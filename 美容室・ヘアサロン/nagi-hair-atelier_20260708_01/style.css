@@ -17,7 +17,7 @@ body{
 }
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-weight:500;line-height:1.18;letter-spacing:.02em}
+h1,h2,h3{font-weight:500;line-height:1.18;letter-spacing:.02em;font-feature-settings:"palt"}
 .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:200}
 .skip:focus{left:12px;top:12px}
 ::selection{background:var(--glow);color:#2a1a0d}
@@ -59,6 +59,7 @@ h1,h2,h3{font-weight:500;line-height:1.18;letter-spacing:.02em}
   display:flex;flex-direction:column;justify-content:center;gap:.4rem;padding:0 var(--pad);
   transform:translateY(-100%);transition:transform .6s var(--ease)}
 .drawer.open{transform:translateY(0)}
+.drawer[hidden]{display:none}
 .drawer__links{display:flex;flex-direction:column;gap:.2rem}
 .drawer__links a{font-family:var(--serif);font-size:clamp(2rem,10vw,3rem);padding:.35em 0;
   border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:1rem}
