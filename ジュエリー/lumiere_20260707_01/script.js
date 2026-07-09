@@ -3,10 +3,27 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var fine = window.matchMedia("(pointer:fine)").matches;
 
-  window.addEventListener("load", function () {
-    var l = document.getElementById("loader");
-    setTimeout(function () { if (l) l.classList.add("done"); fadeInFirst(); }, reduce ? 0 : 1500);
-  });
+  /* loader — JS生成: script.jsが読めなければオーバーレイ自体が存在せず本体が即見える */
+  var loaderDone = false;
+  function finishLoader(l) {
+    if (loaderDone) return;
+    loaderDone = true;
+    l.classList.add("done");
+    fadeInFirst();
+  }
+  (function () {
+    var l = document.createElement("div");
+    l.className = "loader";
+    l.setAttribute("aria-hidden", "true");
+    l.innerHTML = '<span class="loader__mark">LUMIÈRE</span><span class="loader__line"><i></i></span>';
+    document.body.appendChild(l);
+    setTimeout(function () { finishLoader(l); }, reduce ? 0 : 1500);
+    /* safety: 何かが失敗しても3秒で必ず解除し、進行中の退場/登場transitionも打ち切って即表示 */
+    setTimeout(function () {
+      document.documentElement.classList.add("loader-snap");
+      finishLoader(l);
+    }, 3000);
+  })();
 
   function fadeInFirst() {
     document.querySelectorAll("#s1 [data-fade]").forEach(function (el, i) {

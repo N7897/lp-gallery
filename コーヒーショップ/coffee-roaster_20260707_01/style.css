@@ -47,6 +47,8 @@ body.hide-native,body.hide-native *{cursor:none}
 /* ---------- loader ---------- */
 .loader{position:fixed;inset:0;z-index:10000;background:var(--espresso);display:grid;place-items:center;transition:transform 1s var(--ease);}
 .loader.done{transform:translateY(-101%)}
+/* safetyタイマ発火時(異常系)はフェードせず即時に本体を見せる */
+html.loader-snap .loader,html.loader-snap .hero__title .word{transition:none}
 .loader__inner{text-align:center}
 .loader__mark{font-family:var(--serif);color:var(--cream);font-size:clamp(2rem,7vw,4rem);letter-spacing:.06em;display:block}
 .loader__bar{display:block;width:170px;height:2px;background:rgba(244,236,225,.2);margin:22px auto 0;overflow:hidden}
