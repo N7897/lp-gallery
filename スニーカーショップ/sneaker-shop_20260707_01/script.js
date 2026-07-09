@@ -2,20 +2,36 @@
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* loader */
-  window.addEventListener("load", function () {
-    var l = document.getElementById("loader"), num = document.getElementById("loaderNum");
-    var n = 0, dur = reduce ? 0 : 1100, t0 = null;
+  /* loader — JS生成: script.jsが読めなければオーバーレイ自体が存在せず本体が即見える */
+  var loaderDone = false;
+  function finishLoader(l, snap) {
+    if (loaderDone) return;
+    loaderDone = true;
+    if (snap) document.documentElement.classList.add("loader-snap");
+    l.classList.add("done");
+    revealHero();
+  }
+  (function () {
+    var l = document.createElement("div");
+    l.className = "loader";
+    l.setAttribute("aria-hidden", "true");
+    l.innerHTML = '<span class="loader__num">00</span><span class="loader__label">LOADING THE DROP</span>';
+    document.body.appendChild(l);
+    var num = l.querySelector(".loader__num");
+    var dur = reduce ? 0 : 1100, t0 = null;
     function step(ts) {
+      if (loaderDone) return;
       if (!t0) t0 = ts;
-      var p = Math.min((ts - t0) / dur, 1);
-      n = Math.round(p * 100);
-      if (num) num.textContent = (n < 10 ? "0" : "") + n;
+      var p = dur ? Math.min((ts - t0) / dur, 1) : 1;
+      var n = Math.round(p * 100);
+      num.textContent = (n < 10 ? "0" : "") + n;
       if (p < 1) requestAnimationFrame(step);
-      else { l.classList.add("done"); revealHero(); }
+      else finishLoader(l);
     }
     requestAnimationFrame(step);
-  });
+    /* safety: rAFが止まる環境(バックグラウンドタブ/ヘッドレス仮想時間)でも3秒で必ず即時解除 */
+    setTimeout(function () { finishLoader(l, true); }, 3000);
+  })();
 
   function revealHero() {
     document.querySelectorAll(".hero__title em").forEach(function (em, i) {

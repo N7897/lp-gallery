@@ -33,6 +33,8 @@ body.cur,body.cur *{cursor:none}
 /* loader */
 .loader{position:fixed;inset:0;z-index:10000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity .6s,visibility .6s}
 .loader.done{opacity:0;visibility:hidden}
+/* safetyタイマ発火時(異常系)はフェードせず即時に本体を見せる */
+html.loader-snap .loader,html.loader-snap .hero__title em{transition:none}
 .loader__num{font-family:var(--disp);font-size:clamp(4rem,20vw,12rem);color:var(--volt);line-height:1}
 .loader__label{font-size:.75rem;letter-spacing:.4em;color:var(--muted)}
 
