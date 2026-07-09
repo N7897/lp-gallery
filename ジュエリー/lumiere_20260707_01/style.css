@@ -30,6 +30,8 @@ body.cur,body.cur *{cursor:none}
 /* loader */
 .loader{position:fixed;inset:0;z-index:10000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .8s var(--ease),visibility .8s}
 .loader.done{opacity:0;visibility:hidden}
+/* safetyタイマ発火時(異常系)はフェードせず即時に本体を見せる */
+html.loader-snap .loader,html.loader-snap #s1 [data-fade]{transition:none}
 .loader__mark{font-family:var(--serif);font-weight:300;letter-spacing:.42em;font-size:clamp(1.4rem,4vw,2.4rem);color:var(--ink);padding-left:.42em}
 .loader__line{display:block;width:150px;height:1px;background:rgba(236,228,216,.18);overflow:hidden}
 .loader__line i{display:block;height:100%;width:0;background:var(--gold);animation:load 1.4s var(--ease) forwards}

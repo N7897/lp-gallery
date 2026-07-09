@@ -2,14 +2,27 @@
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* loader */
-  window.addEventListener("load", function () {
-    var l = document.getElementById("loader");
+  /* loader — JS生成: script.jsが読めなければオーバーレイ自体が存在せず本体が即見える */
+  var loaderDone = false;
+  function finishLoader(l) {
+    if (loaderDone) return;
+    loaderDone = true;
+    l.classList.add("done");
+    revealHero();
+  }
+  (function () {
+    var l = document.createElement("div");
+    l.className = "loader";
+    l.setAttribute("aria-hidden", "true");
+    l.innerHTML = '<div class="loader__inner"><span class="loader__mark">MŌRU</span><span class="loader__bar"><i></i></span></div>';
+    document.body.appendChild(l);
+    setTimeout(function () { finishLoader(l); }, reduce ? 0 : 1250);
+    /* safety: 何かが失敗しても3秒で必ず解除し、進行中の退場/登場transitionも打ち切って即表示 */
     setTimeout(function () {
-      if (l) l.classList.add("done");
-      revealHero();
-    }, reduce ? 0 : 1250);
-  });
+      document.documentElement.classList.add("loader-snap");
+      finishLoader(l);
+    }, 3000);
+  })();
 
   function revealHero() {
     var words = document.querySelectorAll(".hero__title .word");
