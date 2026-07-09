@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MŌRU — Specialty Coffee Roasters</title>
+<meta name="description" content="MŌRU Coffee Roasters — 単一農園のスペシャルティコーヒーを、朝の光のように届ける小さな焙煎所。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <span class="loader__mark">MŌRU</span>
+    <span class="loader__bar"><i></i></span>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" data-cursor>MŌRU<span>&nbsp;coffee</span></a>
+  <nav class="nav__links" aria-label="主要ナビゲーション">
+    <a href="#craft" data-cursor>焙煎</a>
+    <a href="#menu" data-cursor>メニュー</a>
+    <a href="#origin" data-cursor>産地</a>
+    <a href="#visit" data-cursor>店舗</a>
+  </nav>
+  <a href="#visit" class="nav__cta" data-cursor>オンライン注文</a>
+  <button class="nav__burger" id="burger" aria-label="メニューを開く" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <a href="#craft">焙煎</a>
+  <a href="#menu">メニュー</a>
+  <a href="#origin">産地</a>
+  <a href="#visit">店舗</a>
+  <a href="#visit" class="drawer__cta">オンライン注文</a>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__meta">
+      <span class="hero__loc">TOKYO&nbsp;·&nbsp;NAKAMEGURO</span>
+      <span class="hero__est">EST. 2016 — SINGLE ORIGIN</span>
+    </div>
+
+    <div class="hero__type">
+      <h1 class="hero__title">
+        <span class="line"><span class="word" data-reveal>Slow</span></span>
+        <span class="line"><span class="word italic" data-reveal>morning,</span></span>
+        <span class="line"><span class="word" data-reveal>bright</span> <span class="word ghost" data-reveal>cup.</span></span>
+      </h1>
+    </div>
+
+    <div class="hero__cup" aria-hidden="true">
+      <div class="cup">
+        <div class="cup__steam">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="cup__body">
+          <div class="cup__surface"></div>
+        </div>
+        <div class="cup__handle"></div>
+        <div class="cup__saucer"></div>
+      </div>
+      <div class="hero__ring hero__ring--a"></div>
+      <div class="hero__ring hero__ring--b"></div>
+    </div>
+
+    <div class="hero__foot">
+      <p class="hero__desc">
+        小さな焙煎所から、その日いちばん澄んだ一杯を。
+        農園から生豆を選び、季節ごとに火の入れ方を変えています。
+      </p>
+      <a href="#craft" class="hero__scroll" data-cursor>
+        <span>scroll</span>
+        <i></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Ethiopia&nbsp;Yirgacheffe</span><span class="dot">●</span>
+      <span>Small&nbsp;Batch&nbsp;Roast</span><span class="dot">●</span>
+      <span>Hand&nbsp;Poured</span><span class="dot">●</span>
+      <span>Colombia&nbsp;Huila</span><span class="dot">●</span>
+      <span>Roasted&nbsp;in&nbsp;Nakameguro</span><span class="dot">●</span>
+      <span>Ethiopia&nbsp;Yirgacheffe</span><span class="dot">●</span>
+      <span>Small&nbsp;Batch&nbsp;Roast</span><span class="dot">●</span>
+      <span>Hand&nbsp;Poured</span><span class="dot">●</span>
+      <span>Colombia&nbsp;Huila</span><span class="dot">●</span>
+      <span>Roasted&nbsp;in&nbsp;Nakameguro</span><span class="dot">●</span>
+    </div>
+  </div>
+
+  <!-- CRAFT -->
+  <section class="craft" id="craft">
+    <div class="craft__head">
+      <span class="eyebrow" data-reveal>01 — 焙煎の哲学</span>
+      <h2 class="craft__title" data-reveal>
+        火加減は、<span class="italic">その豆の声</span>を<br />聞いてから決める。
+      </h2>
+    </div>
+    <div class="craft__grid">
+      <figure class="craft__media" data-parallax>
+        <div class="craft__photo craft__photo--beans"></div>
+        <figcaption>プロバット社の焙煎機で、200gごとの少量焙煎</figcaption>
+      </figure>
+      <div class="craft__text" data-reveal>
+        <p>
+          コーヒーは農産物です。同じ農園でも、その年の雨や標高で表情が変わります。
+          わたしたちは焙煎前に必ずカッピングを行い、豆が持ついちばん甘い一点を探します。
+        </p>
+        <p>
+          浅すぎず、深すぎず。青い果実のような酸から、蜜のような余韻までを一本の線でつなぐ。
+          それが MŌRU の目指す「明るい一杯」です。
+        </p>
+        <ul class="craft__stats">
+          <li><b data-count="200">0</b><span>g / batch</span></li>
+          <li><b data-count="14">0</b><span>producers</span></li>
+          <li><b data-count="9">0</b><span>years roasting</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU / BENTO -->
+  <section class="menu" id="menu">
+    <div class="menu__head">
+      <span class="eyebrow" data-reveal>02 — 本日のカウンター</span>
+      <h2 class="menu__title" data-reveal>今日、飲めるもの。</h2>
+    </div>
+    <div class="bento">
+      <article class="cell cell--feature" data-reveal data-cursor>
+        <span class="cell__tag">signature</span>
+        <div class="cell__body">
+          <h3>Morning Batch Filter</h3>
+          <p>その日いちばんに焙く一種を、ネルドリップで。日ごとに産地が変わります。</p>
+        </div>
+        <span class="cell__price">¥680</span>
+      </article>
+
+      <article class="cell cell--tall" data-reveal data-cursor>
+        <span class="cell__tag">espresso</span>
+        <div class="cell__body">
+          <h3>Flat White</h3>
+          <p>密度のあるマイクロフォームと、ふたつのショット。</p>
+        </div>
+        <span class="cell__price">¥620</span>
+      </article>
+
+      <article class="cell" data-reveal data-cursor>
+        <span class="cell__tag">cold</span>
+        <div class="cell__body">
+          <h3>Cold Brew Tonic</h3>
+          <p>12時間抽出のコールドブリューに、柑橘のトニック。</p>
+        </div>
+        <span class="cell__price">¥700</span>
+      </article>
+
+      <article class="cell cell--wide" data-reveal data-cursor>
+        <span class="cell__tag">beans</span>
+        <div class="cell__body">
+          <h3>Retail Beans — 100g / 200g</h3>
+          <p>焙煎から48時間以内の豆をお持ち帰り。挽き方はお好みで。</p>
+        </div>
+        <span class="cell__price">¥1,400〜</span>
+      </article>
+
+      <article class="cell cell--sweet" data-reveal data-cursor>
+        <span class="cell__tag">sweets</span>
+        <div class="cell__body">
+          <h3>Cardamom Bun</h3>
+          <p>近所のベーカリーと共作。カルダモンの香るバン。</p>
+        </div>
+        <span class="cell__price">¥480</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ORIGIN / TIMELINE -->
+  <section class="origin" id="origin">
+    <div class="origin__sticky">
+      <span class="eyebrow" data-reveal>03 — 豆が届くまで</span>
+      <h2 class="origin__title" data-reveal>農園から、<br /><span class="italic">この一杯</span>まで。</h2>
+      <p class="origin__lead" data-reveal>
+        顔の見える生産者から、直接、あるいは信頼するインポーター経由で。
+        フェアな価格と、透明な流れを大切にしています。
+      </p>
+    </div>
+    <ol class="origin__steps">
+      <li data-reveal>
+        <span class="step__no">01</span>
+        <h3>Sourcing</h3>
+        <p>年に二度、産地を訪れ、標高と精製方法で豆を選定します。</p>
+      </li>
+      <li data-reveal>
+        <span class="step__no">02</span>
+        <h3>Cupping</h3>
+        <p>到着した生豆をすべてカッピング。香り・酸・甘さを採点。</p>
+      </li>
+      <li data-reveal>
+        <span class="step__no">03</span>
+        <h3>Roasting</h3>
+        <p>豆ごとにプロファイルを設計し、少量ずつ火を入れます。</p>
+      </li>
+      <li data-reveal>
+        <span class="step__no">04</span>
+        <h3>Serving</h3>
+        <p>焙煎から48時間。いちばん澄んだ瞬間にお出しします。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote">
+    <p data-reveal>
+      「おいしいコーヒーは、<span class="italic">静けさ</span>から生まれる。」
+    </p>
+    <span class="quote__by" data-reveal>— Kaoru Mori, Head Roaster</span>
+  </section>
+
+  <!-- VISIT / CTA -->
+  <section class="visit" id="visit">
+    <div class="visit__card" data-reveal>
+      <div class="visit__left">
+        <span class="eyebrow">04 — 店舗のご案内</span>
+        <h2>朝の光が<br /><span class="italic">いちばん綺麗な</span>時間に。</h2>
+        <a href="#" class="btn btn--fill" data-cursor>オンラインで注文する</a>
+      </div>
+      <div class="visit__right">
+        <dl class="visit__info">
+          <div><dt>Address</dt><dd>東京都目黒区中目黒 2-1-6</dd></div>
+          <div><dt>Hours</dt><dd>08:00 – 18:00 / 火曜定休</dd></div>
+          <div><dt>Contact</dt><dd>hello@moru-coffee.jp</dd></div>
+        </dl>
+        <div class="visit__mini">
+          <span class="visit__pin"></span>
+          <p>中目黒駅より徒歩4分。目黒川沿いの路地を入った先。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__big" data-cursor>MŌRU</div>
+  <div class="footer__cols">
+    <div>
+      <span>Shop</span>
+      <a href="#menu">メニュー</a>
+      <a href="#menu">豆を買う</a>
+      <a href="#">ギフト</a>
+    </div>
+    <div>
+      <span>About</span>
+      <a href="#craft">焙煎について</a>
+      <a href="#origin">産地</a>
+      <a href="#">ジャーナル</a>
+    </div>
+    <div>
+      <span>Social</span>
+      <a href="#">Instagram</a>
+      <a href="#">Newsletter</a>
+      <a href="#">Notes</a>
+    </div>
+  </div>
+  <div class="footer__base">
+    <span>© 2026 MŌRU Coffee Roasters</span>
+    <span>Roasted with care in Nakameguro</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* ============ しっぽ商店 SHIPPO ============ */
+:root{
+  --cream:#FBF6EE;
+  --surface:#F3E9DA;
+  --surface-2:#EFE2CF;
+  --ink:#2C2A28;
+  --ink-soft:#6A5F52;
+  --coral:#EF7A4D;
+  --coral-deep:#AC3F1E;
+  --coral-soft:rgba(239,122,77,.18);
+  --mint:#1F735D;
+  --mint-soft:rgba(46,139,116,.14);
+  --line:rgba(44,42,40,.14);
+  --ease:cubic-bezier(.22,.68,.28,1);
+  --pop:cubic-bezier(.34,1.56,.42,1);
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:"Noto Sans JP",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;overflow-x:hidden;
+}
+h1,h2,h3{line-height:1.28;margin:0;font-weight:700;letter-spacing:.01em}
+p{margin:0}
+a{color:inherit}
+em{font-style:normal;color:var(--coral-deep);font-weight:700}
+.mono{font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--cream);padding:.6rem 1rem;z-index:200}
+.skip:focus{left:12px;top:12px;border-radius:8px}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+
+/* ---- 共通 ---- */
+.sec-tag{
+  font-family:"Roboto Mono",monospace;font-size:.74rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--coral-deep);margin-bottom:1rem;
+}
+.sec-tag.on-coral{color:rgba(255,255,255,.85)}
+.lead-h2{font-family:"Baloo 2","Noto Sans JP",sans-serif;font-size:clamp(1.7rem,4.4vw,2.9rem);letter-spacing:.005em}
+.eyebrow{font-family:"Roboto Mono",monospace;font-size:.76rem;letter-spacing:.16em;color:var(--ink-soft);text-transform:uppercase;margin:0 0 1.1rem}
+
+/* ---- CTA ---- */
+.cta{
+  display:inline-flex;align-items:center;gap:.5em;
+  background:var(--coral-deep);color:#fff;text-decoration:none;font-weight:700;
+  padding:.85em 1.5em;border-radius:999px;font-size:1rem;
+  box-shadow:0 8px 20px -8px rgba(191,74,36,.6);
+  transition:transform .3s var(--pop),box-shadow .3s var(--ease),background .3s;
+}
+.cta::after{content:"";width:.62em;height:.62em;border-top:2.4px solid currentColor;border-right:2.4px solid currentColor;transform:rotate(45deg);transition:transform .3s var(--ease)}
+.cta:hover,.cta:focus-visible{transform:translateY(-3px);box-shadow:0 14px 26px -8px rgba(191,74,36,.7);background:var(--coral)}
+.cta:hover::after,.cta:focus-visible::after{transform:rotate(45deg) translate(2px,-2px)}
+.cta--sm{padding:.6em 1.15em;font-size:.9rem}
+.cta--big{font-size:1.15rem;padding:1em 2em;margin-top:1.8rem}
+.ghostlink{font-weight:700;text-decoration:none;color:var(--ink);border-bottom:2px solid var(--coral);padding-bottom:2px;transition:color .3s}
+.ghostlink:hover{color:var(--coral-deep)}
+
+/* ---- 足あとレール ---- */
+.pawrail{position:fixed;top:0;left:26px;height:100vh;width:22px;z-index:40;display:flex;justify-content:center;pointer-events:none}
+.pawrail__line{position:absolute;top:14vh;bottom:14vh;width:2px;background:var(--line);border-radius:2px}
+.pawrail__paws{position:absolute;top:14vh;bottom:14vh;left:0;right:0}
+.paw{position:absolute;left:50%;width:14px;height:14px;transform:translate(-50%,-50%) scale(.5);opacity:.2;transition:opacity .5s var(--ease),transform .5s var(--pop);color:var(--coral)}
+.paw svg{display:block;width:100%;height:100%}
+.paw.lit{opacity:1;transform:translate(-50%,-50%) scale(1)}
+@media(max-width:900px){.pawrail{display:none}}
+
+/* ---- ヘッダー ---- */
+.site{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;align-items:center;gap:1.5rem;
+  padding:1rem clamp(1.1rem,4vw,3rem);
+  transition:background .4s var(--ease),box-shadow .4s var(--ease),padding .4s var(--ease);
+}
+.site.scrolled{background:rgba(251,246,238,.86);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding-top:.7rem;padding-bottom:.7rem}
+.brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand__mark{color:var(--coral);display:flex}
+.brand__name{font-family:"Yusei Magic","Noto Sans JP",sans-serif;font-size:1.32rem;letter-spacing:.04em}
+.nav{display:flex;gap:1.6rem}
+.nav a{text-decoration:none;font-weight:500;font-size:.94rem;position:relative;padding:.2em 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:2px;background:var(--coral);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:720px){.nav{display:none}}
+
+/* ---- ヒーロー ---- */
+.hero{
+  min-height:100svh;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;
+  gap:2rem;max-width:var(--wrap);margin:0 auto;padding:8rem clamp(1.2rem,5vw,3rem) 4rem;position:relative;
+}
+.hero__copy{max-width:30rem}
+.hero__title{
+  font-family:"Baloo 2","Noto Sans JP",sans-serif;
+  font-size:clamp(2.8rem,8vw,5rem);line-height:1.06;letter-spacing:.01em;margin-bottom:1.4rem;
+}
+.hero__lead{color:var(--ink-soft);font-size:1.03rem;margin-bottom:2rem}
+.hero__actions{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+.hero__wagreadout{margin-top:2.2rem;font-family:"Roboto Mono",monospace;font-size:.8rem;color:var(--ink-soft);letter-spacing:.06em}
+.hero__wagreadout span:first-of-type{color:var(--coral-deep);font-weight:500}
+.hero__wagreadout .unit{opacity:.7}
+
+.hero__stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.dog{width:min(100%,480px);height:auto;overflow:visible;cursor:pointer;will-change:transform}
+.dog__body,.dog__head{transform-box:fill-box}
+.stage__hint{
+  margin-top:.4rem;font-family:"Yusei Magic",sans-serif;color:var(--coral-deep);
+  font-size:.98rem;opacity:.85;transition:opacity .4s
+}
+.trail-seg{fill:none;stroke:var(--coral);stroke-linecap:round}
+
+.scrollcue{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;text-decoration:none;color:var(--ink-soft);font-family:"Roboto Mono",monospace;font-size:.66rem;letter-spacing:.22em}
+.scrollcue__bar{width:2px;height:38px;background:linear-gradient(var(--coral),transparent);border-radius:2px;animation:cue 1.9s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(.3);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.1%{transform-origin:bottom}100%{transform:scaleY(.3);transform-origin:bottom}}
+
+/* ---- 暮らし ---- */
+.kurashi{max-width:var(--wrap);margin:0 auto;padding:6rem clamp(1.2rem,5vw,3rem)}
+.kurashi .lead-h2{max-width:20ch;margin-bottom:2.6rem}
+.kurashi__cols{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;max-width:56rem}
+.kurashi__cols p{color:var(--ink-soft);font-size:1.02rem}
+
+/* ---- サービス ベント ---- */
+.services{max-width:var(--wrap);margin:0 auto;padding:4rem clamp(1.2rem,5vw,3rem) 6rem}
+.services__head{margin-bottom:2.4rem}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(180px,auto);gap:1.1rem}
+.tile{
+  position:relative;background:var(--surface);border-radius:22px;padding:1.7rem;
+  display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;
+  border:1px solid var(--line);cursor:default;
+  transition:transform .45s var(--pop),box-shadow .45s var(--ease),background .45s var(--ease);
+}
+.tile--lg{grid-row:span 2;background:var(--surface-2)}
+.tile--wide{grid-column:span 2}
+.tile__no{position:absolute;top:1.2rem;left:1.5rem;font-family:"Roboto Mono",monospace;font-size:.8rem;color:var(--coral-deep);letter-spacing:.1em}
+.tile h3{font-family:"Baloo 2","Noto Sans JP",sans-serif;font-size:1.35rem;margin-bottom:.6rem}
+.tile p{color:var(--ink-soft);font-size:.95rem}
+.tile__tag{align-self:flex-start;margin-top:1rem;font-family:"Roboto Mono",monospace;font-size:.7rem;letter-spacing:.08em;padding:.35em .8em;border-radius:999px;background:var(--coral-soft);color:var(--coral-deep)}
+.tile__tag.mint{background:var(--mint-soft);color:var(--mint)}
+.tile::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 100% 0%,var(--coral-soft),transparent 60%);opacity:0;transition:opacity .45s var(--ease)}
+.tile:hover,.tile:focus-visible{transform:translateY(-8px);box-shadow:0 22px 40px -22px rgba(44,42,40,.4)}
+.tile:hover::before,.tile:focus-visible::before{opacity:1}
+
+/* ---- ステップ ---- */
+.steps{background:var(--surface);padding:6rem clamp(1.2rem,5vw,3rem)}
+.steps .lead-h2{max-width:var(--wrap);margin:0 auto 3rem}
+.steplist{max-width:var(--wrap);margin:0 auto;list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;counter-reset:s}
+.steplist li{position:relative;padding-top:1.4rem;border-top:2px solid var(--coral)}
+.step__n{font-family:"Roboto Mono",monospace;color:var(--coral-deep);font-size:.85rem;letter-spacing:.1em}
+.steplist h3{font-family:"Baloo 2","Noto Sans JP",sans-serif;font-size:1.3rem;margin:.5rem 0 .7rem}
+.steplist p{color:var(--ink-soft);font-size:.96rem}
+
+/* ---- 声 ---- */
+.voices{max-width:var(--wrap);margin:0 auto;padding:6rem clamp(1.2rem,5vw,3rem)}
+.voices .sec-tag{text-align:center}
+.voices__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:1.5rem}
+.voice{margin:0;background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:1.8rem}
+.voice blockquote{margin:0 0 1.2rem;font-size:1.02rem;line-height:1.85}
+.voice figcaption{font-family:"Roboto Mono",monospace;font-size:.76rem;color:var(--ink-soft);letter-spacing:.03em}
+
+/* ---- 不安解消 ---- */
+.assure{max-width:var(--wrap);margin:0 auto;padding:2rem clamp(1.2rem,5vw,3rem) 6rem}
+.assure__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:1.5rem}
+.assure__item{padding:1.6rem;border-radius:20px;background:var(--surface);border:1px solid var(--line)}
+.assure__item h3{font-family:"Baloo 2","Noto Sans JP",sans-serif;font-size:1.18rem;margin-bottom:.6rem}
+.assure__item p{color:var(--ink-soft);font-size:.95rem}
+
+/* ---- アクセス CTA ---- */
+.access{position:relative;background:var(--coral-deep);color:#fff;overflow:hidden}
+.access__inner{max-width:var(--wrap);margin:0 auto;padding:6rem clamp(1.2rem,5vw,3rem);display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.access__h{font-family:"Baloo 2","Noto Sans JP",sans-serif;font-size:clamp(2rem,6vw,3.4rem);line-height:1.1;margin:.4rem 0 1.2rem}
+.access__lead{color:rgba(255,255,255,.95);font-size:1.03rem;max-width:32ch}
+.access .cta--big{background:#fff;color:var(--coral-deep);box-shadow:0 12px 30px -10px rgba(0,0,0,.4)}
+.access .cta--big:hover,.access .cta--big:focus-visible{background:var(--cream);color:var(--coral-deep)}
+.access__info{margin:0;display:grid;gap:1.3rem}
+.access__info>div{display:grid;grid-template-columns:6.5rem 1fr;gap:1rem;padding-bottom:1.3rem;border-bottom:1px solid rgba(255,255,255,.24)}
+.access__info dt{font-family:"Roboto Mono",monospace;font-size:.76rem;letter-spacing:.12em;color:rgba(255,255,255,.7);text-transform:uppercase}
+.access__info dd{margin:0;color:#fff;font-size:.98rem;line-height:1.65}
+.access__info .mono{color:#fff}
+.minidog{position:absolute;right:clamp(1rem,5vw,4rem);bottom:1.4rem;width:110px;height:auto;overflow:visible;opacity:.9}
+#minitail{transform-box:fill-box;transform-origin:46px 92px}
+
+/* ---- フッター ---- */
+.foot{max-width:var(--wrap);margin:0 auto;padding:3.5rem clamp(1.2rem,5vw,3rem);display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.foot__brand .brand__name{font-family:"Yusei Magic",sans-serif;font-size:1.3rem}
+.foot__brand p{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem}
+.foot__note{color:var(--ink-soft);font-size:.78rem;font-family:"Roboto Mono",monospace}
+
+/* ---- レスポンシブ ---- */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:1rem;padding-top:7rem;text-align:center}
+  .hero__copy{max-width:none;margin:0 auto}
+  .hero__actions{justify-content:center}
+  .hero__wagreadout{text-align:center}
+  .hero__stage{order:-1}
+  .kurashi__cols{grid-template-columns:1fr;gap:1.4rem}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .tile--wide{grid-column:span 2}
+  .tile--lg{grid-row:span 1}
+  .steplist,.voices__grid,.assure__grid{grid-template-columns:1fr;gap:1.4rem}
+  .access__inner{grid-template-columns:1fr;gap:2rem}
+  .minidog{position:static;display:block;margin:0 auto;width:96px}
+}
+@media(max-width:520px){
+  .bento{grid-template-columns:1fr}
+  .tile--wide{grid-column:span 1}
+  .sp-br{display:none}
+  .hero__title{font-size:clamp(2.6rem,13vw,3.4rem)}
+  .foot{flex-direction:column;align-items:flex-start}
+}
+@media(min-width:521px){.sp-br{display:inline}}
+
+/* ---- reduced-motion ---- */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .scrollcue__bar{animation:none}
+}
+
+/* ---- リビール ---- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}

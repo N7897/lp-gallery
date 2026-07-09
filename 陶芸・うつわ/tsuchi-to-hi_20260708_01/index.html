@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>土と火 TSUCHI TO HI｜手挽きのうつわ工房 ― 益子・谷戸窯</title>
+<meta name="description" content="益子の谷戸で、日々つかううつわを挽いています。ろくろが土をいのちに変え、火が色を約束する。飯碗・皿・湯呑・花入。手びねりとろくろの体験教室も。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans+JP:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#hero" aria-label="土と火 ホームへ">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="26" height="26" role="img" aria-hidden="true">
+        <ellipse cx="16" cy="22" rx="12" ry="4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M9 22 C9 14, 23 14, 23 22" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M12 22 C12 17, 20 17, 20 22" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+      </svg>
+    </span>
+    <span class="brand__name">土と火<span class="brand__en">TSUCHI TO HI</span></span>
+  </a>
+  <nav class="site-nav" aria-label="主要ナビゲーション">
+    <a href="#philosophy">土のこと</a>
+    <a href="#process">挽く工程</a>
+    <a href="#collection">うつわ</a>
+    <a href="#glaze">窯と釉</a>
+    <a href="#workshop">体験教室</a>
+  </nav>
+  <a class="cta cta--header" href="#workshop">体験を予約</a>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO : 轆轤で挽く ===== -->
+  <section class="hero" id="hero" aria-labelledby="heroTitle">
+    <div class="hero__sticky">
+      <div class="hero__stage">
+        <div class="wheel" id="wheel" aria-hidden="true">
+          <svg id="wheelSvg" viewBox="0 0 600 620" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <radialGradient id="clayGrad" cx="42%" cy="34%" r="75%">
+                <stop offset="0%" stop-color="#B9A489"/>
+                <stop offset="55%" stop-color="#9C8265"/>
+                <stop offset="100%" stop-color="#6F573F"/>
+              </radialGradient>
+              <linearGradient id="glazeGrad" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#2F4A38"/>
+                <stop offset="55%" stop-color="#4E7154"/>
+                <stop offset="100%" stop-color="#6E9169"/>
+              </linearGradient>
+              <radialGradient id="emberGrad" cx="50%" cy="60%" r="60%">
+                <stop offset="0%" stop-color="#E8894F" stop-opacity="0.9"/>
+                <stop offset="45%" stop-color="#C4552C" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#C4552C" stop-opacity="0"/>
+              </radialGradient>
+              <clipPath id="clayClip"><path id="clayClipPath" d=""/></clipPath>
+            </defs>
+
+            <!-- 窯の火（フィナーレの発光） -->
+            <ellipse id="ember" cx="300" cy="360" rx="260" ry="230" fill="url(#emberGrad)" opacity="0"/>
+
+            <!-- 轆轤の円盤（回転） -->
+            <g id="wheelHead">
+              <ellipse cx="300" cy="500" rx="210" ry="52" fill="#241D16"/>
+              <ellipse cx="300" cy="494" rx="210" ry="52" fill="#3A2F24"/>
+              <g id="wheelMarks"></g>
+              <ellipse cx="300" cy="494" rx="210" ry="52" fill="none" stroke="#0E0A06" stroke-width="1.4" opacity="0.5"/>
+            </g>
+
+            <!-- 土 → 器（scrubでモーフ） -->
+            <path id="clayBody" d="" fill="url(#clayGrad)"/>
+            <path id="clayGlaze" d="" fill="url(#glazeGrad)" clip-path="url(#clayClip)" opacity="0"/>
+            <!-- 轆轤目（回転を示す横線） -->
+            <g id="throwLines" clip-path="url(#clayClip)"></g>
+            <!-- 中心の光 -->
+            <ellipse id="core" cx="300" cy="300" rx="0" ry="0" fill="#F3D7A6" opacity="0"/>
+          </svg>
+
+          <p class="wheel__fallback" id="wheelFallback">手挽きのうつわ</p>
+        </div>
+
+        <div class="hero__copy">
+          <p class="hero__kicker">益子・谷戸窯 <span aria-hidden="true">—</span> てしごとのうつわ</p>
+          <h1 class="hero__title" id="heroTitle"><span class="hero__ja">土と火</span><span class="hero__en">TSUCHI &nbsp;TO&nbsp; HI</span></h1>
+          <p class="hero__lead">ろくろが土をいのちに変え、<br>火が色を約束する。</p>
+          <p class="hero__stage-label" id="stageLabel" aria-live="off">
+            <span class="hero__stage-num" id="stageNum">01</span>
+            <span class="hero__stage-name" id="stageName">土揉み</span>
+          </p>
+          <p class="hero__scrollhint" id="scrollHint">スクロールして、挽く<span aria-hidden="true"> ↓</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 土のこと ===== -->
+  <section class="philosophy" id="philosophy" aria-labelledby="phTitle">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow__no">其の一</span>土のこと</p>
+      <div class="ph__grid">
+        <h2 class="ph__title" id="phTitle">用いて、<br>はじめて<br class="only-sp">うつくしい。</h2>
+        <div class="ph__body">
+          <p class="ph__lead">名のある一点ものより、毎朝の手にしっくり来る一碗を。ここで挽くのは、飾るためでなく、つかうためのうつわです。</p>
+          <p>手のあと ― 指のあと、轆轤目<span class="note" tabindex="0">ろくろめ<span class="note__pop">ろくろの回転が土に残す、細いらせんの筋。手挽きの証。</span></span>、火のむら ― を、私たちは消しません。わずかなゆがみは欠点ではなく、そのうつわが手から生まれたことの証だからです。</p>
+          <p>使ううちに口あたりがなじみ、色が深くなる。買った日がいちばん美しいのではなく、いちばん長くつかった日がいちばん美しい。そんなうつわを目指しています。</p>
+          <p class="ph__sign">谷戸窯 ・ 陶<span class="ph__sign-en">TSUCHI TO HI</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 挽く工程 ===== -->
+  <section class="process" id="process" aria-labelledby="prTitle">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__no">其の二</span>ひとつの碗ができるまで</p>
+      <h2 class="section-title section-title--light" id="prTitle">挽く工程</h2>
+      <ol class="steps" id="steps">
+        <li class="step" data-step="1">
+          <span class="step__no">01</span>
+          <div class="step__main">
+            <h3 class="step__name">土揉み<span class="step__yomi">つちもみ・菊練り</span></h3>
+            <p class="step__desc">土のなかの空気を抜き、粒の向きを揃える。菊の花びらのような練り目から、この名がつきました。ここで気を抜くと、火のなかで割れます。</p>
+          </div>
+          <span class="step__meta">下ごしらえ</span>
+        </li>
+        <li class="step" data-step="2">
+          <span class="step__no">02</span>
+          <div class="step__main">
+            <h3 class="step__name">水挽き<span class="step__yomi">みずびき</span></h3>
+            <p class="step__desc">回るろくろの上で、水を含ませた手が土を立ち上げる。押して、挟んで、引き上げる。器の背丈と口は、この数十秒でほとんど決まります。</p>
+          </div>
+          <span class="step__meta">成形</span>
+        </li>
+        <li class="step" data-step="3">
+          <span class="step__no">03</span>
+          <div class="step__main">
+            <h3 class="step__name">削り<span class="step__yomi">けずり</span></h3>
+            <p class="step__desc">半乾きの器を伏せ、高台<span class="note note--light" tabindex="0">こうだい<span class="note__pop">器の底の、輪になった脚。手に持ったときの軽さと佇まいを決める。</span></span>を彫る。手に持ったときの軽さは、ここで決まります。</p>
+          </div>
+          <span class="step__meta">仕上げ</span>
+        </li>
+        <li class="step" data-step="4">
+          <span class="step__no">04</span>
+          <div class="step__main">
+            <h3 class="step__name">素焼き<span class="step__yomi">すやき</span></h3>
+            <p class="step__desc">乾いた器を、いちど低い温度で焼き締める。土がしっかり固まり、次の釉をよく吸うようになります。</p>
+          </div>
+          <span class="step__meta"><span class="step__temp">800</span>℃</span>
+        </li>
+        <li class="step" data-step="5">
+          <span class="step__no">05</span>
+          <div class="step__main">
+            <h3 class="step__name">釉掛け<span class="step__yomi">くすりがけ</span></h3>
+            <p class="step__desc">灰と長石を溶いた釉に、器をひたす。掛かる厚みのむらが、焼き上がりの景色になります。まだ、色はありません。</p>
+          </div>
+          <span class="step__meta">化粧</span>
+        </li>
+        <li class="step step--last" data-step="6">
+          <span class="step__no">06</span>
+          <div class="step__main">
+            <h3 class="step__name">本焼き<span class="step__yomi">ほんやき</span></h3>
+            <p class="step__desc">窯に火を入れ、丸一日かけて温度を上げる。灰が溶け、鉄や銅が発色し、はじめて色が生まれる。火が色を約束する、最後のひと工程です。</p>
+          </div>
+          <span class="step__meta"><span class="step__temp">1250</span>℃</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== うつわ ===== -->
+  <section class="collection" id="collection" aria-labelledby="colTitle">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow__no">其の三</span>日々のうつわ</p>
+      <h2 class="section-title" id="colTitle">うつわ</h2>
+      <ul class="pieces">
+        <li class="piece">
+          <div class="piece__figure" data-glaze="oribe">
+            <svg viewBox="0 0 200 160" role="img" aria-label="織部釉の飯碗">
+              <ellipse cx="100" cy="132" rx="52" ry="10" fill="#00000018"/>
+              <path d="M52 78 C54 116, 146 116, 148 78 L142 78 C140 108, 60 108, 58 78 Z" fill="#3f6248"/>
+              <path d="M52 78 C52 62, 148 62, 148 78 C148 90, 52 90, 52 78 Z" fill="#4E7154"/>
+              <ellipse cx="100" cy="78" rx="46" ry="8" fill="#2F4A38"/>
+              <rect x="88" y="112" width="24" height="7" rx="2" fill="#2f4a38"/>
+            </svg>
+          </div>
+          <div class="piece__info">
+            <h3 class="piece__name">飯碗 <span class="piece__glaze">織部</span></h3>
+            <p class="piece__desc">毎朝の一膳に。深い緑がごはんの白を引き立てます。</p>
+            <p class="piece__price">¥3,300 <span class="piece__tax">税込</span></p>
+          </div>
+        </li>
+        <li class="piece">
+          <div class="piece__figure" data-glaze="kohiki">
+            <svg viewBox="0 0 200 160" role="img" aria-label="粉引の六寸皿">
+              <ellipse cx="100" cy="120" rx="70" ry="14" fill="#00000015"/>
+              <ellipse cx="100" cy="96" rx="74" ry="20" fill="#E4DAC9"/>
+              <ellipse cx="100" cy="92" rx="74" ry="20" fill="#EFE7DA"/>
+              <ellipse cx="100" cy="90" rx="52" ry="12" fill="#DFD3BF"/>
+            </svg>
+          </div>
+          <div class="piece__info">
+            <h3 class="piece__name">六寸皿 <span class="piece__glaze">粉引</span></h3>
+            <p class="piece__desc">取り皿にちょうど。化粧土のやわらかな白。</p>
+            <p class="piece__price">¥4,180 <span class="piece__tax">税込</span></p>
+          </div>
+        </li>
+        <li class="piece">
+          <div class="piece__figure" data-glaze="ame">
+            <svg viewBox="0 0 200 160" role="img" aria-label="飴釉の湯呑">
+              <ellipse cx="100" cy="134" rx="34" ry="8" fill="#00000018"/>
+              <path d="M74 60 C74 60, 72 124, 100 124 C128 124, 126 60, 126 60 Z" fill="#7A4A22"/>
+              <path d="M74 60 C74 50, 126 50, 126 60 C126 68, 74 68, 74 60 Z" fill="#95632F"/>
+              <ellipse cx="100" cy="60" rx="26" ry="5" fill="#5C3316"/>
+            </svg>
+          </div>
+          <div class="piece__info">
+            <h3 class="piece__name">湯呑 <span class="piece__glaze">飴釉</span></h3>
+            <p class="piece__desc">手にすっぽり。鉄が溶けた琥珀の艶。</p>
+            <p class="piece__price">¥2,750 <span class="piece__tax">税込</span></p>
+          </div>
+        </li>
+        <li class="piece">
+          <div class="piece__figure" data-glaze="hai">
+            <svg viewBox="0 0 200 160" role="img" aria-label="灰釉の片口">
+              <ellipse cx="100" cy="132" rx="48" ry="9" fill="#00000015"/>
+              <path d="M60 74 C60 118, 140 118, 140 74 Z" fill="#9FA48F"/>
+              <path d="M60 74 C60 62, 140 62, 140 74 C140 82, 60 82, 60 74 Z" fill="#B4B8A4"/>
+              <path d="M138 70 L156 78 L138 82 Z" fill="#B4B8A4"/>
+              <ellipse cx="100" cy="74" rx="40" ry="7" fill="#82876F"/>
+            </svg>
+          </div>
+          <div class="piece__info">
+            <h3 class="piece__name">片口 <span class="piece__glaze">灰釉</span></h3>
+            <p class="piece__desc">酒にも、出汁にも、ドレッシングにも。注ぎ口の景色。</p>
+            <p class="piece__price">¥5,500 <span class="piece__tax">税込</span></p>
+          </div>
+        </li>
+        <li class="piece">
+          <div class="piece__figure" data-glaze="yakishime">
+            <svg viewBox="0 0 200 160" role="img" aria-label="焼締の花入">
+              <ellipse cx="100" cy="136" rx="34" ry="8" fill="#00000018"/>
+              <path d="M84 48 L86 64 C70 76, 70 124, 100 130 C130 124, 130 76, 114 64 L116 48 Z" fill="#6E5540"/>
+              <path d="M84 48 C84 44, 116 44, 116 48 C116 52, 84 52, 84 48 Z" fill="#856848"/>
+              <path d="M74 96 C86 92, 114 92, 126 96" fill="none" stroke="#4E3B2A" stroke-width="2" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="piece__info">
+            <h3 class="piece__name">花入 <span class="piece__glaze">焼締</span></h3>
+            <p class="piece__desc">釉を掛けず、火と灰だけで景色をつくる。一輪挿しに。</p>
+            <p class="piece__price">¥8,800 <span class="piece__tax">税込</span></p>
+          </div>
+        </li>
+        <li class="piece">
+          <div class="piece__figure" data-glaze="shino">
+            <svg viewBox="0 0 200 160" role="img" aria-label="紅志野の急須">
+              <ellipse cx="100" cy="132" rx="50" ry="9" fill="#00000015"/>
+              <path d="M60 84 C60 116, 132 116, 132 84 C132 72, 60 72, 60 84 Z" fill="#C98E77"/>
+              <path d="M60 84 C60 74, 132 74, 132 84" fill="none" stroke="#E7C7B4" stroke-width="6"/>
+              <path d="M132 80 C150 74, 158 84, 150 96" fill="none" stroke="#C98E77" stroke-width="9" stroke-linecap="round"/>
+              <path d="M52 74 C40 70, 40 90, 56 92" fill="none" stroke="#B87A62" stroke-width="8" stroke-linecap="round"/>
+              <ellipse cx="96" cy="70" rx="18" ry="5" fill="#B87A62"/>
+              <circle cx="96" cy="66" r="4" fill="#9C6450"/>
+            </svg>
+          </div>
+          <div class="piece__info">
+            <h3 class="piece__name">急須 <span class="piece__glaze">紅志野</span></h3>
+            <p class="piece__desc">茶葉がひらく、たっぷりの丸み。長石釉の温かな緋。</p>
+            <p class="piece__price">¥12,100 <span class="piece__tax">税込</span></p>
+          </div>
+        </li>
+      </ul>
+      <p class="collection__note">ひとつずつ手で挽いているため、大きさ・色にわずかな個体差があります。売り切れの際は、次の窯出しをお待ちください。</p>
+    </div>
+  </section>
+
+  <!-- ===== 窯と釉 ===== -->
+  <section class="glaze" id="glaze" aria-labelledby="glTitle">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__no">其の四</span>火が約束する色</p>
+      <h2 class="section-title section-title--light" id="glTitle">窯と釉</h2>
+      <p class="glaze__lead">同じ土、同じ釉でも、窯のなかの置き場所と火のまわり方で、色は毎回ちがう。この予測しきれない変化を、窯変<span class="note note--light" tabindex="0">ようへん<span class="note__pop">窯のなかで、火と灰が思いがけない色や景色を生むこと。作り手にも読みきれない。</span></span>と呼びます。</p>
+      <ul class="swatches">
+        <li class="swatch">
+          <span class="swatch__chip" style="--c1:#6E9169;--c2:#2F4A38" aria-hidden="true"></span>
+          <h3 class="swatch__name">織部 <span class="swatch__en">Oribe</span></h3>
+          <p class="swatch__desc">銅が生む、艶やかな深緑。この工房の顔となる色。</p>
+        </li>
+        <li class="swatch">
+          <span class="swatch__chip" style="--c1:#F1EADC;--c2:#D8CBB4" aria-hidden="true"></span>
+          <h3 class="swatch__name">粉引 <span class="swatch__en">Kohiki</span></h3>
+          <p class="swatch__desc">化粧土のやわらかな白。使うほど、貫入に色が入る。</p>
+        </li>
+        <li class="swatch">
+          <span class="swatch__chip" style="--c1:#B47B3E;--c2:#5C3316" aria-hidden="true"></span>
+          <h3 class="swatch__name">飴釉 <span class="swatch__en">Ame</span></h3>
+          <p class="swatch__desc">鉄が溶けきった、飴色の艶。光を深くたたえる。</p>
+        </li>
+        <li class="swatch">
+          <span class="swatch__chip" style="--c1:#D89A81;--c2:#A85236" aria-hidden="true"></span>
+          <h3 class="swatch__name">紅志野 <span class="swatch__en">Shino</span></h3>
+          <p class="swatch__desc">長石釉の、温かな緋。火のあたり方で緋色が濃くなる。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 体験教室 ===== -->
+  <section class="workshop" id="workshop" aria-labelledby="wsTitle">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow__no">其の五</span>土にふれる</p>
+      <h2 class="section-title" id="wsTitle">体験教室</h2>
+      <p class="workshop__lead">見るより、さわるほうが早い。谷戸の工房で、土のつめたさと、回るろくろの手ごたえを。少人数・予約制でお迎えします。</p>
+      <div class="courses">
+        <article class="course">
+          <h3 class="course__name">手びねり一日体験</h3>
+          <p class="course__time"><span class="course__min">90</span>分 / 定員4名</p>
+          <p class="course__desc">ろくろを使わず、手のひらで土をかたちづくる。飯碗かマグ、ひとつ。焼き上がりは後日お届けします。</p>
+          <p class="course__price">¥4,400 <span class="course__note">（焼成・送料込 ¥5,940）</span></p>
+        </article>
+        <article class="course course--feature">
+          <span class="course__tag">人気</span>
+          <h3 class="course__name">ろくろ体験</h3>
+          <p class="course__time"><span class="course__min">120</span>分 / 定員2名</p>
+          <p class="course__desc">回るろくろに、土を立ち上げる。作り手がとなりで支えます。土と手が一致する、あの一瞬を。</p>
+          <p class="course__price">¥6,600 <span class="course__note">（焼成・送料込 ¥8,140）</span></p>
+        </article>
+      </div>
+      <div class="workshop__cta">
+        <a class="cta cta--big" href="#access">日程を見て予約する</a>
+        <p class="workshop__cta-note">開講日は金・土・日。火入れの週はお休みをいただきます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 工房 / アクセス ===== -->
+  <section class="access" id="access" aria-labelledby="acTitle">
+    <div class="wrap access__grid">
+      <div class="access__main">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__no">其の六</span>谷戸のおくへ</p>
+        <h2 class="section-title section-title--light" id="acTitle">工房のこと</h2>
+        <p class="access__lead">益子の町はずれ、谷戸のいちばん奥に、小さな登り窯と工房があります。ふらりと寄って、うつわを手に取ってください。</p>
+        <a class="cta cta--big cta--ghost" href="mailto:hello@tsuchitohi.example">メールで問い合わせる</a>
+      </div>
+      <dl class="access__info">
+        <div><dt>屋号</dt><dd>谷戸窯（やとがま）／ 土と火</dd></div>
+        <div><dt>所在</dt><dd>栃木県 益子 谷戸の奥<br><span class="access__sub">最寄りバス停より徒歩12分</span></dd></div>
+        <div><dt>開いている日</dt><dd>金・土・日<br>11:00 – 17:00</dd></div>
+        <div><dt>お休み</dt><dd>月〜木、火入れの週</dd></div>
+        <div><dt>連絡</dt><dd>hello@tsuchitohi.example</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p class="site-footer__brand">土と火 <span>TSUCHI TO HI</span></p>
+    <p class="site-footer__copy">手のなかで、器が生まれる。<br>© 2026 谷戸窯 ／ 益子</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

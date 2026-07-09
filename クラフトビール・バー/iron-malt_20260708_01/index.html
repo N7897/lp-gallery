@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>鉄と麦 IRON &amp; MALT｜醸造所併設タップルーム</title>
+<meta name="description" content="発酵は、静かな熱狂。冷たいタンクと甘い麦の熱。注がれた一杯に立ちのぼる泡が、夜をひと呼吸ぶん沸き立たせる。醸造所併設のタップルーム、鉄と麦。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Big+Shoulders+Display:wght@500;700;900&family=M+PLUS+1:wght@400;500;700&family=Martian+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-head" id="siteHead">
+  <a class="brand" href="#main" aria-label="鉄と麦 IRON and MALT ホーム">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+        <path d="M8 5h16l-1.6 21.5a3 3 0 0 1-3 2.8h-6.8a3 3 0 0 1-3-2.8L8 5Z" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M9.2 13.5h13.6" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M16 5v-3M13 3.2 16 2l3 1.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand__type">鉄と麦<b>IRON &amp; MALT</b></span>
+  </a>
+  <nav class="nav" aria-label="主要ナビゲーション">
+    <a href="#tap">タップリスト</a>
+    <a href="#brew">醸造</a>
+    <a href="#room">店内</a>
+    <a href="#visit">アクセス</a>
+  </nav>
+  <a class="cta cta--head" href="#visit">席を予約</a>
+</header>
+
+<main id="main">
+
+  <!-- HERO : 注がれるグラス（scrub連動で満ちる＋炭酸の泡） -->
+  <section class="hero" id="hero" aria-labelledby="heroTitle">
+    <div class="hero__sticky">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span>TAPROOM &amp; BREWERY</span>醸造所併設 / 8 taps</p>
+          <h1 class="hero__title" id="heroTitle">
+            <span class="hero__jp">鉄と麦</span>
+            <span class="hero__en">IRON &amp; MALT</span>
+          </h1>
+          <p class="hero__lead">発酵は、静かな熱狂。</p>
+          <p class="hero__sub">冷たいタンクと、甘い麦の熱。注がれた一杯に立ちのぼる泡が、この街の夜を<em>ひと呼吸ぶん</em>沸き立たせる。</p>
+          <div class="hero__actions">
+            <a class="cta" href="#tap">今夜の8タップを見る</a>
+            <a class="ghost" href="#brew">醸造の話</a>
+          </div>
+        </div>
+
+        <div class="hero__glass" aria-hidden="true">
+          <div class="glass" id="glass">
+            <svg class="glass__svg" viewBox="0 0 240 380" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <clipPath id="glassInner">
+                  <path d="M52 40 L188 40 L176 330 Q175 352 154 352 L86 352 Q65 352 64 330 Z"/>
+                </clipPath>
+                <linearGradient id="beerGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#F0A93E"/>
+                  <stop offset="0.55" stop-color="#E0812A"/>
+                  <stop offset="1" stop-color="#B5601A"/>
+                </linearGradient>
+                <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="rgba(255,255,255,0.16)"/>
+                  <stop offset="0.18" stop-color="rgba(255,255,255,0.02)"/>
+                  <stop offset="0.8" stop-color="rgba(255,255,255,0)"/>
+                  <stop offset="1" stop-color="rgba(255,255,255,0.10)"/>
+                </linearGradient>
+              </defs>
+              <!-- glass back -->
+              <path class="glass__body" d="M52 40 L188 40 L176 330 Q175 352 154 352 L86 352 Q65 352 64 330 Z"/>
+              <g clip-path="url(#glassInner)">
+                <!-- beer fill -->
+                <rect id="beerFill" x="40" y="352" width="160" height="360" fill="url(#beerGrad)"/>
+                <!-- foam -->
+                <g id="foam" opacity="0">
+                  <rect id="foamBand" x="40" y="120" width="160" height="26" fill="#F6EEDA"/>
+                  <ellipse cx="80" cy="120" rx="22" ry="15" fill="#F8F2E2"/>
+                  <ellipse cx="120" cy="115" rx="26" ry="17" fill="#FBF6EA"/>
+                  <ellipse cx="160" cy="121" rx="22" ry="15" fill="#F4EAD2"/>
+                  <ellipse cx="100" cy="124" rx="18" ry="12" fill="#FDFAF1"/>
+                  <ellipse cx="142" cy="124" rx="18" ry="12" fill="#F1E6CC"/>
+                </g>
+                <g id="bubbleLayer"></g>
+                <rect x="52" y="40" width="136" height="312" fill="url(#glassSheen)"/>
+              </g>
+              <!-- glass outline over everything -->
+              <path class="glass__rim" d="M52 40 L188 40 L176 330 Q175 352 154 352 L86 352 Q65 352 64 330 Z"/>
+              <line x1="52" y1="40" x2="188" y2="40" class="glass__lip"/>
+            </svg>
+            <div class="glass__pour" id="pour" aria-hidden="true"></div>
+          </div>
+          <p class="hero__scrubhint" id="scrubHint"><span class="dot"></span>スクロールして注ぐ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 物語 / 掴み -->
+  <section class="story" id="story" aria-labelledby="storyH">
+    <p class="kicker">EST. 2019 — 裏で醸し、表で注ぐ</p>
+    <h2 class="story__h" id="storyH">その日の樽が<br>空になるまで。</h2>
+    <div class="story__cols">
+      <p>カウンターの奥に、磨かれた鉄のタンクが四基。ここで仕込んだビールは、配送も貯蔵もされない。醸して、注いで、その夜に飲まれる。だから同じ味は二度と出ない。</p>
+      <p>私たちが売っているのは麦とホップの液体ではなく、<em>発酵という時間の、いちばん美味しい一点</em>だ。開栓の音、立ちのぼる泡、最初のひと口。全部が一度きりのできごとになる。</p>
+    </div>
+    <ul class="story__stats" aria-label="店の指標">
+      <li><span class="num" data-count="8">0</span><span class="lab">本日のタップ</span></li>
+      <li><span class="num" data-count="4">0</span><span class="lab">発酵タンク</span></li>
+      <li><span class="num" data-count="120" data-suffix="L">0</span><span class="lab">1バッチの量</span></li>
+      <li><span class="num" data-count="0" data-text="0m">0</span><span class="lab">樽からの距離</span></li>
+    </ul>
+  </section>
+
+  <!-- タップリスト / H1 液面充填 -->
+  <section class="tap" id="tap" aria-labelledby="tapH">
+    <div class="tap__head">
+      <p class="kicker">TODAY ON TAP — 本日のタップリスト</p>
+      <h2 id="tapH">今夜、注がれる八つ。</h2>
+      <p class="tap__note">グラスに触れると、その一杯の色が満ちます。数字は ABV（度数）と IBU（苦味）。</p>
+    </div>
+    <ul class="tap__list" role="list"></ul>
+  </section>
+
+  <!-- 醸造工程 / 信頼 -->
+  <section class="brew" id="brew" aria-labelledby="brewH">
+    <div class="brew__intro">
+      <p class="kicker">HOW WE BREW — 四つの手仕事</p>
+      <h2 id="brewH">麦が、夜になるまで。</h2>
+    </div>
+    <ol class="brew__steps" role="list">
+      <li class="brew__step">
+        <span class="brew__idx">01</span>
+        <h3>製麦・粉砕</h3>
+        <p>選んだ麦芽を、その日の狙いに合わせて挽く。粗さひとつで、甘みも色も変わる。</p>
+        <span class="brew__temp">malt</span>
+      </li>
+      <li class="brew__step">
+        <span class="brew__idx">02</span>
+        <h3>仕込み</h3>
+        <p>68℃前後の湯で糖を引き出し、煮沸釜でホップを放つ。厨房に麦の匂いが満ちる時間。</p>
+        <span class="brew__temp">68&deg;C</span>
+      </li>
+      <li class="brew__step">
+        <span class="brew__idx">03</span>
+        <h3>発酵</h3>
+        <p>酵母が糖を食べ、静かに泡を吐く。タンクの中で、麦は少しずつ夜の顔になる。</p>
+        <span class="brew__temp">14&ndash;20&deg;C</span>
+      </li>
+      <li class="brew__step">
+        <span class="brew__idx">04</span>
+        <h3>熟成・注ぐ</h3>
+        <p>数週間ねかせ、澄んだところでタップへ繋ぐ。冷えた鉄から、あなたのグラスへ最短距離。</p>
+        <span class="brew__temp">0m</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 店内 / 欲求 -->
+  <section class="room" id="room" aria-labelledby="roomH">
+    <div class="room__text">
+      <p class="kicker">THE TAPROOM — 鉄と、湯気と、人の声</p>
+      <h2 id="roomH">立ち飲みの、<br>ちょうどいい熱。</h2>
+      <p>むき出しのコンクリートに、鈍く光る四基のタンク。長いカウンターの端から端まで、知らない誰かと肩が触れる距離。椅子は少なく、会話は多い。</p>
+      <p>週末には、樽出しの限定を一本だけ開ける。並んだ人にしか飲めない、その夜かぎりの一杯。</p>
+      <div class="room__tags">
+        <span>#立ち飲み中心</span><span>#週末の樽出し</span><span>#ペアリング小皿</span><span>#テイクアウト量り売り</span>
+      </div>
+    </div>
+    <div class="room__art" aria-hidden="true">
+      <div class="tanks">
+        <div class="tank"><span></span></div>
+        <div class="tank"><span></span></div>
+        <div class="tank"><span></span></div>
+        <div class="tank"><span></span></div>
+        <div class="tanks__pipe"></div>
+        <div class="tanks__floor"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 訪れる / 行動 -->
+  <section class="visit" id="visit" aria-labelledby="visitH">
+    <div class="visit__card">
+      <p class="kicker">VISIT US — 今夜、空いています</p>
+      <h2 id="visitH">冷えた鉄から、<br>あなたのグラスへ。</h2>
+      <p class="visit__lead">満席になり次第、その日の受付は締めます。まずは席だけ、押さえておきませんか。</p>
+      <a class="cta cta--big" href="#visit">席を予約する</a>
+      <dl class="visit__info">
+        <div><dt>営業</dt><dd>火&ndash;日 17:00&ndash;24:00 <span>（月休・樽次第で早仕舞い）</span></dd></div>
+        <div><dt>場所</dt><dd>東京都 蔵前 三丁目 4-8 鉄骨ビル 1F</dd></div>
+        <div><dt>連絡</dt><dd>03-0000-0000 / hello@tetsu-mugi.jp</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="site-foot__brand">鉄と麦<span>IRON &amp; MALT — Brewery Taproom, Kuramae</span></div>
+  <nav class="site-foot__nav" aria-label="フッターナビゲーション">
+    <a href="#tap">タップリスト</a><a href="#brew">醸造</a><a href="#room">店内</a><a href="#visit">アクセス</a>
+  </nav>
+  <p class="site-foot__note">20歳未満の飲酒は法律で禁じられています。飲酒運転は絶対にしないでください。© 2026 鉄と麦</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

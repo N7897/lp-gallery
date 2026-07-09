@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>律 RITSU ｜ 機械式時計のアトリエ ― 時を刻む、機械の鼓動</title>
+<meta name="description" content="律 RITSU（りつ）は東京・京橋の機械式時計アトリエ。自動巻ムーブメントを一挺ずつ調整し、手首に宿す小さな宇宙を仕立てます。完全予約制。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Kaisei+Tokumin:wght@400;500;700&family=BIZ+UDPGothic:wght@400;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="律 RITSU トップへ">
+      <span class="brand-mark" aria-hidden="true">律</span>
+      <span class="brand-name">RITSU</span>
+    </a>
+    <nav class="nav" aria-label="主要ナビゲーション">
+      <a href="#collection">コレクション</a>
+      <a href="#mechanism">機構</a>
+      <a href="#atelier">工房</a>
+      <a href="#care">保証</a>
+    </nav>
+    <a href="#visit" class="btn btn-header">来店予約</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO : 生きているムーブメント -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tick" aria-hidden="true"></span>東京・京橋 ／ 機械式時計アトリエ</p>
+        <h1 id="hero-title" class="hero-title">
+          <span class="line jp">時を、</span>
+          <span class="line jp">刻む。</span>
+        </h1>
+        <p class="hero-lead">
+          電池ではなく、ゼンマイの張力で動く。<br>
+          テンプは毎秒八度、静かに息をする。<br>
+          手首に宿す、小さな宇宙を。
+        </p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn btn-primary">コレクションを見る</a>
+          <a href="#mechanism" class="btn btn-ghost">機構を知る</a>
+        </div>
+        <dl class="hero-meta" aria-label="基準スペック">
+          <div><dt>振動数</dt><dd><span class="num">28,800</span> <small>振動/時</small></dd></div>
+          <div><dt>パワーリザーブ</dt><dd><span class="num">70</span> <small>時間</small></dd></div>
+          <div><dt>調整</dt><dd>自社 <small>一挺ずつ</small></dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-stage">
+        <figure class="movement-figure" aria-label="機械式時計のムーブメント。テンプが左右に振動し、歯車がかみ合って回転している様子。">
+          <svg id="movement" class="movement" viewBox="0 0 520 520" role="img" aria-hidden="true">
+            <!-- fallback baseline (JSが動かない場合の静的エンブレム) -->
+            <g id="mv-fallback">
+              <circle cx="260" cy="260" r="232" class="mv-ring"/>
+              <circle cx="260" cy="260" r="196" class="mv-ring thin"/>
+              <text x="260" y="286" text-anchor="middle" class="mv-emblem">律</text>
+            </g>
+          </svg>
+          <figcaption class="movement-cap"><span class="beat-dot" aria-hidden="true"></span>Cal. R-28 ／ 自動巻ムーブメント</figcaption>
+        </figure>
+      </div>
+    </div>
+    <a href="#collection" class="scroll-cue" aria-hidden="true"><span>SCROLL</span><i></i></a>
+  </section>
+
+  <!-- PINNED DIAL SCRUB : 12時間のコレクション -->
+  <section class="dial-scroll" id="collection" aria-labelledby="dial-title">
+    <div class="dial-sticky">
+      <div class="wrap dial-grid">
+        <div class="dial-visual">
+          <p class="section-index"><span>01</span> ／ 時計盤を、めぐる</p>
+          <h2 id="dial-title" class="section-title jp">針の進むさきに、<br>次の一挺。</h2>
+          <div class="dial-wrap">
+            <svg id="dial" class="dial" viewBox="0 0 400 400" role="img" aria-label="アナログ時計盤。スクロールに合わせて針が一周し、時刻ごとにコレクションが現れます。">
+              <circle cx="200" cy="200" r="188" class="dial-face"/>
+              <circle cx="200" cy="200" r="188" class="dial-rim"/>
+              <g id="dial-ticks"></g>
+              <g id="dial-hands">
+                <line id="hand-hour" x1="200" y1="200" x2="200" y2="118" class="hand hour"/>
+                <line id="hand-min" x1="200" y1="200" x2="200" y2="66" class="hand min"/>
+                <line id="hand-sec" x1="200" y1="222" x2="200" y2="58" class="hand sec"/>
+                <circle cx="200" cy="200" r="8" class="hand-cap"/>
+                <circle cx="200" cy="200" r="3" class="hand-pin"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <ol class="dial-cards" aria-label="時刻でめぐるコレクション">
+          <li class="dcard is-active" data-at="0">
+            <p class="dcard-time"><span class="num">II</span></p>
+            <h3>暁 <span>AKATSUKI</span></h3>
+            <p class="dcard-desc">夜明けの空を映すグラデーション文字盤。三針の潔さ。はじめての一挺に。</p>
+            <p class="dcard-spec"><span>自動巻</span><span>径 38.5mm</span><span>¥298,000</span></p>
+          </li>
+          <li class="dcard" data-at="1">
+            <p class="dcard-time"><span class="num">V</span></p>
+            <h3>潮 <span>SHIO</span></h3>
+            <p class="dcard-desc">二つの時間を持ち歩く GMT。旅の空でも、もう一つの街を離さない。</p>
+            <p class="dcard-spec"><span>GMT 自動巻</span><span>径 40mm</span><span>¥368,000</span></p>
+          </li>
+          <li class="dcard" data-at="2">
+            <p class="dcard-time"><span class="num">VIII</span></p>
+            <h3>静 <span>SEI</span></h3>
+            <p class="dcard-desc">スモールセコンドの手巻。巻く時間さえ愉しみに変える、静けさの設計。</p>
+            <p class="dcard-spec"><span>手巻</span><span>径 37mm</span><span>¥248,000</span></p>
+          </li>
+          <li class="dcard" data-at="3">
+            <p class="dcard-time"><span class="num">XI</span></p>
+            <h3>月虹 <span>GEKKŌ</span></h3>
+            <p class="dcard-desc">六時位置に満ち欠ける月。夜のために仕立てた、ムーンフェイズの静謐。</p>
+            <p class="dcard-spec"><span>ムーンフェイズ</span><span>径 38.5mm</span><span>¥420,000</span></p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION BENTO : tilt cards (H9) -->
+  <section class="gallery" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <header class="gallery-head">
+        <p class="section-index"><span>02</span> ／ すべての一挺</p>
+        <h2 id="gallery-title" class="section-title jp">光を受けて、<br>はじめて完成する。</h2>
+        <p class="section-note">文字盤に指を近づけると、盤面が傾き、サファイアが光を返します。</p>
+      </header>
+      <div class="bento" id="bento">
+        <article class="piece tilt" tabindex="0" data-face="dawn">
+          <div class="piece-watch" aria-hidden="true">
+            <span class="pw-case"></span><span class="pw-glass"></span>
+            <span class="pw-hand h"></span><span class="pw-hand m"></span><span class="pw-pin"></span>
+          </div>
+          <div class="piece-info">
+            <h3>暁 <em>AKATSUKI</em></h3>
+            <p>夜明けを閉じ込めた三針。</p>
+            <p class="piece-meta"><span>Ref. R-01</span><span>¥298,000</span></p>
+          </div>
+        </article>
+        <article class="piece tilt wide" tabindex="0" data-face="skeleton">
+          <div class="piece-watch" aria-hidden="true">
+            <span class="pw-case"></span><span class="pw-glass"></span>
+            <span class="pw-open"></span>
+            <span class="pw-hand h"></span><span class="pw-hand m"></span><span class="pw-pin"></span>
+          </div>
+          <div class="piece-info">
+            <h3>律 <em>RITSU 01</em></h3>
+            <p>心臓を見せる、オープンハート。テンプの律動を、盤面ごしに。</p>
+            <p class="piece-meta"><span>Ref. R-00</span><span>¥480,000</span></p>
+          </div>
+        </article>
+        <article class="piece tilt" tabindex="0" data-face="tide">
+          <div class="piece-watch" aria-hidden="true">
+            <span class="pw-case"></span><span class="pw-glass"></span>
+            <span class="pw-hand h"></span><span class="pw-hand m"></span><span class="pw-hand g"></span><span class="pw-pin"></span>
+          </div>
+          <div class="piece-info">
+            <h3>潮 <em>SHIO</em></h3>
+            <p>二つの時間を、ひとつの手首に。</p>
+            <p class="piece-meta"><span>Ref. R-02</span><span>¥368,000</span></p>
+          </div>
+        </article>
+        <article class="piece tilt" tabindex="0" data-face="still">
+          <div class="piece-watch" aria-hidden="true">
+            <span class="pw-case"></span><span class="pw-glass"></span>
+            <span class="pw-hand h"></span><span class="pw-hand m"></span><span class="pw-sub"></span><span class="pw-pin"></span>
+          </div>
+          <div class="piece-info">
+            <h3>静 <em>SEI</em></h3>
+            <p>手で巻く、静けさの時間。</p>
+            <p class="piece-meta"><span>Ref. R-03</span><span>¥248,000</span></p>
+          </div>
+        </article>
+        <article class="piece tilt wide" tabindex="0" data-face="moon">
+          <div class="piece-watch" aria-hidden="true">
+            <span class="pw-case"></span><span class="pw-glass"></span>
+            <span class="pw-moon"></span>
+            <span class="pw-hand h"></span><span class="pw-hand m"></span><span class="pw-pin"></span>
+          </div>
+          <div class="piece-info">
+            <h3>月虹 <em>GEKKŌ</em></h3>
+            <p>六時に昇る月。夜を待つための、ムーンフェイズ。</p>
+            <p class="piece-meta"><span>Ref. R-04</span><span>¥420,000</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MECHANISM : mono spec + live escapement -->
+  <section class="mechanism" id="mechanism" aria-labelledby="mech-title">
+    <div class="wrap mech-grid">
+      <div class="mech-copy">
+        <p class="section-index"><span>03</span> ／ 機構</p>
+        <h2 id="mech-title" class="section-title jp">数字は、<br>沈黙の約束。</h2>
+        <p class="mech-lead">
+          誇張はしません。日差はありのまま、精度は測って記す。
+          一挺ずつ、東京の工房で姿勢差を追い込み、規定に収めてから箱に入れます。
+        </p>
+        <dl class="spec">
+          <div><dt>振動数</dt><dd><span class="num">28,800</span> 振動/時（4Hz）</dd></div>
+          <div><dt>石数</dt><dd><span class="num">27</span> 石</dd></div>
+          <div><dt>パワーリザーブ</dt><dd><span class="num">70</span> 時間</dd></div>
+          <div><dt>日差</dt><dd><span class="num">−5 〜 +8</span> 秒／日</dd></div>
+          <div><dt>防水</dt><dd><span class="num">100</span> m（10気圧）</dd></div>
+          <div><dt>風防</dt><dd>ボックス型サファイア（無反射）</dd></div>
+          <div><dt>ケース</dt><dd>316L ステンレススチール</dd></div>
+          <div><dt>ムーブメント</dt><dd>Cal. R-28 自動巻（自社調整）</dd></div>
+        </dl>
+      </div>
+      <div class="mech-visual" aria-hidden="true">
+        <svg id="escape" class="escape" viewBox="0 0 320 320" role="img" aria-label="脱進機の模式図。ガンギ車が一歯ずつ送られ、テンプが振動する。">
+          <circle cx="160" cy="160" r="150" class="esc-ring"/>
+          <g id="esc-parts"></g>
+        </svg>
+        <p class="escape-cap"><span class="beat-dot" aria-hidden="true"></span>脱進機 ／ 一秒に八度の刻み</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATELIER : editorial essay -->
+  <section class="atelier" id="atelier" aria-labelledby="atelier-title">
+    <div class="wrap atelier-inner">
+      <p class="section-index"><span>04</span> ／ 工房</p>
+      <h2 id="atelier-title" class="section-title jp big">一挺に、<br>ひとりの時計師。</h2>
+      <div class="atelier-body">
+        <p>
+          京橋の路地、三階の窓。北向きのやわらかな光の下で、時計師は
+          ピンセットを持ち替えます。テンプの受けを一度きり緩め、姿勢を変えて
+          日差を追い込む。急がず、けれど、決して見逃さない。
+        </p>
+        <p>
+          機械式時計は、いつか必ず止まります。止まるからこそ、また巻き、
+          また動き出す。持ち主の時間に寄り添って、少しずつ癖を覚えていく。
+          十年、二十年と使ううちに、それはもう「あなたの時計」になる。
+        </p>
+        <p class="atelier-sign">— 律 主宰時計師　<span>三石 律</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARE : trust / overhaul -->
+  <section class="care" id="care" aria-labelledby="care-title">
+    <div class="wrap">
+      <header class="care-head">
+        <p class="section-index"><span>05</span> ／ 永く使うために</p>
+        <h2 id="care-title" class="section-title jp">買った日から、<br>付き合いが始まる。</h2>
+      </header>
+      <div class="care-grid">
+        <article class="care-card">
+          <p class="care-num">5<small>年</small></p>
+          <h3>国際保証</h3>
+          <p>ご購入日より五年間、通常使用における不具合を無償で調整・修理します。</p>
+        </article>
+        <article class="care-card">
+          <p class="care-num">4–5<small>年ごと</small></p>
+          <h3>オーバーホール</h3>
+          <p>分解・洗浄・注油・精度調整の一式。工房で受け付け、状態を写真でご報告します。</p>
+        </article>
+        <article class="care-card">
+          <p class="care-num">永年<small></small></p>
+          <h3>アフターケア</h3>
+          <p>ベルト交換、電池不要ゆえの再稼働、経年の相談まで。一生の伴走を前提に。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT / CTA -->
+  <section class="visit" id="visit" aria-labelledby="visit-title">
+    <div class="wrap visit-inner">
+      <div class="visit-copy">
+        <p class="section-index"><span>06</span> ／ 来店予約</p>
+        <h2 id="visit-title" class="section-title jp">手首に、<br>のせてみる。</h2>
+        <p class="visit-lead">
+          完全予約制のアトリエです。まずは腕にのせ、重さと針の走りを確かめてください。
+          オンラインでのご相談も承ります。
+        </p>
+        <dl class="visit-info">
+          <div><dt>所在</dt><dd>東京都中央区京橋二丁目（詳細は予約時にご案内）</dd></div>
+          <div><dt>営業</dt><dd>12:00 – 19:00 ／ 水曜定休</dd></div>
+          <div><dt>予約</dt><dd class="mono">03-0000-0000</dd></div>
+        </dl>
+      </div>
+      <form class="visit-form" aria-label="来店予約フォーム" novalidate>
+        <div class="field">
+          <label for="v-name">お名前</label>
+          <input id="v-name" name="name" type="text" autocomplete="name" placeholder="律 太郎">
+        </div>
+        <div class="field">
+          <label for="v-mail">メールアドレス</label>
+          <input id="v-mail" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="v-when">ご希望日</label>
+          <input id="v-when" name="when" type="date">
+        </div>
+        <div class="field">
+          <label for="v-model">気になる一挺</label>
+          <select id="v-model" name="model">
+            <option value="">選ばない（相談したい）</option>
+            <option>暁 AKATSUKI</option>
+            <option>潮 SHIO</option>
+            <option>静 SEI</option>
+            <option>月虹 GEKKŌ</option>
+            <option>律 RITSU 01</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">予約を申し込む</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite">送信は確定ではありません。折り返し日時を調整します。</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark small" aria-hidden="true">律</span>
+      <p>律 RITSU ／ 機械式時計アトリエ<br><small>東京・京橋 ｜ 完全予約制</small></p>
+    </div>
+    <nav class="footer-nav" aria-label="フッターナビ">
+      <a href="#collection">コレクション</a>
+      <a href="#mechanism">機構</a>
+      <a href="#atelier">工房</a>
+      <a href="#care">保証</a>
+      <a href="#visit">来店予約</a>
+    </nav>
+    <p class="copyright"><small>© 2026 RITSU Atelier. 掲載の価格・仕様は税込・架空の設定を含みます。</small></p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

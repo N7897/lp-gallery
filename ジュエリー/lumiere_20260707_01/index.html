@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LUMIÈRE — 一粒の光を、あなたへ。</title>
+<meta name="description" content="LUMIÈRE（リュミエール）は、一粒石の輝きを最大に引き出すファインジュエリー。倫理的に調達した石と、東京のアトリエによる手仕事。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<canvas id="gem" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <span class="loader__mark">LUMIÈRE</span>
+  <span class="loader__line"><i></i></span>
+</div>
+
+<header class="nav" id="nav">
+  <a href="#s1" class="nav__brand" data-cursor>LUMIÈRE</a>
+  <nav class="nav__links" aria-label="メイン">
+    <a href="#s3" data-cursor>Collection</a>
+    <a href="#s4" data-cursor>Quality</a>
+    <a href="#s5" data-cursor>Atelier</a>
+    <a href="#s7" data-cursor>Visit</a>
+  </nav>
+  <a href="#s7" class="nav__cta" data-cursor>来店予約</a>
+  <button class="burger" id="burger" aria-label="メニュー" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <a href="#s3">Collection</a>
+  <a href="#s4">Quality</a>
+  <a href="#s5">Atelier</a>
+  <a href="#s7">来店予約</a>
+</div>
+
+<nav class="dots" id="dots" aria-label="セクション">
+  <a href="#s1" data-cursor aria-label="Intro"></a>
+  <a href="#s2" data-cursor aria-label="Story"></a>
+  <a href="#s3" data-cursor aria-label="Collection"></a>
+  <a href="#s4" data-cursor aria-label="Quality"></a>
+  <a href="#s5" data-cursor aria-label="Atelier"></a>
+  <a href="#s6" data-cursor aria-label="Voice"></a>
+  <a href="#s7" data-cursor aria-label="Visit"></a>
+</nav>
+
+<main id="scroller">
+  <!-- 1 HERO / GEM STAGE -->
+  <section class="panel hero" id="s1">
+    <span class="hero__eyebrow" data-fade>FINE JEWELRY · TOKYO</span>
+    <h1 class="hero__title" data-fade>
+      <span>一粒の光を、</span>
+      <span class="it">あなたへ。</span>
+    </h1>
+    <p class="hero__sub" data-fade>石そのものの輝きを、極限まで引き出す。</p>
+    <a href="#s2" class="scroll-cue" data-cursor data-fade><span>scroll</span><i></i></a>
+  </section>
+
+  <!-- 2 STORY / MANIFESTO -->
+  <section class="panel story" id="s2">
+    <div class="story__inner">
+      <span class="eyebrow" data-fade>Our Belief</span>
+      <p class="story__lead" data-fade>
+        装飾を削ぎ、<span class="it">石と光だけ</span>を残す。<br />
+        余白は、輝きのための沈黙です。
+      </p>
+      <p class="story__body" data-fade>
+        LUMIÈRE は、過剰を足さないという選択から生まれました。ひとつの石が最も美しく見える角度を探し、地金は最小限に。手にした瞬間の静かな昂ぶりを、長く連れ添える一生の一点へ。
+      </p>
+    </div>
+  </section>
+
+  <!-- 3 COLLECTION -->
+  <section class="panel collection" id="s3">
+    <div class="sec-head" data-fade>
+      <span class="eyebrow">Signature Collection</span>
+      <h2>三つの、<span class="it">静けさ</span>。</h2>
+    </div>
+    <div class="pieces">
+      <article class="piece" data-fade data-cursor>
+        <div class="piece__gem g-solitaire"></div>
+        <h3>Solitaire</h3>
+        <p>一粒石の王道。爪を細く、石を高く。光の通り道を最大化した定番。</p>
+        <span class="piece__price">¥240,000〜</span>
+      </article>
+      <article class="piece" data-fade data-cursor>
+        <div class="piece__gem g-halo"></div>
+        <h3>Halo</h3>
+        <p>中心石を小粒の光で囲む。夜の灯りに、もっとも映える一点。</p>
+        <span class="piece__price">¥320,000〜</span>
+      </article>
+      <article class="piece" data-fade data-cursor>
+        <div class="piece__gem g-line"></div>
+        <h3>Ligne</h3>
+        <p>一直線に石を連ねたエタニティ。日常に、途切れない光を。</p>
+        <span class="piece__price">¥180,000〜</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4 QUALITY / 4C -->
+  <section class="panel quality" id="s4">
+    <div class="sec-head" data-fade>
+      <span class="eyebrow">The Standard</span>
+      <h2>光を決める、<span class="it">四つの基準</span>。</h2>
+    </div>
+    <ul class="fourc">
+      <li data-fade><span class="fourc__k">01</span><h3>Cut</h3><p>輝きの9割はカット。理想比率のみを厳選します。</p></li>
+      <li data-fade><span class="fourc__k">02</span><h3>Color</h3><p>無色に近いほど希少。Dから始まる上位のみ。</p></li>
+      <li data-fade><span class="fourc__k">03</span><h3>Clarity</h3><p>内包物の少なさ。肉眼で澄んで見える等級を基準に。</p></li>
+      <li data-fade><span class="fourc__k">04</span><h3>Carat</h3><p>大きさは最後。まず質、それから重さを選びます。</p></li>
+    </ul>
+    <p class="quality__note" data-fade>すべての石は鑑定機関の証明書付き。産地の透明性にも配慮しています。</p>
+  </section>
+
+  <!-- 5 ATELIER -->
+  <section class="panel atelier" id="s5">
+    <div class="atelier__inner">
+      <span class="eyebrow" data-fade>Atelier</span>
+      <h2 data-fade>東京の小さな工房で、<br /><span class="it">一点ずつ</span>。</h2>
+      <p data-fade>職人がワックスから原型を彫り、石を留め、磨き上げる。機械では出せない、手の跡のない滑らかさ。仕上げに一週間、あなたの一点だけに時間をかけます。</p>
+      <div class="atelier__stats">
+        <div data-fade><b data-count="30">0</b><span>年の経験</span></div>
+        <div data-fade><b data-count="7">0</b><span>日の仕上げ</span></div>
+        <div data-fade><b data-count="1">0</b><span>点ずつ手作り</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 VOICE -->
+  <section class="panel voice" id="s6">
+    <blockquote data-fade>
+      <p>「派手さはないのに、ずっと見ていられる。<span class="it">石が呼吸している</span>みたいだと言われました。」</p>
+      <cite>— 婚約指輪をお求めのお客様</cite>
+    </blockquote>
+  </section>
+
+  <!-- 7 VISIT / CTA -->
+  <section class="panel visit" id="s7">
+    <div class="visit__inner" data-fade>
+      <span class="eyebrow">Private Appointment</span>
+      <h2>光を、<span class="it">その目で</span>。</h2>
+      <p>アトリエでの個別予約制。石選びから、ゆっくりとご相談ください。</p>
+      <a href="#" class="btn" data-cursor data-magnetic>来店を予約する<i>→</i></a>
+      <dl class="visit__info">
+        <div><dt>Atelier</dt><dd>東京都中央区銀座 6-x-x</dd></div>
+        <div><dt>Hours</dt><dd>12:00–19:00 / 完全予約制</dd></div>
+        <div><dt>Contact</dt><dd>salon@lumiere-jewel.jp</dd></div>
+      </dl>
+    </div>
+    <footer class="foot">
+      <span>© 2026 LUMIÈRE Fine Jewelry</span>
+      <span>Ethically sourced · Handcrafted in Tokyo</span>
+    </footer>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

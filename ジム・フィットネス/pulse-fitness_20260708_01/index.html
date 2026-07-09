@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PULSE ── ブティックジム ｜ 重さは、進むための燃料だ。</title>
+<meta name="description" content="PULSE（パルス）は、テンポで追い込むブティックジム。今日の自分を1レップ超える高揚を、45分のクラスに。HIIT・ストレングス・コンディショニング・モビリティ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="PULSE ホーム">PULSE<i aria-hidden="true"></i></a>
+  <nav class="nav__links" aria-label="主要導線">
+    <a href="#programs">プログラム</a>
+    <a href="#numbers">数字</a>
+    <a href="#coaches">コーチ</a>
+    <a href="#plans">料金</a>
+  </nav>
+  <a class="nav__cta" href="#trial">体験予約</a>
+</header>
+
+<main id="main">
+
+  <!-- HERO : kinetic type -->
+  <section class="hero" id="top" aria-label="PULSE ヒーロー">
+    <div class="hero__bg" aria-hidden="true">
+      <span class="orb orb--1"></span>
+      <span class="orb orb--2"></span>
+      <div class="hero__scan"></div>
+    </div>
+
+    <p class="hero__eyebrow"><span>BOUTIQUE&nbsp;STRENGTH&nbsp;STUDIO</span><span>中目黒</span></p>
+
+    <h1 class="hero__title">
+      <span class="kine" data-kine>
+        <span class="kine__echo" aria-hidden="true">PULSE</span>
+        <span class="kine__main">PULSE</span>
+      </span>
+    </h1>
+    <p class="hero__ja" data-reveal>重さは、<br>進むための<em>燃料</em>だ。</p>
+    <p class="hero__lede" data-reveal>45分。心拍を上げて、テンポで追い込む。<br>今日の自分を、たった1レップだけ超えにいく。</p>
+
+    <div class="hero__actions" data-reveal>
+      <a class="btn btn--primary magnetic" data-magnetic href="#trial">無料体験に申し込む</a>
+      <a class="btn btn--ghost" href="#programs">プログラムを見る</a>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true"><span>SCROLL</span><i></i></div>
+  </section>
+
+  <!-- KINETIC BAND (B7) -->
+  <div class="band" aria-hidden="true">
+    <div class="band__row" data-band>
+      <span>STRENGTH</span><span class="band__dot">●</span><span>HIIT</span><span class="band__dot">●</span><span>CONDITIONING</span><span class="band__dot">●</span><span>MOBILITY</span><span class="band__dot">●</span><span>MOMENTUM</span><span class="band__dot">●</span><span>STRENGTH</span><span class="band__dot">●</span><span>HIIT</span><span class="band__dot">●</span><span>CONDITIONING</span><span class="band__dot">●</span><span>MOBILITY</span><span class="band__dot">●</span><span>MOMENTUM</span><span class="band__dot">●</span>
+    </div>
+  </div>
+
+  <!-- MANIFESTO -->
+  <section class="mani" id="mani" aria-labelledby="mani-h">
+    <p class="sec__idx">01 / MANIFESTO</p>
+    <h2 class="mani__h" id="mani-h" data-reveal>
+      <span data-line>続かないのは、</span>
+      <span data-line>意志が弱いからじゃない。</span>
+      <span data-line class="mani__accent">勢いを、設計していないだけだ。</span>
+    </h2>
+    <p class="mani__body" data-reveal>PULSEは、根性論のジムではありません。心拍・重量・テンポを数字で可視化し、45分ごとに「昨日を超えた」を積み上げる設計。勢い（モメンタム）は才能ではなく、仕組みでつくれる。私たちはそれを、毎クラスで証明します。</p>
+  </section>
+
+  <!-- PROGRAMS : tile dashboard (H2) -->
+  <section class="prog" id="programs" aria-labelledby="prog-h">
+    <div class="prog__head">
+      <p class="sec__idx">02 / PROGRAMS</p>
+      <h2 class="prog__h" id="prog-h" data-reveal>4つの、追い込み方。</h2>
+      <div class="prog__tabs" role="tablist" aria-label="プログラムの絞り込み">
+        <button class="tab is-active" role="tab" aria-selected="true" data-filter="all">すべて</button>
+        <button class="tab" role="tab" aria-selected="false" data-filter="burn">脂肪燃焼</button>
+        <button class="tab" role="tab" aria-selected="false" data-filter="build">筋力</button>
+        <button class="tab" role="tab" aria-selected="false" data-filter="move">可動性</button>
+      </div>
+    </div>
+
+    <ul class="prog__grid">
+      <li class="card" data-cat="burn build" data-reveal>
+        <div class="card__no">01</div>
+        <h3 class="card__title">HIIT<span>ハイインテンシティ</span></h3>
+        <p class="card__desc">20秒追い込み／10秒休息。心拍を天井まで押し上げ、終わった後も燃え続ける身体に。</p>
+        <dl class="card__meta"><div><dt>時間</dt><dd>45min</dd></div><div><dt>強度</dt><dd>★★★★★</dd></div><div><dt>消費</dt><dd>~600kcal</dd></div></dl>
+      </li>
+      <li class="card" data-cat="build" data-reveal>
+        <div class="card__no">02</div>
+        <h3 class="card__title">STRENGTH<span>ストレングス</span></h3>
+        <p class="card__desc">バーベルとダンベルで土台をつくる。重量を数字で管理し、毎週わずかずつ更新する。</p>
+        <dl class="card__meta"><div><dt>時間</dt><dd>50min</dd></div><div><dt>強度</dt><dd>★★★★☆</dd></div><div><dt>消費</dt><dd>~450kcal</dd></div></dl>
+      </li>
+      <li class="card" data-cat="burn move" data-reveal>
+        <div class="card__no">03</div>
+        <h3 class="card__title">CONDITIONING<span>コンディショニング</span></h3>
+        <p class="card__desc">ローイング・スキップ・ケトルベル。心肺と全身の連動を、テンポよく鍛える回路型。</p>
+        <dl class="card__meta"><div><dt>時間</dt><dd>45min</dd></div><div><dt>強度</dt><dd>★★★★☆</dd></div><div><dt>消費</dt><dd>~520kcal</dd></div></dl>
+      </li>
+      <li class="card" data-cat="move" data-reveal>
+        <div class="card__no">04</div>
+        <h3 class="card__title">MOBILITY<span>モビリティ</span></h3>
+        <p class="card__desc">股関節・肩・背骨をほどく。追い込む日のためのリカバリー。可動域が、記録を伸ばす。</p>
+        <dl class="card__meta"><div><dt>時間</dt><dd>40min</dd></div><div><dt>強度</dt><dd>★★☆☆☆</dd></div><div><dt>消費</dt><dd>~250kcal</dd></div></dl>
+      </li>
+    </ul>
+  </section>
+
+  <!-- NUMBERS : KPI counters -->
+  <section class="nums" id="numbers" aria-labelledby="nums-h">
+    <h2 class="visually-hidden" id="nums-h">PULSEの数字</h2>
+    <ul class="nums__grid">
+      <li class="num" data-reveal><span class="num__v"><i data-count="92" data-suffix="%">0</i></span><span class="num__k">3ヶ月継続率</span></li>
+      <li class="num" data-reveal><span class="num__v"><i data-count="45" data-suffix="min">0</i></span><span class="num__k">1クラスの長さ</span></li>
+      <li class="num" data-reveal><span class="num__v"><i data-count="60" data-suffix="+">0</i></span><span class="num__k">週あたりクラス数</span></li>
+      <li class="num" data-reveal><span class="num__v"><i data-count="12" data-suffix="名">0</i></span><span class="num__k">定員（少人数制）</span></li>
+    </ul>
+  </section>
+
+  <!-- COACHES -->
+  <section class="coach" id="coaches" aria-labelledby="coach-h">
+    <div class="coach__head">
+      <p class="sec__idx">03 / COACHES</p>
+      <h2 class="coach__h" id="coach-h" data-reveal>数字を、<br>隣で読む人。</h2>
+    </div>
+    <ul class="coach__list">
+      <li class="coach__card" data-reveal>
+        <div class="coach__ph" aria-hidden="true" data-initial="R"></div>
+        <h3>涼 <span>RYO</span></h3>
+        <p class="coach__role">ヘッドコーチ／ストレングス</p>
+        <p class="coach__bio">元陸上短距離。爆発力とフォームの再現性を叩き込む、PULSEの心拍計。</p>
+      </li>
+      <li class="coach__card" data-reveal>
+        <div class="coach__ph" aria-hidden="true" data-initial="M"></div>
+        <h3>茉奈 <span>MANA</span></h3>
+        <p class="coach__role">コンディショニング／モビリティ</p>
+        <p class="coach__bio">理学療法士。追い込みと回復のさじ加減を、身体の声から翻訳する。</p>
+      </li>
+      <li class="coach__card" data-reveal>
+        <div class="coach__ph" aria-hidden="true" data-initial="K"></div>
+        <h3>慶 <span>KEI</span></h3>
+        <p class="coach__role">HIIT／プログラム設計</p>
+        <p class="coach__bio">データオタクのトレーナー。あなたの記録を、次の45分に変換する。</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PLANS -->
+  <section class="plans" id="plans" aria-labelledby="plans-h">
+    <div class="plans__head">
+      <p class="sec__idx sec__idx--dark">04 / MEMBERSHIP</p>
+      <h2 class="plans__h" id="plans-h" data-reveal>通うほど、<br>軽くなる。</h2>
+    </div>
+    <ul class="plans__grid">
+      <li class="plan" data-reveal>
+        <p class="plan__name">DROP-IN</p>
+        <p class="plan__price"><span class="plan__cur">¥</span>3,800<span class="plan__per">/回</span></p>
+        <ul class="plan__feat"><li>全プログラム参加可</li><li>シューズ・タオル込み</li><li>予約は前日まで</li></ul>
+        <a class="btn btn--ghost" href="#trial">この回だけ試す</a>
+      </li>
+      <li class="plan plan--hot" data-reveal>
+        <p class="plan__badge">人気</p>
+        <p class="plan__name">MOMENTUM</p>
+        <p class="plan__price"><span class="plan__cur">¥</span>16,800<span class="plan__per">/月</span></p>
+        <ul class="plan__feat"><li>月8回・繰越OK</li><li>心拍レポート毎月配信</li><li>プロテイン1杯無料</li><li>予約優先枠</li></ul>
+        <a class="btn btn--primary" href="#trial">これで始める</a>
+      </li>
+      <li class="plan" data-reveal>
+        <p class="plan__name">UNLIMITED</p>
+        <p class="plan__price"><span class="plan__cur">¥</span>24,800<span class="plan__per">/月</span></p>
+        <ul class="plan__feat"><li>通い放題</li><li>個別フォーム診断 月1</li><li>ゲスト同伴 月1回</li></ul>
+        <a class="btn btn--ghost" href="#trial">上限なしで</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- TRIAL / CTA -->
+  <section class="trial" id="trial" aria-labelledby="trial-h">
+    <div class="trial__bg" aria-hidden="true"><span class="orb orb--3"></span></div>
+    <p class="trial__eyebrow">FIRST&nbsp;CLASS&nbsp;FREE</p>
+    <h2 class="trial__h" id="trial-h" data-reveal>最初の45分は、<br>ぜんぶ無料。</h2>
+    <p class="trial__lede">シューズもタオルも、こちらで用意します。<br>手ぶらで来て、心拍だけ置いていってください。</p>
+    <div class="trial__actions">
+      <a class="btn btn--primary btn--lg magnetic" data-magnetic href="#">無料体験を予約する</a>
+      <a class="btn btn--ghost btn--lg" href="#">LINEで相談する</a>
+    </div>
+    <p class="trial__tel">中目黒駅 徒歩4分 ／ 平日 7:00–22:30 ・ 土日 8:00–19:00</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__brand">PULSE<i aria-hidden="true"></i></div>
+  <div class="foot__cols">
+    <nav aria-label="フッター導線"><a href="#programs">プログラム</a><a href="#coaches">コーチ</a><a href="#plans">料金</a><a href="#trial">体験</a></nav>
+    <p class="foot__addr">東京都目黒区上目黒 2-4-x ／ 中目黒 PULSE STUDIO</p>
+  </div>
+  <p class="foot__copy">© 2026 PULSE boutique strength studio. Nakameguro, Tokyo.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

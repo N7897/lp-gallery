@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鼓動 KODŌ ｜ 中目黒のブティック・ストレングススタジオ</title>
+<meta name="description" content="静から、動へ。眠っていた鼓動を呼び覚ますブティック・ストレングススタジオ。計測・追い込み・回復の三位一体メソッドで、あなたの身体を研ぎ澄ます。中目黒・無料体験受付中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&family=IBM+Plex+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#hero" aria-label="鼓動 KODŌ ホーム">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 40 24" width="40" height="24"><path d="M0 12 H8 L11 12 L13 3 L17 21 L21 8 L24 15 L27 12 H40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="brand__name">鼓動<span class="brand__latin">KODŌ</span></span>
+  </a>
+  <nav class="site-nav" aria-label="メインナビゲーション">
+    <a href="#method">メソッド</a>
+    <a href="#programs">プログラム</a>
+    <a href="#stats">実績</a>
+    <a href="#membership">料金</a>
+    <a href="#access">アクセス</a>
+  </nav>
+  <a class="btn btn--pill" href="#access">無料体験を予約</a>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="メニューを開く">
+    <span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="モバイルナビゲーション" hidden>
+  <a href="#method">メソッド</a>
+  <a href="#programs">プログラム</a>
+  <a href="#stats">実績</a>
+  <a href="#membership">料金</a>
+  <a href="#access">アクセス</a>
+  <a class="btn btn--pill" href="#access">無料体験を予約</a>
+</nav>
+
+<div class="pulse-rail" aria-hidden="true">
+  <svg class="pulse-rail__svg" viewBox="0 0 8 1000" preserveAspectRatio="none">
+    <line x1="4" y1="0" x2="4" y2="1000" class="pulse-rail__track"/>
+    <line x1="4" y1="0" x2="4" y2="1000" class="pulse-rail__fill" id="railFill"/>
+  </svg>
+  <span class="pulse-rail__dot" id="railDot"></span>
+</div>
+
+<main id="main">
+
+  <section class="hero" id="hero">
+    <div class="hero__ecg" aria-hidden="true">
+      <svg viewBox="0 0 1200 260" preserveAspectRatio="xMidYMid meet">
+        <path id="ecgPath" d="M0 130 H240 L268 130 L286 62 L312 200 L338 96 L360 150 L384 130 H560 L588 130 L606 40 L634 224 L660 96 L682 150 L706 130 H900 L928 130 L946 70 L974 196 L1000 100 L1022 150 L1046 130 H1200" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="hero__inner">
+      <p class="eyebrow"><span class="eyebrow__pip"></span>BOUTIQUE STRENGTH STUDIO — 中目黒</p>
+      <h1 class="hero__title">
+        <span class="line">静<em>から</em>、</span>
+        <span class="line line--accent">動<em>へ</em>。</span>
+      </h1>
+      <p class="hero__lead">眠っていた鼓動を、呼び覚ます。<br>計測・追い込み・回復。三位一体のメソッドで、身体の芯から研ぎ澄ます。</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="#access">無料体験を予約する</a>
+        <a class="btn btn--ghost" href="#method">メソッドを見る</a>
+      </div>
+    </div>
+
+    <div class="hero__meter" aria-label="平均心拍数の目安">
+      <div class="meter__label">LIVE HEART RATE</div>
+      <div class="meter__value"><span class="counter" data-target="148" data-suffix="">0</span><span class="meter__unit">BPM</span></div>
+      <div class="meter__bar"><span></span></div>
+    </div>
+
+    <a class="scroll-cue" href="#manifesto" aria-label="下へスクロール">
+      <span>SCROLL</span>
+      <span class="scroll-cue__line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <section class="manifesto reveal" id="manifesto">
+    <p class="manifesto__kicker">MANIFESTO</p>
+    <blockquote class="manifesto__quote">
+      鼓動は、<mark>生きている証</mark>。<br>
+      速く、強く、深く打つほど、<br class="only-mb">あなたはまだ、伸びしろの中にいる。
+    </blockquote>
+    <p class="manifesto__note">鼓動 KODŌ は、流行りの器具や派手な演出を追いません。<br>ひとりの身体と、静かに、けれど確かに向き合うためのスタジオです。</p>
+  </section>
+
+  <section class="method" id="method">
+    <div class="section-head">
+      <p class="section-head__kicker">METHOD</p>
+      <h2 class="section-head__title">研ぎ澄ます、<br>三つの拍。</h2>
+      <p class="section-head__desc">感覚ではなく、データと対話しながら鍛える。だから、確実に変わる。</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <div class="step__num" aria-hidden="true">01</div>
+        <div class="step__body">
+          <p class="step__latin">MEASURE</p>
+          <h3 class="step__title">計測する</h3>
+          <p class="step__text">体組成・可動域・心拍変動を初回に精密計測。数値で現在地を可視化し、あなただけの一本道を引きます。感覚論を、確かな地図に変える。</p>
+        </div>
+        <div class="step__vis step__vis--measure" aria-hidden="true">
+          <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+          <span class="ring__val">36.2<small>%</small></span>
+        </div>
+      </li>
+      <li class="step reveal">
+        <div class="step__num" aria-hidden="true">02</div>
+        <div class="step__body">
+          <p class="step__latin">TRAIN</p>
+          <h3 class="step__title">追い込む</h3>
+          <p class="step__text">心拍ゾーンをリアルタイムに監視しながら、その日の身体に最適な強度で。追い込みすぎない、抜きすぎない。鼓動が、正解を教えてくれる。</p>
+        </div>
+        <div class="step__vis step__vis--train" aria-hidden="true">
+          <span class="zone zone--1"></span><span class="zone zone--2"></span><span class="zone zone--3"></span><span class="zone zone--4"></span><span class="zone zone--5"></span>
+          <span class="zone__mark"></span>
+        </div>
+      </li>
+      <li class="step reveal">
+        <div class="step__num" aria-hidden="true">03</div>
+        <div class="step__body">
+          <p class="step__latin">RECOVER</p>
+          <h3 class="step__title">回復する</h3>
+          <p class="step__text">鍛えるのと同じ熱量で、休ませる。ストレッチ、呼吸、コンディショニング。次の鼓動を、より深く打つための静けさを設計します。</p>
+        </div>
+        <div class="step__vis step__vis--recover" aria-hidden="true">
+          <span class="wave"></span><span class="wave"></span><span class="wave"></span>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="programs" id="programs">
+    <div class="section-head">
+      <p class="section-head__kicker">PROGRAMS</p>
+      <h2 class="section-head__title">鍛え方は、<br>ひとつじゃない。</h2>
+    </div>
+    <div class="prog-grid">
+      <article class="prog reveal" tabindex="0">
+        <span class="prog__idx">P/01</span>
+        <h3 class="prog__name">ストレングス</h3>
+        <p class="prog__desc">自重とフリーウェイトで、使える力を根本から。フォームを1mm単位で整え、怪我なく重量を伸ばす。</p>
+        <span class="prog__meta">週2〜3｜60分</span>
+      </article>
+      <article class="prog reveal" tabindex="0">
+        <span class="prog__idx">P/02</span>
+        <h3 class="prog__name">コンディショニング</h3>
+        <p class="prog__desc">心肺と代謝に火を入れるインターバル。脂肪を燃やし、疲れにくい身体の土台をつくる。</p>
+        <span class="prog__meta">週1〜2｜45分</span>
+      </article>
+      <article class="prog reveal" tabindex="0">
+        <span class="prog__idx">P/03</span>
+        <h3 class="prog__name">モビリティ</h3>
+        <p class="prog__desc">硬さを解き、可動域を広げる。動ける身体は、それだけで若い。日々の姿勢まで変わる。</p>
+        <span class="prog__meta">週1｜30分</span>
+      </article>
+      <article class="prog reveal" tabindex="0">
+        <span class="prog__idx">P/04</span>
+        <h3 class="prog__name">パーソナル</h3>
+        <p class="prog__desc">専属コーチと1対1。目的も身体も十人十色。あなただけの60分を、丁寧に設計する。</p>
+        <span class="prog__meta">完全予約｜60分</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="stats" id="stats">
+    <p class="stats__kicker">BY THE NUMBERS</p>
+    <div class="stats__grid">
+      <div class="stat reveal">
+        <div class="stat__num"><span class="counter" data-target="92" data-suffix="%">0</span></div>
+        <div class="stat__label">3ヶ月継続率</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span class="counter" data-target="41800" data-suffix="" data-comma="1">0</span></div>
+        <div class="stat__label">累計セッション数</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span class="prefix">+</span><span class="counter" data-target="23" data-suffix="%">0</span></div>
+        <div class="stat__label">平均パフォーマンス向上</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__num"><span class="counter" data-target="7" data-suffix="">0</span></div>
+        <div class="stat__label">専属コーチ在籍</div>
+      </div>
+    </div>
+    <p class="stats__foot">※開業からの実測値（2024年4月〜2026年6月）。継続率は入会後3ヶ月の在籍ベース。</p>
+  </section>
+
+  <section class="coaches" id="coaches">
+    <div class="section-head">
+      <p class="section-head__kicker">COACHES</p>
+      <h2 class="section-head__title">拍を、<br>読める人たち。</h2>
+    </div>
+    <div class="coach-grid">
+      <article class="coach reveal">
+        <div class="coach__portrait" data-initial="R" style="--c1:#1e3aff;--c2:#0a1a66;"><span>R</span></div>
+        <h3 class="coach__name">陸 遼介<span class="coach__role">Head Coach / ストレングス</span></h3>
+        <p class="coach__bio">元・実業団短距離。数値と身体感覚の翻訳者。「重さより、質」を掲げる。</p>
+      </article>
+      <article class="coach reveal">
+        <div class="coach__portrait" data-initial="M" style="--c1:#2b2d33;--c2:#0e0f12;"><span>M</span></div>
+        <h3 class="coach__name">水無月 環<span class="coach__role">コンディショニング</span></h3>
+        <p class="coach__bio">理学療法士。回復の設計が本業。追い込んだ後の"静"を最も大切にする。</p>
+      </article>
+      <article class="coach reveal">
+        <div class="coach__portrait" data-initial="K" style="--c1:#c9c3b4;--c2:#6d6858;"><span>K</span></div>
+        <h3 class="coach__name">桐生 蒼<span class="coach__role">モビリティ / パーソナル</span></h3>
+        <p class="coach__bio">ヨガと機能解剖の橋渡し役。硬い身体ほど、伸びしろがあると信じている。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="membership" id="membership">
+    <div class="section-head">
+      <p class="section-head__kicker">MEMBERSHIP</p>
+      <h2 class="section-head__title">続けられる、<br>ちょうどいい重さ。</h2>
+    </div>
+    <div class="plan-grid">
+      <article class="plan reveal">
+        <p class="plan__name">RHYTHM</p>
+        <p class="plan__price"><span class="plan__cur">¥</span>14,800<span class="plan__cyc">/月</span></p>
+        <p class="plan__for">月4回・自分のペースで</p>
+        <ul class="plan__list">
+          <li>グループセッション 月4回</li>
+          <li>初回フル計測</li>
+          <li>心拍計レンタル込み</li>
+        </ul>
+        <a class="btn btn--ghost btn--full" href="#access">このプランで体験</a>
+      </article>
+      <article class="plan plan--feature reveal">
+        <span class="plan__badge">人気</span>
+        <p class="plan__name">PULSE</p>
+        <p class="plan__price"><span class="plan__cur">¥</span>24,800<span class="plan__cyc">/月</span></p>
+        <p class="plan__for">通い放題・本気で変えたい人へ</p>
+        <ul class="plan__list">
+          <li>グループセッション 通い放題</li>
+          <li>月1回パーソナル</li>
+          <li>体組成 毎月計測＆レポート</li>
+          <li>栄養サポートチャット</li>
+        </ul>
+        <a class="btn btn--solid btn--full" href="#access">このプランで体験</a>
+      </article>
+      <article class="plan reveal">
+        <p class="plan__name">PRIVATE</p>
+        <p class="plan__price"><span class="plan__cur">¥</span>42,000<span class="plan__cyc">/月</span></p>
+        <p class="plan__for">完全1対1・最短で結果を</p>
+        <ul class="plan__list">
+          <li>パーソナル 月8回</li>
+          <li>専属コーチ担当制</li>
+          <li>回復プログラム込み</li>
+        </ul>
+        <a class="btn btn--ghost btn--full" href="#access">このプランで体験</a>
+      </article>
+    </div>
+    <p class="membership__note">入会金 ¥11,000（体験当日入会で無料）。契約期間の縛りはありません。</p>
+  </section>
+
+  <section class="voices" id="voices">
+    <div class="section-head">
+      <p class="section-head__kicker">VOICES</p>
+      <h2 class="section-head__title">変わった人の、<br>短い証言。</h2>
+    </div>
+    <div class="voice-grid">
+      <figure class="voice reveal">
+        <blockquote>「数字で現在地が見えるから、続く。3ヶ月で階段が怖くなくなった。」</blockquote>
+        <figcaption>会社員・42歳 / PULSE会員</figcaption>
+      </figure>
+      <figure class="voice reveal">
+        <blockquote>「追い込むだけじゃなく、休ませ方まで教わった。翌日の身体が全然ちがう。」</blockquote>
+        <figcaption>デザイナー・35歳 / RHYTHM会員</figcaption>
+      </figure>
+      <figure class="voice reveal">
+        <blockquote>「静かなスタジオで、自分の鼓動だけに集中できる。ここは、逃げ場じゃなく整え場。」</blockquote>
+        <figcaption>経営者・50歳 / PRIVATE会員</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cta" id="access">
+    <div class="cta__ecg" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0 60 H300 L320 60 L336 20 L360 100 L384 40 L404 72 L424 60 H700 L720 60 L736 24 L760 96 L784 44 L804 72 L824 60 H1200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="cta__inner">
+      <p class="cta__kicker">FREE TRIAL</p>
+      <h2 class="cta__title">最初の一拍を、<br>ここで。</h2>
+      <p class="cta__lead">無料体験は所要60分。動きやすい服装だけ持って来てください。<br>シューズ・タオル・ウェアは無料でお貸しします。</p>
+      <a class="btn btn--solid btn--lg" href="#" onclick="return false;">無料体験を予約する</a>
+
+      <dl class="access-info">
+        <div><dt>STUDIO</dt><dd>東京都目黒区中目黒3-●-● KODŌ Bld. 2F</dd></div>
+        <div><dt>OPEN</dt><dd>平日 7:00–22:30 / 土日祝 8:00–20:00<br>（水曜定休）</dd></div>
+        <div><dt>ACCESS</dt><dd>東急東横線・日比谷線「中目黒」駅 徒歩4分</dd></div>
+        <div><dt>CONTACT</dt><dd>03-0000-0000 / hello@kodo-studio.jp</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__brand">
+    <span class="brand__name">鼓動<span class="brand__latin">KODŌ</span></span>
+    <p>Boutique Strength Studio, Nakameguro Tokyo.</p>
+  </div>
+  <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+    <a href="#method">メソッド</a>
+    <a href="#programs">プログラム</a>
+    <a href="#membership">料金</a>
+    <a href="#access">アクセス</a>
+  </nav>
+  <p class="site-footer__copy">© 2026 KODŌ Studio. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

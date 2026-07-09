@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VOLT — Sneaker Boutique / スニーカーの熱を、街へ。</title>
+<meta name="description" content="VOLTは厳選したスニーカーと限定ドロップを扱う東京のブティック。試着・オーソ鑑定・世界配送まで。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="cursor" aria-hidden="true"></div>
+<div class="scrollbar" id="scrollbar" aria-hidden="true"></div>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <span class="loader__num" id="loaderNum">00</span>
+  <span class="loader__label">LOADING THE DROP</span>
+</div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo" data-cursor>VOLT<sup>®</sup></a>
+  <nav class="nav__links" aria-label="メイン">
+    <a href="#drop" data-cursor>Drop</a>
+    <a href="#shop" data-cursor>Shop</a>
+    <a href="#tech" data-cursor>Tech</a>
+    <a href="#member" data-cursor>Member</a>
+    <a href="#faq" data-cursor>FAQ</a>
+  </nav>
+  <a href="#shop" class="nav__cart" data-cursor>CART <span>(0)</span></a>
+  <button class="burger" id="burger" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <a href="#drop">Drop</a>
+  <a href="#shop">Shop</a>
+  <a href="#tech">Tech</a>
+  <a href="#member">Member</a>
+  <a href="#faq">FAQ</a>
+</div>
+
+<main id="top">
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="hero__tag"><span>EST. TOKYO</span><span>限定ドロップ / 毎週金曜 20:00</span></div>
+    <h1 class="hero__title">
+      <span class="ln"><em data-split>STEP</em></span>
+      <span class="ln outline"><em data-split>INTO</em></span>
+      <span class="ln"><em data-split>THE</em> <em data-split class="volt">HYPE</em></span>
+    </h1>
+    <div class="hero__shoe" data-tilt aria-hidden="true">
+      <div class="shoe">
+        <svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg">
+          <path class="s-sole" d="M8 132 C10 150 40 156 78 156 L268 156 C300 156 314 146 314 132 L314 122 L8 122 Z"/>
+          <path class="s-mid" d="M8 122 L314 122 L314 112 C300 110 60 110 8 116 Z"/>
+          <path class="s-body" d="M18 116 C24 78 60 60 96 58 C120 56 132 74 168 76 C214 78 236 66 262 84 C286 100 300 104 306 116 C300 120 40 120 18 116 Z"/>
+          <path class="s-toe" d="M18 116 C22 92 40 74 66 66 C74 90 70 108 74 116 Z"/>
+          <path class="s-swoosh" d="M120 106 C160 96 214 74 292 72 C250 92 176 110 132 116 C126 114 122 110 120 106 Z"/>
+          <path class="s-lace" d="M120 78 L150 70 M126 90 L156 82 M134 100 L162 94" />
+          <circle class="s-eye" cx="118" cy="80" r="3"/><circle class="s-eye" cx="124" cy="92" r="3"/><circle class="s-eye" cx="132" cy="102" r="3"/>
+        </svg>
+      </div>
+      <div class="hero__glow"></div>
+    </div>
+    <div class="hero__foot">
+      <p>厳選した本物だけを、鑑定つきで。<br />試着もオンラインも、スニーカー好きのための一軒。</p>
+      <a href="#shop" class="btn btn--volt" data-cursor data-magnetic>今すぐ探す<i>→</i></a>
+    </div>
+  </section>
+
+  <!-- 2. TRUST MARQUEE -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__row">
+      <span>AUTHENTICATED&nbsp;100%</span><b>✦</b><span>12,000+&nbsp;PAIRS&nbsp;SOLD</span><b>✦</b>
+      <span>WORLDWIDE&nbsp;SHIPPING</span><b>✦</b><span>WEEKLY&nbsp;DROPS</span><b>✦</b>
+      <span>AUTHENTICATED&nbsp;100%</span><b>✦</b><span>12,000+&nbsp;PAIRS&nbsp;SOLD</span><b>✦</b>
+      <span>WORLDWIDE&nbsp;SHIPPING</span><b>✦</b><span>WEEKLY&nbsp;DROPS</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- 3. FEATURED DROP -->
+  <section class="drop" id="drop">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>01 / This Week's Drop</span>
+      <h2 data-reveal>今週の<span class="volt">主役</span>。</h2>
+    </div>
+    <div class="drop__card" data-reveal data-tilt>
+      <div class="drop__media">
+        <span class="drop__badge">LIMITED · 120 pairs</span>
+        <div class="drop__shoe"></div>
+      </div>
+      <div class="drop__info">
+        <span class="drop__brand">AeroStrike '92 — "Neon Dusk"</span>
+        <h3>都会の夜を歩くための、一足。</h3>
+        <p>復刻シルエットに、反射材とボルトカラーのアクセント。アッパーはリサイクルニット、ソールは軽量フォーム。数量限定、今週金曜20:00にドロップします。</p>
+        <ul class="drop__spec">
+          <li><b>¥26,400</b><span>税込</span></li>
+          <li><b>UK5–UK11</b><span>サイズ</span></li>
+          <li><b>Fri 20:00</b><span>抽選開始</span></li>
+        </ul>
+        <a href="#" class="btn btn--line" data-cursor data-magnetic>抽選に申し込む<i>→</i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SHOP / HORIZONTAL RAIL -->
+  <section class="shop" id="shop">
+    <div class="sec-head sec-head--row">
+      <div>
+        <span class="eyebrow" data-reveal>02 / In Stock</span>
+        <h2 data-reveal>今、履ける<span class="volt">在庫</span>。</h2>
+      </div>
+      <p class="shop__hint" data-reveal>横にスクロール →</p>
+    </div>
+    <div class="rail" id="rail">
+      <article class="prod" data-cursor><div class="prod__img p1"></div><div class="prod__meta"><h3>Court Classic Low</h3><span>¥14,800</span></div></article>
+      <article class="prod" data-cursor><div class="prod__img p2"></div><div class="prod__meta"><h3>Trail Runner GTX</h3><span>¥19,200</span></div></article>
+      <article class="prod" data-cursor><div class="prod__img p3"></div><div class="prod__meta"><h3>Retro Hoops '85</h3><span>¥22,600</span></div></article>
+      <article class="prod" data-cursor><div class="prod__img p4"></div><div class="prod__meta"><h3>Cloud Knit Pro</h3><span>¥17,400</span></div></article>
+      <article class="prod" data-cursor><div class="prod__img p5"></div><div class="prod__meta"><h3>Skate Deck SB</h3><span>¥13,900</span></div></article>
+    </div>
+  </section>
+
+  <!-- 5. TECH / FEATURES -->
+  <section class="tech" id="tech">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>03 / Why VOLT</span>
+      <h2 data-reveal>ただ売るだけの店じゃない。</h2>
+    </div>
+    <div class="tech__grid">
+      <article class="feat" data-reveal><span class="feat__no">01</span><h3>全品オーソ鑑定</h3><p>入荷した全ペアを専門スタッフが多点鑑定。偽物は一切置きません。鑑定タグ付きでお渡しします。</p></article>
+      <article class="feat" data-reveal><span class="feat__no">02</span><h3>店頭で試着</h3><p>中目黒のショールームで実物を試着可能。足型計測とフィッティングのアドバイスも無料です。</p></article>
+      <article class="feat" data-reveal><span class="feat__no">03</span><h3>48hで世界配送</h3><p>国内翌日、海外も最短48時間。追跡・保険付きで、箱の状態までていねいに梱包します。</p></article>
+      <article class="feat" data-reveal><span class="feat__no">04</span><h3>買取・下取り</h3><p>履かなくなった一足を査定。次の一足の割引に使えます。眠っているスニーカーに次の街を。</p></article>
+    </div>
+  </section>
+
+  <!-- 6. STATS -->
+  <section class="stats">
+    <div class="stat" data-reveal><b data-count="12000">0</b><span>Pairs Sold</span></div>
+    <div class="stat" data-reveal><b data-count="100">0</b><span>% Authenticated</span></div>
+    <div class="stat" data-reveal><b data-count="48">0</b><span>Hour Shipping</span></div>
+    <div class="stat" data-reveal><b data-count="320">0</b><span>Weekly Drops</span></div>
+  </section>
+
+  <!-- 7. LOOKBOOK -->
+  <section class="look">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>04 / Lookbook</span>
+      <h2 data-reveal>足元から、<span class="volt">スタイル</span>。</h2>
+    </div>
+    <div class="look__grid">
+      <div class="look__cell l1" data-reveal data-parallax></div>
+      <div class="look__cell l2" data-reveal data-parallax></div>
+      <div class="look__cell l3" data-reveal data-parallax></div>
+      <div class="look__cell l4" data-reveal data-parallax></div>
+    </div>
+  </section>
+
+  <!-- 8. REVIEWS -->
+  <section class="reviews">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>05 / Voices</span>
+      <h2 data-reveal>買った人の<span class="volt">声</span>。</h2>
+    </div>
+    <div class="reviews__grid">
+      <blockquote data-reveal><p>“鑑定タグ付きで届いて安心。梱包も丁寧で、箱まできれい。ここ以外で買わなくなった。”</p><cite>— Ryo, 27 / 会社員</cite></blockquote>
+      <blockquote data-reveal><p>“店頭で足型を測ってもらって、いつも0.5大きく買ってた事に気づいた。フィット感が別物。”</p><cite>— Mika, 24 / 学生</cite></blockquote>
+      <blockquote data-reveal><p>“抽選のドロップで念願の一足。当たった瞬間の通知が忘れられない。next dropも狙う。”</p><cite>— Kenta, 31 / デザイナー</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- 9. MEMBERSHIP / PRICING -->
+  <section class="member" id="member">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>06 / Membership</span>
+      <h2 data-reveal>ドロップを、<span class="volt">先に</span>。</h2>
+    </div>
+    <div class="plans">
+      <article class="plan" data-reveal>
+        <h3>Free</h3><p class="plan__price">¥0</p>
+        <ul><li>会員価格</li><li>ドロップ通知</li><li>買取査定</li></ul>
+        <a href="#" class="btn btn--line" data-cursor data-magnetic>登録する</a>
+      </article>
+      <article class="plan plan--pro" data-reveal>
+        <span class="plan__flag">人気</span>
+        <h3>VOLT+</h3><p class="plan__price">¥980<small>/月</small></p>
+        <ul><li>抽選の当選確率アップ</li><li>先行アクセス 24h</li><li>送料無料・返品無料</li><li>限定カラー招待</li></ul>
+        <a href="#" class="btn btn--volt" data-cursor data-magnetic>+に入る<i>→</i></a>
+      </article>
+      <article class="plan" data-reveal>
+        <h3>Crew</h3><p class="plan__price">¥4,800<small>/月</small></p>
+        <ul><li>VOLT+の全特典</li><li>毎月1足まで確保枠</li><li>限定イベント招待</li></ul>
+        <a href="#" class="btn btn--line" data-cursor data-magnetic>Crewになる</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 10. STORY -->
+  <section class="story">
+    <div class="story__text" data-reveal>
+      <span class="eyebrow">07 / Our Story</span>
+      <h2>一足の熱を、<br /><span class="volt">次の街</span>へ渡す。</h2>
+      <p>VOLTは2019年、たった6畳の部屋から始まりました。偽物が出回る市場で「本物だけを、正直に」を合言葉に。今も一足ずつ手に取り、鑑定し、あなたの足元へ送り出しています。</p>
+      <p>スニーカーは移動の道具であり、自己表現の言語。私たちはその熱量を信じています。</p>
+    </div>
+    <div class="story__mark" data-reveal aria-hidden="true">VOLT</div>
+  </section>
+
+  <!-- 11. FAQ -->
+  <section class="faq" id="faq">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>08 / FAQ</span>
+      <h2 data-reveal>よくある質問。</h2>
+    </div>
+    <div class="acc" id="acc">
+      <div class="acc__item" data-reveal><button class="acc__q" data-cursor>本当に本物ですか？<i></i></button><div class="acc__a"><p>はい。全品を専門スタッフが多点鑑定し、鑑定タグを付けてお渡しします。万一偽物と判明した場合は全額返金＋補償します。</p></div></div>
+      <div class="acc__item" data-reveal><button class="acc__q" data-cursor>試着はできますか？<i></i></button><div class="acc__a"><p>中目黒ショールームで可能です。ご来店予約は不要、足型計測も無料です。オンライン購入分の店頭受取もできます。</p></div></div>
+      <div class="acc__item" data-reveal><button class="acc__q" data-cursor>ドロップの抽選はどう参加しますか？<i></i></button><div class="acc__a"><p>会員登録後、対象商品ページの「抽選に申し込む」から。毎週金曜20:00開始、結果は当日中に通知します。VOLT+会員は当選確率が上がります。</p></div></div>
+      <div class="acc__item" data-reveal><button class="acc__q" data-cursor>返品・交換は？<i></i></button><div class="acc__a"><p>未使用に限り7日以内で承ります。VOLT+/Crew会員は返品送料無料。サイズ交換は在庫があれば即日手配します。</p></div></div>
+    </div>
+  </section>
+
+  <!-- 12. FINAL CTA -->
+  <section class="cta">
+    <h2 data-reveal>次のドロップ、<span class="volt">見逃すな。</span></h2>
+    <p data-reveal>登録は無料。金曜20:00の通知を、いちばん早く。</p>
+    <form class="cta__form" data-reveal onsubmit="return false">
+      <input type="email" placeholder="you@email.com" aria-label="メールアドレス" required />
+      <button class="btn btn--volt" data-cursor data-magnetic>通知を受け取る<i>→</i></button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#top" class="footer__logo" data-cursor>VOLT<sup>®</sup></a>
+    <div class="footer__cols">
+      <div><span>Shop</span><a href="#shop">在庫一覧</a><a href="#drop">今週のドロップ</a><a href="#member">メンバーシップ</a></div>
+      <div><span>Store</span><a href="#">中目黒ショールーム</a><a href="#tech">鑑定について</a><a href="#">買取・下取り</a></div>
+      <div><span>Social</span><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">LINE</a></div>
+    </div>
+  </div>
+  <div class="footer__base"><span>© 2026 VOLT Sneaker Boutique</span><span>東京都目黒区中目黒 · authenticated with care</span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

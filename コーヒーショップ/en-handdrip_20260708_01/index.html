@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>淹 EN ｜ ハンドドリップ専門の珈琲スタンド・東京 蔵前</title>
+<meta name="description" content="淹（えん）は、東京・蔵前のハンドドリップ専門スタンド。湯を落とし、蒸らし、雫が満ちるまでの数分間。一杯ずつ丁寧に淹れる朝の珈琲を。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Kaisei+Decol:wght@400;700&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-head" id="siteHead">
+  <a class="brand" href="#top" aria-label="淹 EN トップへ">
+    <span class="brand-mark" aria-hidden="true">淹</span>
+    <span class="brand-latin">EN&nbsp;COFFEE</span>
+  </a>
+  <nav class="nav" aria-label="メインナビゲーション">
+    <a href="#beans">豆</a>
+    <a href="#brew">淹れ方</a>
+    <a href="#place">店</a>
+  </nav>
+  <a class="cta cta--head" href="#reserve">席を予約</a>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO : ピン留めドリップ抽出 scrub ============ -->
+  <section class="hero" id="top" aria-label="ハンドドリップの抽出">
+    <div class="hero-sticky">
+      <div class="hero-grid">
+
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>東京・蔵前 ／ HAND&nbsp;DRIP&nbsp;STAND</p>
+          <h1 class="hero-title">
+            <span class="l l1">朝の数分を、</span>
+            <span class="l l2"><em>淹</em>れる。</span>
+          </h1>
+          <p class="hero-lead">
+            湯を細く落とし、粉がふくらむのを待つ。<br />
+            雫がひとつ、またひとつ。<br />
+            一杯が満ちるまでの、静かな時間。
+          </p>
+          <div class="hero-actions">
+            <a class="cta" href="#reserve">席を予約する</a>
+            <a class="txtlink" href="#beans">今日の豆を見る →</a>
+          </div>
+
+          <!-- 抽出レール（進捗＋数値） -->
+          <aside class="rail" aria-hidden="true">
+            <div class="rail-track"><span class="rail-fill"></span><span class="rail-dot"></span></div>
+            <ul class="rail-steps">
+              <li data-step="0"><b>注ぐ</b><span>pour</span></li>
+              <li data-step="1"><b>蒸らし</b><span>bloom</span></li>
+              <li data-step="2"><b>抽出</b><span>brew</span></li>
+              <li data-step="3"><b>一杯</b><span>serve</span></li>
+            </ul>
+            <div class="rail-meta">
+              <span class="m"><i>92</i>℃</span>
+              <span class="m"><i>15</i>g</span>
+              <span class="m time"><i id="brewTime">0:00</i></span>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 抽出ステージ（SVG主役） -->
+        <figure class="brew" aria-label="ハンドドリップで一杯が抽出される様子">
+          <svg class="brew-svg" viewBox="0 0 420 560" role="img" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <linearGradient id="gCoffee" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#7A3D22" />
+                <stop offset="1" stop-color="#3A1E12" />
+              </linearGradient>
+              <linearGradient id="gServer" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8A4A28" />
+                <stop offset="1" stop-color="#43220F" />
+              </linearGradient>
+              <radialGradient id="gBloom" cx="0.5" cy="0.35" r="0.75">
+                <stop offset="0" stop-color="#6B3B22" />
+                <stop offset="0.6" stop-color="#4A281A" />
+                <stop offset="1" stop-color="#331B12" />
+              </radialGradient>
+              <clipPath id="clipServer">
+                <path d="M150 402 L150 470 Q150 512 210 512 Q270 512 270 470 L270 402 Z" />
+              </clipPath>
+              <clipPath id="clipCone">
+                <path d="M132 214 L288 214 L226 352 L194 352 Z" />
+              </clipPath>
+            </defs>
+
+            <!-- 湯気 -->
+            <g class="steam" aria-hidden="true">
+              <path class="st st1" d="M196 196 q-14 -26 0 -52 q14 -26 0 -52" />
+              <path class="st st2" d="M214 190 q16 -24 0 -50 q-16 -26 0 -50" />
+              <path class="st st3" d="M232 198 q-12 -22 0 -46 q12 -24 0 -48" />
+            </g>
+
+            <!-- ケトル注ぎ口 & 螺旋の湯 -->
+            <g class="kettle">
+              <path class="kettle-body" d="M300 150 q34 -6 44 14 q6 12 -6 18 l-40 8 Z" />
+              <path class="spout" d="M300 158 L214 176" />
+            </g>
+            <path class="pour" d="M214 176 C206 214 244 214 226 244 C214 262 200 258 208 276" pathLength="100" />
+            <g class="spiral">
+              <path class="spiral-path" d="M210 250 m0 0 a6 4 0 1 1 0.1 0 a12 7 0 1 1 0.1 0 a18 10 0 1 1 0.1 0 a24 12 0 1 1 0.1 0" pathLength="100" />
+            </g>
+
+            <!-- V60 ドリッパー -->
+            <g class="dripper">
+              <ellipse class="dripper-rim" cx="210" cy="214" rx="80" ry="18" />
+              <path class="dripper-cone" d="M132 214 L288 214 L226 352 L194 352 Z" />
+              <g class="ribs" clip-path="url(#clipCone)">
+                <path d="M210 214 L210 352" /><path d="M180 214 L200 352" /><path d="M240 214 L220 352" />
+                <path d="M150 214 L188 352" /><path d="M270 214 L232 352" />
+              </g>
+              <!-- コーヒーの粉床（蒸らしでふくらむ） -->
+              <g clip-path="url(#clipCone)">
+                <ellipse class="bed" cx="210" cy="224" rx="74" ry="16" fill="url(#gBloom)" />
+                <g class="bubbles" aria-hidden="true">
+                  <circle cx="188" cy="220" r="3" /><circle cx="210" cy="216" r="4" />
+                  <circle cx="232" cy="221" r="3" /><circle cx="200" cy="226" r="2.4" />
+                  <circle cx="222" cy="226" r="2.6" /><circle cx="176" cy="224" r="2.2" />
+                  <circle cx="244" cy="224" r="2.2" />
+                </g>
+              </g>
+            </g>
+
+            <!-- 落ちる雫 -->
+            <g class="drips" aria-hidden="true">
+              <path class="drip d1" d="M210 356 q-4 8 0 14 q4 -6 0 -14 Z" />
+              <path class="drip d2" d="M210 356 q-4 8 0 14 q4 -6 0 -14 Z" />
+              <path class="drip d3" d="M210 356 q-4 8 0 14 q4 -6 0 -14 Z" />
+            </g>
+
+            <!-- サーバー（受け）と満ちる珈琲 -->
+            <g class="server">
+              <path class="server-glass" d="M150 402 L150 470 Q150 512 210 512 Q270 512 270 470 L270 402 Z" />
+              <g clip-path="url(#clipServer)">
+                <rect class="server-fill" x="150" y="512" width="120" height="120" fill="url(#gServer)" />
+                <ellipse class="ripple r1" cx="210" cy="512" rx="0" ry="0" />
+                <ellipse class="ripple r2" cx="210" cy="512" rx="0" ry="0" />
+              </g>
+              <path class="server-neck" d="M182 392 L182 404 M238 392 L238 404" />
+              <ellipse class="server-lip" cx="210" cy="392" rx="30" ry="7" />
+            </g>
+          </svg>
+
+          <figcaption class="brew-cap">V60 ／ 一杯を淹れる</figcaption>
+        </figure>
+
+      </div>
+    </div>
+    <p class="scroll-hint" aria-hidden="true"><span>SCROLL</span></p>
+  </section>
+
+  <!-- ============ 序 — エディトリアル ============ -->
+  <section class="intro" id="intro" aria-label="淹れるという時間">
+    <p class="sec-num">01 ／ 序</p>
+    <div class="intro-cols">
+      <div class="col col-a">
+        <h2 class="intro-h">淹れる、<br />という時間。</h2>
+      </div>
+      <div class="col col-b">
+        <p>豆を挽くと、まだ湯にも触れていないのに、部屋が朝になる。ドリッパーに湯を細く落とすと、粉はゆっくり息を吐くようにふくらむ。焙煎したての豆ほど、大きく。</p>
+        <p>蒸らしの三十秒は、待つための時間ではありません。豆と湯が、ちょうどよく出会うための間（ま）。急がず、遅すぎず。その頃合いを見るのが、私たちの仕事です。</p>
+      </div>
+      <div class="col col-c">
+        <p>一杯にかかるのは、およそ三分。長いようで、飲んでしまえば一瞬の時間です。けれど、その三分をきちんと淹れた珈琲は、机に置いてからも、しばらく香りで居てくれる。</p>
+        <blockquote class="pull">“いい一杯は、<br />飲み終えても<br />香りが残る。”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 豆 — 今日の3種 ============ -->
+  <section class="beans" id="beans" aria-label="今日の豆">
+    <header class="beans-head">
+      <p class="sec-num">02 ／ 豆</p>
+      <h2 class="sec-h">今日、淹れている豆。</h2>
+      <p class="sec-sub">小さな焙煎機で、週に二度だけ焼いています。<br class="pc-br" />一杯 ¥600〜／豆 100g ¥1,200〜（税込）。</p>
+    </header>
+
+    <ul class="bean-list">
+      <li class="bean">
+        <div class="bean-main">
+          <p class="bean-latin">ETHIOPIA</p>
+          <h3 class="bean-name">エチオピア <span>イルガチェフェ</span></h3>
+          <span class="bean-lead" aria-hidden="true"></span>
+          <p class="bean-notes">白桃・ジャスミン・紅茶</p>
+        </div>
+        <dl class="bean-spec">
+          <div><dt>焙煎</dt><dd>浅煎り</dd></div>
+          <div><dt>精製</dt><dd>Washed</dd></div>
+          <div><dt>標高</dt><dd>1,950m</dd></div>
+        </dl>
+      </li>
+      <li class="bean">
+        <div class="bean-main">
+          <p class="bean-latin">GUATEMALA</p>
+          <h3 class="bean-name">グアテマラ <span>アンティグア</span></h3>
+          <span class="bean-lead" aria-hidden="true"></span>
+          <p class="bean-notes">チョコレート・オレンジ・くるみ</p>
+        </div>
+        <dl class="bean-spec">
+          <div><dt>焙煎</dt><dd>中煎り</dd></div>
+          <div><dt>精製</dt><dd>Washed</dd></div>
+          <div><dt>標高</dt><dd>1,500m</dd></div>
+        </dl>
+      </li>
+      <li class="bean">
+        <div class="bean-main">
+          <p class="bean-latin">INDONESIA</p>
+          <h3 class="bean-name">インドネシア <span>マンデリン</span></h3>
+          <span class="bean-lead" aria-hidden="true"></span>
+          <p class="bean-notes">黒糖・杉・ダークカカオ</p>
+        </div>
+        <dl class="bean-spec">
+          <div><dt>焙煎</dt><dd>深煎り</dd></div>
+          <div><dt>精製</dt><dd>Wet-hull</dd></div>
+          <div><dt>標高</dt><dd>1,300m</dd></div>
+        </dl>
+      </li>
+      <li class="bean bean--house">
+        <div class="bean-main">
+          <p class="bean-latin">HOUSE&nbsp;BLEND</p>
+          <h3 class="bean-name">ブレンド <span>「朝」</span></h3>
+          <span class="bean-lead" aria-hidden="true"></span>
+          <p class="bean-notes">ミルクと合う・毎日の一杯に</p>
+        </div>
+        <dl class="bean-spec">
+          <div><dt>焙煎</dt><dd>中深煎り</dd></div>
+          <div><dt>構成</dt><dd>3種</dd></div>
+          <div><dt>相性</dt><dd>ラテ◎</dd></div>
+        </dl>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ 淹れ方 — 家での一杯 ============ -->
+  <section class="brew-guide" id="brew" aria-label="家での淹れ方">
+    <header class="guide-head">
+      <p class="sec-num">03 ／ 淹れ方</p>
+      <h2 class="sec-h">家でも、<br class="sp-br" />おいしく。</h2>
+      <p class="sec-sub">むずかしいことは、ひとつもありません。<br class="pc-br" />いつもの道具で、四つの手順を。</p>
+    </header>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-no">01</span>
+        <h3 class="step-h">量る</h3>
+        <p class="step-p">豆は一杯につき<b>15g</b>、湯は<b>250g</b>。まずは同じ分量で淹れて、味の基準をつくります。</p>
+      </li>
+      <li class="step">
+        <span class="step-no">02</span>
+        <h3 class="step-h">挽く</h3>
+        <p class="step-p">グラニュー糖より少し粗く。粒がそろうほど、雑味が出ずに澄んだ味に近づきます。</p>
+      </li>
+      <li class="step">
+        <span class="step-no">03</span>
+        <h3 class="step-h">蒸らす</h3>
+        <p class="step-p"><b>92℃</b>の湯を中心から少量。粉全体が湿ったら<b>30秒</b>待つ。ふくらみが新鮮さの合図。</p>
+      </li>
+      <li class="step">
+        <span class="step-no">04</span>
+        <h3 class="step-h">落とす</h3>
+        <p class="step-p">「の」の字に、細く三回。合計<b>3分</b>を目安に、最後の湯を落としきる前にドリッパーを外します。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ 店 — 朝の場所（暗転） ============ -->
+  <section class="place" id="place" aria-label="店について">
+    <div class="place-inner">
+      <p class="sec-num sec-num--light">04 ／ 店</p>
+      <h2 class="place-h">朝の、<em>場所</em>。</h2>
+      <p class="place-lead">六席だけの、小さなカウンター。朝いちばんの光が、蔵前の路地から差し込みます。淹れる音と、豆を挽く音のほかは、なるべく静かに。</p>
+      <dl class="place-info">
+        <div><dt>営業時間</dt><dd>平日 <i>7:30</i>–<i>18:00</i><br />土日 <i>8:00</i>–<i>19:00</i></dd></div>
+        <div><dt>定休日</dt><dd>水曜</dd></div>
+        <div><dt>場所</dt><dd>東京都台東区蔵前<br />（蔵前駅 徒歩4分）</dd></div>
+        <div><dt>席数</dt><dd>カウンター <i>6</i>席</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ CTA / footer ============ -->
+  <section class="reserve" id="reserve" aria-label="予約・お問い合わせ">
+    <p class="reserve-eyebrow">週末の朝は、席の予約がおすすめです。</p>
+    <h2 class="reserve-h">一杯、<br />淹れて待っています。</h2>
+    <a class="cta cta--big" href="#reserve">席を予約する</a>
+    <p class="reserve-sub">豆の通販は <a href="#reserve">オンラインストア</a> から。<br />ギフト・定期便もご用意しています。</p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-brand"><span aria-hidden="true">淹</span> EN COFFEE</div>
+  <p class="foot-meta">東京・蔵前 ハンドドリップ・スタンド ／ 7:30–18:00（水休）</p>
+  <p class="foot-copy">© 2026 EN COFFEE. 架空のブランドによるデザイン制作例です。</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

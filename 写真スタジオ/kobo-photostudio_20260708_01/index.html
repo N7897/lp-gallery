@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光房 KŌBŌ ｜ 光を彫る肖像写真スタジオ ― 東京・蔵前の自然光フォトスタジオ</title>
+<meta name="description" content="光房 KŌBŌ は、光そのものを主役にした東京・蔵前の肖像写真スタジオ。家族写真・七五三・ポートレート・ビジネスプロフィールを、あなたの光で彫り出します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hina+Mincho&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&family=Red+Hat+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#hero" aria-label="光房 KŌBŌ ホーム">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="24" height="24" focusable="false"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.1"/><circle cx="12" cy="12" r="3.4" fill="currentColor"/><circle cx="15.4" cy="8.4" r="1.1" fill="var(--bg)"/></svg>
+    </span>
+    <span class="brand__name"><span class="brand__jp">光房</span><span class="brand__en">KŌBŌ</span></span>
+  </a>
+  <nav class="nav" aria-label="メインナビゲーション">
+    <a href="#jo">序</a>
+    <a href="#studies">光の習作</a>
+    <a href="#sessions">あつらえ</a>
+    <a href="#flow">撮影の流れ</a>
+  </nav>
+  <a class="btn btn--book" href="#book">撮影を予約する</a>
+</header>
+
+<main id="main">
+
+  <!-- HERO : cursor = key light -->
+  <section class="hero" id="hero" aria-labelledby="heroTitle">
+    <div class="hero__stage" id="heroStage">
+      <!-- dim base layer (always visible) -->
+      <div class="hero__layer hero__dim" aria-hidden="true">
+        <svg class="portrait" viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice" role="presentation">
+          <defs>
+            <radialGradient id="dimFace" cx="42%" cy="38%" r="70%">
+              <stop offset="0%" stop-color="#20242e"/>
+              <stop offset="55%" stop-color="#14161d"/>
+              <stop offset="100%" stop-color="#0b0c10"/>
+            </radialGradient>
+          </defs>
+          <rect width="400" height="520" fill="#0b0c10"/>
+          <path d="M200 92c58 0 96 44 96 108 0 52-20 96-52 122-14 12-28 20-44 20s-30-8-44-20c-32-26-52-70-52-122 0-64 38-108 96-108z" fill="url(#dimFace)"/>
+          <ellipse cx="200" cy="470" rx="150" ry="70" fill="#101218"/>
+        </svg>
+      </div>
+      <!-- lit layer (revealed under the key light) -->
+      <div class="hero__layer hero__lit" id="heroLit" aria-hidden="true">
+        <svg class="portrait" viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice" role="presentation">
+          <defs>
+            <radialGradient id="litFace" cx="40%" cy="34%" r="72%">
+              <stop offset="0%" stop-color="#efe6d6"/>
+              <stop offset="30%" stop-color="#c3bdb0"/>
+              <stop offset="66%" stop-color="#5c5e66"/>
+              <stop offset="100%" stop-color="#181b22"/>
+            </radialGradient>
+            <linearGradient id="rim" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f8efdd"/>
+              <stop offset="35%" stop-color="rgba(248,239,221,0)"/>
+            </linearGradient>
+            <radialGradient id="litShoulder" cx="50%" cy="10%" r="90%">
+              <stop offset="0%" stop-color="#3a3d47"/>
+              <stop offset="100%" stop-color="#111319"/>
+            </radialGradient>
+          </defs>
+          <rect width="400" height="520" fill="#111319"/>
+          <ellipse cx="200" cy="470" rx="150" ry="72" fill="url(#litShoulder)"/>
+          <path d="M200 92c58 0 96 44 96 108 0 52-20 96-52 122-14 12-28 20-44 20s-30-8-44-20c-32-26-52-70-52-122 0-64 38-108 96-108z" fill="url(#litFace)"/>
+          <path d="M200 92c58 0 96 44 96 108 0 52-20 96-52 122-14 12-28 20-44 20s-30-8-44-20c-32-26-52-70-52-122 0-64 38-108 96-108z" fill="url(#rim)" opacity="0.9"/>
+          <circle cx="168" cy="176" r="6.5" fill="#faf4e6"/>
+          <circle cx="171" cy="173" r="2" fill="#ffffff"/>
+        </svg>
+      </div>
+      <!-- physical light disc -->
+      <div class="hero__light" id="heroLight" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>東京・蔵前 ／ 自然光の肖像写真スタジオ</p>
+      <h1 class="hero__title" id="heroTitle">光を、<br>彫る。</h1>
+      <p class="hero__lede">写真は、顔を写す仕事ではありません。<br>その人にしか宿らない光を見つけ、そっと彫り出す仕事です。</p>
+      <p class="exif" aria-label="撮影データの例">
+        <span>f/1.4</span><span aria-hidden="true">·</span><span>1/125s</span><span aria-hidden="true">·</span><span>ISO&nbsp;100</span><span aria-hidden="true">·</span><span>85mm</span>
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#book">撮影を予約する</a>
+        <a class="btn btn--ghost" href="#studies">光の習作を見る</a>
+      </div>
+      <p class="hero__hint" id="heroHint"><span class="hero__hint-dot" aria-hidden="true"></span>画面にそっと触れて、光を動かしてみてください。</p>
+    </div>
+
+    <a class="scroll-cue" href="#jo" aria-label="下へスクロール">
+      <span class="scroll-cue__label">SCROLL</span>
+      <span class="scroll-cue__line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- 序 philosophy -->
+  <section class="jo" id="jo" aria-labelledby="joTitle">
+    <p class="section-index">01 ／ 序</p>
+    <div class="jo__grid">
+      <h2 class="jo__statement" id="joTitle">写真とは、<br>光の<em>彫刻</em>である。</h2>
+      <div class="jo__body">
+        <p>同じ人でも、光の当て方ひとつで別人のように写ります。強い光は輪郭を彫り、やわらかな光は空気を含ませる。わたしたちは、その日のあなたに合う光を一緒に探すことから撮影を始めます。</p>
+        <p>だから光房では、いきなりカメラを構えません。まず座って、話して、笑って。緊張がほどけて素の表情が戻ってきたその一瞬に、はじめてシャッターを切ります。</p>
+        <p class="jo__sign"><span class="mono">光房 主宰</span>／ 影山 灯</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 光の習作 : horizontal film strip, cursor spotlight -->
+  <section class="studies" id="studies" aria-labelledby="studiesTitle">
+    <div class="studies__head">
+      <p class="section-index">02 ／ 光の習作</p>
+      <h2 class="studies__title" id="studiesTitle">六つの、光のかたち</h2>
+      <p class="studies__note">顔に落ちる影の位置で、人の印象は驚くほど変わります。撮影当日は、あなたの骨格と物語に合う一灯を選びます。<span class="studies__drag">横にドラッグ →</span></p>
+    </div>
+
+    <div class="strip" id="strip" tabindex="0" role="region" aria-label="光の習作（横スクロール）">
+      <div class="strip__track" id="stripTrack">
+
+        <article class="study" style="--i:0">
+          <div class="study__frame">
+            <svg viewBox="0 0 260 320" class="study__art" role="img" aria-label="レンブラント・ライティングの光の習作">
+              <rect width="260" height="320" fill="#0e1016"/>
+              <defs><radialGradient id="s1" cx="38%" cy="34%" r="72%"><stop offset="0%" stop-color="#e7ddca"/><stop offset="34%" stop-color="#9b968b"/><stop offset="70%" stop-color="#3a3c44"/><stop offset="100%" stop-color="#0e1016"/></radialGradient></defs>
+              <path d="M130 66c40 0 66 30 66 74 0 40-16 74-40 92-10 8-18 12-26 12s-16-4-26-12c-24-18-40-52-40-92 0-44 26-74 66-74z" fill="url(#s1)"/>
+              <path d="M150 150l14 22-16 3z" fill="#efe6d3" opacity="0.75"/>
+              <circle cx="112" cy="140" r="4" fill="#f6efdd"/>
+            </svg>
+          </div>
+          <div class="study__meta">
+            <p class="study__name">レンブラント</p>
+            <p class="study__desc">頬に小さな光の三角。陰影が最も深く、物語を帯びる。</p>
+            <p class="exif exif--sm"><span>f/2.0</span><span aria-hidden="true">·</span><span>1/100s</span><span aria-hidden="true">·</span><span>ISO&nbsp;200</span></p>
+          </div>
+        </article>
+
+        <article class="study" style="--i:1">
+          <div class="study__frame">
+            <svg viewBox="0 0 260 320" class="study__art" role="img" aria-label="バタフライ・ライティングの光の習作">
+              <rect width="260" height="320" fill="#0e1016"/>
+              <defs><radialGradient id="s2" cx="50%" cy="30%" r="70%"><stop offset="0%" stop-color="#efe6d3"/><stop offset="32%" stop-color="#b7b1a4"/><stop offset="72%" stop-color="#3d3f47"/><stop offset="100%" stop-color="#0e1016"/></radialGradient></defs>
+              <path d="M130 66c40 0 66 30 66 74 0 40-16 74-40 92-10 8-18 12-26 12s-16-4-26-12c-24-18-40-52-40-92 0-44 26-74 66-74z" fill="url(#s2)"/>
+              <ellipse cx="130" cy="170" rx="10" ry="7" fill="#2a2c34" opacity="0.7"/>
+              <circle cx="112" cy="132" r="4" fill="#f6efdd"/><circle cx="148" cy="132" r="4" fill="#f6efdd"/>
+            </svg>
+          </div>
+          <div class="study__meta">
+            <p class="study__name">バタフライ</p>
+            <p class="study__desc">鼻の下に蝶の影。正面から包み、肌をなめらかに見せる。</p>
+            <p class="exif exif--sm"><span>f/2.8</span><span aria-hidden="true">·</span><span>1/160s</span><span aria-hidden="true">·</span><span>ISO&nbsp;100</span></p>
+          </div>
+        </article>
+
+        <article class="study" style="--i:2">
+          <div class="study__frame">
+            <svg viewBox="0 0 260 320" class="study__art" role="img" aria-label="ループ・ライティングの光の習作">
+              <rect width="260" height="320" fill="#0e1016"/>
+              <defs><radialGradient id="s3" cx="42%" cy="33%" r="72%"><stop offset="0%" stop-color="#e5dbc7"/><stop offset="36%" stop-color="#a29c90"/><stop offset="72%" stop-color="#393b43"/><stop offset="100%" stop-color="#0e1016"/></radialGradient></defs>
+              <path d="M130 66c40 0 66 30 66 74 0 40-16 74-40 92-10 8-18 12-26 12s-16-4-26-12c-24-18-40-52-40-92 0-44 26-74 66-74z" fill="url(#s3)"/>
+              <path d="M142 150c6 6 8 12 4 16-3 3-8 1-10-3z" fill="#2b2d35" opacity="0.7"/>
+              <circle cx="114" cy="138" r="4" fill="#f6efdd"/>
+            </svg>
+          </div>
+          <div class="study__meta">
+            <p class="study__name">ループ</p>
+            <p class="study__desc">最も自然で使いやすい定番。誰の顔にも素直に馴染む。</p>
+            <p class="exif exif--sm"><span>f/2.2</span><span aria-hidden="true">·</span><span>1/125s</span><span aria-hidden="true">·</span><span>ISO&nbsp;160</span></p>
+          </div>
+        </article>
+
+        <article class="study" style="--i:3">
+          <div class="study__frame">
+            <svg viewBox="0 0 260 320" class="study__art" role="img" aria-label="スプリット・ライティングの光の習作">
+              <rect width="260" height="320" fill="#0e1016"/>
+              <defs><linearGradient id="s4" x1="0" y1="0" x2="1" y2="0"><stop offset="46%" stop-color="#0e1016"/><stop offset="52%" stop-color="#4a4c54"/><stop offset="100%" stop-color="#e3d9c5"/></linearGradient></defs>
+              <path d="M130 66c40 0 66 30 66 74 0 40-16 74-40 92-10 8-18 12-26 12s-16-4-26-12c-24-18-40-52-40-92 0-44 26-74 66-74z" fill="url(#s4)"/>
+              <circle cx="150" cy="138" r="4" fill="#f6efdd"/>
+            </svg>
+          </div>
+          <div class="study__meta">
+            <p class="study__name">スプリット</p>
+            <p class="study__desc">顔を光と闇で二分する。意志のある、凛とした一枚に。</p>
+            <p class="exif exif--sm"><span>f/1.8</span><span aria-hidden="true">·</span><span>1/200s</span><span aria-hidden="true">·</span><span>ISO&nbsp;200</span></p>
+          </div>
+        </article>
+
+        <article class="study" style="--i:4">
+          <div class="study__frame">
+            <svg viewBox="0 0 260 320" class="study__art" role="img" aria-label="リム・ライティングの光の習作">
+              <rect width="260" height="320" fill="#0e1016"/>
+              <defs>
+                <radialGradient id="s5" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#23252d"/><stop offset="100%" stop-color="#0e1016"/></radialGradient>
+                <linearGradient id="s5rim" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f6efdd"/><stop offset="30%" stop-color="rgba(246,239,221,0)"/></linearGradient>
+              </defs>
+              <path d="M130 66c40 0 66 30 66 74 0 40-16 74-40 92-10 8-18 12-26 12s-16-4-26-12c-24-18-40-52-40-92 0-44 26-74 66-74z" fill="url(#s5)"/>
+              <path d="M130 66c40 0 66 30 66 74 0 40-16 74-40 92-10 8-18 12-26 12s-16-4-26-12c-24-18-40-52-40-92 0-44 26-74 66-74z" fill="url(#s5rim)"/>
+            </svg>
+          </div>
+          <div class="study__meta">
+            <p class="study__name">リム</p>
+            <p class="study__desc">輪郭だけを光でなぞる。闇の中に人の気配が立ち上がる。</p>
+            <p class="exif exif--sm"><span>f/1.4</span><span aria-hidden="true">·</span><span>1/250s</span><span aria-hidden="true">·</span><span>ISO&nbsp;400</span></p>
+          </div>
+        </article>
+
+        <article class="study" style="--i:5">
+          <div class="study__frame">
+            <svg viewBox="0 0 260 320" class="study__art" role="img" aria-label="クラムシェル・ライティングの光の習作">
+              <rect width="260" height="320" fill="#0e1016"/>
+              <defs><radialGradient id="s6" cx="50%" cy="42%" r="74%"><stop offset="0%" stop-color="#f0e7d5"/><stop offset="40%" stop-color="#c9c3b6"/><stop offset="78%" stop-color="#43454d"/><stop offset="100%" stop-color="#0e1016"/></radialGradient></defs>
+              <path d="M130 66c40 0 66 30 66 74 0 40-16 74-40 92-10 8-18 12-26 12s-16-4-26-12c-24-18-40-52-40-92 0-44 26-74 66-74z" fill="url(#s6)"/>
+              <circle cx="112" cy="132" r="4" fill="#fff"/><circle cx="148" cy="132" r="4" fill="#fff"/>
+              <circle cx="112" cy="146" r="3" fill="#efe6d3" opacity="0.6"/><circle cx="148" cy="146" r="3" fill="#efe6d3" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="study__meta">
+            <p class="study__name">クラムシェル</p>
+            <p class="study__desc">上下から挟む二灯。透明感が生まれ、美容・記念に。</p>
+            <p class="exif exif--sm"><span>f/3.2</span><span aria-hidden="true">·</span><span>1/160s</span><span aria-hidden="true">·</span><span>ISO&nbsp;100</span></p>
+          </div>
+        </article>
+
+      </div>
+      <div class="strip__light" id="stripLight" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- あつらえ sessions / plans -->
+  <section class="sessions" id="sessions" aria-labelledby="sessionsTitle">
+    <div class="sessions__head">
+      <p class="section-index">03 ／ あつらえ</p>
+      <h2 class="sessions__title" id="sessionsTitle">撮る理由の、数だけ。</h2>
+      <p class="sessions__note">料金はすべて税込。データ・レタッチ込みの明朗表記です。追加料金はいただきません。</p>
+    </div>
+    <ul class="plan-list">
+      <li class="plan">
+        <div class="plan__main"><span class="plan__name">家族写真</span><span class="plan__leader" aria-hidden="true"></span><span class="plan__price">¥33,000<span class="plan__unit">〜</span></span></div>
+        <p class="plan__sub">約60分／全カットデータ納品／台紙プリント2枚。三世代でどうぞ。</p>
+      </li>
+      <li class="plan">
+        <div class="plan__main"><span class="plan__name">七五三・お宮参り</span><span class="plan__leader" aria-hidden="true"></span><span class="plan__price">¥38,000<span class="plan__unit">〜</span></span></div>
+        <p class="plan__sub">約90分／衣装持ち込み可／ぐずっても大丈夫、時間はたっぷり。</p>
+      </li>
+      <li class="plan">
+        <div class="plan__main"><span class="plan__name">ポートレート</span><span class="plan__leader" aria-hidden="true"></span><span class="plan__price">¥22,000<span class="plan__unit">〜</span></span></div>
+        <p class="plan__sub">約45分／六つの光から一灯を選定／SNS用データも同梱。</p>
+      </li>
+      <li class="plan">
+        <div class="plan__main"><span class="plan__name">ビジネスプロフィール</span><span class="plan__leader" aria-hidden="true"></span><span class="plan__price">¥18,000<span class="plan__unit">〜</span></span></div>
+        <p class="plan__sub">約30分／2カット納品／名刺・登壇・採用ページに。当日仕上げ可。</p>
+      </li>
+      <li class="plan">
+        <div class="plan__main"><span class="plan__name">マタニティ</span><span class="plan__leader" aria-hidden="true"></span><span class="plan__price">¥28,000<span class="plan__unit">〜</span></span></div>
+        <p class="plan__sub">約60分／体調最優先／自然光のやわらかな一灯で包みます。</p>
+      </li>
+      <li class="plan">
+        <div class="plan__main"><span class="plan__name">ペットと家族</span><span class="plan__leader" aria-hidden="true"></span><span class="plan__price">¥30,000<span class="plan__unit">〜</span></span></div>
+        <p class="plan__sub">約60分／おやつ・おもちゃ歓迎／床置き撮影で目線を合わせて。</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 撮影の流れ -->
+  <section class="flow" id="flow" aria-labelledby="flowTitle">
+    <div class="flow__head">
+      <p class="section-index">04 ／ 撮影の流れ</p>
+      <h2 class="flow__title" id="flowTitle">光ができるまでの、四歩。</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__no mono">01</span>
+        <h3 class="step__h">ご相談</h3>
+        <p class="step__p">オンラインまたは電話で、撮る理由と好みの雰囲気をうかがいます。所要10分ほど。</p>
+      </li>
+      <li class="step">
+        <span class="step__no mono">02</span>
+        <h3 class="step__h">光を決める</h3>
+        <p class="step__p">当日、あなたの骨格と物語に合わせて一灯を選定。ここが写真の八割を決めます。</p>
+      </li>
+      <li class="step">
+        <span class="step__no mono">03</span>
+        <h3 class="step__h">撮影</h3>
+        <p class="step__p">話しながら、笑いながら。緊張がほどけた一瞬を待って切ります。急ぎません。</p>
+      </li>
+      <li class="step">
+        <span class="step__no mono">04</span>
+        <h3 class="step__h">仕上げ</h3>
+        <p class="step__p">その場で一緒にセレクト。丁寧なレタッチを施し、最短当日〜10日で納品します。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 声 -->
+  <section class="voices" id="voices" aria-labelledby="voicesTitle">
+    <p class="section-index">05 ／ 声</p>
+    <h2 class="voices__title" id="voicesTitle">撮ったあとに、残るもの。</h2>
+    <div class="voices__grid">
+      <blockquote class="voice">
+        <p>「うちの子、こんな顔で笑うんだって初めて気づきました。写真というより、その日の空気ごと預かってもらった感じ。」</p>
+        <footer>— 七五三でご来店 ／ 世田谷区・M様</footer>
+      </blockquote>
+      <blockquote class="voice">
+        <p>「転職用にと軽い気持ちで撮ったのに、面接官に必ず触れられる一枚になりました。光の当て方でここまで変わるとは。」</p>
+        <footer>— ビジネスプロフィール ／ 台東区・K様</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 予約 CTA -->
+  <section class="book" id="book" aria-labelledby="bookTitle">
+    <div class="book__inner">
+      <p class="section-index section-index--light">06 ／ 予約</p>
+      <h2 class="book__title" id="bookTitle">あなたの光を、<br>彫りにきてください。</h2>
+      <p class="book__lede">ご相談は無料です。撮る理由がまだ言葉にならなくても、話しながら一緒に見つけます。</p>
+      <div class="book__cta">
+        <a class="btn btn--primary btn--lg" href="#book">空き状況を確認して予約</a>
+        <a class="btn btn--ghost btn--lg" href="tel:0300000000">03-0000-0000</a>
+      </div>
+      <dl class="studio-info">
+        <div><dt>所在</dt><dd>東京都台東区蔵前 2-1-8 光房ビル 3F</dd></div>
+        <div><dt>営業</dt><dd class="mono">10:00 – 19:00 ／ 水曜定休</dd></div>
+        <div><dt>最寄</dt><dd>都営浅草線・大江戸線「蔵前」駅 徒歩3分</dd></div>
+        <div><dt>創業</dt><dd class="mono">2012</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__brand">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" focusable="false"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.1"/><circle cx="12" cy="12" r="3.4" fill="currentColor"/></svg>
+    </span>
+    <span>光房 KŌBŌ</span>
+  </div>
+  <p class="site-footer__tag">光を彫る肖像写真スタジオ ／ 東京・蔵前</p>
+  <p class="site-footer__copy mono">© 2012–2026 KŌBŌ Portrait Studio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

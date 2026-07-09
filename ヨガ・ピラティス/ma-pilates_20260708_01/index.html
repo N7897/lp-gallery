@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>間 ma ｜ 呼吸と背骨のピラティス・スタジオ｜谷中</title>
+<meta name="description" content="間 ma は、呼吸とアライメントにひとつずつ立ち返る、谷中の小さなピラティス／ヨガ・スタジオ。ととのう、という贅沢を。体験レッスン受付中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Zen+Maru+Gothic:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<!-- 背骨の軸（全編を貫く縦線・椎骨ノード） -->
+<div class="spine" aria-hidden="true">
+  <svg class="spine__svg" viewBox="0 0 20 1000" preserveAspectRatio="none">
+    <line class="spine__base" x1="10" y1="0" x2="10" y2="1000"/>
+    <line class="spine__draw" x1="10" y1="0" x2="10" y2="1000"/>
+  </svg>
+  <span class="spine__label"><i data-node></i><em id="spineLabel">01 呼吸</em></span>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#hero" aria-label="間 ma ホーム">
+    <span class="nav__mark">間</span>
+    <span class="nav__word">ma</span>
+  </a>
+  <nav class="nav__links" aria-label="主要ナビゲーション">
+    <a href="#philosophy">間について</a>
+    <a href="#method">メソッド</a>
+    <a href="#flow">一日の流れ</a>
+    <a href="#teacher">講師</a>
+    <a href="#price">料金</a>
+  </nav>
+  <a class="btn btn--sm" href="#book">体験する</a>
+  <button class="nav__burger" id="burger" aria-label="メニューを開く" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main id="main">
+
+  <!-- ① ヒーロー：呼吸リング -->
+  <section class="hero" id="hero" aria-labelledby="hero-h">
+    <div class="hero__stage">
+      <div class="breath" data-breath aria-hidden="true">
+        <span class="breath__ring breath__ring--3"></span>
+        <span class="breath__ring breath__ring--2"></span>
+        <span class="breath__ring breath__ring--1"></span>
+        <span class="breath__core"></span>
+      </div>
+      <p class="hero__cue" aria-live="off"><span data-cue>吸って</span></p>
+    </div>
+
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>PILATES &amp; BREATH STUDIO — 谷中</p>
+      <h1 class="hero__h" id="hero-h">呼吸を、<br>ひとつ<span class="ink">ずつ</span>。</h1>
+      <p class="hero__lead">速さを競わない。息の入る場所と、背骨の一本を、ていねいに思い出す時間。<br>ここは、あなたの「間（あわい）」をととのえる小さなスタジオです。</p>
+      <div class="hero__cta">
+        <a class="btn" href="#book">体験レッスンを予約する</a>
+        <a class="btn btn--ghost" href="#philosophy">間について、もう少し</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true"><span>SCROLL</span><i></i></div>
+  </section>
+
+  <!-- ② 間について -->
+  <section class="phil" id="philosophy" aria-labelledby="phil-h" data-section data-label="02 間">
+    <span class="bgword" aria-hidden="true" data-parallax>MA</span>
+    <div class="phil__inner">
+      <p class="tag">01 — Philosophy</p>
+      <h2 class="phil__h" id="phil-h" data-reveal>
+        動きと動きの<br><span class="hl">あいだ</span>に、<br>ととのう時間がある。
+      </h2>
+      <div class="phil__cols">
+        <p data-reveal>「間（ま）」とは、吸うと吐くのあいだ、伸ばすと戻すのあいだにある、ほんの一瞬の静けさのこと。私たちはその静けさを、いちばん大切にしています。</p>
+        <p data-reveal>回数でも、汗の量でもなく、息がどこまで深く入るか。背骨がどれだけまっすぐ立てるか。小さな変化に気づけるよう、一クラス最大6名の少人数で向き合います。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ メソッド：左リング(ピン)×右3メソッド(D5) -->
+  <section class="method" id="method" aria-labelledby="method-h" data-section data-label="03 メソッド">
+    <div class="method__sticky">
+      <div class="mini-breath" data-minibreath aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <p class="tag">02 — Method</p>
+      <h2 class="method__h" id="method-h">三つの、<br>立ち返る場所。</h2>
+      <p class="method__note" data-methodnote>右へスクロールするたび、ひとつずつ。</p>
+    </div>
+
+    <ol class="method__list">
+      <li class="mcard" data-method="01" data-reveal>
+        <span class="mcard__no">01</span>
+        <svg class="mcard__ico" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="10" class="io"/><circle cx="32" cy="32" r="20" class="io"/><circle cx="32" cy="32" r="29" class="io"/></svg>
+        <h3>呼吸 <em>Breath</em></h3>
+        <p>肋骨のうしろ、背中側まで空気を届ける。深い呼吸は、力むための準備ではなく、力を抜くための技術です。</p>
+      </li>
+      <li class="mcard" data-method="02" data-reveal>
+        <span class="mcard__no">02</span>
+        <svg class="mcard__ico" viewBox="0 0 64 64" aria-hidden="true"><path class="io" d="M14 32 Q32 8 50 32 Q32 56 14 32 Z"/><circle cx="32" cy="32" r="4" class="io fill"/></svg>
+        <h3>コア <em>Core</em></h3>
+        <p>お腹を固めるのではなく、内側から支える。体幹は「締める場所」ではなく、姿勢を静かに保ちつづける土台です。</p>
+      </li>
+      <li class="mcard" data-method="03" data-reveal>
+        <span class="mcard__no">03</span>
+        <svg class="mcard__ico" viewBox="0 0 64 64" aria-hidden="true"><line class="io" x1="32" y1="10" x2="32" y2="54"/><circle class="io" cx="32" cy="17" r="4"/><circle class="io" cx="32" cy="32" r="4"/><circle class="io" cx="32" cy="47" r="4"/></svg>
+        <h3>軸 <em>Alignment</em></h3>
+        <p>背骨を一本の線に戻す。積み木のように椎骨がそろうと、肩も呼吸もほどける。姿勢は、いちばん静かなトレーニングです。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ④ 一日の流れ -->
+  <section class="flow" id="flow" aria-labelledby="flow-h" data-section data-label="04 一日">
+    <div class="flow__head">
+      <p class="tag">03 — A Session</p>
+      <h2 class="flow__h" id="flow-h">55分の、<br>呼吸のリズム。</h2>
+      <p class="flow__lead">吸って、止めて、吐いて。レッスンもまた、ひとつの長い呼吸のように流れていきます。</p>
+    </div>
+    <ol class="flow__list">
+      <li data-reveal><span class="flow__t">00:00</span><h3>グラウンディング</h3><p>床に背中をあずけ、今日の呼吸の深さを確かめる。目を閉じる5分間。</p></li>
+      <li data-reveal><span class="flow__t">00:10</span><h3>アーティキュレーション</h3><p>背骨をひと椎ずつ動かし、固まった「間」をほどいていく。</p></li>
+      <li data-reveal><span class="flow__t">00:25</span><h3>コア・ワーク</h3><p>呼吸に合わせて内側から支える。マット／リフォーマーで負荷を微調整。</p></li>
+      <li data-reveal><span class="flow__t">00:45</span><h3>リストア</h3><p>ととのった軸のまま、ゆっくり日常へ戻る。最後にもう一度、深い一呼吸。</p></li>
+    </ol>
+  </section>
+
+  <!-- ⑤ 講師 -->
+  <section class="teacher" id="teacher" aria-labelledby="teacher-h" data-section data-label="05 講師">
+    <div class="teacher__head">
+      <p class="tag">04 — Instructors</p>
+      <h2 class="teacher__h" id="teacher-h">隣で、<br>同じ呼吸を。</h2>
+    </div>
+    <div class="teacher__grid">
+      <article class="tcard" data-reveal>
+        <div class="tcard__ph" aria-hidden="true"><span class="tcard__initial">A</span></div>
+        <h3>安藤 あさひ<em>Asahi Ando</em></h3>
+        <p class="tcard__role">主宰 / ピラティス・呼吸</p>
+        <p>理学療法士として10年。「痛みの前に、呼吸を」を信条に、身体の声を聞く時間を大切にしています。</p>
+      </article>
+      <article class="tcard" data-reveal>
+        <div class="tcard__ph" aria-hidden="true"><span class="tcard__initial">M</span></div>
+        <h3>三隅 なぎ<em>Nagi Misumi</em></h3>
+        <p class="tcard__role">ヨガ / アライメント</p>
+        <p>ヴィンヤサとリストラティブの両輪で。強くしなやかな軸を、無理なく育てるクラスを担当します。</p>
+      </article>
+      <article class="tcard" data-reveal>
+        <div class="tcard__ph" aria-hidden="true"><span class="tcard__initial">R</span></div>
+        <h3>李 律<em>Ritsu Lee</em></h3>
+        <p class="tcard__role">リフォーマー / コア</p>
+        <p>元ダンサー。マシンを使った繊細なコントロールで、眠っている深部の筋肉を目覚めさせます。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ⑥ 料金 -->
+  <section class="price" id="price" aria-labelledby="price-h" data-section data-label="06 料金">
+    <div class="price__head">
+      <p class="tag">05 — Plans</p>
+      <h2 class="price__h" id="price-h">続けやすさも、<br>ととのえて。</h2>
+      <p class="price__lead">入会金・事務手数料はいただきません。まずは体験から、どうぞ気軽に。</p>
+    </div>
+    <div class="price__grid">
+      <article class="pcard" data-reveal>
+        <h3>体験レッスン</h3>
+        <p class="pcard__price"><span class="yen">¥</span>1,650<small>／初回のみ・税込</small></p>
+        <ul>
+          <li>グループ55分・1回</li>
+          <li>マット／リフォーマー選択可</li>
+          <li>ウェア・靴下レンタル込み</li>
+        </ul>
+        <a class="btn btn--ghost btn--full" href="#book">これを予約</a>
+      </article>
+      <article class="pcard pcard--feat" data-reveal>
+        <span class="pcard__badge">いちばん人気</span>
+        <h3>月4回 メンバー</h3>
+        <p class="pcard__price"><span class="yen">¥</span>13,200<small>／月・税込</small></p>
+        <ul>
+          <li>グループレッスン 月4回</li>
+          <li>予約は2週間先まで</li>
+          <li>当日キャンセル 月1回無料</li>
+          <li>プライベート20％OFF</li>
+        </ul>
+        <a class="btn btn--full" href="#book">体験してから決める</a>
+      </article>
+      <article class="pcard" data-reveal>
+        <h3>通い放題</h3>
+        <p class="pcard__price"><span class="yen">¥</span>22,000<small>／月・税込</small></p>
+        <ul>
+          <li>グループレッスン 通い放題</li>
+          <li>朝6:30クラスも利用可</li>
+          <li>ゲスト同伴 月1回無料</li>
+        </ul>
+        <a class="btn btn--ghost btn--full" href="#book">これを予約</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ⑦ 予約CTA -->
+  <section class="cta" id="book" aria-labelledby="cta-h">
+    <div class="breath breath--cta" data-breath aria-hidden="true">
+      <span class="breath__ring breath__ring--3"></span>
+      <span class="breath__ring breath__ring--2"></span>
+      <span class="breath__ring breath__ring--1"></span>
+      <span class="breath__core"></span>
+    </div>
+    <div class="cta__copy">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>体験レッスン受付中</p>
+      <h2 class="cta__h" id="cta-h">まずは、<br>ひと呼吸から。</h2>
+      <p class="cta__lead">オンラインで24時間予約できます。予約後の変更・キャンセルも、前日まで無料です。</p>
+      <a class="btn btn--lg" href="#book">体験レッスンを予約する</a>
+      <p class="cta__sub">お電話でも承ります　<a href="tel:0300000000">03-0000-0000</a>（平日 10:00–19:00）</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__brand">
+    <span class="nav__mark">間</span>
+    <p>ma — pilates &amp; breath studio</p>
+  </div>
+  <div class="foot__cols">
+    <div>
+      <h4>アクセス</h4>
+      <p>〒110-0001<br>東京都台東区谷中3-0-0 間ビル 2F<br>JR日暮里駅 西口より徒歩5分</p>
+    </div>
+    <div>
+      <h4>営業時間</h4>
+      <p>平日 6:30–21:00<br>土日 8:00–18:00<br>定休：火曜</p>
+    </div>
+    <div>
+      <h4>フォロー</h4>
+      <p><a href="#book">Instagram</a><br><a href="#book">Newsletter</a><br><a href="#book">お問い合わせ</a></p>
+    </div>
+  </div>
+  <p class="foot__copy">© 2026 ma studio. すべての呼吸に、間を。</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

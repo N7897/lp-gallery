@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>花筥 -hanabako- ｜ 季節の花あつらえ アトリエ</title>
+<meta name="description" content="花筥 -hanabako- は、その日の空気ごと束ねる季節の花あつらえアトリエ。専属フローリストが摘みたての花で一束ずつ仕立て、全国へお届けします。誕生日・記念日・開店祝い・ブライダル・お供えまで。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+<div class="cursor" aria-hidden="true"><span class="cursor__petal"></span></div>
+<div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#hero" aria-label="花筥 hanabako トップへ">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34"><g fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M20 6c4 5 4 9 0 13-4-4-4-8 0-13Z"/>
+        <path d="M20 19c5-2 9 0 11 5-6 2-9 0-11-5Z"/>
+        <path d="M20 19c-5-2-9 0-11 5 6 2 9 0 11-5Z"/>
+        <path d="M20 20v14"/>
+      </g></svg>
+    </span>
+    <span class="brand__type"><b>花筥</b><i>hanabako</i></span>
+  </a>
+  <nav class="nav" aria-label="メインナビゲーション">
+    <a href="#value">こだわり</a>
+    <a href="#collection">コレクション</a>
+    <a href="#plan">定期便</a>
+    <a href="#story">アトリエ</a>
+    <a href="#faq">よくある質問</a>
+  </nav>
+  <a class="btn btn--head" href="#cta" data-magnetic>ご注文・ご相談<span class="btn__arrow" aria-hidden="true">→</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__scene" aria-hidden="true">
+    <span class="petal petal--1"></span>
+    <span class="petal petal--2"></span>
+    <span class="petal petal--3"></span>
+    <span class="petal petal--4"></span>
+    <span class="petal petal--5"></span>
+  </div>
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow reveal">Seasonal Flower Atelier ・ since 2009</p>
+      <h1 class="hero__title">
+        <span class="line reveal">その日の空気ごと、</span>
+        <span class="line reveal"><em>束ねる。</em></span>
+      </h1>
+      <p class="hero__lead reveal">摘みたての季節の花だけで、専属フローリストが一束ずつ仕立てる花あつらえ。<br />贈る相手の一日を想いながら、名もなき草花まで丁寧に選びます。</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary" href="#collection" data-magnetic>コレクションを見る<span class="btn__arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" href="#plan">定期便を知る</a>
+      </div>
+      <p class="hero__note reveal">当日15時までのご注文で最短翌日、全国へ。</p>
+    </div>
+    <div class="hero__stage">
+      <div class="bloom" data-tilt>
+        <div class="bloom__ring bloom__ring--a"></div>
+        <div class="bloom__ring bloom__ring--b"></div>
+        <div class="bloom__card">
+          <span class="bloom__season">— 今週の花 —</span>
+          <span class="bloom__name">白芍薬とスモークツリー</span>
+          <span class="bloom__cap">初夏の余白を束ねた一輪</span>
+        </div>
+        <span class="bloom__leaf bloom__leaf--1" aria-hidden="true"></span>
+        <span class="bloom__leaf bloom__leaf--2" aria-hidden="true"></span>
+        <span class="bloom__leaf bloom__leaf--3" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scrollcue" aria-hidden="true"><span>Scroll</span><i></i></div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="trust" aria-label="実績">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>季節の花あつらえ</span><span aria-hidden="true">✿</span>
+      <span>ブライダル装花</span><span aria-hidden="true">✿</span>
+      <span>開店・就任のお祝い</span><span aria-hidden="true">✿</span>
+      <span>定期便サブスク</span><span aria-hidden="true">✿</span>
+      <span>全国配送</span><span aria-hidden="true">✿</span>
+      <span>季節の花あつらえ</span><span aria-hidden="true">✿</span>
+      <span>ブライダル装花</span><span aria-hidden="true">✿</span>
+      <span>開店・就任のお祝い</span><span aria-hidden="true">✿</span>
+      <span>定期便サブスク</span><span aria-hidden="true">✿</span>
+      <span>全国配送</span><span aria-hidden="true">✿</span>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b class="count" data-to="47200" data-suffix="束">0</b><span>これまでに束ねた花</span></div>
+    <div class="stat"><b class="count" data-to="17" data-suffix="年">0</b><span>アトリエの歩み</span></div>
+    <div class="stat"><b class="count" data-to="1280" data-suffix="組">0</b><span>ブライダルの実績</span></div>
+    <div class="stat"><b><span class="count" data-to="49" data-decimal="1">0</span></b><span>Google 星の評価（★4.9 / 2,100件）</span></div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="problem" id="problem">
+  <div class="section-head">
+    <p class="eyebrow">The Difficulty ・ 花選びの、ためらい</p>
+    <h2 class="section-title reveal">「なにを贈れば」で、<br /><em>手が止まってしまう。</em></h2>
+  </div>
+  <ul class="problem__list">
+    <li class="problem__item reveal"><span class="problem__no">01</span><h3>相手の好みが分からない</h3><p>色も花も無数にあって、どれがその人に似合うのか決めきれない。無難な花束になってしまう。</p></li>
+    <li class="problem__item reveal"><span class="problem__no">02</span><h3>お店ごとに品質がまちまち</h3><p>写真は素敵でも、届いたら元気がない。大切な日に、しおれた花は贈りたくない。</p></li>
+    <li class="problem__item reveal"><span class="problem__no">03</span><h3>贈るタイミングを逃す</h3><p>気づけば前日。当日でも間に合う、信頼できる花屋をひとつ持っておきたい。</p></li>
+  </ul>
+  <p class="problem__bridge reveal">——その迷いを、専属フローリストごと引き受けます。</p>
+</section>
+
+<!-- ============ VALUE ============ -->
+<section class="value" id="value">
+  <div class="section-head section-head--split">
+    <p class="eyebrow">Why hanabako ・ 四つの約束</p>
+    <h2 class="section-title reveal">花屋である前に、<br /><em>あなたの一日の設計者。</em></h2>
+    <p class="section-lead reveal">仕入れから仕立て、配送までを自社で抱えるから、写真そのままの一束が、いちばん美しい瞬間で届きます。</p>
+  </div>
+  <div class="value__grid">
+    <article class="vcard reveal" data-tilt>
+      <span class="vcard__icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M24 10c5 7 5 12 0 18-5-6-5-11 0-18Z"/><path d="M24 28v10"/><path d="M18 38h12"/></g></svg>
+      </span>
+      <h3>朝摘みの季節花だけ</h3>
+      <p>契約農家と国内市場から、その週いちばんの花を厳選。旬を外れた花は、あえて仕入れません。</p>
+    </article>
+    <article class="vcard reveal" data-tilt>
+      <span class="vcard__icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="24" cy="18" r="7"/><path d="M12 40c2-8 8-11 12-11s10 3 12 11"/></g></svg>
+      </span>
+      <h3>専属フローリスト制</h3>
+      <p>ご注文ごとに担当が付き、贈る相手・場面・予算をヒアリング。二度目からは前回の記録を引き継ぎます。</p>
+    </article>
+    <article class="vcard reveal" data-tilt>
+      <span class="vcard__icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 30h32"/><path d="M14 30l4-14h12l4 14"/><circle cx="16" cy="34" r="3"/><circle cx="32" cy="34" r="3"/></g></svg>
+      </span>
+      <h3>翌日届く保鮮配送</h3>
+      <p>専用の保水パックと温度帯便で、摘みたての張りをそのままに。全国どこでも最短翌日にお届けします。</p>
+    </article>
+    <article class="vcard reveal" data-tilt>
+      <span class="vcard__icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M24 8v32"/><path d="M24 16c-4-4-10-3-12 1 4 4 9 3 12-1Z"/><path d="M24 24c4-4 10-3 12 1-4 4-9 3-12-1Z"/></g></svg>
+      </span>
+      <h3>7日間の花もち保証</h3>
+      <p>万一7日以内に元気を失った場合は、無償で束ね直し。花のある暮らしを、安心して続けていただけます。</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ COLLECTION (tabs) ============ -->
+<section class="collection" id="collection">
+  <div class="section-head">
+    <p class="eyebrow">Collection ・ 場面で選ぶ</p>
+    <h2 class="section-title reveal">その日にふさわしい、<br /><em>一束のかたち。</em></h2>
+  </div>
+  <div class="tabs" role="tablist" aria-label="コレクションの場面">
+    <button class="tab is-active" role="tab" aria-selected="true" data-tab="birthday">誕生日</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="celebration">開店・就任</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="bridal">ブライダル</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="memorial">お供え</button>
+  </div>
+
+  <div class="tab-panels">
+    <div class="tab-panel is-active" data-panel="birthday">
+      <div class="prod">
+        <article class="pcard reveal"><div class="pcard__img pcard__img--a" role="img" aria-label="淡いピンクとくすみ色の誕生日ブーケ"></div><div class="pcard__body"><span class="pcard__tag">人気No.1</span><h3>ハレの日ブーケ</h3><p>主役の一輪を芍薬に。まわりを季節の小花で囲んだ、開けた瞬間に歓声のあがる花束。</p><span class="pcard__price">¥6,600〜</span></div></article>
+        <article class="pcard reveal"><div class="pcard__img pcard__img--b" role="img" aria-label="ビタミンカラーの明るい花束"></div><div class="pcard__body"><span class="pcard__tag">元気を贈る</span><h3>サンライズ</h3><p>ラナンキュラスとミモザを効かせた、朝の光のような黄橙のブーケ。若い方への贈り物に。</p><span class="pcard__price">¥5,500〜</span></div></article>
+        <article class="pcard reveal"><div class="pcard__img pcard__img--c" role="img" aria-label="くすみカラーのシックな花束"></div><div class="pcard__body"><span class="pcard__tag">大人の誕生日</span><h3>トワイライト</h3><p>ボルドーとスモーキーピンクで束ねた、静かで艶やかな一束。40代からの贈り物に。</p><span class="pcard__price">¥7,700〜</span></div></article>
+      </div>
+    </div>
+    <div class="tab-panel" data-panel="celebration">
+      <div class="prod">
+        <article class="pcard reveal"><div class="pcard__img pcard__img--d" role="img" aria-label="華やかなスタンド花"></div><div class="pcard__body"><span class="pcard__tag">開店祝い</span><h3>グランドオープン スタンド</h3><p>遠目に映える大輪の胡蝶蘭とグリーンで、店先を華やかに。木札・立札を無料でお付けします。</p><span class="pcard__price">¥16,500〜</span></div></article>
+        <article class="pcard reveal"><div class="pcard__img pcard__img--e" role="img" aria-label="上品な就任祝いのアレンジ"></div><div class="pcard__body"><span class="pcard__tag">就任・昇進</span><h3>コンビビアル アレンジ</h3><p>オフィスに映える端正な卓上アレンジ。そのまま飾れる器付きで、受け取った側の手間を取りません。</p><span class="pcard__price">¥11,000〜</span></div></article>
+        <article class="pcard reveal"><div class="pcard__img pcard__img--f" role="img" aria-label="周年記念の豪華な花束"></div><div class="pcard__body"><span class="pcard__tag">周年記念</span><h3>アニバーサリー</h3><p>ブランドカラーに合わせて仕立てるオーダーメイド花束。ロゴ色の花で世界観を束ねます。</p><span class="pcard__price">¥13,200〜</span></div></article>
+      </div>
+    </div>
+    <div class="tab-panel" data-panel="bridal">
+      <div class="prod">
+        <article class="pcard reveal"><div class="pcard__img pcard__img--g" role="img" aria-label="ナチュラルなクラッチブーケ"></div><div class="pcard__body"><span class="pcard__tag">クラッチ</span><h3>ナチュラル クラッチ</h3><p>茎を束ねたままの、風をまとうようなブーケ。ガーデンウェディングや前撮りに。</p><span class="pcard__price">¥19,800〜</span></div></article>
+        <article class="pcard reveal"><div class="pcard__img pcard__img--h" role="img" aria-label="会場装花のコーディネート"></div><div class="pcard__body"><span class="pcard__tag">会場装花</span><h3>会場トータル装花</h3><p>ブーケから高砂・ゲストテーブルまで一貫コーディネート。会場との事前打合せも承ります。</p><span class="pcard__price">お見積り</span></div></article>
+        <article class="pcard reveal"><div class="pcard__img pcard__img--i" role="img" aria-label="ドライフラワーのアフターブーケ"></div><div class="pcard__body"><span class="pcard__tag">記念に残す</span><h3>アフターブーケ加工</h3><p>当日のブーケを押し花・ドライで額装。一生に一度の花を、これからの日々にも。</p><span class="pcard__price">¥8,800〜</span></div></article>
+      </div>
+    </div>
+    <div class="tab-panel" data-panel="memorial">
+      <div class="prod">
+        <article class="pcard reveal"><div class="pcard__img pcard__img--j" role="img" aria-label="白を基調としたお供えの花"></div><div class="pcard__body"><span class="pcard__tag">ご供花</span><h3>やすらぎ アレンジ</h3><p>白と淡い紫でまとめた、しずかな卓上アレンジ。棘や香りに配慮して仕立てます。</p><span class="pcard__price">¥6,600〜</span></div></article>
+        <article class="pcard reveal"><div class="pcard__img pcard__img--k" role="img" aria-label="お悔やみの花束"></div><div class="pcard__body"><span class="pcard__tag">お悔やみ</span><h3>偲ぶ 花束</h3><p>故人を偲ぶ、控えめで品のある花束。メッセージカードと立札を無料でご用意します。</p><span class="pcard__price">¥5,500〜</span></div></article>
+        <article class="pcard reveal"><div class="pcard__img pcard__img--l" role="img" aria-label="月命日の小さな花"></div><div class="pcard__body"><span class="pcard__tag">月命日に</span><h3>月かさね 小花</h3><p>毎月お届けする、手のひらほどの小さな供花。ご仏壇にそっと寄り添う定期便です。</p><span class="pcard__price">¥3,300／月</span></div></article>
+      </div>
+    </div>
+  </div>
+  <p class="collection__foot reveal">※ 花は入荷状況により、同等以上の花材で仕立てる場合がございます。ご予算・イメージのご相談はお気軽に。</p>
+</section>
+
+<!-- ============ PROCESS (sticky) ============ -->
+<section class="process" id="process">
+  <div class="process__sticky">
+    <p class="eyebrow">How it works ・ ご注文の流れ</p>
+    <h2 class="section-title"><em>五つの</em>手順で、<br />迷わず贈れます。</h2>
+    <p class="section-lead">オンラインでも、店頭でも。<br />専属フローリストが最後まで伴走します。</p>
+    <a class="btn btn--primary" href="#cta" data-magnetic>相談してみる<span class="btn__arrow" aria-hidden="true">→</span></a>
+  </div>
+  <ol class="steps">
+    <li class="step reveal"><span class="step__no">01</span><div><h3>場面を選ぶ</h3><p>誕生日・お祝い・ブライダル・お供えから、贈る場面をお選びください。ご予算だけでもOKです。</p></div></li>
+    <li class="step reveal"><span class="step__no">02</span><div><h3>専属担当とヒアリング</h3><p>相手の雰囲気や好きな色を、チャット・電話・店頭でお聞きします。おまかせも歓迎です。</p></div></li>
+    <li class="step reveal"><span class="step__no">03</span><div><h3>仕立てのご提案</h3><p>その週の花で組む一束を、写真とともにご提案。イメージが固まるまで何度でも調整します。</p></div></li>
+    <li class="step reveal"><span class="step__no">04</span><div><h3>朝、束ねる</h3><p>お届け日の朝に摘みたてで仕立て、保水・保冷して発送。仕上がりは写真でお知らせします。</p></div></li>
+    <li class="step reveal"><span class="step__no">05</span><div><h3>お届け・アフター</h3><p>最短翌日に到着。7日間の花もち保証と、飾り方ガイドカードを同梱します。</p></div></li>
+  </ol>
+</section>
+
+<!-- ============ SUBSCRIPTION PLANS ============ -->
+<section class="plan" id="plan">
+  <div class="section-head">
+    <p class="eyebrow">Subscription ・ 花のある暮らし</p>
+    <h2 class="section-title reveal">暮らしに、<br /><em>季節を定期便で。</em></h2>
+    <p class="section-lead reveal">その週いちばんの花を、おまかせで。ポストに届く手のひらサイズから、食卓を彩る本格ブーケまで。いつでも休止・解約できます。</p>
+  </div>
+  <div class="plans">
+    <article class="planc reveal">
+      <header><span class="planc__name">ポスト便</span><p class="planc__desc">手のひらの季節を、気軽に。</p></header>
+      <p class="planc__price"><b>¥1,320</b><span>／回・税込</span></p>
+      <ul class="planc__list">
+        <li>季節の小花 3〜5本</li>
+        <li>ポスト投函で受け取り不要</li>
+        <li>隔週 or 毎週から選択</li>
+        <li>飾り方カード同梱</li>
+      </ul>
+      <a class="btn btn--ghost" href="#cta">はじめる</a>
+    </article>
+    <article class="planc planc--feat reveal">
+      <span class="planc__ribbon">いちばん人気</span>
+      <header><span class="planc__name">アトリエ便</span><p class="planc__desc">食卓が主役になるブーケ。</p></header>
+      <p class="planc__price"><b>¥3,850</b><span>／回・税込</span></p>
+      <ul class="planc__list">
+        <li>季節のブーケ 10〜13本</li>
+        <li>専属フローリストのおまかせ</li>
+        <li>花器が映えるボリューム</li>
+        <li>花もち保証つき</li>
+        <li>初回は花ばさみをプレゼント</li>
+      </ul>
+      <a class="btn btn--primary" href="#cta" data-magnetic>はじめる<span class="btn__arrow" aria-hidden="true">→</span></a>
+    </article>
+    <article class="planc reveal">
+      <header><span class="planc__name">迎賓便</span><p class="planc__desc">店舗・オフィスの顔として。</p></header>
+      <p class="planc__price"><b>¥8,800</b><span>／回・税込</span></p>
+      <ul class="planc__list">
+        <li>大型アレンジ or スタンド</li>
+        <li>設置・撤去・水替え代行</li>
+        <li>ブランドカラー対応</li>
+        <li>請求書・領収書払い可</li>
+        <li>専任コンシェルジュ</li>
+      </ul>
+      <a class="btn btn--ghost" href="#cta">相談する</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ GALLERY / CASE ============ -->
+<section class="gallery" id="gallery" aria-label="ブライダルと納品の実績">
+  <div class="section-head section-head--center">
+    <p class="eyebrow">Lookbook ・ 実績の記録</p>
+    <h2 class="section-title reveal">束ねてきた、<br /><em>誰かの一日。</em></h2>
+  </div>
+  <div class="gallery__grid">
+    <figure class="g-item g-item--tall reveal"><span class="g-item__img gi--1" role="img" aria-label="緑あふれるガーデンウェディングの装花"></span><figcaption>ガーデン装花 ／ 軽井沢</figcaption></figure>
+    <figure class="g-item reveal"><span class="g-item__img gi--2" role="img" aria-label="開店祝いのスタンド花"></span><figcaption>開店祝い ／ 表参道</figcaption></figure>
+    <figure class="g-item reveal"><span class="g-item__img gi--3" role="img" aria-label="くすみカラーのクラッチブーケ"></span><figcaption>クラッチブーケ</figcaption></figure>
+    <figure class="g-item g-item--wide reveal"><span class="g-item__img gi--4" role="img" aria-label="高砂の大型装花"></span><figcaption>高砂装花 ／ ホテル</figcaption></figure>
+    <figure class="g-item reveal"><span class="g-item__img gi--5" role="img" aria-label="季節のテーブルフラワー"></span><figcaption>テーブルフラワー</figcaption></figure>
+    <figure class="g-item g-item--tall reveal"><span class="g-item__img gi--6" role="img" aria-label="白基調のご供花アレンジ"></span><figcaption>ご供花 ／ ご自宅</figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="voices" id="voices" aria-label="お客様の声">
+  <div class="section-head">
+    <p class="eyebrow">Voices ・ 贈った人・受け取った人</p>
+    <h2 class="section-title reveal">花が、<br /><em>言葉のかわりになった。</em></h2>
+  </div>
+  <div class="voices__grid">
+    <blockquote class="voice reveal"><p>「母の還暦に。写真で仕上がりを見せてもらえたので、当日まで安心して待てました。届いた花を見て母が泣いてしまって、こちらまで。」</p><footer><span class="voice__ava" aria-hidden="true">M</span><cite>松田 佳奈 様<small>誕生日・ハレの日ブーケ</small></cite></footer></blockquote>
+    <blockquote class="voice reveal"><p>「開店祝いを何度もお願いしています。木札の名入れも早く、遠方の店舗にも当日きれいに届く。取引先からの評判がいいんです。」</p><footer><span class="voice__ava" aria-hidden="true">T</span><cite>髙橋 亮 様<small>開店祝い・スタンド花</small></cite></footer></blockquote>
+    <blockquote class="voice reveal"><p>「打合せからブーケの色まで、担当の方が本当に親身でした。会場装花まで一貫でお願いでき、当日は花のことを何も心配せずに済みました。」</p><footer><span class="voice__ava" aria-hidden="true">S</span><cite>佐々木 美咲 様<small>ブライダル・会場トータル</small></cite></footer></blockquote>
+    <blockquote class="voice reveal"><p>「アトリエ便を1年続けています。毎週ちがう花で、季節の移ろいが食卓でわかる。花のある生活が、こんなに気持ちを整えるとは思いませんでした。」</p><footer><span class="voice__ava" aria-hidden="true">K</span><cite>川口 大輔 様<small>定期便・アトリエ便</small></cite></footer></blockquote>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="story" id="story">
+  <div class="story__media reveal" data-tilt>
+    <div class="story__frame" role="img" aria-label="アトリエで花を束ねるフローリスト"></div>
+    <span class="story__badge">Atelier<br />hanabako</span>
+  </div>
+  <div class="story__body">
+    <p class="eyebrow reveal">Our Story ・ アトリエのはじまり</p>
+    <h2 class="section-title reveal">花は、<br /><em>手渡す前から始まっている。</em></h2>
+    <p class="reveal">2009年、東京・谷中の路地裏に六坪の小さな店を構えました。市場で見た朝の花の張りを、そのまま誰かの手元へ——ただそれだけを願って始めた花屋です。</p>
+    <p class="reveal">流通に乗せると、いちばん美しい瞬間が削れてしまう。だから私たちは仕入れも仕立ても配送も、自分たちの手から離しませんでした。17年で束ねた花は47,000束を超え、ブライダルは1,280組。それでも、一束ごとに贈る相手を思い浮かべる時間だけは、初日から変えていません。</p>
+    <p class="story__sign reveal">花筥 主宰 ／ 花を束ねる人　<b>結城 あや</b></p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="section-head section-head--center">
+    <p class="eyebrow">FAQ ・ よくあるご質問</p>
+    <h2 class="section-title reveal">贈る前の、<br /><em>小さな不安に。</em></h2>
+  </div>
+  <div class="acc">
+    <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">当日の注文でも間に合いますか？<span class="acc__ico" aria-hidden="true"></span></button><div class="acc__a"><p>平日15時までのご注文で、都内は当日配送・全国は最短翌日にお届けします。お急ぎの場合はお電話いただければ、可能な限り調整いたします。</p></div></div>
+    <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">花の指定やイメージの相談はできますか？<span class="acc__ico" aria-hidden="true"></span></button><div class="acc__a"><p>もちろんです。色・雰囲気・避けたい花などをお聞きし、専属フローリストが仕立てます。「おまかせ」でも、贈る相手の情報から最適な一束をご提案します。</p></div></div>
+    <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">法人・請求書払いに対応していますか？<span class="acc__ico" aria-hidden="true"></span></button><div class="acc__a"><p>対応しております。開店祝い・定期装花・イベント装花など、月締めの請求書払い・領収書発行が可能です。迎賓便では専任コンシェルジュがまとめて承ります。</p></div></div>
+    <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">定期便はいつでも休止・解約できますか？<span class="acc__ico" aria-hidden="true"></span></button><div class="acc__a"><p>次回お届けの3日前までなら、マイページからいつでも休止・スキップ・解約が可能です。旅行や出張のときだけ止める、といった使い方もできます。</p></div></div>
+    <div class="acc__item reveal"><button class="acc__q" aria-expanded="false">花もち保証とは何ですか？<span class="acc__ico" aria-hidden="true"></span></button><div class="acc__a"><p>お届けから7日以内に花が元気を失った場合、写真をお送りいただければ無償で束ね直してお届けします。配送中の事故や品質不良にも同様に対応します。</p></div></div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="cta" id="cta">
+  <div class="cta__scene" aria-hidden="true"><span class="petal petal--c1"></span><span class="petal petal--c2"></span><span class="petal petal--c3"></span></div>
+  <div class="cta__inner">
+    <p class="eyebrow reveal">Order & Contact</p>
+    <h2 class="cta__title reveal">その人の一日を、<br /><em>いっしょに束ねましょう。</em></h2>
+    <p class="cta__lead reveal">ご予算やイメージだけでも大丈夫です。専属フローリストが、ぴったりの一束をご提案します。</p>
+    <div class="cta__actions reveal">
+      <a class="btn btn--primary btn--lg" href="#" data-magnetic>オンラインで注文<span class="btn__arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn--ghost btn--lg" href="#">LINEで相談</a>
+    </div>
+    <p class="cta__tel reveal">お電話でのご相談 <a href="tel:0357335200">03-5733-5200</a>（10:00 – 19:00 / 火曜定休）</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="foot__top">
+    <div class="foot__brand">
+      <span class="brand brand--foot"><span class="brand__type"><b>花筥</b><i>hanabako</i></span></span>
+      <p>その日の空気ごと、束ねる。<br />季節の花あつらえアトリエ。</p>
+    </div>
+    <div class="foot__cols">
+      <div><h4>コレクション</h4><a href="#collection">誕生日</a><a href="#collection">開店・就任祝い</a><a href="#collection">ブライダル</a><a href="#collection">お供え</a></div>
+      <div><h4>サービス</h4><a href="#plan">定期便サブスク</a><a href="#process">ご注文の流れ</a><a href="#faq">花もち保証</a><a href="#cta">法人のご相談</a></div>
+      <div><h4>アトリエ</h4><a href="#story">わたしたちについて</a><a href="#gallery">ルックブック</a><a href="#voices">お客様の声</a><a href="#faq">よくある質問</a></div>
+    </div>
+    <div class="foot__info">
+      <h4>Atelier hanabako</h4>
+      <p>〒110-0001<br />東京都台東区谷中3-11-2<br />千駄木駅より徒歩5分</p>
+      <p>10:00 – 19:00 ／ 火曜定休<br /><a href="tel:0357335200">03-5733-5200</a></p>
+      <div class="foot__sns"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="X">X</a><a href="#" aria-label="note">note</a></div>
+    </div>
+  </div>
+  <div class="foot__bottom">
+    <small>© 2009–2026 Atelier hanabako</small>
+    <nav aria-label="規約"><a href="#">特定商取引法</a><a href="#">プライバシー</a><a href="#">配送について</a></nav>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

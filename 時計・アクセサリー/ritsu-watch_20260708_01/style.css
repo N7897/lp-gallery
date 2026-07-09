@@ -1,0 +1,339 @@
+/* ============================================================
+   律 RITSU — 機械式時計アトリエ
+   骨格: D1×H9 (J16) / 署名: 生きているムーブメント
+   配色: graphite × blued-steel(署名) + brass hairline(機械素材)
+   ============================================================ */
+
+:root{
+  --base:#12141a;
+  --surface:#1b1e26;
+  --surface-2:#232732;
+  --line:#2c313d;
+  --ink:#e9e7e1;         /* primary text (platinum) */
+  --ink-2:#aeb2bc;       /* secondary text */
+  --ink-3:#8f95a2;       /* tertiary */
+  --steel:#6fa0d8;       /* blued steel — AA on base */
+  --steel-deep:#2c4e86;  /* deep blued — large/line only */
+  --steel-glow:#4d84c9;
+  --brass:#c0916a;       /* movement material — decorative only */
+  --brass-soft:#8f6c4d;
+  --radius:14px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-slow:cubic-bezier(.16,.84,.34,1);
+  --wrap:1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--base);
+  color:var(--ink);
+  font-family:"BIZ UDPGothic","Hiragino Kaku Gothic ProN",system-ui,sans-serif;
+  line-height:1.75;
+  letter-spacing:.02em;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;font-weight:400;letter-spacing:.01em}
+p{margin:0}
+ol,ul,dl{margin:0;padding:0;list-style:none}
+
+.wrap{width:min(var(--wrap),92vw);margin-inline:auto}
+.jp{font-family:"Kaisei Tokumin","Hiragino Mincho ProN",serif}
+.num{font-family:"Geist Mono",ui-monospace,"SF Mono",monospace;font-variant-numeric:tabular-nums;letter-spacing:0}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--steel);color:#06121f;padding:.7em 1.2em;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+
+:focus-visible{outline:2px solid var(--steel);outline-offset:3px;border-radius:4px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+  font-family:inherit;font-size:.92rem;letter-spacing:.08em;
+  padding:.85em 1.7em;border-radius:100px;cursor:pointer;border:1px solid transparent;
+  transition:transform .4s var(--ease),background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease);
+}
+.btn-primary{background:var(--steel);color:#06121f;font-weight:700}
+.btn-primary:hover{transform:translateY(-2px);background:#8fb6e2}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--steel);color:var(--steel);transform:translateY(-2px)}
+.btn-header{background:transparent;border:1px solid var(--steel-deep);color:var(--ink);padding:.6em 1.3em;font-size:.82rem}
+.btn-header:hover{background:var(--steel);color:#06121f;border-color:var(--steel)}
+.btn-block{width:100%}
+
+/* ---------- header ---------- */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .5s var(--ease),border-color .5s var(--ease),backdrop-filter .5s;
+  border-bottom:1px solid transparent;
+}
+.site-header.scrolled{
+  background:rgba(18,20,26,.82);backdrop-filter:blur(14px) saturate(1.2);
+  border-bottom-color:var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:2rem}
+.brand{display:flex;align-items:baseline;gap:.55rem}
+.brand-mark{font-family:"Kaisei Tokumin",serif;font-size:1.7rem;color:var(--steel);line-height:1}
+.brand-name{font-family:"Italiana",serif;font-size:1.15rem;letter-spacing:.34em;padding-left:.1em}
+.nav{display:flex;gap:1.9rem}
+.nav a{font-size:.9rem;color:var(--ink-2);position:relative;padding:.2em 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--steel);transition:width .4s var(--ease)}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{width:100%}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:112px 0 60px;overflow:hidden}
+.hero-grain{position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(120% 90% at 78% 30%, rgba(45,78,134,.28), transparent 55%),
+    radial-gradient(80% 70% at 12% 88%, rgba(45,78,134,.14), transparent 60%),
+    var(--base);
+}
+.hero-grain::after{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:3px 3px;mix-blend-mode:screen}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:4rem;align-items:center;width:min(var(--wrap),92vw)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.6em;font-size:.78rem;letter-spacing:.22em;color:var(--ink-2);text-transform:uppercase;margin-bottom:1.7rem}
+.eyebrow .tick{width:7px;height:7px;border-radius:50%;background:var(--steel);box-shadow:0 0 12px var(--steel-glow)}
+.hero-title{font-family:"Kaisei Tokumin",serif;font-size:clamp(3.6rem,9vw,6.6rem);line-height:.98;letter-spacing:.02em;margin-bottom:1.7rem}
+.hero-title .line{display:block;padding-bottom:.04em}
+.hero-title .line:last-child{color:var(--steel);text-shadow:0 0 40px rgba(77,132,201,.35)}
+.hero-lead{color:var(--ink-2);font-size:1.02rem;max-width:34ch;margin-bottom:2.4rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.hero-meta{display:flex;gap:2.4rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.5rem}
+.hero-meta dt{font-size:.72rem;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase;margin-bottom:.35em}
+.hero-meta dd{font-size:1.5rem;color:var(--ink)}
+.hero-meta .num{font-size:1.7rem;color:var(--steel)}
+.hero-meta small{font-size:.7rem;color:var(--ink-3);letter-spacing:.06em}
+
+.hero-stage{display:flex;align-items:center;justify-content:center}
+.movement-figure{margin:0;width:min(100%,460px);position:relative}
+.movement{width:100%;height:auto;filter:drop-shadow(0 24px 60px rgba(0,0,0,.55))}
+.movement-cap{margin-top:1.1rem;text-align:center;font-family:"Geist Mono",monospace;font-size:.74rem;letter-spacing:.12em;color:var(--ink-3);display:flex;align-items:center;justify-content:center;gap:.6em}
+.beat-dot{width:6px;height:6px;border-radius:50%;background:var(--steel);animation:beat 1s steps(1,end) infinite}
+@keyframes beat{0%,50%{opacity:1;box-shadow:0 0 10px var(--steel-glow)}51%,100%{opacity:.25;box-shadow:none}}
+
+/* movement SVG parts */
+.mv-ring{fill:none;stroke:var(--line);stroke-width:1.4}
+.mv-ring.thin{stroke:rgba(192,145,106,.25)}
+.mv-emblem{font-family:"Kaisei Tokumin",serif;font-size:120px;fill:rgba(233,231,225,.06)}
+.mv-plate{fill:var(--surface);stroke:var(--line);stroke-width:1}
+.mv-bridge{fill:var(--surface-2);stroke:rgba(192,145,106,.3);stroke-width:1}
+.mv-gear{fill:none;stroke:var(--brass-soft);stroke-width:1.4}
+.mv-gear-fill{fill:rgba(192,145,106,.06)}
+.mv-gear-core{fill:none;stroke:rgba(192,145,106,.4);stroke-width:1}
+.mv-balance-rim{fill:none;stroke:var(--steel);stroke-width:3}
+.mv-balance-spoke{stroke:var(--steel-glow);stroke-width:2.2}
+.mv-hairspring{fill:none;stroke:var(--steel);stroke-width:1;opacity:.85}
+.mv-fork{fill:none;stroke:var(--brass);stroke-width:2;stroke-linecap:round}
+.mv-jewel{fill:var(--steel);filter:drop-shadow(0 0 4px var(--steel-glow))}
+.mv-screw{fill:var(--steel-deep);stroke:var(--steel);stroke-width:.6}
+
+.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.6em;color:var(--ink-3);font-family:"Geist Mono",monospace;font-size:.66rem;letter-spacing:.3em}
+.scroll-cue i{width:1px;height:40px;background:linear-gradient(var(--steel),transparent);animation:cueSlide 2.2s var(--ease) infinite}
+@keyframes cueSlide{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- section commons ---------- */
+.section-index{font-family:"Geist Mono",monospace;font-size:.76rem;letter-spacing:.14em;color:var(--ink-3);margin-bottom:1.1rem;display:flex;align-items:center;gap:.7em}
+.section-index span{color:var(--steel)}
+.section-title{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.16;letter-spacing:.02em}
+.section-title.big{font-size:clamp(2.4rem,6vw,4.6rem)}
+.section-note{color:var(--ink-2);margin-top:1rem;max-width:44ch}
+
+/* ---------- DIAL SCRUB (pinned) ---------- */
+.dial-scroll{position:relative;height:340vh;background:linear-gradient(180deg,var(--base),#0f1116 40%,var(--base))}
+.dial-sticky{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden}
+.dial-grid{display:grid;grid-template-columns:1fr .82fr;gap:3.5rem;align-items:center;width:min(var(--wrap),92vw)}
+.dial-visual{position:relative}
+.dial-wrap{margin-top:1.8rem;width:min(100%,420px);aspect-ratio:1;position:relative}
+.dial{width:100%;height:auto;filter:drop-shadow(0 20px 50px rgba(0,0,0,.5))}
+.dial-face{fill:#171a22}
+.dial-rim{fill:none;stroke:var(--line);stroke-width:2}
+.tick{stroke:var(--ink-3);stroke-width:1.5}
+.tick.major{stroke:var(--steel);stroke-width:2.6}
+.tick-num{font-family:"Italiana",serif;font-size:19px;fill:var(--ink-2)}
+.hand{stroke-linecap:round;transform-origin:200px 200px}
+.hand.hour{stroke:var(--ink);stroke-width:6}
+.hand.min{stroke:var(--ink);stroke-width:4}
+.hand.sec{stroke:var(--steel);stroke-width:2}
+.hand-cap{fill:var(--ink)}
+.hand-pin{fill:var(--steel)}
+
+.dial-cards{position:relative;min-height:340px}
+.dcard{position:absolute;inset:0;opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease);pointer-events:none}
+.dcard.is-active{opacity:1;transform:none;pointer-events:auto}
+.dcard-time{font-family:"Italiana",serif;font-size:2.4rem;color:var(--steel);line-height:1;margin-bottom:.8rem}
+.dcard h3{font-family:"Kaisei Tokumin",serif;font-size:2.1rem;margin-bottom:.9rem;display:flex;align-items:baseline;gap:.7em}
+.dcard h3 span{font-family:"Italiana",serif;font-size:1rem;letter-spacing:.22em;color:var(--ink-3)}
+.dcard-desc{color:var(--ink-2);max-width:34ch;margin-bottom:1.4rem}
+.dcard-spec{display:flex;flex-wrap:wrap;gap:.6em}
+.dcard-spec span{font-family:"Geist Mono",monospace;font-size:.78rem;color:var(--ink-2);border:1px solid var(--line);border-radius:100px;padding:.4em 1em}
+.dcard-spec span:last-child{color:var(--steel);border-color:var(--steel-deep)}
+
+/* ---------- GALLERY BENTO (tilt) ---------- */
+.gallery{padding:8rem 0 7rem}
+.gallery-head{margin-bottom:3.2rem;max-width:60ch}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.piece{grid-column:span 1;background:linear-gradient(160deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:border-color .5s var(--ease),transform .5s var(--ease);transform-style:preserve-3d;will-change:transform}
+.piece.wide{grid-column:span 2}
+.piece::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--gx,50%) var(--gy,0%),rgba(111,160,216,.16),transparent 55%);opacity:0;transition:opacity .5s var(--ease);pointer-events:none}
+.piece:hover,.piece:focus-visible{border-color:var(--steel-deep);transform:translateY(-4px)}
+.piece:hover::before,.piece:focus-visible::before{opacity:1}
+
+.piece-watch{position:relative;width:118px;height:118px;margin:0 auto;transform:translateZ(30px)}
+.pw-case{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 210deg,#3a3f4c,#20242e,#3a3f4c,#181b22,#3a3f4c);box-shadow:inset 0 0 0 3px #2a2e39,0 8px 24px rgba(0,0,0,.5)}
+.pw-glass{position:absolute;inset:11px;border-radius:50%;background:radial-gradient(circle at 34% 28%,#232834,#14171e 78%);box-shadow:inset 0 2px 10px rgba(0,0,0,.6),inset 0 0 0 1px rgba(111,160,216,.14)}
+.pw-glass::after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(125deg,rgba(255,255,255,.14),transparent 40%);pointer-events:none}
+.pw-hand{position:absolute;left:50%;bottom:50%;transform-origin:bottom center;background:var(--ink);border-radius:2px}
+.pw-hand.h{width:3px;height:26px;transform:translateX(-50%) rotate(38deg)}
+.pw-hand.m{width:2px;height:38px;transform:translateX(-50%) rotate(-70deg);background:var(--steel)}
+.pw-hand.g{width:2px;height:34px;transform:translateX(-50%) rotate(150deg);background:var(--brass)}
+.pw-pin{position:absolute;left:50%;top:50%;width:8px;height:8px;border-radius:50%;background:var(--steel);transform:translate(-50%,-50%);box-shadow:0 0 8px var(--steel-glow)}
+.pw-sub{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);width:26px;height:26px;border-radius:50%;border:1px solid var(--ink-3)}
+.pw-moon{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:30px;height:16px;border-radius:0 0 30px 30px;background:linear-gradient(90deg,#0f1218,#2c4e86);overflow:hidden}
+.pw-moon::after{content:"";position:absolute;top:2px;left:6px;width:11px;height:11px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e9e7e1,#9aa0ac)}
+.pw-open{position:absolute;left:24px;bottom:26px;width:30px;height:30px;border-radius:50%;border:1px solid var(--brass-soft);background:radial-gradient(circle,#1a1e26,#101318)}
+.pw-open::after{content:"";position:absolute;inset:0;margin:auto;width:16px;height:16px;border-radius:50%;border:2px solid var(--steel);border-top-color:transparent;border-left-color:transparent;animation:spin 3.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.piece-info h3{font-family:"Kaisei Tokumin",serif;font-size:1.35rem;display:flex;align-items:baseline;gap:.6em;margin-bottom:.5rem}
+.piece-info h3 em{font-family:"Italiana",serif;font-style:normal;font-size:.78rem;letter-spacing:.2em;color:var(--ink-3)}
+.piece-info>p{color:var(--ink-2);font-size:.9rem}
+.piece-meta{display:flex;justify-content:space-between;margin-top:1rem;font-family:"Geist Mono",monospace;font-size:.78rem}
+.piece-meta span:first-child{color:var(--ink-3)}
+.piece-meta span:last-child{color:var(--steel)}
+
+/* ---------- MECHANISM ---------- */
+.mechanism{padding:7rem 0;background:var(--surface);border-block:1px solid var(--line)}
+.mech-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
+.mech-lead{color:var(--ink-2);margin:1.5rem 0 2.2rem;max-width:42ch}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.spec>div{display:flex;flex-direction:column;gap:.3em;padding:1.1rem 0;border-top:1px solid var(--line)}
+.spec>div:nth-child(odd){padding-right:1.4rem}
+.spec dt{font-size:.72rem;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
+.spec dd{font-size:1.02rem;color:var(--ink)}
+.spec .num{color:var(--steel);font-size:1.14rem}
+.mech-visual{display:flex;flex-direction:column;align-items:center}
+.escape{width:min(100%,320px);height:auto}
+.esc-ring{fill:none;stroke:var(--line);stroke-width:1.4}
+.esc-wheel{fill:none;stroke:var(--brass-soft);stroke-width:1.4}
+.esc-wheel-fill{fill:rgba(192,145,106,.05)}
+.esc-fork{fill:none;stroke:var(--brass);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.esc-balance{fill:none;stroke:var(--steel);stroke-width:3}
+.esc-spoke{stroke:var(--steel-glow);stroke-width:2}
+.esc-hair{fill:none;stroke:var(--steel);stroke-width:1;opacity:.8}
+.esc-jewel{fill:var(--steel);filter:drop-shadow(0 0 3px var(--steel-glow))}
+.escape-cap{margin-top:1rem;font-family:"Geist Mono",monospace;font-size:.74rem;letter-spacing:.1em;color:var(--ink-3);display:flex;align-items:center;gap:.6em}
+
+/* ---------- ATELIER ---------- */
+.atelier{padding:8rem 0}
+.atelier-inner{max-width:820px}
+.section-title.big{margin-block:.8rem 2.4rem}
+.atelier-body p{color:var(--ink-2);font-size:1.06rem;line-height:2;margin-bottom:1.5rem;max-width:56ch}
+.atelier-body p:first-child::first-letter{font-family:"Kaisei Tokumin",serif;font-size:3.4em;float:left;line-height:.8;padding:.06em .12em 0 0;color:var(--steel)}
+.atelier-sign{color:var(--ink-3);font-family:"Geist Mono",monospace;font-size:.82rem;letter-spacing:.08em;margin-top:2rem}
+.atelier-sign span{color:var(--ink)}
+
+/* ---------- CARE ---------- */
+.care{padding:7rem 0;background:linear-gradient(180deg,var(--base),#0f1116)}
+.care-head{margin-bottom:3rem}
+.care-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.care-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:2.2rem 1.9rem;transition:border-color .5s var(--ease),transform .5s var(--ease)}
+.care-card:hover{border-color:var(--steel-deep);transform:translateY(-4px)}
+.care-num{font-family:"Italiana",serif;font-size:3.2rem;color:var(--steel);line-height:1;margin-bottom:1rem}
+.care-num small{font-family:"BIZ UDPGothic",sans-serif;font-size:.9rem;color:var(--ink-3);margin-left:.2em}
+.care-card h3{font-family:"Kaisei Tokumin",serif;font-size:1.28rem;margin-bottom:.7rem}
+.care-card p{color:var(--ink-2);font-size:.92rem}
+
+/* ---------- VISIT ---------- */
+.visit{padding:7rem 0 8rem;background:var(--surface);border-top:1px solid var(--line)}
+.visit-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.visit-lead{color:var(--ink-2);margin:1.6rem 0 2.2rem;max-width:40ch}
+.visit-info>div{display:grid;grid-template-columns:5rem 1fr;gap:1rem;padding:1rem 0;border-top:1px solid var(--line)}
+.visit-info dt{font-size:.78rem;letter-spacing:.12em;color:var(--ink-3)}
+.visit-info dd{color:var(--ink)}
+.visit-info .mono{font-family:"Geist Mono",monospace;letter-spacing:.05em;color:var(--steel)}
+.visit-form{background:var(--base);border:1px solid var(--line);border-radius:var(--radius);padding:2.2rem}
+.field{margin-bottom:1.3rem;display:flex;flex-direction:column;gap:.5em}
+.field label{font-size:.82rem;letter-spacing:.06em;color:var(--ink-2)}
+.field input,.field select{
+  font-family:inherit;font-size:.95rem;color:var(--ink);
+  background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:.85em 1em;
+  transition:border-color .3s var(--ease),box-shadow .3s var(--ease);
+}
+.field input::placeholder{color:var(--ink-3)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--steel);box-shadow:0 0 0 3px rgba(111,160,216,.16)}
+.form-note{margin-top:1rem;font-size:.78rem;color:var(--ink-3);text-align:center}
+
+/* ---------- footer ---------- */
+.site-footer{padding:3.5rem 0;border-top:1px solid var(--line);background:var(--base)}
+.footer-inner{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between}
+.footer-brand{display:flex;align-items:center;gap:1rem}
+.brand-mark.small{font-size:2rem}
+.footer-brand p{font-size:.9rem;color:var(--ink-2)}
+.footer-brand small{color:var(--ink-3)}
+.footer-nav{display:flex;gap:1.6rem;flex-wrap:wrap}
+.footer-nav a{font-size:.86rem;color:var(--ink-2)}
+.footer-nav a:hover{color:var(--steel)}
+.copyright{width:100%;text-align:center;color:var(--ink-3);border-top:1px solid var(--line);padding-top:1.6rem;margin-top:.6rem}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease-slow),transform .9s var(--ease-slow)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-stage{order:-1}
+  .movement-figure{width:min(72%,380px)}
+  .dial-grid{grid-template-columns:1fr;gap:2rem;text-align:left}
+  .dial-scroll{height:300vh}
+  .dial-wrap{margin-inline:0}
+  .dial-cards{min-height:230px}
+  .mech-grid{grid-template-columns:1fr;gap:3rem}
+  .visit-inner{grid-template-columns:1fr;gap:2.6rem}
+}
+@media (max-width:820px){
+  .nav{display:none}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .piece.wide{grid-column:span 2}
+  .care-grid{grid-template-columns:1fr;gap:1rem}
+  .spec{grid-template-columns:1fr}
+  .spec>div:nth-child(odd){padding-right:0}
+}
+@media (max-width:560px){
+  body{font-size:15px}
+  .header-inner{height:62px}
+  .btn-header{padding:.5em 1em;font-size:.76rem}
+  .hero{padding:96px 0 40px;min-height:auto}
+  .hero-meta{gap:1.4rem}
+  .hero-meta dd{font-size:1.2rem}
+  .hero-meta .num{font-size:1.35rem}
+  .bento{grid-template-columns:1fr}
+  .piece.wide{grid-column:span 1}
+  .dial-scroll{height:auto}
+  .dial-sticky{position:static;height:auto;padding:5rem 0}
+  .dial-cards{position:static;min-height:0}
+  .dcard{position:static;opacity:1;transform:none;pointer-events:auto;padding:1.6rem 0;border-top:1px solid var(--line)}
+  .dcard.is-active{}
+  .gallery,.mechanism,.atelier,.care,.visit{padding-block:4.5rem}
+  .visit-form{padding:1.6rem}
+  .visit-info>div{grid-template-columns:4rem 1fr}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+  .scroll-cue i{animation:none}
+  .pw-open::after{animation:none}
+  .beat-dot{animation:none;opacity:1}
+}

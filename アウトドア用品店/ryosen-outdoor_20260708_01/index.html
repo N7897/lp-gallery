@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>稜線 RYŌSEN｜山道具店 — 次の稜線へ、何を持っていくか</title>
+<meta name="description" content="長野・松本の山道具店 稜線 RYŌSEN。装備を選ぶことは、ルートを引くこと。レイヤリングからシェル、フットウェア、パックまで、次の稜線へ向かう一式を、対話でととのえます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Mono:wght@400;500&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" aria-label="稜線 RYŌSEN ホーム">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 34 24" width="34" height="24"><path d="M2 22 L11 6 L17 14 L23 3 L32 22 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="brand__name"><b>稜線</b><i>RYŌSEN</i></span>
+  </a>
+  <nav class="site-nav" aria-label="メインナビゲーション">
+    <a href="#manifesto">考え方</a>
+    <a href="#route">ルート</a>
+    <a href="#gear">装備</a>
+    <a href="#shop">店舗</a>
+  </nav>
+  <a class="cta-btn cta-btn--sm" href="#contact">装備を相談する</a>
+</header>
+
+<!-- ============ FIXED ALTIMETER RAIL ============ -->
+<aside class="rail" id="rail" aria-hidden="true">
+  <div class="rail__top">
+    <span class="rail__label">ALT</span>
+    <span class="rail__alt"><b id="altValue">610</b><i>m</i></span>
+  </div>
+  <div class="rail__track">
+    <svg class="rail__svg" viewBox="0 0 8 600" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="4" y1="0" x2="4" y2="600" class="rail__base"/>
+      <line x1="4" y1="0" x2="4" y2="600" class="rail__prog" id="railProg"/>
+    </svg>
+    <span class="rail__marker" id="railMarker"><span class="rail__pulse"></span></span>
+  </div>
+  <div class="rail__waypoints" id="railWaypoints"></div>
+  <div class="rail__bottom">
+    <span class="rail__coord">N 36.238°</span>
+    <span class="rail__coord">E 137.972°</span>
+  </div>
+</aside>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__map" aria-hidden="true">
+    <svg class="topo" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" id="topoSvg">
+      <g class="topo__contours" id="topoContours"></g>
+      <g class="topo__hatch" id="topoHatch"></g>
+      <path class="topo__route" id="heroRoute" fill="none"
+        d="M120,860 C260,820 300,690 430,660 C560,630 560,500 690,470 C820,440 840,320 980,290 C1120,260 1180,150 1320,120"/>
+      <circle class="topo__peak" cx="1320" cy="120" r="0"/>
+    </svg>
+    <div class="hero__grain"></div>
+  </div>
+
+  <div class="hero__inner">
+    <p class="hero__eyebrow"><span class="tick"></span>OUTFITTERS FOR THE NEXT RIDGELINE</p>
+    <h1 class="hero__title">
+      <span class="line">次の稜線へ、</span>
+      <span class="line line--indent">何を持っていくか。</span>
+    </h1>
+    <p class="hero__lead">
+      装備を選ぶことは、ルートを引くこと。<br>
+      長野・松本の山道具店<span class="nowrap">稜線 RYŌSEN</span> は、<br class="mob-br">
+      あなたの次の一歩から逆算して、一式をととのえます。
+    </p>
+    <div class="hero__actions">
+      <a class="cta-btn" href="#contact">装備を相談する</a>
+      <a class="ghost-btn" href="#gear">装備を見る<span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <p class="hero__note klee">— 標高 610m、ここが登山口。</p>
+  </div>
+
+  <div class="hero__base" aria-hidden="true">
+    <span class="hero__base-alt">610<i>m</i></span>
+    <span class="hero__base-name">松本 BASE CAMP</span>
+    <span class="hero__scroll">SCROLL / 登る<span class="scroll-line"></span></span>
+  </div>
+</section>
+
+<!-- ============ 01 MANIFESTO ============ -->
+<section class="section manifesto" id="manifesto" data-alt="1240" data-name="第一のたわみ">
+  <div class="wp-head">
+    <span class="wp-head__no">01</span>
+    <span class="wp-head__alt">1,240m</span>
+    <span class="wp-head__name">考え方 / PHILOSOPHY</span>
+  </div>
+  <div class="manifesto__grid">
+    <h2 class="manifesto__title reveal">
+      道具は、<em>目的</em>じゃない。<br>次の稜線へ行くための、<em>手段</em>だ。
+    </h2>
+    <div class="manifesto__body">
+      <p class="reveal">軽ければいい、高価ならいい、というものではありません。あなたがどこへ、誰と、どんな季節に行くのか。荷物の一つひとつは、その問いへの答えです。</p>
+      <p class="reveal">わたしたちは道具を売る前に、まずルートを一緒に描きます。持っていくものより、置いていくものを決める。それが軽くて安全な山行の、はじまりです。</p>
+      <p class="manifesto__sign klee reveal">稜線 店主 — 三村 悠</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 ROUTE / PROCESS ============ -->
+<section class="section route" id="route" data-alt="1820" data-name="樹林帯を抜ける">
+  <div class="wp-head">
+    <span class="wp-head__no">02</span>
+    <span class="wp-head__alt">1,820m</span>
+    <span class="wp-head__name">ルートを引く / PROCESS</span>
+  </div>
+  <h2 class="route__lead reveal">装備がととのうまでの、三つのピッチ。</h2>
+  <ol class="route__steps">
+    <li class="step reveal">
+      <span class="step__idx">01</span>
+      <span class="step__en">CONSULT</span>
+      <h3 class="step__title">まず、行き先を聞く</h3>
+      <p class="step__desc">目的の山、時期、経験、同行者。カウンターで地図を広げ、装備より先にルートを描きます。所要はおよそ30分、予約制。</p>
+    </li>
+    <li class="step reveal">
+      <span class="step__idx">02</span>
+      <span class="step__en">FIT</span>
+      <h3 class="step__title">背負って、履いて、試す</h3>
+      <p class="step__desc">ザックは実荷重で、靴は下り斜度の試登台で。店内の傾斜ボードとフィッティング室で、身体に合う一点だけを選びます。</p>
+    </li>
+    <li class="step reveal">
+      <span class="step__idx">03</span>
+      <span class="step__en">FIELD WARRANTY</span>
+      <h3 class="step__title">山から帰っても、続く</h3>
+      <p class="step__desc">縫製リペア、ソール張り替え、ダウン洗い。買って終わりにしない、フィールド保証。次の一本まで、道具を生かします。</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 03 GEAR ============ -->
+<section class="section gear" id="gear" data-alt="2280" data-name="森林限界">
+  <div class="wp-head">
+    <span class="wp-head__no">03</span>
+    <span class="wp-head__alt">2,280m</span>
+    <span class="wp-head__name">装備 / GEAR</span>
+  </div>
+  <h2 class="gear__lead reveal">標高帯ごとに、選ぶものは変わる。</h2>
+  <div class="gear__grid">
+    <article class="gcard reveal">
+      <span class="gcard__band">BASE 〜1,500m</span>
+      <h3 class="gcard__title">レイヤリング</h3>
+      <p class="gcard__desc">汗と気温に応じて足し引きする三層。肌に触れる一枚から、行動中の一枚まで。</p>
+      <ul class="gcard__list"><li>ベースレイヤー</li><li>行動用ミッド</li><li>薄手フリース</li></ul>
+      <span class="gcard__count">28 items</span>
+    </article>
+    <article class="gcard reveal">
+      <span class="gcard__band">MID 〜2,300m</span>
+      <h3 class="gcard__title">シェル</h3>
+      <p class="gcard__desc">風と雨を切る最外層。稜線の突風を想定した、透湿と耐水のバランスで選ぶ。</p>
+      <ul class="gcard__list"><li>ハードシェル</li><li>ウインドシェル</li><li>レインウェア</li></ul>
+      <span class="gcard__count">19 items</span>
+    </article>
+    <article class="gcard reveal">
+      <span class="gcard__band">FOOT 全域</span>
+      <h3 class="gcard__title">フットウェア</h3>
+      <p class="gcard__desc">足首の自由と保護のせめぎ合い。試登台で下りの当たりまで確かめて。</p>
+      <ul class="gcard__list"><li>アルパインブーツ</li><li>トレッキング</li><li>アプローチ</li></ul>
+      <span class="gcard__count">34 items</span>
+    </article>
+    <article class="gcard reveal">
+      <span class="gcard__band">PACK 全域</span>
+      <h3 class="gcard__title">パック & ギア</h3>
+      <p class="gcard__desc">背負い心地は容量より背面長。実荷重で背負って決める、あなたの一つ。</p>
+      <ul class="gcard__list"><li>30〜60Lパック</li><li>ヘッドランプ</li><li>クッカー</li></ul>
+      <span class="gcard__count">51 items</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 04 THE ROUTE — SIGNATURE ============ -->
+<section class="section profile" id="the-route" data-alt="2760" data-name="偽ピーク">
+  <div class="wp-head">
+    <span class="wp-head__no">04</span>
+    <span class="wp-head__alt">2,760m</span>
+    <span class="wp-head__name">断面 / THE ROUTE</span>
+  </div>
+  <div class="profile__head">
+    <h2 class="profile__title reveal">松本 BASE から、<br>頂稜 2,999m まで。</h2>
+    <p class="profile__sub reveal">スクロールに合わせて、ルートが引かれていく。<br class="mob-br">一歩ごとに、必要な一枚が決まる。</p>
+  </div>
+  <div class="profile__stage" id="profileStage">
+    <svg class="profile__svg" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="ridgeFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="rgba(232,85,43,0.10)"/>
+          <stop offset="1" stop-color="rgba(232,85,43,0)"/>
+        </linearGradient>
+      </defs>
+      <!-- elevation grid -->
+      <g class="profile__grid" id="profileGrid"></g>
+      <!-- ridge silhouette -->
+      <path class="profile__ridge" id="profileRidge" fill="url(#ridgeFill)"
+        d="M0,520 L0,470 C160,470 200,360 340,350 C470,340 470,270 610,300 C700,318 720,210 860,240 C980,265 1000,120 1120,80 L1200,60 L1200,520 Z"/>
+      <!-- drawn route -->
+      <path class="profile__route" id="profileRoute" fill="none"
+        d="M0,470 C160,470 200,360 340,350 C470,340 470,270 610,300 C700,318 720,210 860,240 C980,265 1000,120 1120,80 L1200,60"/>
+      <circle class="profile__hiker" id="profileHiker" r="7" cx="0" cy="470"/>
+    </svg>
+    <ul class="profile__waypoints">
+      <li style="left:2%"><b>610m</b><span>登山口</span></li>
+      <li style="left:28%"><b>1,240m</b><span>たわみ</span></li>
+      <li style="left:51%"><b>1,820m</b><span>樹林帯</span></li>
+      <li style="left:72%"><b>2,280m</b><span>森林限界</span></li>
+      <li style="left:93%"><b>2,999m</b><span>頂稜</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 05 SHOP / TRUST ============ -->
+<section class="section shop" id="shop" data-alt="2999" data-name="頂稜">
+  <div class="wp-head">
+    <span class="wp-head__no">05</span>
+    <span class="wp-head__alt">2,999m</span>
+    <span class="wp-head__name">店舗 / BASE STATION</span>
+  </div>
+  <div class="shop__grid">
+    <div class="shop__lead reveal">
+      <h2 class="shop__title">松本の登山口に、<br>基地がある。</h2>
+      <p class="shop__desc">ガイド経験のあるスタッフが、道具の裏側まで話します。売れ筋ではなく、あなたの山に合う一点を。相談だけの来店も歓迎です。</p>
+      <a class="ghost-btn" href="#contact">来店を予約する<span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <dl class="shop__facts">
+      <div class="fact reveal"><dt>フィッティング室</dt><dd>傾斜ボードと試登台を常設。実荷重・実斜度で確かめる。</dd></div>
+      <div class="fact reveal"><dt>リペア工房併設</dt><dd>縫製・ソール張替・ダウン洗いを店内で受付。</dd></div>
+      <div class="fact reveal"><dt>フィールドデー</dt><dd>月一の山行会。買った道具を、実際の稜線で試す。</dd></div>
+      <div class="fact reveal"><dt>取扱</dt><dd>国内外 40 ブランド。定番から小規模ガレージまで。</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section cta" id="contact" data-alt="2999" data-name="稜線">
+  <div class="cta__inner">
+    <p class="cta__eyebrow klee">— そろそろ、地図をひらこう。</p>
+    <h2 class="cta__title">稜線で、<br>会おう。</h2>
+    <p class="cta__lead">次の一本の話を、聞かせてください。<br>装備の相談は無料、予約はおおよそ30分から。</p>
+    <div class="cta__actions">
+      <a class="cta-btn cta-btn--lg" href="#">相談を予約する</a>
+      <a class="ghost-btn" href="#">オンラインで質問する<span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="foot__brand">
+    <span class="brand__name brand__name--foot"><b>稜線</b><i>RYŌSEN</i></span>
+    <p class="foot__tag">OUTFITTERS FOR THE NEXT RIDGELINE</p>
+  </div>
+  <div class="foot__cols">
+    <div class="foot__col">
+      <h3>店舗</h3>
+      <p>長野県松本市 蟻ケ崎 2-3-9<br>登山口ビル 1F</p>
+      <p class="mono">N 36.238° / E 137.972°</p>
+    </div>
+    <div class="foot__col">
+      <h3>営業</h3>
+      <p>平日 11:00 – 20:00<br>土日祝 9:00 – 19:00</p>
+      <p>水曜定休（祝日は営業）</p>
+    </div>
+    <div class="foot__col">
+      <h3>連絡</h3>
+      <p>0263-00-2999<br>hello@ryosen.example</p>
+      <p class="mono">SINCE 2015</p>
+    </div>
+  </div>
+  <p class="foot__copy">© 2026 稜線 RYŌSEN 山道具店. 架空のブランドです.</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

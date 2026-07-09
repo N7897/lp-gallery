@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>こむぎ日和 KOMUGI-BIYORI ｜ 夜明けの天然酵母パン</title>
+<meta name="description" content="坂の途中の小さなパン屋、こむぎ日和。夜のうちにふくらみ、夜明けに焼ける。北海道産小麦と自家培養の天然酵母、石窯でゆっくり色をつけた一斤を、朝いちばんに。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-head" id="siteHead">
+  <a class="brand" href="#top" aria-label="こむぎ日和 トップへ">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34" role="img" aria-label="こむぎ日和のロゴ：麦の穂">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <path d="M20 34 V12"/>
+          <path d="M20 15 C15 14 13 11 13 8 C17 8 20 10 20 14"/>
+          <path d="M20 15 C25 14 27 11 27 8 C23 8 20 10 20 14"/>
+          <path d="M20 20 C15 19 13 16 13 13 C17 13 20 15 20 19"/>
+          <path d="M20 20 C25 19 27 16 27 13 C23 13 20 15 20 19"/>
+          <path d="M20 25 C15 24 13 21 13 18 C17 18 20 20 20 24"/>
+          <path d="M20 25 C25 24 27 21 27 18 C23 18 20 20 20 24"/>
+        </g>
+      </svg>
+    </span>
+    <span class="brand__type">
+      <span class="brand__ja">こむぎ日和</span>
+      <span class="brand__en">KOMUGI-BIYORI</span>
+    </span>
+  </a>
+  <nav class="site-nav" aria-label="主要ナビゲーション">
+    <a href="#story">はなし</a>
+    <a href="#bake">焼く</a>
+    <a href="#breads">本日のパン</a>
+    <a href="#hours">時刻表</a>
+    <a href="#visit">店・取り置き</a>
+  </nav>
+  <a class="cta cta--head" href="#visit">取り置きする</a>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <canvas class="hero__dust" id="dust" aria-hidden="true"></canvas>
+  <div class="hero__sky" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__eyebrow"><span>坂の途中の、小さなパン屋</span></p>
+    <h1 class="hero__title" id="heroTitle">
+      <span class="hero__line">夜のうちに、</span>
+      <span class="hero__line">ふくらむ。</span>
+      <span class="hero__line hero__line--em"><em>Baked at dawn.</em></span>
+    </h1>
+    <p class="hero__lead">
+      仕込みは日暮れ。粉と水と、ひとつまみの塩。<br>
+      あとは酵母と、ひと晩の時間にまかせます。<br>
+      夜明け、石窯がゆっくりと色をつけたら、今日のパンのできあがり。
+    </p>
+    <div class="hero__actions">
+      <a class="cta" href="#breads">本日のパンを見る</a>
+      <a class="cta cta--ghost" href="#story">こむぎ日和のこと</a>
+    </div>
+  </div>
+  <a class="hero__cue" href="#story" aria-label="下へスクロール">
+    <span>scroll</span>
+    <span class="hero__cue-line" aria-hidden="true"></span>
+  </a>
+</section>
+
+<section class="story" id="story" aria-labelledby="storyTitle">
+  <div class="story__grid">
+    <p class="section-index" aria-hidden="true">01 — はなし</p>
+    <h2 class="story__title" id="storyTitle">
+      いちばん<em>時間</em>のかかる<br>材料は、時間です。
+    </h2>
+    <div class="story__body">
+      <p>
+        こむぎ日和は、朝5時に窓の灯る店です。特別なことは、なにもしていません。
+        国産の小麦を石臼で挽き、自分たちで育てたレーズン種を少しだけ加えて、
+        低い温度でゆっくり、ときに<span class="mono">18時間</span>かけて発酵させる。
+        急がないことだけを、まじめに続けています。
+      </p>
+      <p>
+        パンはたぶん、待ってくれた人の顔を覚えています。
+        だから焼き上がりの時間になると、坂をのぼってくる足音が聞こえる気がして、
+        私たちはいつも少しだけ、そわそわしています。
+      </p>
+      <p class="story__sign">— 店主 ふたり、犬いっぴき</p>
+    </div>
+  </div>
+</section>
+
+<section class="bake" id="bake" aria-labelledby="bakeTitle">
+  <div class="bake__sticky">
+    <div class="bake__stage">
+      <svg class="bake__svg" viewBox="0 0 520 420" role="img" aria-labelledby="bakeSvgTitle bakeSvgDesc" id="bakeSvg">
+        <title id="bakeSvgTitle">石窯で焼き上がっていく一斤のパン</title>
+        <desc id="bakeSvgDesc">スクロールに合わせて、生地に切り込み（クープ）が開き、焼き色が濃くなり、湯気が立ちのぼります。</desc>
+        <defs>
+          <linearGradient id="crustGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" id="cs0" stop-color="#f0dcbf"/>
+            <stop offset="0.5" id="cs1" stop-color="#e6c99b"/>
+            <stop offset="1" id="cs2" stop-color="#d8b784"/>
+          </linearGradient>
+          <radialGradient id="ovenGlow" cx="0.5" cy="0.62" r="0.65">
+            <stop offset="0" stop-color="#ffd9a0" stop-opacity="0.0" id="glowStop"/>
+            <stop offset="1" stop-color="#ffd9a0" stop-opacity="0"/>
+          </radialGradient>
+          <clipPath id="loafClip">
+            <path d="M92 300 C92 232 150 196 260 196 C370 196 428 232 428 300 C428 330 400 344 260 344 C120 344 92 330 92 300 Z"/>
+          </clipPath>
+        </defs>
+
+        <rect class="bake__oven" x="34" y="150" width="452" height="232" rx="10"/>
+        <rect class="bake__ovenGlow" x="34" y="150" width="452" height="232" rx="10" fill="url(#ovenGlow)"/>
+
+        <g class="bake__steam" id="steam" aria-hidden="true">
+          <path class="steam" d="M190 196 C176 168 204 150 190 120 C178 96 200 78 190 54"/>
+          <path class="steam" d="M262 196 C248 164 276 146 262 112 C250 86 272 66 262 40"/>
+          <path class="steam" d="M334 196 C320 170 348 152 334 122 C322 98 344 80 334 58"/>
+        </g>
+
+        <path class="bake__loaf" id="loaf" d="M92 300 C92 232 150 196 260 196 C370 196 428 232 428 300 C428 330 400 344 260 344 C120 344 92 330 92 300 Z" fill="url(#crustGrad)"/>
+        <g clip-path="url(#loafClip)">
+          <path class="bake__score" id="score1" d="M168 236 C196 222 236 220 262 232"/>
+          <path class="bake__score" id="score2" d="M232 250 C266 232 312 232 346 250"/>
+          <path class="bake__score" id="score3" d="M196 272 C242 254 300 256 342 276"/>
+        </g>
+        <ellipse class="bake__flour" cx="260" cy="214" rx="150" ry="16"/>
+      </svg>
+
+      <div class="bake__readout" aria-hidden="true">
+        <div class="readout">
+          <span class="readout__k">発酵</span>
+          <span class="readout__v"><span id="fermVal">00</span><span class="readout__u">h</span></span>
+        </div>
+        <div class="readout">
+          <span class="readout__k">窯温</span>
+          <span class="readout__v"><span id="tempVal">020</span><span class="readout__u">℃</span></span>
+        </div>
+        <div class="readout">
+          <span class="readout__k">焼成</span>
+          <span class="readout__v"><span id="bakeVal">00</span><span class="readout__u">%</span></span>
+        </div>
+      </div>
+    </div>
+
+    <ol class="bake__phases" aria-label="焼き上がりまでの工程">
+      <li data-phase="0"><span class="mono">21:00</span> 仕込み・こねる</li>
+      <li data-phase="1"><span class="mono">23:00</span> 一次発酵・ふくらむ</li>
+      <li data-phase="2"><span class="mono">05:00</span> 成形・クープを入れる</li>
+      <li data-phase="3"><span class="mono">06:30</span> 窯入れ・色がつく</li>
+      <li data-phase="4"><span class="mono">07:00</span> 焼き上がり・湯気</li>
+    </ol>
+  </div>
+  <div class="bake__scrolltrack" id="bakeTrack" aria-hidden="true"></div>
+  <div class="bake__caption">
+    <h2 id="bakeTitle" class="visually-hidden">時間が焼く</h2>
+    <p>スクロールするほど、窯の中の一斤に<em>焼き色</em>がのっていきます。</p>
+  </div>
+</section>
+
+<section class="breads" id="breads" aria-labelledby="breadsTitle">
+  <header class="breads__head">
+    <p class="section-index" aria-hidden="true">02 — 本日のパン</p>
+    <h2 id="breadsTitle">今朝、坂の上で待っているもの。</h2>
+    <p class="breads__note">数に限りがあります。売り切れ次第、その日はおしまい。価格は税込です。</p>
+  </header>
+
+  <ul class="bento" role="list">
+    <li class="tile tile--wide">
+      <div class="tile__art" aria-hidden="true">
+        <svg viewBox="0 0 220 150" role="img" aria-label="バゲットのイラスト">
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 96 C40 70 180 62 196 72 C204 78 200 92 176 100 C120 116 44 112 30 104 Z" class="tile__fill"/>
+            <path d="M64 84 l14 -12"/><path d="M92 82 l14 -13"/><path d="M120 82 l14 -12"/><path d="M148 84 l13 -11"/>
+          </g>
+        </svg>
+      </div>
+      <div class="tile__body">
+        <h3>バゲット・トラディション</h3>
+        <p>粉と水と塩と酵母だけ。皮はぱりっと、中はしっとり。夕方には堅くなるので、朝の一本を。</p>
+        <p class="tile__meta"><span class="mono">¥340</span><span class="tile__tag">国産準強力粉</span></p>
+      </div>
+    </li>
+
+    <li class="tile">
+      <div class="tile__art" aria-hidden="true">
+        <svg viewBox="0 0 160 150" role="img" aria-label="田舎パン（カンパーニュ）のイラスト">
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 92 C28 58 60 42 80 42 C100 42 132 58 132 92 C132 112 108 120 80 120 C52 120 28 112 28 92 Z" class="tile__fill"/>
+            <path d="M52 62 L108 100"/><path d="M108 62 L52 100"/>
+          </g>
+        </svg>
+      </div>
+      <div class="tile__body">
+        <h3>田舎パン</h3>
+        <p>ライ麦を少し。噛むほどに酸味と甘み。ハーフサイズもあります。</p>
+        <p class="tile__meta"><span class="mono">¥520</span><span class="tile__tag">18h発酵</span></p>
+      </div>
+    </li>
+
+    <li class="tile">
+      <div class="tile__art" aria-hidden="true">
+        <svg viewBox="0 0 160 150" role="img" aria-label="角食パンのイラスト">
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M36 108 L36 72 C36 54 52 44 80 44 C108 44 124 54 124 72 L124 108 Z" class="tile__fill"/>
+            <path d="M36 88 L124 88"/>
+          </g>
+        </svg>
+      </div>
+      <div class="tile__body">
+        <h3>食パン「朝」</h3>
+        <p>湯種でもっちり。トーストで香ばしく、そのままでやさしい一斤。</p>
+        <p class="tile__meta"><span class="mono">¥480</span><span class="tile__tag">一斤</span></p>
+      </div>
+    </li>
+
+    <li class="tile">
+      <div class="tile__art" aria-hidden="true">
+        <svg viewBox="0 0 160 150" role="img" aria-label="クロワッサンのイラスト">
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M30 104 C40 74 70 58 100 62 C118 64 132 74 130 86 C128 96 116 96 104 92 C120 100 128 112 120 118 C112 124 96 116 84 104 C92 118 86 128 74 124 C64 120 62 108 66 98 C54 106 40 108 34 100 Z" class="tile__fill"/>
+          </g>
+        </svg>
+      </div>
+      <div class="tile__body">
+        <h3>クロワッサン</h3>
+        <p>発酵バターを折り込んで。数えきれない層が、口の中で崩れます。</p>
+        <p class="tile__meta"><span class="mono">¥260</span><span class="tile__tag">数量限定</span></p>
+      </div>
+    </li>
+
+    <li class="tile">
+      <div class="tile__art" aria-hidden="true">
+        <svg viewBox="0 0 160 150" role="img" aria-label="くるみとレーズンのライ麦パンのイラスト">
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M30 96 C30 66 54 50 80 50 C106 50 130 66 130 96 C130 114 108 120 80 120 C52 120 30 114 30 96 Z" class="tile__fill"/>
+            <circle cx="62" cy="86" r="5"/><circle cx="88" cy="78" r="5"/><circle cx="100" cy="98" r="5"/><circle cx="72" cy="104" r="4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="tile__body">
+        <h3>くるみとレーズンのライ麦</h3>
+        <p>チーズにも、赤ワインにも。夜のためのパンです。</p>
+        <p class="tile__meta"><span class="mono">¥420</span><span class="tile__tag">ハーフ</span></p>
+      </div>
+    </li>
+
+    <li class="tile">
+      <div class="tile__art" aria-hidden="true">
+        <svg viewBox="0 0 160 150" role="img" aria-label="あんぱんのイラスト">
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="80" cy="88" rx="50" ry="34" class="tile__fill"/>
+            <circle cx="80" cy="60" r="4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="tile__body">
+        <h3>あんぱん</h3>
+        <p>自家製のこしあん。甘さは控えめ、皮はしっとり。桜の塩漬けをひとつ。</p>
+        <p class="tile__meta"><span class="mono">¥240</span><span class="tile__tag">自家製こしあん</span></p>
+      </div>
+    </li>
+
+    <li class="tile tile--wide tile--focaccia">
+      <div class="tile__art" aria-hidden="true">
+        <svg viewBox="0 0 220 150" role="img" aria-label="季節のフォカッチャのイラスト">
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M30 96 C30 74 44 66 110 66 C176 66 190 74 190 96 C190 112 168 118 110 118 C52 118 30 112 30 96 Z" class="tile__fill"/>
+            <circle cx="70" cy="90" r="3.4"/><circle cx="100" cy="84" r="3.4"/><circle cx="132" cy="92" r="3.4"/><circle cx="156" cy="86" r="3.4"/><circle cx="88" cy="100" r="3.4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="tile__body">
+        <h3>季節のフォカッチャ</h3>
+        <p>今月はローズマリーとじゃがいも。オリーブオイルをたっぷり含ませて、切り分けます。</p>
+        <p class="tile__meta"><span class="mono">¥380</span><span class="tile__tag">今月の一枚</span></p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="materials" id="materials" aria-labelledby="matTitle">
+  <div class="materials__grid">
+    <div class="materials__lede">
+      <p class="section-index" aria-hidden="true">03 — 素材</p>
+      <h2 id="matTitle">かくしごとが、ほとんどありません。</h2>
+      <p>数えられるものは、数えて書いておきます。信じてもらう理由が、味のほかにもあってほしいから。</p>
+    </div>
+    <dl class="materials__list">
+      <div class="mat">
+        <dt>小麦</dt>
+        <dd>北海道産「ゆめちから」「春よ恋」を中心に、店で石臼挽き。<span class="mono">国産100%</span></dd>
+      </div>
+      <div class="mat">
+        <dt>酵母</dt>
+        <dd>自家培養のレーズン種と、少しの自家製ルヴァン。イーストは使いません。</dd>
+      </div>
+      <div class="mat">
+        <dt>塩と水</dt>
+        <dd>ゲランドの塩、仕込み水は軟水を調整。生地の温度は<span class="mono">24℃</span>を目安に。</dd>
+      </div>
+      <div class="mat">
+        <dt>窯</dt>
+        <dd>石床のデッキ窯。<span class="mono">250℃</span>で蒸気を入れて、皮を薄く硬く。</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="hours" id="hours" aria-labelledby="hoursTitle">
+  <div class="hours__head">
+    <p class="section-index" aria-hidden="true">04 — 焼き上がり時刻表</p>
+    <h2 id="hoursTitle">この時間に、いちばん良い香りがします。</h2>
+    <p>数量に限りがあるため、前後することがあります。あくまで目安に。</p>
+  </div>
+  <ul class="timetable" role="list">
+    <li><span class="mono time">07:00</span><span class="dots" aria-hidden="true"></span><span class="what">バゲット・田舎パン</span></li>
+    <li><span class="mono time">08:00</span><span class="dots" aria-hidden="true"></span><span class="what">食パン「朝」・クロワッサン</span></li>
+    <li><span class="mono time">10:00</span><span class="dots" aria-hidden="true"></span><span class="what">あんぱん・菓子パン各種</span></li>
+    <li><span class="mono time">11:30</span><span class="dots" aria-hidden="true"></span><span class="what">季節のフォカッチャ</span></li>
+    <li><span class="mono time">14:00</span><span class="dots" aria-hidden="true"></span><span class="what">午後の追い焼き（少量）</span></li>
+  </ul>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visitTitle">
+  <div class="visit__card">
+    <div class="visit__info">
+      <p class="section-index" aria-hidden="true">05 — 店・取り置き</p>
+      <h2 id="visitTitle">坂をのぼって、右手の窓。</h2>
+      <p class="visit__lead">確実に受け取りたいパンは、前日までにお取り置きを。電話でも、フォームでも。</p>
+      <dl class="visit__meta">
+        <div><dt>営業</dt><dd>木・金・土・日・月　<span class="mono">7:00 – 売り切れ次第</span></dd></div>
+        <div><dt>定休</dt><dd>火・水（仕込みの日）</dd></div>
+        <div><dt>場所</dt><dd>海の見える坂の町　南町三丁目、線路沿いの坂の途中</dd></div>
+        <div><dt>電話</dt><dd><a href="tel:0000000000" class="mono">000-0000-0000</a></dd></div>
+      </dl>
+      <div class="visit__actions">
+        <a class="cta" href="#visit">取り置きフォーム</a>
+        <a class="cta cta--ghost" href="#top">トップに戻る</a>
+      </div>
+    </div>
+    <div class="visit__map" aria-hidden="true">
+      <svg viewBox="0 0 320 300" role="img" aria-label="お店周辺の略地図">
+        <rect x="0" y="0" width="320" height="300" rx="12" class="map__bg"/>
+        <path class="map__rail" d="M-10 250 C80 240 120 210 320 200"/>
+        <path class="map__road" d="M40 300 C90 210 150 150 300 60"/>
+        <path class="map__coast" d="M0 40 C80 60 140 40 220 60 C270 72 300 60 320 66"/>
+        <circle class="map__pin" cx="196" cy="128" r="9"/>
+        <circle class="map__pin-ring" cx="196" cy="128" r="16"/>
+        <text x="196" y="112" class="map__label" text-anchor="middle">こむぎ日和</text>
+        <text x="60" y="278" class="map__label map__label--sm" text-anchor="middle">駅</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="site-foot__brand">
+    <span class="brand__ja">こむぎ日和</span>
+    <span class="brand__en">KOMUGI-BIYORI ・ since 2019</span>
+  </div>
+  <p class="site-foot__note">夜のうちにふくらみ、夜明けに焼ける。<br>小さなパン屋の、小さなしあわせを。</p>
+  <p class="site-foot__copy mono">© 2026 KOMUGI-BIYORI. 架空のパン屋です。</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

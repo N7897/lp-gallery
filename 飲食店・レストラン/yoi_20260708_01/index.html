@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宵 YOI ｜ 神楽坂・夜のおまかせコース</title>
+<meta name="description" content="神楽坂の路地裏、八席の日本料理店「宵 YOI」。陽が落ちてから始まる全七品のおまかせコース。一皿ごとに更ける夜と、満ちてゆく月を。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400&family=Murecho:wght@300;400;500;700&family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#course">献立へ移動</a>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="宵 YOI ホームへ">
+    <span class="nav__mark">宵</span>
+    <span class="nav__latin">YOI</span>
+  </a>
+  <nav class="nav__links" aria-label="メインナビゲーション">
+    <a href="#story">物語</a>
+    <a href="#course">献立</a>
+    <a href="#provenance">素材</a>
+    <a href="#room">しつらえ</a>
+    <a href="#menu">お品書き</a>
+  </nav>
+  <a class="btn btn--cta nav__cta" href="#reserve">席を予約する</a>
+  <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navSheet" aria-label="メニューを開く">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="sheet" id="navSheet" hidden>
+  <a href="#story">物語</a>
+  <a href="#course">献立</a>
+  <a href="#provenance">素材</a>
+  <a href="#room">しつらえ</a>
+  <a href="#menu">お品書き</a>
+  <a class="btn btn--cta" href="#reserve">席を予約する</a>
+</div>
+
+<!-- 夜の月ゲージ（署名・固定） -->
+<aside class="nightgauge" id="nightgauge" aria-hidden="true">
+  <svg class="nightgauge__moon" viewBox="0 0 64 64" role="img">
+    <defs>
+      <radialGradient id="moonface" cx="38%" cy="34%" r="72%">
+        <stop offset="0%" stop-color="#F4F0E6"/>
+        <stop offset="55%" stop-color="#CBD8EE"/>
+        <stop offset="100%" stop-color="#8FA0C2"/>
+      </radialGradient>
+    </defs>
+    <circle class="nm-halo" cx="32" cy="32" r="22"/>
+    <circle class="nm-disk" cx="32" cy="32" r="22" fill="url(#moonface)"/>
+    <path class="nm-shadow" d="M32 10 A22 22 0 0 0 32 54 A22 22 0 0 1 32 10 Z"/>
+    <circle class="nm-rim" cx="32" cy="32" r="22"/>
+  </svg>
+  <span class="nightgauge__time" id="ngTime">宵の口</span>
+  <span class="nightgauge__pct" id="ngPct">18:00</span>
+</aside>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas class="hero__stars" id="stars" aria-hidden="true"></canvas>
+    <div class="hero__vignette" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal">神楽坂 &middot; おまかせコース</p>
+      <h1 class="hero__title">宵</h1>
+      <p class="hero__latin reveal" data-d="1">Yoi</p>
+      <p class="hero__lead reveal" data-d="2">陽が落ちてから、はじまる。<br>一皿ごとに更ける夜と、満ちてゆく月を。</p>
+      <a class="hero__cue reveal" data-d="3" href="#story" aria-label="読み進める">
+        <span>宵をひらく</span>
+        <svg viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2v30" /><path d="M5 26l7 8 7-8"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <p class="eyebrow reveal">物語 <span>Our Night</span></p>
+    <h2 class="story__head reveal" data-d="1">夜を、<br class="only-sp">一冊の献立に。</h2>
+    <div class="story__body">
+      <p class="reveal" data-d="1">宵の口。暖簾をくぐると、外の時間はそっと置いてくる。カウンターの向こうで炭が爆ぜ、湯気が立ちのぼる。ここから先は、私たちの用意した一夜の物語です。</p>
+      <p class="reveal" data-d="2">おまかせは全七品。先付から甘味へ、料理が進むたび、窓の月はすこしずつ満ちてゆきます。あなたが席を立つころ、夜空にはまるい月。</p>
+      <p class="reveal" data-d="3">旬だけを、無理なく。派手さよりも、余韻を。宵は、また来たい夜をつくる店です。</p>
+    </div>
+    <div class="story__rule reveal" aria-hidden="true"></div>
+  </section>
+
+  <!-- COURSE (C6×D3) -->
+  <section class="course" id="course">
+    <div class="course__aside">
+      <div class="course__stick">
+        <p class="eyebrow">献立 <span>The Course</span></p>
+        <p class="course__label">お品書き</p>
+        <p class="course__now" id="courseNow" aria-live="polite">
+          <span class="course__num" id="courseNum">壱</span>
+          <span class="course__name" id="courseName">先付</span>
+        </p>
+        <p class="course__yomi" id="courseYomi">さきづけ</p>
+        <svg class="constel" id="constel" viewBox="0 0 40 300" aria-hidden="true">
+          <path class="constel__line" id="constelLine" d="M20 18 L20 60 L20 102 L20 144 L20 186 L20 228 L20 270"/>
+          <g id="constelDots"></g>
+        </svg>
+        <p class="course__count"><span id="courseIdx">1</span> <i>/</i> 7 品</p>
+      </div>
+    </div>
+
+    <ol class="course__list">
+      <li class="dish reveal" data-i="1" data-num="壱" data-name="先付" data-yomi="さきづけ" data-phase="宵の口" data-time="18:00" data-moon="0.06" style="--dish:#7FA06B">
+        <div class="dish__plate" data-motif="plate"></div>
+        <div class="dish__text">
+          <p class="dish__kicker">壱 &middot; 先付</p>
+          <h3 class="dish__title">箸をとる前に、季節をひとくち。</h3>
+          <p class="dish__desc">順才と占地、白酢がけ。まずは軽く、その日の空気ごと味わう一皿から。</p>
+          <p class="dish__src">賀茂の夏野菜 &middot; 京都</p>
+        </div>
+      </li>
+      <li class="dish reveal" data-i="2" data-num="弐" data-name="椀物" data-yomi="わんもの" data-phase="宵の口" data-time="18:40" data-moon="0.2" style="--dish:#D8A94E">
+        <div class="dish__plate" data-motif="broth"></div>
+        <div class="dish__text">
+          <p class="dish__kicker">弐 &middot; 椀物</p>
+          <h3 class="dish__title">湯気の向こうに、だしの記憶。</h3>
+          <p class="dish__desc">蛤と芽吹き独活の椀。蓋を取った瞬間に立ちのぼる香りまでが、料理です。</p>
+          <p class="dish__src">桑名の蛤 &middot; 三重</p>
+        </div>
+      </li>
+      <li class="dish reveal" data-i="3" data-num="参" data-name="向付" data-yomi="むこうづけ" data-phase="夜のはじまり" data-time="19:20" data-moon="0.34" style="--dish:#C98B86">
+        <div class="dish__plate" data-motif="plate"></div>
+        <div class="dish__text">
+          <p class="dish__kicker">参 &middot; 向付</p>
+          <h3 class="dish__title">海の静けさを、そのまま。</h3>
+          <p class="dish__desc">鮪と鯛の向付。山葵と土佐醤油で、素材のいちばん良い温度のうちに。</p>
+          <p class="dish__src">大間の鮪・明石の鯛 &middot; 青森／兵庫</p>
+        </div>
+      </li>
+      <li class="dish reveal" data-i="4" data-num="四" data-name="焼物" data-yomi="やきもの" data-phase="夜半" data-time="20:00" data-moon="0.5" style="--dish:#B5794A">
+        <div class="dish__plate" data-motif="plate"></div>
+        <div class="dish__text">
+          <p class="dish__kicker">四 &middot; 焼物</p>
+          <h3 class="dish__title">炭の、いちばん良いところで。</h3>
+          <p class="dish__desc">甘鯛の若狭焼。うろこを立たせて香ばしく、身はふっくらと。目の前の炭火で仕上げます。</p>
+          <p class="dish__src">若狭ぐじ &middot; 福井・小浜</p>
+        </div>
+      </li>
+      <li class="dish reveal" data-i="5" data-num="五" data-name="強肴" data-yomi="しいざかな" data-phase="夜半" data-time="20:40" data-moon="0.66" style="--dish:#9A8FC0">
+        <div class="dish__plate" data-motif="plate"></div>
+        <div class="dish__text">
+          <p class="dish__kicker">五 &middot; 強肴</p>
+          <h3 class="dish__title">今日いちばんの、ごちそう。</h3>
+          <p class="dish__desc">黒毛和牛の炭火焼と焼茄子。脂の甘みと、煙のにおい。コースの頂きです。</p>
+          <p class="dish__src">但馬牛 &middot; 兵庫</p>
+        </div>
+      </li>
+      <li class="dish reveal" data-i="6" data-num="六" data-name="食事" data-yomi="しょくじ" data-phase="暁ちかく" data-time="21:20" data-moon="0.82" style="--dish:#D9CDB6">
+        <div class="dish__plate" data-motif="broth"></div>
+        <div class="dish__text">
+          <p class="dish__kicker">六 &middot; 食事</p>
+          <h3 class="dish__title">しめは、白いごはんの湯気で。</h3>
+          <p class="dish__desc">土鍋の新米、香の物、赤出汁。飾らないものほど、腕が出ます。</p>
+          <p class="dish__src">魚沼産こしひかり &middot; 新潟</p>
+        </div>
+      </li>
+      <li class="dish reveal" data-i="7" data-num="漆" data-name="甘味" data-yomi="かんみ" data-phase="満月" data-time="22:00" data-moon="1" style="--dish:#AC8CC8">
+        <div class="dish__plate" data-motif="sweet"></div>
+        <div class="dish__text">
+          <p class="dish__kicker">漆 &middot; 甘味</p>
+          <h3 class="dish__title">満ちた月に、そっと甘さを。</h3>
+          <p class="dish__desc">和三盆の水羊羹と焙じ茶。夜がまるくなったころ、しずかに幕を。</p>
+          <p class="dish__src">阿波和三盆 &middot; 徳島</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- PROVENANCE -->
+  <section class="prov" id="provenance">
+    <p class="eyebrow reveal">素材 <span>Provenance</span></p>
+    <h2 class="prov__head reveal" data-d="1">その日、いちばんのものだけ。</h2>
+    <div class="prov__grid">
+      <article class="pcard reveal" data-d="1">
+        <span class="pcard__no">01</span>
+        <h3>朝の魚河岸</h3>
+        <p>豊洲と、行きつけの仲卸。その日いちばん良いものを、店主が自分の目で選びます。だから献立は、毎晩すこしずつ変わります。</p>
+      </article>
+      <article class="pcard reveal" data-d="2">
+        <span class="pcard__no">02</span>
+        <h3>畑のたより</h3>
+        <p>契約する近郊の農家から、朝どりの野菜が届く。土のついたままの季節を、そのまま皿の上へ。</p>
+      </article>
+      <article class="pcard reveal" data-d="3">
+        <span class="pcard__no">03</span>
+        <h3>土地の酒</h3>
+        <p>全国の小さな蔵の日本酒を、料理に合わせて。八品のペアリングは、コースのもうひとつの物語です。</p>
+      </article>
+      <article class="pcard reveal" data-d="4">
+        <span class="pcard__no">04</span>
+        <h3>一客の器</h3>
+        <p>作家ものの器に、料理を一枚の絵として。器が変われば、同じ料理も違う顔になります。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ROOM -->
+  <section class="room" id="room">
+    <div class="room__lead">
+      <p class="eyebrow reveal">しつらえ <span>The Room</span></p>
+      <h2 class="room__head reveal" data-d="1">八席の、静けさ。</h2>
+      <p class="room__body reveal" data-d="2">白木のカウンター八席と、小さな個室がひとつ。目の前で仕上がる料理と、炭のにおい。声を張らずに話せる、それくらいの店です。</p>
+    </div>
+    <div class="room__cols">
+      <figure class="rtile reveal" data-d="1" data-motif="counter" style="--dish:#CBD8EE">
+        <div class="rtile__art"></div>
+        <figcaption><b>カウンター八席</b><span>白木、目の前の炭火</span></figcaption>
+      </figure>
+      <figure class="rtile reveal" data-d="2" data-motif="private" style="--dish:#C8A24A">
+        <div class="rtile__art"></div>
+        <figcaption><b>奥の個室</b><span>〜4名、静かな夜に</span></figcaption>
+      </figure>
+      <figure class="rtile reveal" data-d="3" data-motif="ware" style="--dish:#9A8FC0">
+        <div class="rtile__art"></div>
+        <figcaption><b>灯りと器</b><span>作家ものの一客</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- MENU / PRICING -->
+  <section class="menu" id="menu">
+    <p class="eyebrow reveal">お品書き <span>Menu</span></p>
+    <h2 class="menu__head reveal" data-d="1">料金</h2>
+    <dl class="menu__list reveal" data-d="2">
+      <div class="mrow"><dt>夜 おまかせコース<span>全七品</span></dt><dd>¥16,500</dd></div>
+      <div class="mrow"><dt>昼 おまかせコース<span>全五品・金土日</span></dt><dd>¥8,800</dd></div>
+      <div class="mrow"><dt>日本酒ペアリング<span>八品</span></dt><dd>¥8,800</dd></div>
+      <div class="mrow"><dt>ノンアルコール・ペアリング</dt><dd>¥5,500</dd></div>
+      <div class="mrow"><dt>お祝いの一皿<span>要予約</span></dt><dd>¥2,200〜</dd></div>
+    </dl>
+    <p class="menu__note reveal" data-d="3">※ 表示はすべて税込。席料・サービス料はいただきません。仕入れにより献立は変わります。苦手な食材・アレルギーは、ご予約時にお知らせください。</p>
+  </section>
+
+  <!-- RESERVE / ACCESS -->
+  <section class="reserve" id="reserve">
+    <div class="reserve__panel reveal">
+      <p class="eyebrow">予約 <span>Reserve</span></p>
+      <h2 class="reserve__head">席を、<br>ご用意して。</h2>
+      <p class="reserve__sub">ご予約は前日までに。当日空席がある場合もございます。まずはお気軽に。</p>
+      <div class="reserve__cta">
+        <a class="btn btn--cta btn--lg" href="#reserve">席を予約する</a>
+        <a class="btn btn--ghost" href="tel:0300000000">電話でのご予約 03-0000-0000</a>
+      </div>
+    </div>
+    <dl class="reserve__info reveal" data-d="1">
+      <div><dt>営業</dt><dd>18:00–23:00（最終入店 20:30）<br>昼は 金土日 12:00–14:00</dd></div>
+      <div><dt>定休</dt><dd>日曜の夜・月曜</dd></div>
+      <div><dt>席数</dt><dd>カウンター 8席・個室 1室（〜4名）</dd></div>
+      <div><dt>住所</dt><dd>東京都新宿区神楽坂5-0-0<br>宵ビル 1F（神楽坂駅 徒歩3分）</dd></div>
+      <div><dt>電話</dt><dd><a href="tel:0300000000">03-0000-0000</a></dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__brand"><span class="foot__mark">宵</span><span>YOI</span></div>
+  <p class="foot__addr">日本料理 宵 ｜ 東京・神楽坂</p>
+  <p class="foot__copy">&copy; 2026 YOI. 架空の店舗として制作したデモンストレーションです。</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

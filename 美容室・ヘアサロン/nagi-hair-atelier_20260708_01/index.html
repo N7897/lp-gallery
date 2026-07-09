@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nagi ── 光をまとう髪 ｜ hair atelier 奥沢</title>
+<meta name="description" content="奥沢の小さなヘアアトリエ nagi（凪）。朝の斜光が差し込む席で、切ることは軽くなる儀式。カット・カラー・トリートメント・ヘッドスパ。ご予約承ります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#philosophy">本文へスキップ</a>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#hero" aria-label="nagi ホームへ">
+    <span class="nav__mark" aria-hidden="true"></span>
+    <span class="nav__name">nagi</span>
+  </a>
+  <nav class="nav__links" aria-label="メインナビゲーション">
+    <a href="#philosophy">凪について</a>
+    <a href="#menu">メニュー</a>
+    <a href="#stylists">スタイリスト</a>
+    <a href="#gallery">スタイル</a>
+    <a href="#reserve">アクセス</a>
+  </nav>
+  <a class="btn btn--book nav__book" href="#reserve">予約する</a>
+  <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <nav class="drawer__links" aria-label="モバイルナビゲーション">
+    <a href="#philosophy"><span>01</span>凪について</a>
+    <a href="#menu"><span>02</span>メニュー</a>
+    <a href="#stylists"><span>03</span>スタイリスト</a>
+    <a href="#gallery"><span>04</span>スタイル</a>
+    <a href="#reserve"><span>05</span>アクセス</a>
+  </nav>
+  <a class="btn btn--book drawer__book" href="#reserve">予約する</a>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="hairCanvas" aria-hidden="true"></canvas>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">hair atelier ── 奥沢</p>
+      <h1 class="hero__title">
+        <span class="hero__line">髪は、その日の</span>
+        <span class="hero__line hero__line--em">光</span>
+        <span class="hero__line">をまとう。</span>
+      </h1>
+      <p class="hero__lead">切ることは、軽くなること。<br>朝の斜光が差し込む席で、あなたの一日をひとつ、整えます。</p>
+      <div class="hero__actions">
+        <a class="btn btn--book" href="#reserve">予約する</a>
+        <a class="btn btn--ghost" href="#menu">メニューを見る</a>
+      </div>
+    </div>
+    <a class="hero__cue" href="#philosophy" aria-label="下へスクロール">
+      <span>scroll</span>
+      <span class="hero__cue-line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="phil" id="philosophy" aria-labelledby="phil-h">
+    <p class="sec-index" aria-hidden="true"><em>01</em> — 凪について</p>
+    <div class="phil__grid">
+      <h2 class="phil__title" id="phil-h">軽くなる、<br>という贅沢。</h2>
+      <div class="phil__body reveal">
+        <p>鏡の前の一時間は、あなたが自分だけに戻る時間です。凪では、流行を追いかけるより、あなたの骨格と髪質、そして暮らしの速度に耳を澄ませます。</p>
+        <p>切りすぎない。染めすぎない。手を入れるのは、明日の朝、鏡の前で微笑めるところまで。仕上がりは、光の入り方まで計算します。</p>
+        <p class="phil__sign">── 凪 主宰・棚橋 律</p>
+      </div>
+    </div>
+    <ul class="phil__marks reveal" aria-label="凪の約束">
+      <li><span class="mark-n" aria-hidden="true">i</span>一日ひとりを大切に、席は三席のみ</li>
+      <li><span class="mark-n" aria-hidden="true">ii</span>カウンセリングに二十分</li>
+      <li><span class="mark-n" aria-hidden="true">iii</span>再現できる、家での手入れまで</li>
+    </ul>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="menu__head">
+      <p class="sec-index" aria-hidden="true"><em>02</em> — メニュー</p>
+      <h2 class="menu__title" id="menu-h">手を入れる、<br>ということ。</h2>
+      <p class="menu__note">価格は税込。表示のないメニューは長さ・状態により承ります。<br>初回のお客様はカウンセリング料をいただきません。</p>
+    </div>
+    <ul class="menu__list">
+      <li class="menu__item reveal">
+        <div class="menu__row"><h3>カット</h3><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">¥6,600</span></div>
+        <p class="menu__desc">骨格診断から。乾かすだけで決まる、家で再現できる輪郭を。<span class="menu__time">約70分</span></p>
+      </li>
+      <li class="menu__item reveal">
+        <div class="menu__row"><h3>カラー <em>&amp;</em> カット</h3><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">¥13,200〜</span></div>
+        <p class="menu__desc">光に透ける陰影設計。白髪も、色を"隠す"のでなく"なじませる"。<span class="menu__time">約150分</span></p>
+      </li>
+      <li class="menu__item reveal">
+        <div class="menu__row"><h3>髪質改善トリートメント</h3><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">¥8,800</span></div>
+        <p class="menu__desc">内側から水分を編み直す四工程。手ぐしの通る指どけの軽さへ。<span class="menu__time">約90分</span></p>
+      </li>
+      <li class="menu__item reveal">
+        <div class="menu__row"><h3>ヘッドスパ <em>凪</em></h3><span class="menu__dots" aria-hidden="true"></span><span class="menu__price">¥5,500</span></div>
+        <p class="menu__desc">頭皮の緊張をほどく三十分。眠ってしまってかまいません。<span class="menu__time">約40分</span></p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- STYLISTS -->
+  <section class="stylists" id="stylists" aria-labelledby="sty-h">
+    <div class="stylists__head">
+      <p class="sec-index" aria-hidden="true"><em>03</em> — スタイリスト</p>
+      <h2 class="stylists__title" id="sty-h">三人の、<br>ちがう光。</h2>
+    </div>
+    <ul class="stylists__grid">
+      <li class="card reveal">
+        <div class="card__portrait" aria-hidden="true">
+          <svg viewBox="0 0 300 380" preserveAspectRatio="xMidYMid slice" role="img"><use href="#fig-a"></use></svg>
+        </div>
+        <div class="card__meta">
+          <p class="card__role">主宰 / director</p>
+          <h3 class="card__name">棚橋 律 <span>Ritsu</span></h3>
+          <p class="card__bio">"引き算"の設計者。乾かす時間まで含めて似合わせる、ミニマルな輪郭づくり。</p>
+        </div>
+      </li>
+      <li class="card reveal">
+        <div class="card__portrait" aria-hidden="true">
+          <svg viewBox="0 0 300 380" preserveAspectRatio="xMidYMid slice" role="img"><use href="#fig-b"></use></svg>
+        </div>
+        <div class="card__meta">
+          <p class="card__role">カラーリスト / colorist</p>
+          <h3 class="card__name">結城 芽依 <span>Mei</span></h3>
+          <p class="card__bio">光の下で色を組む人。透明感と白髪ぼかしの陰影設計が持ち味。</p>
+        </div>
+      </li>
+      <li class="card reveal">
+        <div class="card__portrait" aria-hidden="true">
+          <svg viewBox="0 0 300 380" preserveAspectRatio="xMidYMid slice" role="img"><use href="#fig-c"></use></svg>
+        </div>
+        <div class="card__meta">
+          <p class="card__role">スパニスト / spa</p>
+          <h3 class="card__name">小森 湊 <span>Minato</span></h3>
+          <p class="card__bio">頭皮と髪の体調管理。ほどく手のひらの温度に、指名が絶えない。</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery" aria-labelledby="gal-h">
+    <div class="gallery__head">
+      <p class="sec-index" aria-hidden="true"><em>04</em> — スタイル</p>
+      <h2 class="gallery__title" id="gal-h">仕上がりは、<br>光で決まる。</h2>
+      <p class="gallery__note">髪が分かれて、あらわれる。スクロールでご覧ください。</p>
+    </div>
+    <div class="gallery__grid">
+      <figure class="shot reveal-curtain shot--tall">
+        <div class="shot__img" aria-hidden="true"><svg viewBox="0 0 400 560" preserveAspectRatio="xMidYMid slice"><use href="#style-1"></use></svg></div>
+        <figcaption><span>01</span>くびれミディ ／ 透けるアッシュ</figcaption>
+      </figure>
+      <figure class="shot reveal-curtain">
+        <div class="shot__img" aria-hidden="true"><svg viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice"><use href="#style-2"></use></svg></div>
+        <figcaption><span>02</span>ハンサムショート</figcaption>
+      </figure>
+      <figure class="shot reveal-curtain">
+        <div class="shot__img" aria-hidden="true"><svg viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice"><use href="#style-3"></use></svg></div>
+        <figcaption><span>03</span>陰影ロング ／ ハイライト</figcaption>
+      </figure>
+      <figure class="shot reveal-curtain shot--tall">
+        <div class="shot__img" aria-hidden="true"><svg viewBox="0 0 400 560" preserveAspectRatio="xMidYMid slice"><use href="#style-4"></use></svg></div>
+        <figcaption><span>04</span>ゆるやかボブ ／ グレイぼかし</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- VOICE -->
+  <section class="voice" aria-label="お客様の声">
+    <blockquote class="voice__quote reveal">
+      <p>「切った翌朝、鏡の前で少しだけ背筋が伸びました。軽いのに、私のまま。」</p>
+      <cite>── 世田谷区・38歳・二度目のご来店</cite>
+    </blockquote>
+  </section>
+
+  <!-- RESERVE / ACCESS -->
+  <section class="reserve" id="reserve" aria-labelledby="res-h">
+    <p class="sec-index sec-index--light" aria-hidden="true"><em>05</em> — アクセス &amp; ご予約</p>
+    <div class="reserve__grid">
+      <div class="reserve__lead">
+        <h2 class="reserve__title" id="res-h">その光を、<br>あなたにも。</h2>
+        <p class="reserve__copy">ご予約はお電話、またはLINEにて。当日枠が空いていることもございます。まずはお気軽に。</p>
+        <a class="btn btn--book btn--lg" href="tel:0300000000">予約する</a>
+        <p class="reserve__sub">tel. 03-0000-0000 ／ 予約優先制</p>
+      </div>
+      <dl class="reserve__info">
+        <div><dt>住所</dt><dd>東京都世田谷区奥沢 2-1-4<br>あさひビル 2F</dd></div>
+        <div><dt>最寄り</dt><dd>東急目黒線・大井町線「奥沢駅」南口 徒歩3分</dd></div>
+        <div><dt>営業時間</dt><dd>10:00 – 19:00（最終受付 カット18:00）</dd></div>
+        <div><dt>定休日</dt><dd>火曜・第2水曜</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__brand"><span class="nav__mark" aria-hidden="true"></span> nagi ── hair atelier</div>
+  <p class="foot__sm">© 2026 nagi hair atelier. 髪は、その日の光をまとう。</p>
+</footer>
+
+<!-- SVG defs: 自作の暖色シルエット（灰プレースホルダ禁止） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="g-warm" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#F3E6D4"/><stop offset="1" stop-color="#E7C9A6"/>
+  </linearGradient>
+  <linearGradient id="g-warm2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#EAD3B4"/><stop offset="1" stop-color="#D9A56E"/>
+  </linearGradient>
+  <linearGradient id="g-hair" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8a6a4f"/><stop offset="1" stop-color="#c69a6e"/>
+  </linearGradient>
+  <linearGradient id="g-hair2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#6f5844"/><stop offset="1" stop-color="#b98f66"/>
+  </linearGradient>
+
+  <g id="fig-a"><rect width="300" height="380" fill="#EAD9C1"/><circle cx="150" cy="150" r="150" fill="#E9A575" opacity=".18"/><path d="M150 120c40 0 62 30 62 78 0 60-18 120-18 182H106c0-62-18-122-18-182 0-48 22-78 62-78z" fill="url(#g-hair)"/><circle cx="150" cy="150" r="46" fill="#F0DCC2"/><path d="M104 150c0-40 20-64 46-64s46 24 46 64c8-4 14-16 14-34 0-40-26-64-60-64s-60 24-60 64c0 18 6 30 14 34z" fill="url(#g-hair)"/></g>
+  <g id="fig-b"><rect width="300" height="380" fill="#E7D3BC"/><circle cx="150" cy="160" r="150" fill="#E9A575" opacity=".16"/><path d="M150 122c44 0 66 30 66 70 0 34-14 40-14 40l6 148H92l6-148s-14-6-14-40c0-40 22-70 66-70z" fill="url(#g-hair2)"/><circle cx="150" cy="156" r="44" fill="#F1DEC6"/><path d="M110 150c0-34 18-56 40-56s40 22 40 56c6-6 10-18 10-32 0-34-22-54-50-54s-50 20-50 54c0 14 4 26 10 32z" fill="url(#g-hair2)"/></g>
+  <g id="fig-c"><rect width="300" height="380" fill="#ECDCC6"/><circle cx="150" cy="150" r="150" fill="#E9A575" opacity=".2"/><path d="M150 118c38 0 58 26 58 64 0 66-14 130-14 198H106c0-68-14-132-14-198 0-38 20-64 58-64z" fill="url(#g-hair)"/><circle cx="150" cy="150" r="45" fill="#F0DCC2"/><path d="M106 148c0-38 20-60 44-60s44 22 44 60c8-4 12-16 12-32 0-38-24-60-56-60s-56 22-56 60c0 16 4 28 12 32z" fill="url(#g-hair)"/></g>
+
+  <g id="style-1"><rect width="400" height="560" fill="#E7D0B4"/><circle cx="200" cy="150" r="240" fill="#E9A575" opacity=".22"/><path d="M200 150c60 0 92 40 92 104 0 96-30 210-30 306H138c0-96-30-210-30-306 0-64 32-104 92-104z" fill="url(#g-hair)"/><circle cx="200" cy="176" r="60" fill="#F2E0C8"/><path d="M140 168c0-52 26-84 60-84s60 32 60 84c12-6 18-22 18-46 0-52-34-84-78-84s-78 32-78 84c0 24 6 40 18 46z" fill="url(#g-hair)"/></g>
+  <g id="style-2"><rect width="400" height="360" fill="#EAD7BE"/><circle cx="200" cy="120" r="200" fill="#E9A575" opacity=".18"/><path d="M200 96c50 0 76 32 76 76 0 40-16 44-16 44l6 168H134l6-168s-16-4-16-44c0-44 26-76 70-76z" fill="url(#g-hair2)"/><circle cx="200" cy="150" r="52" fill="#F2E0C8"/></g>
+  <g id="style-3"><rect width="400" height="360" fill="#E6CFB2"/><circle cx="200" cy="130" r="220" fill="#E9A575" opacity=".2"/><path d="M200 92c56 0 84 34 84 92 0 78-22 150-22 220H138c0-70-22-142-22-220 0-58 28-92 84-92z" fill="url(#g-hair)"/><circle cx="200" cy="150" r="54" fill="#F2E0C8"/></g>
+  <g id="style-4"><rect width="400" height="560" fill="#EBDAC2"/><circle cx="200" cy="170" r="240" fill="#E9A575" opacity=".16"/><path d="M200 150c58 0 88 36 88 90 0 44-18 52-18 52l8 246H122l8-246s-18-8-18-52c0-54 30-90 88-90z" fill="url(#g-hair2)"/><circle cx="200" cy="182" r="58" fill="#F2E0C8"/></g>
+</defs></svg>
+
+<script src="script.js" defer></script>
+</body>
+</html>

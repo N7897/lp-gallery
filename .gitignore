@@ -1,0 +1,26 @@
+# === 運営ノウハウ（非公開）===
+_BRAIN.md
+_ARCHIVE.md
+_DIRECTOR.md
+_TRENDS.md
+_SKELETONS.md
+_LOG.md
+_KNOWLEDGE/
+_tools/
+_ASSETS/
+_qa_check.py
+_タスク手順*.txt
+.claude/
+
+# === 制作メモ（非公開・過去分含む）===
+**/_notes.txt
+**/_status.txt
+
+# === サムネは軽量webのみ公開 ===
+_THUMBS/*
+!_THUMBS/web/
+
+# === 一時ファイル ===
+__pycache__/
+*.pyc
+_lh_report.json

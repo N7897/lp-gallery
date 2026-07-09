@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>余白 YOHAKU｜本と珈琲のある部屋</title>
+<meta name="description" content="余白 — 頁の外側にある静けさを売る、夜の読書室。選び抜いた蔵書と一杯の珈琲、読書会や朗読の催し。読むように過ごす時間を、街の片隅で。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Zen+Antique&family=Noto+Serif+JP:wght@300;400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へskip</a>
+
+<!-- 栞: scroll progress ribbon -->
+<div class="shiori" aria-hidden="true">
+  <div class="shiori__rail"></div>
+  <div class="shiori__ribbon"><span class="shiori__pct">000</span></div>
+</div>
+
+<header class="site-head" id="siteHead">
+  <a class="brand" href="#top" aria-label="余白 ホームへ">
+    <span class="brand__jp">余白</span>
+    <span class="brand__en">YOHAKU</span>
+  </a>
+  <nav class="site-nav" aria-label="主要">
+    <a href="#jo">序</a>
+    <a href="#zosho">蔵書</a>
+    <a href="#coffee">珈琲</a>
+    <a href="#events">催し</a>
+    <a href="#hours">会員</a>
+  </nav>
+  <a href="#hours" class="btn-reserve">席をとる</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <nav aria-label="メニュー">
+    <a href="#jo"><em>i.</em>序</a>
+    <a href="#zosho"><em>ii.</em>蔵書</a>
+    <a href="#coffee"><em>iii.</em>珈琲</a>
+    <a href="#pageturn"><em>iv.</em>頁をめくる</a>
+    <a href="#events"><em>v.</em>催し</a>
+    <a href="#hours"><em>vi.</em>会員・時間</a>
+  </nav>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO : 扉 ============ -->
+<section class="hero" id="hero" aria-label="扉">
+  <div class="hero__meta hero__meta--tl">
+    <span class="mono">室 No.01 — 読書室</span>
+  </div>
+  <div class="hero__meta hero__meta--tr">
+    <span class="mono">開室 12:00 → 24:00</span>
+  </div>
+
+  <div class="book-stage">
+    <div class="book" id="book">
+      <div class="book__page book__page--back">
+        <div class="book__inner book__inner--back">
+          <p class="mono book__folio">頁 / 000</p>
+          <p class="book__poem">読むように、<br>過ごす。</p>
+        </div>
+      </div>
+      <div class="book__page book__page--front" id="bookCover">
+        <div class="book__inner book__inner--front">
+          <span class="mono book__imprint">本と珈琲のある部屋</span>
+          <h1 class="book__title"><span>余</span><span>白</span></h1>
+          <span class="book__en">Y O H A K U</span>
+          <span class="book__rule" aria-hidden="true"></span>
+          <span class="mono book__est">since 2016 · 一番町</span>
+        </div>
+        <span class="book__spine" aria-hidden="true"></span>
+        <span class="book__ribbon" aria-hidden="true"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__copy">
+    <p class="hero__lead">頁の外側にある、<b>静けさ</b>を売る。</p>
+    <p class="hero__sub">選び抜いた蔵書と、一杯の深煎り。読書会も、ひとりの黙読も。<br>街の片隅の小さな読書室で、時間を頁のようにめくる夜を。</p>
+    <div class="hero__cta">
+      <a href="#zosho" class="btn-primary">頁をひらく</a>
+      <a href="#coffee" class="btn-ghost">献立を見る</a>
+    </div>
+  </div>
+
+  <div class="hero__index" aria-label="目次">
+    <span class="mono hero__index-t">目 次 — CONTENTS</span>
+    <ol class="toc">
+      <li><a href="#jo"><span class="mono">i</span><span>序 — 余白について</span></a></li>
+      <li><a href="#zosho"><span class="mono">ii</span><span>蔵書 — 棚のしごと</span></a></li>
+      <li><a href="#coffee"><span class="mono">iii</span><span>珈琲 — 一杯の栞</span></a></li>
+      <li><a href="#events"><span class="mono">v</span><span>催し — 読書会と朗読</span></a></li>
+      <li><a href="#hours"><span class="mono">vi</span><span>会員・時間</span></a></li>
+    </ol>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true"><span class="mono">めくる</span><i></i></div>
+</section>
+
+<!-- ============ 序 : About ============ -->
+<section class="jo" id="jo" aria-labelledby="jo-h">
+  <div class="sec-head">
+    <span class="mono sec-no">i / 序</span>
+    <h2 id="jo-h" class="sec-title">読むための、<br>余白をつくる。</h2>
+  </div>
+  <div class="jo__body">
+    <p class="jo__p reveal">私たちが売っているのは、本でも珈琲でもなく、その<span class="fn" tabindex="0" role="button" aria-describedby="fn1">あいだにある時間<sup>*1</sup><span class="fn__note" id="fn1" role="tooltip">*1 — 一冊を読み終える必要はありません。三頁で閉じて、また来ればいい。</span></span>かもしれません。頁の余白がなければ文字は読めないように、暮らしにも余白が要ります。</p>
+    <p class="jo__p reveal">壁一面の書架、低い灯り、他人の気配だけがある静けさ。ページをめくる音と、豆を挽く音。<span class="fn" tabindex="0" role="button" aria-describedby="fn2">それだけの部屋<sup>*2</sup><span class="fn__note" id="fn2" role="tooltip">*2 — 会話は歓迎です。ただし、声は本のように。ひらけば聞こえ、閉じれば消えるくらいの。</span></span>を、二〇一六年から続けています。</p>
+    <div class="jo__marks reveal">
+      <div class="mark"><span class="mono">01</span><p>蔵書<br><em>四千冊</em></p></div>
+      <div class="mark"><span class="mono">02</span><p>席数<br><em>二十四</em></p></div>
+      <div class="mark"><span class="mono">03</span><p>珈琲<br><em>七種の深煎り</em></p></div>
+      <div class="mark"><span class="mono">04</span><p>催し<br><em>月に四夜</em></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 蔵書 : Selection ============ -->
+<section class="zosho" id="zosho" aria-labelledby="zosho-h">
+  <div class="sec-head sec-head--center">
+    <span class="mono sec-no">ii / 蔵書</span>
+    <h2 id="zosho-h" class="sec-title">棚は、<br>編集された地図。</h2>
+    <p class="sec-sub">売れ筋ではなく、店主の読線でつくる棚。迷子になれるように、少しだけ並びを狂わせて。</p>
+  </div>
+  <div class="shelf">
+    <article class="tile tile--tall reveal" style="--i:0">
+      <span class="mono tile__call">933 / F</span>
+      <h3 class="tile__t">異国の夜を歩く</h3>
+      <p class="tile__d">翻訳小説を中心に、旅と越境の物語。読むほど遠くへ行ける棚。</p>
+      <span class="tile__n mono">218冊</span>
+    </article>
+    <article class="tile reveal" style="--i:1">
+      <span class="mono tile__call">159 / L</span>
+      <h3 class="tile__t">静かな暮らしの技法</h3>
+      <p class="tile__d">随筆・生活・思索。手放すこと、待つこと。</p>
+      <span class="tile__n mono">146冊</span>
+    </article>
+    <article class="tile tile--wide reveal" style="--i:2">
+      <span class="mono tile__call">726 / A</span>
+      <h3 class="tile__t">絵と余白のあいだ</h3>
+      <p class="tile__d">画集・写真集・造本の美しい本。頁をめくる指の記憶に残る一冊を。</p>
+      <span class="tile__n mono">94冊</span>
+    </article>
+    <article class="tile reveal" style="--i:3">
+      <span class="mono tile__call">911 / P</span>
+      <h3 class="tile__t">短い言葉の棚</h3>
+      <p class="tile__d">詩歌・句集・アフォリズム。一頁で満ちる読書。</p>
+      <span class="tile__n mono">132冊</span>
+    </article>
+    <article class="tile tile--tall reveal" style="--i:4">
+      <span class="mono tile__call">380 / K</span>
+      <h3 class="tile__t">まちの記憶</h3>
+      <p class="tile__d">郷土・民俗・古い写真。この街が忘れかけた頁を集めて。</p>
+      <span class="tile__n mono">77冊</span>
+    </article>
+    <article class="tile reveal" style="--i:5">
+      <span class="mono tile__call">019 / S</span>
+      <h3 class="tile__t">栞のかわりに</h3>
+      <p class="tile__d">店主が読んだ本に添える一筆箋。棚から手紙を受け取る棚。</p>
+      <span class="tile__n mono">選書</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 珈琲 : Café ============ -->
+<section class="coffee" id="coffee" aria-labelledby="coffee-h">
+  <div class="coffee__grid">
+    <div class="coffee__intro">
+      <span class="mono sec-no">iii / 珈琲</span>
+      <h2 id="coffee-h" class="sec-title">一杯を、<br>栞のように。</h2>
+      <p class="sec-sub">本を選ぶように豆を選ぶ。深く、静かに、長く付き合える味を、ネルドリップで一杯ずつ。</p>
+      <p class="mono coffee__note">— 席料はいただきません。一杯で、閉店まで。</p>
+    </div>
+    <ul class="menu">
+      <li class="menu__row reveal">
+        <span class="menu__name">夜の余白 <em>ブレンド</em></span>
+        <span class="menu__dots" aria-hidden="true"></span>
+        <span class="mono menu__price">¥620</span>
+        <span class="menu__desc">苦味と余韻の深煎り。読書に寄り添う一杯。</span>
+      </li>
+      <li class="menu__row reveal">
+        <span class="menu__name">序章 <em>浅煎り</em></span>
+        <span class="menu__dots" aria-hidden="true"></span>
+        <span class="mono menu__price">¥640</span>
+        <span class="menu__desc">花のような酸。朝いちばんの頁に。</span>
+      </li>
+      <li class="menu__row reveal">
+        <span class="menu__name">奥付 <em>カフェオレ</em></span>
+        <span class="menu__dots" aria-hidden="true"></span>
+        <span class="mono menu__price">¥680</span>
+        <span class="menu__desc">深煎りとミルク。読み終えた夜に。</span>
+      </li>
+      <li class="menu__row reveal">
+        <span class="menu__name">頁 <em>季節の焼き菓子</em></span>
+        <span class="menu__dots" aria-hidden="true"></span>
+        <span class="mono menu__price">¥480</span>
+        <span class="menu__desc">近所の菓子舗から。週替わりの一皿。</span>
+      </li>
+      <li class="menu__row reveal">
+        <span class="menu__name">栞 <em>本と珈琲の組</em></span>
+        <span class="menu__dots" aria-hidden="true"></span>
+        <span class="mono menu__price">¥1,200</span>
+        <span class="menu__desc">店主の選書一冊＋一杯。持ち帰りも可。</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 頁をめくる : signature spread ============ -->
+<section class="pageturn" id="pageturn" aria-labelledby="pt-h">
+  <div class="spread" id="spread">
+    <div class="spread__left">
+      <span class="mono">— 頁 088 —</span>
+      <p class="spread__q">「本を読むとは、<br>他人の余白に、<br>自分を書き込むこと。」</p>
+      <span class="spread__by mono">店主のノートより</span>
+    </div>
+    <div class="spread__flip" id="flip" aria-hidden="true">
+      <div class="spread__flip-face spread__flip-front">
+        <span class="mono">089</span>
+      </div>
+      <div class="spread__flip-face spread__flip-back">
+        <span class="mono">090</span>
+      </div>
+    </div>
+    <div class="spread__right">
+      <span class="mono">— 頁 091 —</span>
+      <h2 id="pt-h" class="spread__h">その先を、<br>あなたの手で。</h2>
+      <p class="spread__p">スクロールで頁がめくれます。ここから先は、実際に来て、めくってください。</p>
+      <a href="#hours" class="btn-primary">席をとる</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 催し : Events ============ -->
+<section class="events" id="events" aria-labelledby="ev-h">
+  <div class="sec-head">
+    <span class="mono sec-no">v / 催し</span>
+    <h2 id="ev-h" class="sec-title">読む夜を、<br>ひらく。</h2>
+  </div>
+  <ol class="timeline">
+    <li class="tl__item reveal">
+      <span class="mono tl__date">毎週 火</span>
+      <div class="tl__body">
+        <h3>黙読の会</h3>
+        <p>誰とも話さない、二時間の共読。ただ同じ部屋で、それぞれの本を。</p>
+      </div>
+      <span class="mono tl__meta">19:00 / 無料</span>
+    </li>
+    <li class="tl__item reveal">
+      <span class="mono tl__date">第2 金</span>
+      <div class="tl__body">
+        <h3>朗読の夜</h3>
+        <p>短篇を一篇、声に出して。灯りを落とした部屋で、耳から読む。</p>
+      </div>
+      <span class="mono tl__meta">20:00 / ¥1,000</span>
+    </li>
+    <li class="tl__item reveal">
+      <span class="mono tl__date">第4 土</span>
+      <div class="tl__body">
+        <h3>一冊を語る会</h3>
+        <p>参加者が一冊ずつ持ち寄り、三分で薦める。棚が増えていく夜。</p>
+      </div>
+      <span class="mono tl__meta">18:30 / ¥800</span>
+    </li>
+    <li class="tl__item reveal">
+      <span class="mono tl__date">不定期</span>
+      <div class="tl__body">
+        <h3>著者を招いて</h3>
+        <p>書き手をお招きして、ひとつの本の裏側を聞く。少人数の対話。</p>
+      </div>
+      <span class="mono tl__meta">要予約</span>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 会員・時間 : Hours & membership ============ -->
+<section class="hours" id="hours" aria-labelledby="hr-h">
+  <div class="hours__grid">
+    <div class="hours__info">
+      <span class="mono sec-no">vi / 会員・時間</span>
+      <h2 id="hr-h" class="sec-title">栞会員という、<br>通い方。</h2>
+      <p class="sec-sub">月に一冊の選書と、いつでも一杯。あなたの読書に、店の余白を差し込みます。</p>
+      <dl class="info">
+        <div><dt class="mono">開室</dt><dd>12:00 – 24:00（火は休室）</dd></div>
+        <div><dt class="mono">所在</dt><dd>仙台市青葉区一番町 二丁目 余白ビル 3F</dd></div>
+        <div><dt class="mono">連絡</dt><dd>070-0000-0000 / hello@yohaku.example</dd></div>
+      </dl>
+    </div>
+    <div class="plan reveal">
+      <span class="mono plan__tag">栞会員 / 月額</span>
+      <p class="plan__price"><span class="mono">¥</span>2,800<span class="plan__u mono"> /月</span></p>
+      <ul class="plan__list">
+        <li>店主の選書 月一冊（栞つき）</li>
+        <li>珈琲 いつでも一杯</li>
+        <li>催しの参加費 半額</li>
+        <li>閉室後の「夜の読書室」に入室可</li>
+      </ul>
+      <a href="#" class="btn-primary btn-primary--block">会員になる</a>
+      <p class="mono plan__fine">— まずは一日、席をとることから。</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 奥付 : colophon footer ============ -->
+<footer class="colophon" aria-label="奥付">
+  <div class="colophon__top">
+    <span class="colophon__jp">余白</span>
+    <span class="colophon__en">YOHAKU</span>
+  </div>
+  <div class="colophon__cols">
+    <dl>
+      <dt class="mono">書名</dt>
+      <dd>本と珈琲のある部屋「余白」</dd>
+    </dl>
+    <dl>
+      <dt class="mono">発行</dt>
+      <dd>二〇一六年 初版 / 街の片隅にて</dd>
+    </dl>
+    <dl>
+      <dt class="mono">頒布</dt>
+      <dd>12:00 – 24:00（火 休）</dd>
+    </dl>
+    <dl>
+      <dt class="mono">連絡</dt>
+      <dd>hello@yohaku.example</dd>
+    </dl>
+  </div>
+  <div class="colophon__rule" aria-hidden="true"></div>
+  <p class="colophon__note mono">本サイトの店名・住所・電話番号・価格はすべて架空のものです。頁は、あなたがめくるためにあります。</p>
+  <p class="colophon__c mono">© 2016–2026 YOHAKU 読書室 — 落丁・乱丁はありません。</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

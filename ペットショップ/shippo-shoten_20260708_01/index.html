@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>しっぽ商店 SHIPPO ｜ 犬と猫と暮らす、西荻窪の家族の店</title>
+<meta name="description" content="しっぽ商店は、東京・西荻窪の犬と猫の暮らしの店。ごはん・グルーミング・道具えらび・健康の相談から、お迎えの相談まで。愛玩動物看護師のいる、家族のためのちいさな商店です。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Yusei+Magic&family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<!-- ===== 足あと 進捗レール ===== -->
+<div class="pawrail" aria-hidden="true">
+  <span class="pawrail__line"></span>
+  <div class="pawrail__paws" id="pawPaws"></div>
+</div>
+
+<!-- ===== ヘッダー ===== -->
+<header class="site" id="siteHeader">
+  <a class="brand" href="#top" aria-label="しっぽ商店 ホーム">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34"><path d="M11 27c-4 0-7-3-7-7 0-5 4-10 9-12 3-1 6 0 7 3 1-3 4-4 7-3 5 2 9 7 9 12 0 4-3 7-7 7-3 0-5-2-6-4-1 2-3 4-6 4-2 0-4-1-5-2z" fill="currentColor"/><circle cx="12.5" cy="15" r="2.6" fill="currentColor"/><circle cx="19" cy="12" r="2.6" fill="currentColor"/><circle cx="25.5" cy="12" r="2.6" fill="currentColor"/><circle cx="31.5" cy="15" r="2.6" fill="currentColor"/></svg>
+    </span>
+    <span class="brand__name">しっぽ商店</span>
+  </a>
+  <nav class="nav" aria-label="メインメニュー">
+    <a href="#kurashi">暮らしのこと</a>
+    <a href="#services">できること</a>
+    <a href="#store">お店のこと</a>
+  </nav>
+  <a class="cta cta--sm" href="#access">会いに行く</a>
+</header>
+
+<main id="main">
+
+<!-- ===== ヒーロー ===== -->
+<section class="hero" id="top">
+  <div class="hero__copy">
+    <p class="eyebrow"><span>SHIPPO SHOTEN</span> ・ 西荻窪</p>
+    <h1 class="hero__title">しっぽが揺れる、<br>毎日を。</h1>
+    <p class="hero__lead">
+      うちの子は、家族です。<br>
+      ごはんも、道具も、体のことも。<br>
+      その子らしい毎日のとなりに、そっと立つ商店でありたい。
+    </p>
+    <div class="hero__actions">
+      <a class="cta" href="#services">できることを見る</a>
+      <a class="ghostlink" href="#kurashi">わたしたちのこと →</a>
+    </div>
+    <p class="hero__wagreadout" aria-hidden="true">
+      しあわせ計 <span id="wagReadout">0.24</span> <span class="unit">wag/s</span>
+    </p>
+  </div>
+
+  <!-- 主役：しっぽを振る相棒 -->
+  <div class="hero__stage" id="stage">
+    <svg class="dog" id="dog" viewBox="0 0 520 460" role="img" aria-label="しっぽを揺らして待つ犬のイラスト">
+      <defs>
+        <radialGradient id="floorGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="var(--coral-soft)"/>
+          <stop offset="100%" stop-color="rgba(239,122,77,0)"/>
+        </radialGradient>
+        <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F4D8B8"/>
+          <stop offset="100%" stop-color="#E9C199"/>
+        </linearGradient>
+      </defs>
+      <ellipse class="dog__shadow" cx="270" cy="420" rx="150" ry="26" fill="url(#floorGrad)"/>
+      <!-- 尾のトレイル(残像)はJSで prepend -->
+      <g id="tailTrail"></g>
+      <!-- 尾（アニメーション対象） -->
+      <path id="tail" d="M150 300 Q 96 250 118 196" fill="none" stroke="var(--coral)" stroke-width="26" stroke-linecap="round"/>
+      <!-- 体 -->
+      <g class="dog__body">
+        <path d="M182 330 q -14 -2 -18 -24 q -6 -34 12 -70 q 22 -46 74 -58 q 60 -14 108 12 q 40 24 44 78 q 2 30 -8 60 q -4 12 -18 12 z" fill="url(#bodyGrad)" stroke="var(--ink)" stroke-width="3.4"/>
+        <!-- 前足 -->
+        <path d="M250 322 q 2 24 0 40 q -1 8 -12 8 q -12 0 -12 -9 q 0 -22 6 -40 z" fill="#EBC79E" stroke="var(--ink)" stroke-width="3.2"/>
+        <path d="M300 322 q 2 24 0 40 q -1 8 -12 8 q -12 0 -12 -9 q 0 -22 6 -40 z" fill="#F3D4AC" stroke="var(--ink)" stroke-width="3.2"/>
+        <!-- 頭 -->
+        <g class="dog__head" id="dogHead">
+          <path d="M330 150 q 44 -6 70 22 q 22 24 16 58 q -6 34 -42 44 q -40 12 -70 -12 q -26 -22 -20 -60 q 6 -42 46 -52 z" fill="url(#bodyGrad)" stroke="var(--ink)" stroke-width="3.4"/>
+          <!-- 耳 -->
+          <path id="earBack" d="M336 150 q -20 -34 -6 -58 q 10 -16 26 -8 q 6 30 -2 66 z" fill="#D9A876" stroke="var(--ink)" stroke-width="3.2"/>
+          <path id="earFront" d="M398 156 q 16 -36 40 -44 q 18 -6 22 12 q -6 30 -34 54 z" fill="#E4B584" stroke="var(--ink)" stroke-width="3.2"/>
+          <!-- 目 -->
+          <circle class="eye" cx="356" cy="196" r="6.4" fill="var(--ink)"/>
+          <circle class="eye" cx="404" cy="196" r="6.4" fill="var(--ink)"/>
+          <circle class="glint" cx="358" cy="193.5" r="1.9" fill="#fff"/>
+          <circle class="glint" cx="406" cy="193.5" r="1.9" fill="#fff"/>
+          <!-- 鼻・口 -->
+          <ellipse cx="392" cy="224" rx="11" ry="8.4" fill="var(--ink)"/>
+          <path d="M392 232 q 0 12 -12 14 M392 232 q 0 12 12 14" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+          <path class="cheek" d="M345 218 q 12 8 26 6" fill="none" stroke="var(--coral)" stroke-width="0" />
+        </g>
+      </g>
+    </svg>
+    <p class="stage__hint" id="stageHint">近づくと、よろこびます</p>
+  </div>
+
+  <a class="scrollcue" href="#kurashi" aria-label="下へスクロール">
+    <span>SCROLL</span><span class="scrollcue__bar"></span>
+  </a>
+</section>
+
+<!-- ===== 暮らしのこと（掴み・信頼） ===== -->
+<section class="kurashi" id="kurashi">
+  <p class="sec-tag">01 ・ 暮らしのこと</p>
+  <h2 class="lead-h2">
+    しっぽの揺れは、<br class="sp-br">ことばの前の、いちばん正直な返事。
+  </h2>
+  <div class="kurashi__cols">
+    <p>
+      犬も猫も、うれしいとき、体ぜんぶで教えてくれます。しっぽが揺れる。耳が動く。目がまるくなる。しっぽ商店は、その小さな返事がふえる毎日を、道具とごはんの側から支える店です。
+    </p>
+    <p>
+      流行りのフードでも、いちばん高い首輪でもなく、<em>その子に合うもの</em>を一緒にさがす。だから私たちは、まず質問から始めます。年齢は。よく食べるものは。散歩は好きか、苦手か。答えの数だけ、選ぶものは変わります。
+    </p>
+  </div>
+</section>
+
+<!-- ===== できること（A4 ベント） ===== -->
+<section class="services" id="services">
+  <div class="services__head">
+    <p class="sec-tag">02 ・ できること</p>
+    <h2 class="lead-h2">ごはんから、お迎えの相談まで。</h2>
+  </div>
+  <div class="bento">
+    <article class="tile tile--lg" tabindex="0">
+      <span class="tile__no">A</span>
+      <h3>ごはん・おやつ</h3>
+      <p>体重、年齢、体質から。国産・グレインフリー・療法食まで、少量から試せる量り売りも。合わなければ交換します。</p>
+      <span class="tile__tag mint">試食・少量OK</span>
+    </article>
+    <article class="tile" tabindex="0">
+      <span class="tile__no">B</span>
+      <h3>グルーミング</h3>
+      <p>シャンプー、爪切り、部分カット。苦手な子はまず慣れることから、時間をかけて。</p>
+      <span class="tile__tag">予約制</span>
+    </article>
+    <article class="tile" tabindex="0">
+      <span class="tile__no">C</span>
+      <h3>おもちゃ・道具</h3>
+      <p>首輪、ハーネス、ベッド、キャリー。サイズ合わせは店頭で、試着してから。</p>
+      <span class="tile__tag">サイズ相談</span>
+    </article>
+    <article class="tile" tabindex="0">
+      <span class="tile__no">D</span>
+      <h3>健康サポート</h3>
+      <p>愛玩動物看護師が常駐。体重管理、歯みがき、シニアの暮らし。かかりつけ医とのあいだを、そっと繋ぎます。</p>
+      <span class="tile__tag mint">相談無料</span>
+    </article>
+    <article class="tile tile--wide" tabindex="0">
+      <span class="tile__no">E</span>
+      <h3>里親・お迎えの相談</h3>
+      <p>当店は生体販売をしていません。地域の保護団体と連携し、譲渡会の案内と、迎えたあとの暮らしづくりをお手伝いします。焦らず、その子と家族の相性を第一に。</p>
+      <span class="tile__tag">保護団体と連携</span>
+    </article>
+  </div>
+</section>
+
+<!-- ===== 選び方（信頼） ===== -->
+<section class="steps" id="steps">
+  <p class="sec-tag">03 ・ えらび方</p>
+  <h2 class="lead-h2">3つの質問から、はじめます。</h2>
+  <ol class="steplist">
+    <li>
+      <span class="step__n">01</span>
+      <h3>その子のこと</h3>
+      <p>年齢、体重、いつもの食欲。アレルギーや、去年より減った運動量。暮らしの手触りを聞かせてください。</p>
+    </li>
+    <li>
+      <span class="step__n">02</span>
+      <h3>くらべて、試す</h3>
+      <p>候補を2〜3つに。フードは少量で持ち帰り、一週間ためす。道具はその場で試着。</p>
+    </li>
+    <li>
+      <span class="step__n">03</span>
+      <h3>また、話す</h3>
+      <p>合っていたか、教えてください。しっぽの揺れが増えたなら、それが正解。次はもっと早く選べます。</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ===== 声（欲求） ===== -->
+<section class="voices" id="voices">
+  <p class="sec-tag">04 ・ となりの声</p>
+  <div class="voices__grid">
+    <figure class="voice">
+      <blockquote>「食が細くて悩んでいたのに、量り売りで見つけたごはんは完食。しっぽの揺れが、前より大きい気がします。」</blockquote>
+      <figcaption>ミニチュアダックス・そらくん / 11歳</figcaption>
+    </figure>
+    <figure class="voice">
+      <blockquote>「爪切りが大の苦手。3回に分けて、無理せず。今ではお店に入ると自分から奥へ歩いていきます。」</blockquote>
+      <figcaption>保護猫・むぎちゃん / 4歳</figcaption>
+    </figure>
+    <figure class="voice">
+      <blockquote>「初めて犬を迎えるとき、道具を全部そろえてくれた。“まずこれだけで大丈夫”の一言に救われました。」</blockquote>
+      <figcaption>柴・だいふく / 迎えて半年</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 不安解消 ===== -->
+<section class="assure" id="assure">
+  <p class="sec-tag">05 ・ はじめての方へ</p>
+  <div class="assure__grid">
+    <div class="assure__item">
+      <h3>資格のあるスタッフ</h3>
+      <p>愛玩動物看護師と、ペット栄養管理士が在籍。医療行為はしませんが、日々のことは何でも聞いてください。</p>
+    </div>
+    <div class="assure__item">
+      <h3>合わなければ交換</h3>
+      <p>開封後のフードでも、体に合わなければ交換・相談に応じます。むだにしません。</p>
+    </div>
+    <div class="assure__item">
+      <h3>相談だけでも</h3>
+      <p>買わなくて大丈夫。散歩ついでの立ち話も、うれしいです。しっぽ商店は、まちの相談所でもあります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アクセス・CTA ===== -->
+<section class="access" id="access">
+  <div class="access__inner">
+    <div class="access__copy">
+      <p class="sec-tag on-coral">06 ・ お店のこと</p>
+      <h2 class="access__h">
+        しっぽ商店で、<br>会いましょう。
+      </h2>
+      <p class="access__lead">西荻窪の駅から、桜並木を北へ7分。今日はどんな一日でしたか。よかったら、しっぽの話を聞かせてください。</p>
+      <a class="cta cta--big" href="#top" id="finalCta">会いに行く</a>
+    </div>
+    <dl class="access__info" id="store">
+      <div><dt>住所</dt><dd>東京都杉並区西荻北 三丁目 しっぽ商店<br>（西荻窪駅 北口より徒歩7分）</dd></div>
+      <div><dt>営業</dt><dd><span class="mono">11:00 – 19:00</span> ／ 水曜定休</dd></div>
+      <div><dt>グルーミング</dt><dd>予約制 <span class="mono">11:00 – 17:00</span>（最終受付）</dd></div>
+      <div><dt>電話</dt><dd class="mono">03-0000-0000</dd></div>
+    </dl>
+  </div>
+  <!-- CTA近くで最大に振れる小さな相棒 -->
+  <svg class="minidog" id="minidog" viewBox="0 0 160 130" aria-hidden="true">
+    <path id="minitail" d="M46 92 Q 22 74 30 50" fill="none" stroke="var(--cream)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M58 100 q -6 -1 -8 -12 q -4 -20 6 -40 q 14 -26 44 -30 q 30 -4 44 18 q 12 20 4 46 q -3 10 -12 10 z" fill="var(--cream)"/>
+    <circle cx="120" cy="58" r="4" fill="var(--coral-deep)"/>
+    <circle cx="98" cy="58" r="4" fill="var(--coral-deep)"/>
+    <ellipse cx="112" cy="72" rx="6" ry="4.5" fill="var(--coral-deep)"/>
+  </svg>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__brand">
+    <span class="brand__name">しっぽ商店</span>
+    <p>犬と猫と、その家族のための商店。</p>
+  </div>
+  <p class="foot__note">© 2026 SHIPPO SHOTEN, Nishiogikubo. このサイトは架空の店舗のデザイン作例です。</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
