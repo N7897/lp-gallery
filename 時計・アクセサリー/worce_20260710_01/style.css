@@ -77,17 +77,18 @@ a{color:inherit}
 .slide__fig{position:absolute;inset:0;margin:0;display:flex;justify-content:flex-end}
 .slide__fig img{
   width:min(74vw,1200px);height:100%;object-fit:cover;object-position:center;
-  -webkit-mask-image:radial-gradient(115% 95% at 68% 50%,#000 38%,transparent 76%);
-  mask-image:radial-gradient(115% 95% at 68% 50%,#000 38%,transparent 76%);
-  filter:saturate(.82) contrast(1.06) brightness(.9);
+  -webkit-mask-image:radial-gradient(130% 115% at 72% 48%,#000 12%,rgba(0,0,0,.55) 42%,transparent 68%);
+  mask-image:radial-gradient(130% 115% at 72% 48%,#000 12%,rgba(0,0,0,.55) 42%,transparent 68%);
+  filter:saturate(.72) contrast(1.12) brightness(.72);
   transform:translate3d(calc(var(--px,0)*14px),calc(var(--py,0)*10px),0) scale(1.06);
   will-change:transform;
 }
 .slide::before{
   content:"";position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(90deg,rgba(15,15,17,.94) 0%,rgba(15,15,17,.66) 34%,rgba(15,15,17,.12) 62%,rgba(15,15,17,.05) 100%),
-    linear-gradient(180deg,rgba(15,15,17,.55) 0%,transparent 26%,transparent 70%,rgba(15,15,17,.82) 100%);
+    radial-gradient(120% 100% at 72% 48%,transparent 30%,rgba(15,15,17,.5) 62%,rgba(15,15,17,.92) 88%),
+    linear-gradient(90deg,rgba(15,15,17,.94) 0%,rgba(15,15,17,.66) 34%,rgba(15,15,17,.18) 62%,rgba(15,15,17,.12) 100%),
+    linear-gradient(180deg,rgba(15,15,17,.6) 0%,transparent 28%,transparent 66%,rgba(15,15,17,.88) 100%);
 }
 .slide__info{
   position:relative;z-index:2;
