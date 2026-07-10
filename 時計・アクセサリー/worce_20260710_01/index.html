@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WORCE — 五本立ての時間。系統別に一本ずつ選ぶ時計レーベル</title>
+<meta name="description" content="WORCEはダイバーズ・ドレス・クロノグラフ・GMT・ミニマルの5系統から、季節ごとに一本ずつだけを選び直す時計レーベル。百本の在庫より、五本の確信。">
+<meta property="og:title" content="WORCE — 五本立ての時間。">
+<meta property="og:description" content="5系統×各1本。季節ごとに選び直す時計レーベル。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/dive-1200.webp">
+<meta name="theme-color" content="#f4f3f0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%231c1c1e' stroke-width='2'/%3E%3Cline x1='16' y1='16' x2='16' y2='7' stroke='%231c1c1e' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='16' y1='16' x2='22' y2='19' stroke='%230e7c86' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/bodoni-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="bg__a"></div><div class="bg__b"></div></div>
+
+<header class="site-head">
+  <p class="brand"><a href="#reel">WORCE</a></p>
+  <nav class="nav" aria-label="ページ内">
+    <a href="#reel">Collection</a>
+    <a href="#credo">Credo</a>
+    <a href="#spec">Spec</a>
+    <a href="#care">Care</a>
+  </nav>
+  <div class="head-clock" role="img" aria-label="現在時刻を示すアナログ時計">
+    <svg id="lc" viewBox="0 0 48 48" width="40" height="40">
+      <circle cx="24" cy="24" r="22.5" class="lc-face"/>
+      <g class="lc-ticks"></g>
+      <line id="lc-h" x1="24" y1="24" x2="24" y2="13" class="lc-hand lc-hour"/>
+      <line id="lc-m" x1="24" y1="24" x2="24" y2="8" class="lc-hand lc-min"/>
+      <line id="lc-s" x1="24" y1="26.5" x2="24" y2="6.5" class="lc-hand lc-sec"/>
+      <circle cx="24" cy="24" r="1.4" class="lc-pin"/>
+    </svg>
+  </div>
+</header>
+
+<main>
+<section id="reel" class="reel" aria-roledescription="カルーセル" aria-label="今季の五本">
+  <div class="reel-head">
+    <p class="kicker">FIVE WATCHES, ONE LABEL</p>
+    <h1 class="reel-title">五本立ての時間。</h1>
+    <p class="reel-lede">系統ごとに、今季の一本だけ。<br>3秒に一本ずつ、ご覧に入れます。</p>
+  </div>
+
+  <div class="track" id="track" tabindex="0" aria-label="時計を横に切り替え（左右キーで移動）">
+
+    <article class="card card--tide" data-theme="0">
+      <figure class="card__fig">
+        <img src="img/dive-1200.webp" srcset="img/dive-640.webp 640w, img/dive-1200.webp 1200w, img/dive.webp 1600w" sizes="(max-width: 720px) 86vw, 640px" width="1200" height="801" alt="逆光の中のダイバーズウォッチ。回転ベゼルと鋼のブレスレット" fetchpriority="high">
+      </figure>
+      <div class="card__body">
+        <p class="card__genre">DIVER — 潮</p>
+        <h2 class="card__name">TIDE 200</h2>
+        <p class="card__copy">潮が引くまで、針は正確だった。</p>
+        <dl class="spec-band">
+          <div><dt>MOV</dt><dd>自動巻 28,800振動/時</dd></div>
+          <div><dt>W.R.</dt><dd>200m（ISO 6425）</dd></div>
+          <div><dt>CASE</dt><dd>41mm / SUS316L</dd></div>
+          <div><dt>PRICE</dt><dd>¥238,000</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="card card--soir" data-theme="1">
+      <figure class="card__fig">
+        <img src="img/dress-1200.webp" srcset="img/dress-640.webp 640w, img/dress-1200.webp 1200w, img/dress.webp 1600w" sizes="(max-width: 720px) 86vw, 640px" width="1200" height="800" alt="ローマ数字の白文字盤に黒革ストラップのドレスウォッチ" loading="lazy">
+      </figure>
+      <div class="card__body">
+        <p class="card__genre">DRESS — 夜会</p>
+        <h2 class="card__name">SOIR 38</h2>
+        <p class="card__copy">袖口に、7ミリの静けさを。</p>
+        <dl class="spec-band">
+          <div><dt>MOV</dt><dd>手巻き 21,600振動/時</dd></div>
+          <div><dt>W.R.</dt><dd>3気圧（30m）</dd></div>
+          <div><dt>CASE</dt><dd>38mm / 厚さ7.2mm</dd></div>
+          <div><dt>PRICE</dt><dd>¥186,000</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="card card--lap" data-theme="2">
+      <figure class="card__fig">
+        <img src="img/chrono-1200.webp" srcset="img/chrono-640.webp 640w, img/chrono-1200.webp 1200w, img/chrono.webp 1600w" sizes="(max-width: 720px) 86vw, 640px" width="1200" height="800" alt="雪のような布に置かれた銀文字盤のクロノグラフ" loading="lazy">
+      </figure>
+      <div class="card__body">
+        <p class="card__genre">CHRONOGRAPH — 計測</p>
+        <h2 class="card__name">LAP 41</h2>
+        <p class="card__copy">1/8秒のためらいも、記録になる。</p>
+        <dl class="spec-band">
+          <div><dt>MOV</dt><dd>自動巻クロノ（コラムホイール）</dd></div>
+          <div><dt>W.R.</dt><dd>10気圧（100m）</dd></div>
+          <div><dt>CASE</dt><dd>41mm / タキメーター</dd></div>
+          <div><dt>PRICE</dt><dd>¥398,000</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="card card--meridian" data-theme="3">
+      <figure class="card__fig">
+        <img src="img/pilot-1200.webp" srcset="img/pilot-640.webp 640w, img/pilot-1200.webp 1200w, img/pilot.webp 1600w" sizes="(max-width: 720px) 86vw, 640px" width="1200" height="795" alt="黒文字盤に夜光数字と金色の針が浮かぶパイロットウォッチの接写" loading="lazy">
+      </figure>
+      <div class="card__body">
+        <p class="card__genre">PILOT GMT — 子午線</p>
+        <h2 class="card__name">MERIDIAN 24</h2>
+        <p class="card__copy">東京の夜と、リスボンの朝を同じ手首に。</p>
+        <dl class="spec-band">
+          <div><dt>MOV</dt><dd>自動巻GMT（24時間針）</dd></div>
+          <div><dt>W.R.</dt><dd>10気圧（100m）</dd></div>
+          <div><dt>CASE</dt><dd>40mm / 耐磁一種</dd></div>
+          <div><dt>PRICE</dt><dd>¥276,000</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="card card--blanc" data-theme="4">
+      <figure class="card__fig">
+        <img src="img/minimal-1200.webp" srcset="img/minimal-640.webp 640w, img/minimal-1200.webp 1200w, img/minimal.webp 1600w" sizes="(max-width: 720px) 86vw, 640px" width="1200" height="801" alt="白い彫刻のような文字盤のミニマルウォッチの接写" loading="lazy">
+      </figure>
+      <div class="card__body">
+        <p class="card__genre">MINIMAL — 白</p>
+        <h2 class="card__name">BLANC 36</h2>
+        <p class="card__copy">読むのに1秒。飽きるには、一生。</p>
+        <dl class="spec-band">
+          <div><dt>MOV</dt><dd>クォーツ（月差±15秒）</dd></div>
+          <div><dt>W.R.</dt><dd>5気圧（50m）</dd></div>
+          <div><dt>CASE</dt><dd>36mm / 厚さ6.8mm</dd></div>
+          <div><dt>PRICE</dt><dd>¥98,000</dd></div>
+        </dl>
+      </div>
+    </article>
+  </div>
+
+  <div class="reel-ctl">
+    <button class="ctl-btn" id="prev" type="button" aria-label="前の時計へ">←</button>
+    <div class="dots" id="dots" role="tablist" aria-label="時計の選択"></div>
+    <button class="ctl-btn" id="next" type="button" aria-label="次の時計へ">→</button>
+  </div>
+</section>
+
+<section id="credo" class="credo">
+  <div class="credo__clock" aria-hidden="true">
+    <svg id="bigclock" viewBox="0 0 400 400">
+      <g class="bc-ticks"></g>
+      <line id="bc-h" x1="200" y1="200" x2="200" y2="110" class="bc-hand"/>
+      <line id="bc-m" x1="200" y1="200" x2="200" y2="70" class="bc-hand bc-thin"/>
+      <line id="bc-s" x1="200" y1="220" x2="200" y2="52" class="bc-hand bc-sec"/>
+    </svg>
+  </div>
+  <div class="credo__inner">
+    <p class="kicker">CREDO</p>
+    <h2 class="credo__title">百本の在庫より、<br>五本の確信。</h2>
+    <p class="credo__body">WORCEは季節ごとに、5つの系統から一本ずつだけを選び直すレーベルです。選定基準は3つ——道具としての根拠、10年後の修理性、そして袖口で言い訳をしないこと。</p>
+    <p class="credo__body">店主の物語は語りません。語るべきことは、すべて針が刻んでいます。</p>
+  </div>
+</section>
+
+<section id="hours" class="hours">
+  <p class="kicker">ON THE WRIST</p>
+  <h2 class="hours__title">手首の上の時間。</h2>
+  <ol class="hours__list">
+    <li><span class="hours__time">05:47</span><p>羽田第2ターミナル。MERIDIANの24時間針は、まだリスボンの夜を指している。</p></li>
+    <li><span class="hours__time">12:08</span><p>磯の岩場、波が引いた8分間。TIDEのベゼルを回して、戻りの時刻を仕込む。</p></li>
+    <li><span class="hours__time">19:30</span><p>授賞式の控室。SOIRは袖口から2ミリだけ顔を出して、それ以上は語らない。</p></li>
+  </ol>
+</section>
+
+<section id="spec" class="spec">
+  <p class="kicker">SPECIFICATIONS</p>
+  <h2 class="spec__title">五本の対照表。</h2>
+  <div class="spec__scroll" tabindex="0" role="region" aria-label="5モデルの仕様比較表">
+    <table>
+      <thead>
+        <tr><th scope="col">MODEL</th><th scope="col">MOVEMENT</th><th scope="col">W.R.</th><th scope="col">CASE</th><th scope="col">RESERVE</th><th scope="col">PRICE</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">TIDE 200</th><td>自動巻 28,800</td><td>200m</td><td>41mm 316L</td><td>70h</td><td>¥238,000</td></tr>
+        <tr><th scope="row">SOIR 38</th><td>手巻き 21,600</td><td>30m</td><td>38mm / 7.2mm厚</td><td>46h</td><td>¥186,000</td></tr>
+        <tr><th scope="row">LAP 41</th><td>自動巻クロノ</td><td>100m</td><td>41mm タキメーター</td><td>60h</td><td>¥398,000</td></tr>
+        <tr><th scope="row">MERIDIAN 24</th><td>自動巻GMT</td><td>100m</td><td>40mm 耐磁</td><td>70h</td><td>¥276,000</td></tr>
+        <tr><th scope="row">BLANC 36</th><td>クォーツ</td><td>50m</td><td>36mm / 6.8mm厚</td><td>電池3年</td><td>¥98,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="spec__note">価格はすべて税込。機械式の日差は実測値を納品書に記載します。</p>
+</section>
+
+<section id="care" class="care">
+  <p class="kicker">AFTER CARE</p>
+  <h2 class="care__title">買ったあとの話を、先にします。</h2>
+  <ul class="care__list">
+    <li><strong>1年目</strong><span>無料点検。日差の実測と防水試験。</span></li>
+    <li><strong>4〜5年</strong><span>機械式はオーバーホール推奨。基準価格を明示。</span></li>
+    <li><strong>5年間</strong><span>国際保証。自然故障は無償修理。</span></li>
+    <li><strong>10年先</strong><span>製造終了後も部品を保有し、修理を受け付けます。</span></li>
+  </ul>
+  <a class="cta" href="mailto:fitting@worce.example">試着を予約する</a>
+</section>
+</main>
+
+<footer class="foot">
+  <p class="foot__brand">WORCE</p>
+  <p class="foot__addr">東京都中央区銀座 — 予約制フィッティングルーム</p>
+  <p class="foot__credit">Photos: Pexels（Puneet Kaul / Mat Brown / Tausif Hossain / ClickerHappy / Erik Mclean）</p>
+  <p class="foot__copy">© 2026 WORCE. 架空のブランドです。</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
