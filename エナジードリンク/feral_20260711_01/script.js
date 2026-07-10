@@ -6,9 +6,9 @@ var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* フレーバーごとの色・缶意匠 */
 var THEMES=[
-  {name:'ORBIT',accent:'#6ea8ff',deep:'#6ea8ff'},
-  {name:'GLITCH',accent:'#ff4fa8',deep:'#ff4fa8'},
-  {name:'VINE',accent:'#b98bff',deep:'#b98bff'}
+  {name:'HALO',accent:'#ff4d5e',deep:'#b3202f'},
+  {name:'FIEND',accent:'#3fbf5a',deep:'#1f7d38'},
+  {name:'BOLT',accent:'#5a86ff',deep:'#2447b0'}
 ];
 
 /* ---- splash ---- */
