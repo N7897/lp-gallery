@@ -5,14 +5,9 @@
   --void:#0a0a08;
   --ink:#f4f2e8;
   --ink-2:#9d9a8c;
-  /* フレーバー既定=VENOM。JSでindexごとに書き換え */
-  --accent:#c6ff2e;
-  --accent-deep:#7ba300;
-  --hue:#c6ff2e;
-  --hue-2:#8fd400;
-  --can-body:#c6ff2e;
-  --can-lid:#0a0a08;
-  --can-band:#0a0a08;
+  /* フレーバー既定=ORBIT。JSでindexごとに書き換え */
+  --accent:#6ea8ff;
+  --accent-deep:#6ea8ff;
   --disp:'Bungee',system-ui,sans-serif;
   --mono:'DM Mono',ui-monospace,Consolas,monospace;
   --jp:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,sans-serif;
@@ -53,18 +48,17 @@ a{color:inherit}
 .flavor.is-active{opacity:1;visibility:visible;transition:opacity .7s var(--ease)}
 .flavor__bg{
   position:absolute;inset:0;z-index:0;
-  background:
-    radial-gradient(120% 90% at 50% 45%,var(--hue) 0%,var(--hue-2) 40%,color-mix(in srgb,var(--hue-2) 60%,var(--void)) 100%);
+  background-size:cover;background-position:68% center;
 }
+.flavor--orbit .flavor__bg{background-image:url(img/blue.webp)}
+.flavor--glitch .flavor__bg{background-image:url(img/pink.webp)}
+.flavor--vine .flavor__bg{background-image:url(img/purple.webp)}
 .flavor__bg::before{
   content:"";position:absolute;inset:0;
-  background-image:
-    repeating-radial-gradient(circle at 30% 40%,transparent 0 22px,color-mix(in srgb,var(--void) 22%,transparent) 22px 24px),
-    repeating-radial-gradient(circle at 72% 66%,transparent 0 30px,color-mix(in srgb,var(--void) 16%,transparent) 30px 32px);
-  mix-blend-mode:overlay;opacity:.5;
-  animation:drift 24s linear infinite;
+  background:
+    linear-gradient(90deg,rgba(10,10,8,.82) 0%,rgba(10,10,8,.45) 36%,transparent 62%),
+    linear-gradient(180deg,rgba(10,10,8,.4) 0%,transparent 24%,transparent 68%,rgba(10,10,8,.72) 100%);
 }
-@keyframes drift{to{background-position:200px 120px,-160px 100px}}
 .flavor__wordmark{
   position:absolute;z-index:1;inset:0;
   display:grid;place-items:center;overflow:hidden;pointer-events:none;
@@ -72,45 +66,31 @@ a{color:inherit}
 .flavor__wordmark span{
   font-family:var(--disp);
   font-size:clamp(5rem,28vw,26rem);line-height:.8;
-  color:transparent;-webkit-text-stroke:2px color-mix(in srgb,var(--void) 42%,transparent);
+  color:transparent;-webkit-text-stroke:2px rgba(244,242,232,.16);
   letter-spacing:-.02em;white-space:nowrap;
   transform:translateY(4%);
 }
-.flavor__can{
-  position:relative;z-index:2;
-  height:min(74vh,620px);
-  filter:drop-shadow(0 40px 50px rgba(0,0,0,.4));
-  animation:float 6s ease-in-out infinite;
-}
-@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-18px) rotate(1deg)}}
-.can{height:100%;width:auto}
-.flavor--venom .can{--can-body:#c6ff2e;--can-lid:#0a0a08;--can-band:#0a0a08}
-.flavor--ember .can{--can-body:#ff5a1f;--can-lid:#1a0600;--can-band:#1a0600}
-.flavor--void  .can{--can-body:#a06bff;--can-lid:#08060f;--can-band:#08060f}
-.can-brand{font-family:var(--disp);font-size:20px;letter-spacing:.02em}
-.can-flavor{font-family:var(--disp);font-size:15px;fill:var(--can-body);letter-spacing:.06em}
-.flavor--venom .can-flavor::after{content:""}
 
 .flavor__info{
   position:absolute;z-index:3;
   left:clamp(1rem,5vw,4rem);bottom:clamp(5.5rem,14vh,8rem);
   max-width:min(90vw,26rem);
-  color:var(--void);
+  color:var(--ink);
 }
 .flavor__tag{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;font-weight:600;margin-bottom:.5rem}
 .flavor__name{
   font-family:var(--disp);font-size:clamp(2.6rem,7vw,4.6rem);line-height:.92;
-  color:var(--void);margin-bottom:.8rem;letter-spacing:.01em;
-  text-shadow:3px 3px 0 var(--accent);
+  color:var(--ink);margin-bottom:.8rem;letter-spacing:.01em;
+  text-shadow:3px 3px 0 color-mix(in srgb,var(--accent) 55%,#000);
 }
-.flavor__copy{font-feature-settings:"palt";font-weight:600;max-width:22em;margin-bottom:1.3rem;color:color-mix(in srgb,var(--void) 88%,transparent)}
-.flavor__spec{display:flex;gap:1.4rem;border-top:2px solid color-mix(in srgb,var(--void) 30%,transparent);padding-top:.9rem;margin-bottom:1.4rem}
+.flavor__copy{font-feature-settings:"palt";font-weight:600;max-width:22em;margin-bottom:1.3rem;color:var(--ink);text-shadow:0 1px 14px rgba(0,0,0,.8)}
+.flavor__spec{display:flex;gap:1.4rem;border-top:2px solid rgba(244,242,232,.3);padding-top:.9rem;margin-bottom:1.4rem}
 .flavor__spec div{display:flex;flex-direction:column}
 .flavor__spec dt{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;opacity:.7}
 .flavor__spec dd{font-family:var(--disp);font-size:1.15rem}
 .flavor__cta{
   display:inline-block;font-family:var(--mono);font-weight:700;font-size:.84rem;letter-spacing:.08em;
-  background:var(--void);color:var(--accent);
+  background:var(--accent);color:var(--void);
   padding:.85rem 1.8rem;border-radius:2px;text-decoration:none;
   transition:transform .3s var(--ease);
 }
@@ -122,19 +102,19 @@ a{color:inherit}
 }
 .ctl-arw{
   width:52px;height:52px;border-radius:50%;
-  border:2px solid var(--void);background:transparent;
-  color:var(--void);font-size:1.6rem;line-height:1;cursor:pointer;
+  border:2px solid rgba(244,242,232,.7);background:rgba(10,10,8,.35);
+  color:var(--ink);font-size:1.6rem;line-height:1;cursor:pointer;
   transition:background .3s,color .3s;
 }
-.ctl-arw:hover,.ctl-arw:focus-visible{background:var(--void);color:var(--accent)}
+.ctl-arw:hover,.ctl-arw:focus-visible{background:var(--ink);color:var(--void)}
 .dots{display:flex;gap:.3rem}
 .dots button{width:44px;height:44px;border:0;background:transparent;cursor:pointer;padding:0;display:grid;place-items:center}
-.dots button::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid var(--void)}
-.dots button[aria-selected="true"]::before{background:var(--void)}
-.dots button:focus-visible{outline:2px solid var(--void);outline-offset:-4px}
+.dots button::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid var(--ink)}
+.dots button[aria-selected="true"]::before{background:var(--ink)}
+.dots button:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
 .reel__hint{
   position:absolute;z-index:6;left:50%;bottom:1.6rem;transform:translateX(-50%);
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--void);
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--ink);text-shadow:0 1px 8px rgba(0,0,0,.9);
 }
 
 /* ===== 以降ダーク地セクション ===== */
@@ -190,7 +170,7 @@ html:not(.js) .reel{height:auto}
 
 @media(max-width:760px){
   .head-meta{display:none}
-  .flavor__can{height:min(52vh,440px);margin-bottom:12vh}
+  .flavor__bg{background-position:62% center}
   .flavor__info{max-width:88vw}
   .flavor__spec{gap:1rem}
   .reel__ctl{bottom:1.4rem;right:50%;transform:translateX(50%)}
@@ -198,6 +178,5 @@ html:not(.js) .reel{height:auto}
   .reel__hint{display:none}
 }
 @media(prefers-reduced-motion:reduce){
-  .flavor__can,.flavor__bg::before{animation:none}
   .flavor,.flavor__cta,.buy__cta{transition:none}
 }

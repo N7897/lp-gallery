@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FERAL — 覚醒する野生。3つのフレーバーが手首を掴むエナジードリンク</title>
-<meta name="description" content="FERALは眠りを噛みちぎる3種のエナジードリンク。VENOM（蛇・ライム）、EMBER（狼・炎）、VOID（豹・夜）。1本ごとに世界が総取り替えされる。">
+<meta name="description" content="FERALは眠りを噛みちぎる3種のエナジードリンク。ORBIT（宇宙）、GLITCH（電脳）、VINE（夜の葡萄）。1本ごとに世界が総取り替えされる。">
 <meta property="og:title" content="FERAL — 覚醒する野生。">
 <meta property="og:description" content="眠りを噛みちぎる3種のエナジードリンク。">
 <meta property="og:type" content="website">
 <meta property="og:image" content="img/og.svg">
 <meta name="theme-color" content="#0a0a08">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a08'/%3E%3Cpath d='M16 5 L21 16 L16 27 L11 16 Z' fill='%23c6ff2e'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a08'/%3E%3Cpath d='M16 5 L21 16 L16 27 L11 16 Z' fill='%236ea8ff'/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/bungee.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/dm-mono.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
@@ -32,18 +32,13 @@
 <section id="flavors" class="reel" aria-roledescription="カルーセル" aria-label="3つのフレーバー">
   <div class="reel__stage" id="stage">
 
-    <article class="flavor flavor--venom is-active" data-i="0">
+    <article class="flavor flavor--orbit is-active" data-i="0">
       <div class="flavor__bg" aria-hidden="true"></div>
-      <div class="flavor__wordmark" aria-hidden="true"><span>VENOM</span></div>
-      <div class="flavor__can">
-        <svg class="can" viewBox="0 0 200 380" role="img" aria-label="FERAL VENOM の缶。蛍光ライム色">
-          <use href="#can-shape"/>
-        </svg>
-      </div>
+      <div class="flavor__wordmark" aria-hidden="true"><span>ORBIT</span></div>
       <div class="flavor__info">
-        <p class="flavor__tag">NO.01 — SERPENT LIME</p>
-        <h2 class="flavor__name">VENOM</h2>
-        <p class="flavor__copy">舌を刺す蛍光ライム。眠気に噛みつく最初の一本。</p>
+        <p class="flavor__tag">NO.01 — COSMIC CITRUS</p>
+        <h2 class="flavor__name">ORBIT</h2>
+        <p class="flavor__copy">無重力のクリアシトラス。目が覚めるというより、視界が広がる。</p>
         <dl class="flavor__spec">
           <div><dt>CAFFEINE</dt><dd>150mg</dd></div>
           <div><dt>VOLUME</dt><dd>355ml</dd></div>
@@ -53,18 +48,13 @@
       </div>
     </article>
 
-    <article class="flavor flavor--ember" data-i="1">
+    <article class="flavor flavor--glitch" data-i="1">
       <div class="flavor__bg" aria-hidden="true"></div>
-      <div class="flavor__wordmark" aria-hidden="true"><span>EMBER</span></div>
-      <div class="flavor__can">
-        <svg class="can" viewBox="0 0 200 380" role="img" aria-label="FERAL EMBER の缶。燃える赤橙色">
-          <use href="#can-shape"/>
-        </svg>
-      </div>
+      <div class="flavor__wordmark" aria-hidden="true"><span>GLITCH</span></div>
       <div class="flavor__info">
-        <p class="flavor__tag">NO.02 — WOLF EMBER</p>
-        <h2 class="flavor__name">EMBER</h2>
-        <p class="flavor__copy">喉を焼く赤橙のスパイス。狼の遠吠えみたいな持久力。</p>
+        <p class="flavor__tag">NO.02 — NEON BERRY</p>
+        <h2 class="flavor__name">GLITCH</h2>
+        <p class="flavor__copy">バグったネオンベリー。ドーパミンが誤作動する甘さ。</p>
         <dl class="flavor__spec">
           <div><dt>CAFFEINE</dt><dd>180mg</dd></div>
           <div><dt>VOLUME</dt><dd>355ml</dd></div>
@@ -74,18 +64,13 @@
       </div>
     </article>
 
-    <article class="flavor flavor--void" data-i="2">
+    <article class="flavor flavor--vine" data-i="2">
       <div class="flavor__bg" aria-hidden="true"></div>
-      <div class="flavor__wordmark" aria-hidden="true"><span>VOID</span></div>
-      <div class="flavor__can">
-        <svg class="can" viewBox="0 0 200 380" role="img" aria-label="FERAL VOID の缶。深い紫紺色">
-          <use href="#can-shape"/>
-        </svg>
-      </div>
+      <div class="flavor__wordmark" aria-hidden="true"><span>VINE</span></div>
       <div class="flavor__info">
-        <p class="flavor__tag">NO.03 — PANTHER VOID</p>
-        <h2 class="flavor__name">VOID</h2>
-        <p class="flavor__copy">底なしの紫紺ベリー。豹のように音もなく効いてくる。</p>
+        <p class="flavor__tag">NO.03 — MIDNIGHT GRAPE</p>
+        <h2 class="flavor__name">VINE</h2>
+        <p class="flavor__copy">夜に絡みつく黒葡萄。静かに、深く、長く効く。</p>
         <dl class="flavor__spec">
           <div><dt>CAFFEINE</dt><dd>200mg</dd></div>
           <div><dt>VOLUME</dt><dd>355ml</dd></div>
@@ -117,17 +102,17 @@
     <div class="lab__cell">
       <span class="lab__num" data-count="150">0</span>
       <span class="lab__unit">mg</span>
-      <p class="lab__label">VENOMのカフェイン。コーヒー約1.5杯分。眠気の芯を狙う最小有効量。</p>
+      <p class="lab__label">ORBITのカフェイン。コーヒー約1.5杯分。眠気の芯を狙う最小有効量。</p>
     </div>
     <div class="lab__cell">
       <span class="lab__num" data-count="0">0</span>
       <span class="lab__unit">g SUGAR</span>
-      <p class="lab__label">VENOM/VOIDは砂糖ゼロ。甘さでごまかさず、味そのもので殴る。</p>
+      <p class="lab__label">ORBIT/VINEは砂糖ゼロ。甘さでごまかさず、味そのもので殴る。</p>
     </div>
     <div class="lab__cell">
       <span class="lab__num" data-count="3">0</span>
       <span class="lab__unit">FLAVORS</span>
-      <p class="lab__label">増やさない。蛇・狼・豹。3つで完結する野生の三角形。</p>
+      <p class="lab__label">増やさない。宇宙・電脳・葡萄園。3つで完結する夜の三角形。</p>
     </div>
   </div>
   <p class="lab__note">※妊娠・授乳中の方、カフェインに敏感な方は摂取をお控えください。1日2本まで。</p>
@@ -152,27 +137,6 @@
   <p class="foot__copy">© 2026 FERAL. 架空のブランドです。ビジュアルはコード生成。</p>
 </footer>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <g id="can-shape">
-      <rect x="46" y="20" width="108" height="340" rx="20" fill="var(--can-body)"/>
-      <rect x="46" y="20" width="108" height="340" rx="20" fill="url(#can-shade)"/>
-      <ellipse cx="100" cy="26" rx="54" ry="12" fill="var(--can-lid)"/>
-      <ellipse cx="100" cy="24" rx="54" ry="12" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5"/>
-      <rect x="46" y="150" width="108" height="86" fill="var(--can-band)" opacity=".92"/>
-      <text x="100" y="120" text-anchor="middle" class="can-brand" fill="var(--can-lid)">FERAL</text>
-      <text x="100" y="200" text-anchor="middle" class="can-flavor">FLAVOR</text>
-      <path class="can-motif" d="M70 250 Q100 230 130 250 Q110 275 100 300 Q90 275 70 250 Z" fill="var(--can-lid)" opacity=".85"/>
-      <rect x="46" y="340" width="108" height="20" rx="6" fill="rgba(0,0,0,.35)"/>
-    </g>
-    <linearGradient id="can-shade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="rgba(255,255,255,.42)"/>
-      <stop offset=".28" stop-color="rgba(255,255,255,0)"/>
-      <stop offset=".7" stop-color="rgba(0,0,0,0)"/>
-      <stop offset="1" stop-color="rgba(0,0,0,.4)"/>
-    </linearGradient>
-  </defs>
-</svg>
 
 <script src="script.js" defer></script>
 </body>

@@ -6,9 +6,9 @@ var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* フレーバーごとの色・缶意匠 */
 var THEMES=[
-  {name:'VENOM',flavor:'SERPENT LIME',accent:'#c6ff2e',deep:'#7ba300',hue:'#c6ff2e',hue2:'#8fd400',body:'#c6ff2e',lid:'#0a0a08',band:'#0a0a08'},
-  {name:'EMBER',flavor:'WOLF EMBER',accent:'#ff5a1f',deep:'#ff5a1f',hue:'#ff6a2c',hue2:'#e02f4f',body:'#ff5a1f',lid:'#1a0600',band:'#1a0600'},
-  {name:'VOID',flavor:'PANTHER VOID',accent:'#a06bff',deep:'#a06bff',hue:'#9d7bff',hue2:'#4b2fa0',body:'#a06bff',lid:'#08060f',band:'#08060f'}
+  {name:'ORBIT',accent:'#6ea8ff',deep:'#6ea8ff'},
+  {name:'GLITCH',accent:'#ff4fa8',deep:'#ff4fa8'},
+  {name:'VINE',accent:'#b98bff',deep:'#b98bff'}
 ];
 
 /* ---- splash ---- */
@@ -50,9 +50,6 @@ var THEMES=[
     b.setAttribute('aria-label',THEMES[i].name+'を表示');
     b.addEventListener('click',function(){pause();go(i);});
     dots.appendChild(b);
-    // 缶ラベルにフレーバー名を反映
-    var fx=fl.querySelector('.can-flavor');
-    if(fx)fx.textContent=THEMES[i].name;
   });
   var dotBtns=[].slice.call(dots.children);
 
@@ -60,11 +57,6 @@ var THEMES=[
     var t=THEMES[i];
     root.style.setProperty('--accent',t.accent);
     root.style.setProperty('--accent-deep',t.deep);
-    root.style.setProperty('--hue',t.hue);
-    root.style.setProperty('--hue-2',t.hue2);
-    root.style.setProperty('--can-body',t.body);
-    root.style.setProperty('--can-lid',t.lid);
-    root.style.setProperty('--can-band',t.band);
   }
   function go(i){
     i=(i+flavors.length)%flavors.length;
