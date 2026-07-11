@@ -48,23 +48,31 @@ a{color:inherit}
 .flavor__bg{position:absolute;inset:0;z-index:0}
 .flavor--halo .flavor__bg{
   background:
-    repeating-conic-gradient(from 0deg at 62% 44%,rgba(255,255,255,.34) 0 6deg,transparent 6deg 14deg),
-    radial-gradient(90% 80% at 62% 44%,#ffd9d3 0%,#ff9d92 45%,#e8574e 100%);
+    radial-gradient(circle at 18% 78%,rgba(10,10,8,.14) 0 3px,transparent 3px 22px),
+    repeating-radial-gradient(circle at 50% 50%,transparent 0 90px,rgba(255,255,255,.22) 90px 96px),
+    repeating-conic-gradient(from 4deg at 50% 46%,rgba(179,32,47,.32) 0 3deg,transparent 3deg 8deg),
+    repeating-conic-gradient(from 0deg at 50% 46%,rgba(255,255,255,.42) 0 6deg,transparent 6deg 13deg),
+    radial-gradient(95% 85% at 50% 46%,#ffe3de 0%,#ff9d92 40%,#e8574e 78%,#a83232 100%);
 }
 .flavor--fiend .flavor__bg{
   background:
-    repeating-linear-gradient(135deg,rgba(10,10,8,.13) 0 26px,transparent 26px 52px),
-    repeating-linear-gradient(45deg,rgba(255,255,255,.16) 0 26px,transparent 26px 52px),
-    radial-gradient(90% 80% at 62% 44%,#d8f3d4 0%,#8ecf90 45%,#3f9151 100%);
+    repeating-radial-gradient(circle at 50% 46%,transparent 0 80px,rgba(18,60,28,.2) 80px 86px),
+    repeating-linear-gradient(135deg,rgba(10,10,8,.2) 0 30px,transparent 30px 60px),
+    repeating-linear-gradient(45deg,rgba(255,255,255,.22) 0 30px,transparent 30px 60px),
+    repeating-conic-gradient(from 8deg at 50% 46%,rgba(18,60,28,.18) 0 4deg,transparent 4deg 11deg),
+    radial-gradient(95% 85% at 50% 46%,#e2f7de 0%,#8ecf90 40%,#3f9151 78%,#215c33 100%);
 }
 .flavor--bolt .flavor__bg{
   background:
-    repeating-linear-gradient(115deg,rgba(255,255,255,.2) 0 3px,transparent 3px 40px),
-    radial-gradient(90% 80% at 62% 44%,#dbe7ff 0%,#8fadf0 45%,#3e63c4 100%);
+    repeating-radial-gradient(circle at 50% 46%,transparent 0 85px,rgba(255,255,255,.16) 85px 90px),
+    repeating-linear-gradient(115deg,rgba(255,255,255,.3) 0 4px,transparent 4px 34px),
+    repeating-linear-gradient(-115deg,rgba(21,40,96,.22) 0 4px,transparent 4px 52px),
+    repeating-conic-gradient(from 2deg at 50% 46%,rgba(255,255,255,.2) 0 2deg,transparent 2deg 9deg),
+    radial-gradient(95% 85% at 50% 46%,#e6eeff 0%,#8fadf0 40%,#3e63c4 78%,#1e3a86 100%);
 }
 .flavor__bg::after{
   content:"";position:absolute;inset:0;
-  background:radial-gradient(70% 65% at 62% 44%,transparent 42%,rgba(10,10,8,.16) 100%);
+  background:radial-gradient(72% 66% at 50% 46%,transparent 40%,rgba(10,10,8,.22) 100%);
 }
 .flavor__wordmark{
   position:absolute;z-index:1;inset:0;
@@ -73,12 +81,12 @@ a{color:inherit}
 .flavor__wordmark span{
   font-family:var(--disp2);
   font-size:clamp(6rem,32vw,30rem);line-height:.8;
-  color:rgba(255,255,255,.13);
+  color:rgba(255,255,255,.2);
   letter-spacing:-.02em;white-space:nowrap;
   transform:translate(4%,2%) rotate(-4deg);
 }
 .flavor__fx{position:absolute;z-index:2;inset:0;pointer-events:none}
-.flavor__fx svg{position:absolute;top:50%;right:clamp(6%,16vw,20%);width:min(74vh,680px);height:min(74vh,680px);transform:translate(50%,-50%)}
+.flavor__fx svg{position:absolute;top:50%;left:56%;width:min(80vh,740px);height:min(80vh,740px);transform:translate(-50%,-50%)}
 .fx-ring{fill:none;stroke:#ffe8a3;stroke-width:3;transform-origin:250px 250px;animation:ringpulse 2.6s ease-out infinite}
 .fx-ring2{animation-delay:1.3s}
 @keyframes ringpulse{0%{transform:scale(.55);opacity:0}18%{opacity:.95}100%{transform:scale(1.25);opacity:0}}
@@ -97,8 +105,8 @@ a{color:inherit}
 .fx-drop:nth-child(odd){animation-delay:1.2s}
 @keyframes drop{0%{transform:translateY(-16px);opacity:0}25%{opacity:.95}100%{transform:translateY(70px);opacity:0}}
 .flavor__can{
-  position:absolute;z-index:3;top:50%;right:clamp(6%,16vw,20%);
-  height:min(82vh,760px);transform:translate(50%,-50%);
+  position:absolute;z-index:3;top:50%;left:56%;
+  height:min(82vh,760px);transform:translate(-50%,-50%);
 }
 .flavor__can img{
   height:100%;width:auto;
@@ -107,13 +115,25 @@ a{color:inherit}
 }
 @keyframes float{0%,100%{transform:translateY(0) rotate(-2.5deg)}50%{transform:translateY(-16px) rotate(1.5deg)}}
 
+.flavor__badge{
+  position:absolute;z-index:5;top:16%;left:72%;
+  width:clamp(110px,13vw,170px);aspect-ratio:1;
+  animation:spinbadge 14s linear infinite;
+  filter:drop-shadow(4px 6px 0 rgba(10,10,8,.3));
+}
+@keyframes spinbadge{to{transform:rotate(360deg)}}
+.flavor__badge svg{width:100%;height:100%}
+.badge-star{fill:var(--void)}
+.badge-txt{font-family:var(--disp);font-size:15px;fill:#fff;letter-spacing:.04em}
+.badge-txt2{font-family:var(--mono);font-size:9.5px;fill:var(--accent);letter-spacing:.14em}
+
 .flavor__info{
   position:absolute;z-index:4;
   left:clamp(1rem,5vw,4.4rem);top:50%;transform:translateY(-50%);
   max-width:min(90vw,32rem);
   color:var(--void);
 }
-.flavor__tag{font-family:var(--mono);font-size:.86rem;letter-spacing:.2em;font-weight:700;margin-bottom:.7rem;color:var(--accent-deep)}
+.flavor__tag{font-family:var(--mono);font-size:.86rem;letter-spacing:.2em;font-weight:700;margin-bottom:.7rem;color:#241f1c}
 .flavor__name{
   font-family:var(--disp2);font-size:clamp(4rem,11.5vw,8.2rem);line-height:.9;
   color:var(--void);margin-bottom:1rem;letter-spacing:0;
@@ -149,10 +169,20 @@ a{color:inherit}
 .dots button::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid var(--void)}
 .dots button[aria-selected="true"]::before{background:var(--void)}
 .dots button:focus-visible{outline:2px solid var(--void);outline-offset:-4px}
-.reel__hint{
-  position:absolute;z-index:6;left:50%;bottom:1.6rem;transform:translateX(-50%);
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--void);
+.marquee{
+  position:absolute;z-index:6;left:0;right:0;bottom:0;
+  background:var(--void);color:var(--ink);
+  overflow:hidden;white-space:nowrap;
+  padding:.55rem 0;
+  border-top:3px solid rgba(10,10,8,.65);
 }
+.marquee span{
+  display:inline-block;
+  font-family:var(--disp);font-size:.95rem;letter-spacing:.14em;
+  animation:marq 18s linear infinite;
+}
+.marquee b{color:var(--accent);font-weight:400;transition:color .5s}
+@keyframes marq{to{transform:translateX(-50%)}}
 
 /* ===== 以降ダーク地セクション ===== */
 main section:not(.reel){padding:clamp(5rem,12vh,9rem) clamp(1.2rem,5vw,4rem)}
@@ -222,18 +252,31 @@ html:not(.js) .reel{height:auto}
 @media(max-width:760px){
   .head-meta{display:none}
   .brand{font-size:1.7rem}
-  .flavor__can{right:50%;top:34%;height:min(46vh,420px)}
-  .flavor__fx svg{right:50%;top:34%;width:min(60vh,420px);height:min(60vh,420px)}
-  .flavor__info{top:auto;bottom:7.6rem;transform:none;max-width:92vw}
+  .flavor__can{left:50%;top:34%;height:min(46vh,420px)}
+  .flavor__fx svg{left:50%;top:34%;width:min(60vh,420px);height:min(60vh,420px)}
+  .flavor__badge{top:9%;left:auto;right:4%;width:clamp(90px,24vw,120px)}
+  .marquee span{font-size:.8rem}
+  .flavor__badge{
+  position:absolute;z-index:5;top:16%;left:72%;
+  width:clamp(110px,13vw,170px);aspect-ratio:1;
+  animation:spinbadge 14s linear infinite;
+  filter:drop-shadow(4px 6px 0 rgba(10,10,8,.3));
+}
+@keyframes spinbadge{to{transform:rotate(360deg)}}
+.flavor__badge svg{width:100%;height:100%}
+.badge-star{fill:var(--void)}
+.badge-txt{font-family:var(--disp);font-size:15px;fill:#fff;letter-spacing:.04em}
+.badge-txt2{font-family:var(--mono);font-size:9.5px;fill:var(--accent);letter-spacing:.14em}
+
+.flavor__info{top:auto;bottom:7.6rem;transform:none;max-width:92vw}
   .flavor__name{font-size:clamp(3rem,15vw,4.4rem)}
   .flavor__spec{gap:1rem}
   .reel__ctl{bottom:1.3rem;right:50%;transform:translateX(50%)}
-  .reel__hint{display:none}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .flavor,.flavor__cta,.buy__cta{transition:none}
-  .flavor__can img,.fx-ring,.fx-ring2,.fx-mote,.fx-crack,.fx-grape,.fx-bolt,.fx-bolt2,.fx-drop{animation:none}
+  .flavor__can img,.fx-ring,.fx-ring2,.fx-mote,.fx-crack,.fx-grape,.fx-bolt,.fx-bolt2,.fx-drop,.flavor__badge,.marquee span{animation:none}
   .fx-ring,.fx-crack{opacity:.4}
   .fx-bolt{opacity:.8}
 }
