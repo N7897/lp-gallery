@@ -16,20 +16,19 @@ var THEMES=[
   if(reduced)return;
   var el=document.createElement('div');
   el.id='splash';el.setAttribute('aria-hidden','true');
-  el.innerHTML='<div class="sp-word">FERAL<span class="sp-bar"></span></div>';
-  document.body.appendChild(el);
-  var bar=el.querySelector('.sp-bar');
-  var t0=null,done=false;
-  function finish(){if(done)return;done=true;el.classList.add('is-done');setTimeout(function(){el.remove();},600);}
-  function step(t){
-    if(done)return;
-    if(t0===null)t0=t;
-    var p=Math.min((t-t0)/1400,1);
-    bar.style.width=(p*100)+'%';
-    if(p>=1){finish();return;}
-    requestAnimationFrame(step);
+  var frags='';
+  for(var i=0;i<14;i++){
+    var a=(i/14)*Math.PI*2;
+    frags+='<line x1="'+(250+Math.cos(a)*70).toFixed(0)+'" y1="'+(250+Math.sin(a)*70).toFixed(0)+'" x2="'+(250+Math.cos(a)*240).toFixed(0)+'" y2="'+(250+Math.sin(a)*240).toFixed(0)+'"/>';
   }
-  requestAnimationFrame(step);
+  el.innerHTML='<div class="sp-box">'+
+    '<svg class="sp-fx" viewBox="0 0 500 500"><circle cx="250" cy="250" r="180"/>'+frags+'</svg>'+
+    '<span class="sp-word">FARAL</span>'+
+    '<span class="sp-sub">WILD SINCE MIDNIGHT</span></div>';
+  document.body.appendChild(el);
+  var done=false;
+  function finish(){if(done)return;done=true;el.classList.add('is-done');setTimeout(function(){el.remove();},550);}
+  setTimeout(finish,1700);
   setTimeout(finish,3000);
 })();
 
@@ -81,23 +80,23 @@ var THEMES=[
     if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();pause();go(active-1);}
   });
 
-  /* ホイール/タッチでフレーバー送り。端では通常スクロールへ解放 */
-  function inHero(){var r=reelEl.getBoundingClientRect();return r.top<=1&&r.bottom>=window.innerHeight-1;}
+  /* 横方向のホイール/トラックパッドのみでフレーバー送り。縦スクロールは素通し(ページ送りを妨げない) */
   reelEl.addEventListener('wheel',function(e){
-    if(!inHero()||locked)return;
-    var down=e.deltaY>0;
-    if(down&&active<flavors.length-1){e.preventDefault();pause();go(active+1);lockScroll();}
-    else if(!down&&active>0){e.preventDefault();pause();go(active-1);lockScroll();}
+    if(locked)return;
+    if(Math.abs(e.deltaX)<=Math.abs(e.deltaY))return;
+    var right=e.deltaX>0;
+    if(right&&active<flavors.length-1){e.preventDefault();pause();go(active+1);lockScroll();}
+    else if(!right&&active>0){e.preventDefault();pause();go(active-1);lockScroll();}
   },{passive:false});
   function lockScroll(){locked=true;setTimeout(function(){locked=false;},760);}
 
-  var tY=null;
-  reelEl.addEventListener('touchstart',function(e){tY=e.touches[0].clientY;},{passive:true});
+  var tX=null;
+  reelEl.addEventListener('touchstart',function(e){tX=e.touches[0].clientX;},{passive:true});
   reelEl.addEventListener('touchend',function(e){
-    if(tY===null)return;
-    var dy=e.changedTouches[0].clientY-tY;
-    if(Math.abs(dy)>44){pause();go(active+(dy<0?1:-1));}
-    tY=null;
+    if(tX===null)return;
+    var dx=e.changedTouches[0].clientX-tX;
+    if(Math.abs(dx)>44){pause();go(active+(dx<0?1:-1));}
+    tX=null;
   },{passive:true});
 
   document.addEventListener('visibilitychange',function(){
