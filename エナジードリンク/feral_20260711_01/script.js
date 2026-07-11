@@ -135,4 +135,20 @@ var THEMES=[
     nums.forEach(function(n){io.observe(n);});
   }else nums.forEach(run);
 })();
+
+/* ---- HUD: 雰囲気メーターの数値をゆらす(演出。成分表とは別) ---- */
+(function hud(){
+  var vals=[].slice.call(document.querySelectorAll('.hud-val'));
+  if(!vals.length||reduced)return;
+  setInterval(function(){
+    vals.forEach(function(el){
+      var base=+el.getAttribute('data-hud');
+      var v=Math.max(40,Math.min(99,base+Math.round((Math.random()-.5)*8)));
+      el.textContent=v;
+      var bar=el.parentNode.querySelector('.hud-bar i');
+      if(bar)bar.style.setProperty('--v',v+'%');
+    });
+  },900);
+})();
+
 })();

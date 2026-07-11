@@ -1,6 +1,7 @@
 @font-face{font-family:'Bungee';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/bungee.woff2) format('woff2')}
 @font-face{font-family:'Bungee Inline';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/bungee-inline.woff2) format('woff2')}
 @font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/dm-mono.woff2) format('woff2')}
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/cinzel.woff2) format('woff2')}
 
 :root{
   --void:#0a0a08;
@@ -10,6 +11,7 @@
   --accent-deep:#b3202f;
   --disp:'Bungee',system-ui,sans-serif;
   --disp2:'Bungee Inline','Bungee',system-ui,sans-serif;
+  --emblem:'Cinzel',serif;
   --mono:'DM Mono',ui-monospace,Consolas,monospace;
   --jp:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,sans-serif;
   --ease:cubic-bezier(.16,.9,.24,1);
@@ -91,7 +93,7 @@ a{color:inherit}
     0 0 190px var(--accent);
 }
 .flavor__fx{position:absolute;z-index:2;inset:0;pointer-events:none}
-.flavor__fx svg{position:absolute;top:50%;left:74%;width:min(80vh,740px);height:min(80vh,740px);transform:translate(-50%,-50%)}
+.flavor__fx svg{position:absolute;top:50%;left:64%;width:min(80vh,740px);height:min(80vh,740px);transform:translate(-50%,-50%)}
 .fx-ring{fill:none;stroke:#ffe8a3;stroke-width:3;transform-origin:250px 250px;animation:ringpulse 2.6s ease-out infinite}
 .fx-ring2{animation-delay:1.3s}
 @keyframes ringpulse{0%{transform:scale(.55);opacity:0}18%{opacity:.95}100%{transform:scale(1.25);opacity:0}}
@@ -110,7 +112,7 @@ a{color:inherit}
 .fx-drop:nth-child(odd){animation-delay:1.2s}
 @keyframes drop{0%{transform:translateY(-16px);opacity:0}25%{opacity:.95}100%{transform:translateY(70px);opacity:0}}
 .flavor__can{
-  position:absolute;z-index:3;top:50%;left:74%;
+  position:absolute;z-index:3;top:50%;left:64%;
   height:min(82vh,760px);transform:translate(-50%,-50%);
 }
 .flavor__can img{
@@ -120,6 +122,8 @@ a{color:inherit}
 }
 @keyframes float{0%,100%{transform:translateY(0) rotate(-2.5deg)}50%{transform:translateY(-16px) rotate(1.5deg)}}
 
+.flavor__spark{position:absolute;z-index:2;left:-2%;bottom:-2%;width:44vw;height:56vh;pointer-events:none}
+.flavor__spark svg{width:100%;height:100%}
 .flavor__badge{
   position:absolute;z-index:5;top:clamp(4.6rem,11vh,7rem);right:clamp(1rem,4vw,3.4rem);
   width:clamp(110px,13vw,170px);aspect-ratio:1;
@@ -131,13 +135,23 @@ a{color:inherit}
 .badge-txt{font-family:var(--disp);font-size:15px;fill:#fff;letter-spacing:.04em}
 .badge-txt2{font-family:var(--mono);font-size:9.5px;fill:var(--accent);letter-spacing:.14em}
 
+.flavor__hud{
+  position:absolute;z-index:4;top:50%;right:clamp(1rem,4vw,3.4rem);transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:1.1rem;width:min(30vw,190px);
+  filter:drop-shadow(2px 3px 0 rgba(10,10,8,.5));
+}
+.hud-row{display:grid;grid-template-columns:1fr auto;gap:.2rem .5rem;align-items:center}
+.hud-lbl{font-family:var(--emblem);font-weight:800;font-size:.68rem;letter-spacing:.16em;color:#fff;text-shadow:1px 1px 0 rgba(10,10,8,.7)}
+.hud-val{font-family:var(--disp);font-size:1.05rem;color:#fff;text-shadow:0 0 12px var(--accent),1px 1px 0 rgba(10,10,8,.7)}
+.hud-bar{grid-column:1/3;height:8px;border-radius:5px;background:rgba(10,10,8,.4);overflow:hidden;border:1px solid rgba(255,255,255,.35)}
+.hud-bar i{display:block;height:100%;width:var(--v,50%);background:var(--accent);box-shadow:0 0 12px var(--accent);transition:width .5s var(--ease)}
 .flavor__info{
   position:absolute;z-index:4;
   left:clamp(1rem,5vw,4.4rem);top:50%;transform:translateY(-50%);
   max-width:min(90vw,32rem);
   color:var(--ink);
 }
-.flavor__tag{font-family:var(--mono);font-size:.86rem;letter-spacing:.2em;font-weight:700;margin-bottom:.7rem;color:#fff;text-shadow:0 0 10px var(--accent),2px 2px 0 rgba(10,10,8,.7)}
+.flavor__tag{font-family:var(--emblem);font-size:1.02rem;letter-spacing:.16em;font-weight:800;margin-bottom:.8rem;color:#fff;text-shadow:0 0 12px var(--accent),2px 2px 0 rgba(10,10,8,.75)}
 .flavor__name{
   font-family:var(--disp2);font-size:clamp(3.6rem,10vw,7.2rem);line-height:.9;
   color:#fff;margin-bottom:1rem;letter-spacing:0;
@@ -151,15 +165,15 @@ a{color:inherit}
 .flavor__spec dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;font-weight:700;color:#fff;text-shadow:1px 1px 0 rgba(10,10,8,.8)}
 .flavor__spec dd{font-family:var(--disp);font-size:1.45rem;color:#fff;text-shadow:0 0 14px var(--accent),2px 2px 0 rgba(10,10,8,.8)}
 .flavor__cta{
-  display:inline-block;font-family:var(--disp);font-size:1rem;letter-spacing:.06em;
-  background:transparent;color:#fff;
-  border:2px solid var(--accent);
-  padding:1rem 2.2rem;border-radius:6px;text-decoration:none;
-  text-shadow:0 0 10px var(--accent);
-  box-shadow:0 0 16px color-mix(in srgb,var(--accent) 55%,transparent),inset 0 0 12px color-mix(in srgb,var(--accent) 30%,transparent);
-  transition:box-shadow .3s,background .3s;
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--jp);font-weight:900;font-size:1.06rem;letter-spacing:.04em;
+  background:var(--accent);color:var(--void);
+  padding:1.05rem 2.4rem;border-radius:6px;text-decoration:none;
+  box-shadow:5px 5px 0 rgba(10,10,8,.9),0 0 22px color-mix(in srgb,var(--accent) 60%,transparent);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease);
 }
-.flavor__cta:hover,.flavor__cta:focus-visible{background:var(--accent);color:var(--void);text-shadow:none;box-shadow:0 0 30px var(--accent)}
+.flavor__cta::after{content:"\2192";font-family:var(--disp);font-size:1.1rem}
+.flavor__cta:hover,.flavor__cta:focus-visible{transform:translate(-3px,-3px);box-shadow:9px 9px 0 rgba(10,10,8,.9),0 0 34px var(--accent)}
 
 .reel__ctl{
   position:absolute;z-index:6;right:clamp(1rem,5vw,4rem);bottom:clamp(5.5rem,14vh,8rem);
@@ -262,9 +276,13 @@ html:not(.js) .reel{height:auto}
   .brand{font-size:1.7rem}
   .flavor__can{left:50%;top:34%;height:min(46vh,420px)}
   .flavor__fx svg{left:50%;top:34%;width:min(60vh,420px);height:min(60vh,420px)}
-  .flavor__badge{top:9%;left:auto;right:4%;width:clamp(90px,24vw,120px)}
+  .flavor__spark{position:absolute;z-index:2;left:-2%;bottom:-2%;width:44vw;height:56vh;pointer-events:none}
+.flavor__spark svg{width:100%;height:100%}
+.flavor__badge{top:9%;left:auto;right:4%;width:clamp(90px,24vw,120px)}
   .marquee span{font-size:.8rem}
-  .flavor__badge{
+  .flavor__spark{position:absolute;z-index:2;left:-2%;bottom:-2%;width:44vw;height:56vh;pointer-events:none}
+.flavor__spark svg{width:100%;height:100%}
+.flavor__badge{
   position:absolute;z-index:5;top:clamp(4.6rem,11vh,7rem);right:clamp(1rem,4vw,3.4rem);
   width:clamp(110px,13vw,170px);aspect-ratio:1;
   transform:rotate(12deg);
@@ -283,7 +301,7 @@ html:not(.js) .reel{height:auto}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .flavor,.flavor__cta,.buy__cta{transition:none}
-  .flavor__can img,.fx-ring,.fx-ring2,.fx-mote,.fx-crack,.fx-grape,.fx-bolt,.fx-bolt2,.fx-drop,.flavor__badge,.marquee span{animation:none}
+  .flavor__can img,.fx-ring,.fx-ring2,.fx-mote,.fx-crack,.fx-grape,.fx-bolt,.fx-bolt2,.fx-drop,.marquee span,.sp-mote,.sp-drop,.sp-grape{animation:none}
   .fx-ring,.fx-crack{opacity:.4}
   .fx-bolt{opacity:.8}
 }
