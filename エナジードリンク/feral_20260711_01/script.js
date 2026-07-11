@@ -136,19 +136,22 @@ var THEMES=[
   }else nums.forEach(run);
 })();
 
-/* ---- HUD: 雰囲気メーターの数値をゆらす(演出。成分表とは別) ---- */
+/* ---- HUD: 表示中のフレーバーの雰囲気メーターだけを穏やかに揺らす(演出。成分表とは別) ---- */
 (function hud(){
-  var vals=[].slice.call(document.querySelectorAll('.hud-val'));
-  if(!vals.length||reduced)return;
+  if(reduced||!document.querySelector('.hud-val'))return;
   setInterval(function(){
-    vals.forEach(function(el){
-      var base=+el.getAttribute('data-hud');
-      var v=Math.max(40,Math.min(99,base+Math.round((Math.random()-.5)*8)));
+    var active=document.querySelector('.flavor.is-active');
+    if(!active)return;
+    active.querySelectorAll('.hud-val').forEach(function(el){
+      var b=+el.getAttribute('data-hud');
+      var cur=+el.textContent||b;
+      var v=Math.round(cur+((b+(Math.random()-.5)*4)-cur)*0.5);
+      v=Math.max(60,Math.min(99,v));
       el.textContent=v;
       var bar=el.parentNode.querySelector('.hud-bar i');
       if(bar)bar.style.setProperty('--v',v+'%');
     });
-  },900);
+  },2400);
 })();
 
 })();
