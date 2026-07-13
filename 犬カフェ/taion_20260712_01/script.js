@@ -114,7 +114,7 @@
 
   function dogTrail() {
     var steps = [
-      ["hero", "トップ"],
+      ["story", "体温のはなし"],
       ["dogs", "こどもたち"],
       ["price", "料金"],
       ["flow", "はじめての方へ"],
@@ -144,9 +144,9 @@
       var d = document.createElement("span");
       d.className = "dogtrail__mark dogtrail__paw";
       var leftSide = (k % 2 === 0);
-      d.style.left = (leftSide ? 16 : 50) + "px";
-      d.style.top = (y - 9) + "px";
-      d.style.transform = "rotate(" + (leftSide ? -14 : 14) + "deg)";
+      d.style.left = (leftSide ? 15 : 28) + "px";
+      d.style.top = (y - 7) + "px";
+      d.style.transform = "rotate(" + (leftSide ? -12 : 12) + "deg)";
       d.innerHTML = '<svg viewBox="0 0 100 100" aria-hidden="true">' + PAW + "</svg>";
       wrap.appendChild(d);
       items.push({ el: d, y: y, base: d.style.transform });
@@ -154,11 +154,11 @@
     for (var i = 0; i < steps.length; i++) {
       var el = marks[i];
       if (!el) continue;
-      var y = el.offsetTop + (steps[i][0] === "hero" ? 150 : 54);
+      var y = el.offsetTop + 46;
       var b = document.createElement("button");
       b.type = "button";
       b.className = "dogtrail__mark dogtrail__dog";
-      b.style.top = (y - 42) + "px";
+      b.style.top = (y - 28) + "px";
       b.setAttribute("aria-label", steps[i][1] + "へ移動");
       b.innerHTML =
         '<span class="dogtrail__label">' + steps[i][1] + "</span>" +
