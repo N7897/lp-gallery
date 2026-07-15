@@ -7,3 +7,8 @@ img/ 内の写真クレジット
 
 - car67.png / car68.png (元素材・非表示)
   ユーザー提供のAI生成画像。LPからは参照していない。
+
+- img/cfg-white.webp / cfg-black.webp / cfg-red.webp / cfg-blue.webp / cfg-mix.webp
+  出所: ユーザー提供のAI生成画像 (2026-07-16受領、2ファイル)
+  架空車両のレンダリング。実在の車両・ブランド・人物は含まれない。
+  加工: 透過アルファ/連結成分検出による個別車体の切り出し、青のみCSS mask-imageで背景を周辺色へ滲ませ

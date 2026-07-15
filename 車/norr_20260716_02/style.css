@@ -393,8 +393,43 @@ html.js .rn.is-on { opacity: 1; transform: none; pointer-events: auto; }
   grid-template-columns: 1fr;
   gap: 40px;
 }
-.car-config { display: block; width: min(1000px, 92vw); margin: 0 auto; }
-.car-config path.bodyshell:first-of-type { transition: fill 0.5s var(--ease); }
+.car-config {
+  position: relative;
+  width: min(920px, 92vw);
+  aspect-ratio: 920 / 300;
+  margin: 0 auto;
+}
+.cfg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 0;
+  z-index: 1;
+  clip-path: inset(0 100% 0 0);
+  filter: drop-shadow(0 16px 22px rgba(30, 30, 24, 0.16));
+}
+.cfg-img.is-on {
+  opacity: 1;
+  z-index: 2;
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.75s var(--ease), opacity 0.05s linear;
+}
+.cfg-img.is-wiping {
+  opacity: 1;
+  z-index: 3;
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.75s var(--ease);
+}
+.cfg-blue {
+  -webkit-mask-image: radial-gradient(ellipse 50% 58% at 50% 45%, #000 32%, transparent 78%);
+  mask-image: radial-gradient(ellipse 50% 58% at 50% 45%, #000 32%, transparent 78%);
+}
+html:not(.js) .cfg-img { clip-path: none; opacity: 0; }
+html:not(.js) .cfg-img.is-on { opacity: 1; }
+
 .swatches {
   display: flex;
   justify-content: center;
@@ -411,8 +446,9 @@ html.js .rn.is-on { opacity: 1; transform: none; pointer-events: auto; }
   background: var(--panel);
   cursor: pointer;
   font-family: var(--jp);
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, transform 0.3s var(--ease);
 }
+.swatch:hover { transform: translateY(-1px); }
 .swatch:hover, .swatch.is-on { border-color: var(--ink); }
 .swatch-dot {
   width: 22px;
@@ -424,6 +460,8 @@ html.js .rn.is-on { opacity: 1; transform: none; pointer-events: auto; }
 }
 .swatch-name { font-size: 13px; font-weight: 500; }
 .swatch-name em { font-style: normal; color: var(--ink-faint); margin-left: 4px; font-size: 12px; }
+.swatch-cs { border-style: dashed; }
+.swatch-cs .swatch-name em { color: var(--accent-deep); font-weight: 600; }
 
 .specs {
   list-style: none;

@@ -183,25 +183,32 @@
 <section class="sec sec-mute" id="configure">
   <div class="wrap">
     <p class="sec-no">03 — COLOUR</p>
-    <h2 class="sec-h">色は、4つしかない。<br class="br-sp">それでいい、と思っています。</h2>
-    <p class="sec-lead">全21色から選ぶ配色は、結局同じ3色に集約されると気づきました。だから最初から4色だけ。迷う時間を、運転する時間に。</p>
+    <h2 class="sec-h">色は、4つ。<br class="br-sp">それに、1つだけ逸脱を。</h2>
+    <p class="sec-lead">全21色から選ぶ配色は、結局同じ3色に集約されると気づきました。だから基本は4色だけ。ただし年に一度、静けさを少しだけ破る特別仕様も用意しています。</p>
   </div>
   <div class="configure-stage">
-    <svg class="car-svg car-config" viewBox="0 0 1200 460" role="img" aria-label="選択した色でボディが変わるNORR Oneの側面図" aria-live="polite">
-      <use href="#carBodyDef" data-config-car/>
-    </svg>
+    <div class="car-config" aria-live="polite">
+      <img class="cfg-img is-on" src="img/cfg-white.webp" alt="雪白(Snow)のNORR One" data-color="white" loading="lazy" decoding="async">
+      <img class="cfg-img" src="img/cfg-black.webp" alt="漆黒(Basalt)のNORR One" data-color="black" loading="lazy" decoding="async">
+      <img class="cfg-img" src="img/cfg-red.webp" alt="緋(Scarlet)のNORR One" data-color="red" loading="lazy" decoding="async">
+      <img class="cfg-img cfg-blue" src="img/cfg-blue.webp" alt="藍(Indigo)のNORR One" data-color="blue" loading="lazy" decoding="async">
+      <img class="cfg-img cfg-mix" src="img/cfg-mix.webp" alt="NORR One CS。赤と青のラインが入る特別仕様" data-color="mix" loading="lazy" decoding="async">
+    </div>
     <div class="swatches" role="radiogroup" aria-label="ボディカラーを選択">
-      <button type="button" class="swatch is-on" data-paint="#d7d6cd" data-paint-dark="#8f8e85" style="--sw:#e7e6df" aria-pressed="true">
+      <button type="button" class="swatch is-on" data-color="white" style="--sw:#f5f4f0" aria-pressed="true">
         <span class="swatch-dot"></span><span class="swatch-name">雪白 <em>Snow</em></span>
       </button>
-      <button type="button" class="swatch" data-paint="#b9bcb0" data-paint-dark="#7c8074" style="--sw:#b9bcb0" aria-pressed="false">
-        <span class="swatch-dot"></span><span class="swatch-name">石灰石 <em>Limestone</em></span>
-      </button>
-      <button type="button" class="swatch" data-paint="#7c8a74" data-paint-dark="#535e4c" style="--sw:#7c8a74" aria-pressed="false">
-        <span class="swatch-dot"></span><span class="swatch-name">苔 <em>Moss</em></span>
-      </button>
-      <button type="button" class="swatch" data-paint="#2c2c29" data-paint-dark="#161614" style="--sw:#2c2c29" aria-pressed="false">
+      <button type="button" class="swatch" data-color="black" style="--sw:#1c1c1a" aria-pressed="false">
         <span class="swatch-dot"></span><span class="swatch-name">漆黒 <em>Basalt</em></span>
+      </button>
+      <button type="button" class="swatch" data-color="red" style="--sw:#b0262b" aria-pressed="false">
+        <span class="swatch-dot"></span><span class="swatch-name">緋 <em>Scarlet</em></span>
+      </button>
+      <button type="button" class="swatch" data-color="blue" style="--sw:#1c4fa8" aria-pressed="false">
+        <span class="swatch-dot"></span><span class="swatch-name">藍 <em>Indigo</em></span>
+      </button>
+      <button type="button" class="swatch swatch-cs" data-color="mix" style="--sw:conic-gradient(from 180deg,#b0262b 0 50%,#1c4fa8 0 100%)" aria-pressed="false">
+        <span class="swatch-dot"></span><span class="swatch-name">NORR One <em>CS</em></span>
       </button>
     </div>
   </div>
@@ -262,7 +269,7 @@
       <ul class="price-notes">
         <li>CEV補助金 最大85万円（2026年度・国の制度改定により変動します）</li>
         <li>予約金 ¥100,000（納車前まで全額返金できます）</li>
-        <li>オプションは4色の塗装のみ。装備はすべて標準です。</li>
+        <li>オプションは塗装のみ（4色+特別仕様CS）。装備はすべて標準です。</li>
       </ul>
     </div>
     <div class="buy-cta"><a class="btn btn-solid" href="#drive">試乗を申し込む</a><a class="btn btn-line" href="#rotate">仕様を見る<span class="arrow" aria-hidden="true">→</span></a></div>

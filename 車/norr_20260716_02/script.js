@@ -62,35 +62,42 @@
   }
 
   /* ── カラー配色: ボタン選択でボディ塗装・ホイールを差し替え(<use>先のdefsグラデ終端色を書き換え) ── */
+  /* ── 配色ハブ: 実写5枚をスタック配置し、選択で「ペイントが塗られる」ワイプで前面へ切替
+     (clip-path inset()を右→左に開くアニメ。塗装をひと吹きで替える感覚をそのまま演出に翻訳) ── */
   function initConfigure() {
     var swatches = document.querySelectorAll(".swatch");
-    var carDef = document.querySelector("#carBodyDef");
-    if (!swatches.length || !carDef) return;
-    var grad = document.querySelector("#paintB");
-    var stops = grad ? grad.querySelectorAll("stop") : [];
-
-    function lighten(hex, amt) {
-      var n = parseInt(hex.slice(1), 16);
-      var r = clamp(((n >> 16) & 255) + amt, 0, 255);
-      var g = clamp(((n >> 8) & 255) + amt, 0, 255);
-      var b = clamp((n & 255) + amt, 0, 255);
-      return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    }
-
-    function setColor(base, deep) {
-      if (stops.length < 4) return;
-      stops[0].setAttribute("stop-color", lighten(base, 46));
-      stops[1].setAttribute("stop-color", base);
-      stops[2].setAttribute("stop-color", lighten(base, -18));
-      stops[3].setAttribute("stop-color", deep);
-    }
+    var imgs = document.querySelectorAll(".cfg-img");
+    if (!swatches.length || !imgs.length) return;
 
     swatches.forEach(function (btn) {
       btn.addEventListener("click", function () {
+        var color = btn.dataset.color;
+        var target = null;
+        imgs.forEach(function (img) { if (img.dataset.color === color) target = img; });
+        if (!target || target.classList.contains("is-on")) return;
+
         swatches.forEach(function (b) { b.classList.remove("is-on"); b.setAttribute("aria-pressed", "false"); });
         btn.classList.add("is-on");
         btn.setAttribute("aria-pressed", "true");
-        setColor(btn.dataset.paint, btn.dataset.paintDark);
+
+        if (reduced) {
+          imgs.forEach(function (img) { img.classList.remove("is-on", "is-wiping"); });
+          target.classList.add("is-on");
+          return;
+        }
+
+        var current = document.querySelector(".cfg-img.is-on");
+        target.style.clipPath = "inset(0 100% 0 0)";
+        target.classList.add("is-wiping");
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            target.style.clipPath = "inset(0 0 0 0)";
+          });
+        });
+        setTimeout(function () {
+          imgs.forEach(function (img) { img.classList.remove("is-on", "is-wiping"); img.style.clipPath = ""; });
+          target.classList.add("is-on");
+        }, 780);
       });
     });
   }
