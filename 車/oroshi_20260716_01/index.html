@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>颪 OROSHI type-01 — 風と、和解する。八ヶ岳山麓・受注生産のエレクトリック・クーペ</title>
+<meta name="description" content="空気抵抗係数 Cd 0.19。颪 type-01 は、風と戦うことをやめた受注生産のエレクトリック・クーペ。八ヶ岳山麓の工房から年間200台。試乗は霧ヶ峰の40分。">
+<link rel="preload" href="fonts/SairaCondensed-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/SairaCondensed-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/IBMPlexMono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a1018'/%3E%3Cpath d='M4 12h18M8 17h20M4 22h14' stroke='%236cc8ff' stroke-width='2.4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<meta property="og:title" content="颪 OROSHI type-01 — 風と、和解する。">
+<meta property="og:description" content="Cd 0.19。風と戦うことをやめた受注生産のエレクトリック・クーペ。八ヶ岳山麓から年間200台。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="ogp.png">
+<meta name="theme-color" content="#0a1018">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<header class="site-head" id="top">
+  <a class="brand" href="#top" aria-label="颪 OROSHI トップへ">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 12h18M8 17h20M4 22h14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>
+    <span class="brand-name">颪 <em>OROSHI</em></span>
+  </a>
+  <nav class="site-nav" aria-label="ページ内">
+    <a href="#tunnel">風洞</a>
+    <a href="#design">設計</a>
+    <a href="#performance">性能</a>
+    <a href="#atelier">工房</a>
+    <a href="#buy">購入</a>
+  </nav>
+  <a class="btn btn-solid btn-head" href="#drive">試乗を申し込む</a>
+</header>
+
+<main>
+
+<section class="tunnel" id="tunnel" aria-label="風洞実験室 — 颪 type-01 の空力検分">
+  <div class="stage">
+    <canvas class="wind" aria-hidden="true"></canvas>
+
+    <div class="carwrap" aria-hidden="false">
+      <svg class="car" viewBox="0 0 1200 430" role="img" aria-label="颪 type-01 の側面図。風洞の気流が低いクーペの車体を左から右へ包んでいる">
+        <defs>
+          <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2a3b52"/>
+            <stop offset=".42" stop-color="#16202f"/>
+            <stop offset="1" stop-color="#080d14"/>
+          </linearGradient>
+          <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#79c6f2" stop-opacity=".34"/>
+            <stop offset=".38" stop-color="#101c2b" stop-opacity=".96"/>
+            <stop offset="1" stop-color="#05090f"/>
+          </linearGradient>
+          <linearGradient id="rimlight" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#a8d9ff" stop-opacity=".85"/>
+            <stop offset=".45" stop-color="#5f7d9c" stop-opacity=".24"/>
+            <stop offset="1" stop-color="#000" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="poolGlow" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#6cc8ff" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#6cc8ff" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
+        </defs>
+
+        <ellipse cx="600" cy="384" rx="480" ry="34" fill="url(#poolGlow)"/>
+        <ellipse cx="600" cy="368" rx="430" ry="16" fill="#020408" opacity=".78" filter="url(#soft)"/>
+
+        <g class="car-body">
+          <path class="bodyshell" d="M96 318 C94 306 96 292 104 284 C112 274 126 262 148 254 C210 244 268 240 326 232 C380 224 430 200 486 172 C520 152 556 140 600 138 C700 136 800 168 892 196 C930 206 968 202 990 208 C1010 214 1026 230 1030 252 C1032 274 1024 296 1006 308 L986 316 L984 330 A78 78 0 0 0 836 330 L410 330 A78 78 0 0 0 256 330 L168 330 C130 330 104 326 96 318 Z"
+            fill="url(#bodyGrad)" stroke="url(#rimlight)" stroke-width="2.2"/>
+          <path class="glass" d="M356 230 C420 218 470 196 520 168 C552 150 580 144 608 143 C700 142 786 170 862 194 C830 202 700 212 560 222 C480 227 410 230 356 230 Z" fill="url(#glassGrad)" stroke="#3d5876" stroke-width="1.1"/>
+          <path d="M150 272 C300 256 500 260 700 276 C800 284 900 290 988 290" fill="none" stroke="#42597a" stroke-width="1.2" opacity=".55"/>
+          <path d="M168 328 L980 328" stroke="#02050a" stroke-width="7" opacity=".65"/>
+          <path class="led" d="M104 272 C118 264 136 258 156 254" fill="none" stroke="#bfe7ff" stroke-width="3" stroke-linecap="round"/>
+          <path class="led" d="M1012 216 C1024 226 1030 240 1030 254" fill="none" stroke="#9adcff" stroke-width="2.6" stroke-linecap="round" opacity=".9"/>
+          <path d="M96 318 C120 322 150 324 170 324 L170 330 L168 330 C130 330 104 326 96 318 Z" fill="#04070c"/>
+          <path d="M986 316 L984 330 L920 330 C948 326 972 322 986 316 Z" fill="#04070c"/>
+        </g>
+
+        <g class="wheel" transform="translate(333,296)">
+          <circle r="62" fill="#04070b" stroke="#1c2836" stroke-width="3"/>
+          <circle r="41" fill="#0a1119" stroke="#4c637f" stroke-width="2"/>
+          <g class="rim">
+            <g fill="#8aa3bd"><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z"/><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z" transform="rotate(72)"/><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z" transform="rotate(144)"/><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z" transform="rotate(216)"/><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z" transform="rotate(288)"/></g>
+            <circle r="9" fill="#111a26" stroke="#6a839f" stroke-width="1.6"/>
+          </g>
+        </g>
+        <g class="wheel" transform="translate(913,296)">
+          <circle r="62" fill="#04070b" stroke="#1c2836" stroke-width="3"/>
+          <circle r="41" fill="#0a1119" stroke="#4c637f" stroke-width="2"/>
+          <g class="rim">
+            <g fill="#8aa3bd"><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z"/><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z" transform="rotate(72)"/><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z" transform="rotate(144)"/><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z" transform="rotate(216)"/><path d="M-3 -38 L3 -38 L5 -8 L-5 -8 Z" transform="rotate(288)"/></g>
+            <circle r="9" fill="#111a26" stroke="#6a839f" stroke-width="1.6"/>
+          </g>
+        </g>
+
+        <g class="zone zone-1" aria-hidden="true">
+          <path d="M84 244 L84 226 L112 226 M84 316 L84 334 L112 334 M252 226 L280 226 L280 244 M252 334 L280 334 L280 316" fill="none" stroke="#6cc8ff" stroke-width="1.6"/>
+        </g>
+        <g class="zone zone-2" aria-hidden="true">
+          <path d="M468 124 L468 106 L496 106 M468 172 L468 190 L496 190 M732 106 L760 106 L760 124 M732 190 L760 190 L760 172" fill="none" stroke="#6cc8ff" stroke-width="1.6"/>
+        </g>
+        <g class="zone zone-3" aria-hidden="true">
+          <path d="M936 196 L936 178 L964 178 M936 318 L936 336 L964 336 M1064 178 L1092 178 L1092 196 M1064 336 L1092 336 L1092 318" fill="none" stroke="#6cc8ff" stroke-width="1.6"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hud" aria-hidden="true">
+      <p class="hud-cap">WIND TUNNEL — CHINO, NAGANO</p>
+      <p class="hud-speed"><span class="hud-num" data-wind-speed>0.0</span><span class="hud-unit">m/s</span></p>
+      <div class="hud-bar"><i data-wind-bar></i></div>
+      <p class="hud-sub">DOWNFORCE <span data-wind-df>000</span> kg</p>
+    </div>
+
+    <ol class="rail" aria-label="風洞の検分章">
+      <li><button type="button" class="rail-dot is-on" data-goto="0"><span class="rail-no">00</span><span class="rail-tx">導入</span></button></li>
+      <li><button type="button" class="rail-dot" data-goto="1"><span class="rail-no">01</span><span class="rail-tx">前端</span></button></li>
+      <li><button type="button" class="rail-dot" data-goto="2"><span class="rail-no">02</span><span class="rail-tx">上面</span></button></li>
+      <li><button type="button" class="rail-dot" data-goto="3"><span class="rail-no">03</span><span class="rail-tx">後端</span></button></li>
+    </ol>
+
+    <div class="hero ch-panel is-on" data-ch="0">
+      <p class="eyebrow">八ヶ岳山麓・受注生産のエレクトリック・クーペ</p>
+      <h1 class="hero-h">風と、<br>和解する。</h1>
+      <p class="hero-lead">空気抵抗係数 Cd 0.19。<br class="br-pc">颪 type-01 は、風と戦うことをやめた最初の日本車です。<br class="br-pc">100km/h巡航でいちばん大きな音は、隣の人の小声。</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#drive">試乗を申し込む</a>
+        <a class="btn btn-ghost" href="#design">風洞を見学する<span class="btn-arrow" aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+
+    <article class="ch-panel" data-ch="1">
+      <p class="ch-no">CH.01 — FRONT SPLITTER</p>
+      <h2 class="ch-h">風は、まずここで<br>二手に分かれる。</h2>
+      <p class="ch-tx">地上高94mm。前端の刃が気流を上下に裂き、車体の下には整えられた層流だけを通します。乱れた空気は、一切入れない。</p>
+      <dl class="ch-data">
+        <div><dt>下面流速</dt><dd>52 m/s</dd></div>
+        <div><dt>地上高</dt><dd>94 mm</dd></div>
+      </dl>
+    </article>
+
+    <article class="ch-panel" data-ch="2">
+      <p class="ch-no">CH.02 — ROOF LINE</p>
+      <h2 class="ch-h">屋根の曲率は、<br>風が決めた。</h2>
+      <p class="ch-tx">曲率半径4,120mm。風洞にこもった1,400時間で、剥離点を2mm単位で後方へ追い込みました。この弧はデザイナーの線ではなく、風の線です。</p>
+      <dl class="ch-data">
+        <div><dt>気流剥離</dt><dd>ゼロ</dd></div>
+        <div><dt>風洞検証</dt><dd>1,400 h</dd></div>
+      </dl>
+    </article>
+
+    <article class="ch-panel" data-ch="3">
+      <p class="ch-no">CH.03 — REAR DIFFUSER</p>
+      <h2 class="ch-h">最後の一メートルで、<br>風に礼を。</h2>
+      <p class="ch-tx">車体の下を駆け抜けた気流を、7度の角度で静かに解放する。後方の乱流は消え、時速200kmで210kgのダウンフォースだけが残ります。</p>
+      <dl class="ch-data">
+        <div><dt>拡散角</dt><dd>7°</dd></div>
+        <div><dt>ダウンフォース</dt><dd>210 kg</dd></div>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<section class="sec sec-blueprint" id="design">
+  <div class="wrap">
+    <p class="sec-no">02 — DESIGN</p>
+    <h2 class="sec-h">美しさは、<br class="br-sp">計算の結果にすぎない。</h2>
+    <p class="sec-lead">颪のスタジオに、スケッチはほとんどありません。粘土模型と風洞、その往復だけ。空気が許した線だけが、量産図面に残ります。</p>
+    <figure class="drawing" data-reveal>
+      <svg viewBox="0 0 1270 520" role="img" aria-label="颪 type-01 の寸法図。全長4,480mm、全高1,180mm、ホイールベース2,690mm">
+        <g class="draw-car" fill="none" stroke="#dcebf7" stroke-width="1.6">
+          <path class="dline" pathLength="1" d="M96 358 C94 346 96 332 104 324 C112 314 126 302 148 294 C210 284 268 280 326 272 C380 264 430 240 486 212 C520 192 556 180 600 178 C700 176 800 208 892 236 C930 246 968 242 990 248 C1010 254 1026 270 1030 292 C1032 314 1024 336 1006 348 L986 356 L984 370 A78 78 0 0 0 836 370 L410 370 A78 78 0 0 0 256 370 L168 370 C130 370 104 366 96 358 Z"/>
+          <path class="dline" pathLength="1" d="M356 270 C420 258 470 236 520 208 C552 190 580 184 608 183 C700 182 786 210 862 234 C830 242 700 252 560 262 C480 267 410 270 356 270 Z"/>
+          <circle class="dline" pathLength="1" cx="333" cy="336" r="62"/><circle class="dline" pathLength="1" cx="333" cy="336" r="40"/>
+          <circle class="dline" pathLength="1" cx="913" cy="336" r="62"/><circle class="dline" pathLength="1" cx="913" cy="336" r="40"/>
+        </g>
+        <g class="dims" stroke="#7fb7e0" fill="none" stroke-width="1">
+          <path class="dline" pathLength="1" d="M96 424 L96 444 M1030 424 L1030 444 M96 436 L1030 436"/>
+          <path class="dline" pathLength="1" d="M1096 178 L1116 178 M1096 398 L1116 398 M1108 178 L1108 398"/>
+          <path class="dline" pathLength="1" d="M333 452 L333 468 M913 452 L913 468 M333 462 L913 462"/>
+        </g>
+        <g class="dim-tx" fill="#a7cbe8" font-size="21" font-family="IBM Plex Mono, monospace">
+          <text x="530" y="428">L 4,480</text>
+          <text x="1122" y="294" text-anchor="start">H 1,180</text>
+          <text x="580" y="494">WB 2,690</text>
+          <text x="96" y="152" fill="#7fb7e0" font-size="17">SCALE 1:24 — ALL IN mm</text>
+        </g>
+      </svg>
+      <figcaption class="drawing-cap">量産図面 O-114C。屋根の曲率半径は4,120mm——1,400時間ぶんの風の意見。</figcaption>
+    </figure>
+    <div class="design-notes">
+      <div data-reveal>
+        <h3>消したもの</h3>
+        <p>ドアハンドル、ワイパーアーム、ドアミラー。風が指を引っかける場所を、ひとつずつ削りました。ミラーはカメラに、ハンドルは触れると沈む面に。</p>
+      </div>
+      <div data-reveal>
+        <h3>残したもの</h3>
+        <p>フェンダーの峰と、ロングノーズ。空力上は不利でも、車としての品位を守る線は残す。Cd 0.19は、我慢の数字ではありません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-dark" id="performance">
+  <div class="wrap">
+    <p class="sec-no">03 — PERFORMANCE</p>
+    <h2 class="sec-h">数字は、風の通訳。</h2>
+    <p class="sec-lead">颪の性能表は、モーターの自慢ではなく空力の成績表です。同じ電池でより遠くへ、同じ速度でより静かに。</p>
+    <ul class="specs">
+      <li data-reveal><em class="spec-num"><span data-count="0.19" data-count-dec="2" data-count-dur="1600">0</span></em><span class="spec-cap">空気抵抗係数 Cd</span></li>
+      <li data-reveal><em class="spec-num"><span data-count="580" data-count-dur="1600">0</span><i>km</i></em><span class="spec-cap">一充電航続距離（WLTC）</span></li>
+      <li data-reveal><em class="spec-num"><span data-count="400" data-count-dur="1400">0</span><i>kW</i></em><span class="spec-cap">最高出力（544PS）</span></li>
+      <li data-reveal><em class="spec-num"><span data-count="3.4" data-count-dec="1" data-count-dur="1400">0</span><i>s</i></em><span class="spec-cap">0-100km/h 加速</span></li>
+      <li data-reveal><em class="spec-num"><span data-count="92" data-count-dur="1200">0</span><i>kWh</i></em><span class="spec-cap">バッテリー総電力量</span></li>
+      <li data-reveal><em class="spec-num"><span data-count="57" data-count-dur="1200">0</span><i>dB</i></em><span class="spec-cap">車内騒音（100km/h巡航）</span></li>
+    </ul>
+    <p class="specs-note">社内計測値。航続距離は空調オフ・単独乗車時。冬の颪が吹く日は、1割ほど短くなります——それも正直に。</p>
+  </div>
+</section>
+
+<section class="sec sec-silence" id="silence">
+  <div class="wrap">
+    <p class="sec-no">04 — SILENCE</p>
+    <h2 class="sec-h">静けさは、装備ではなく<br class="br-sp">空力です。</h2>
+    <div class="silence-grid">
+      <p class="sec-lead">時速100kmの車内騒音のほとんどは、エンジンではなく風の悲鳴です。だから颪は、防音材を足す前に、悲鳴の原因を消しました。剥離のないルーフ、渦を作らないミラーレス、密閉されたフロア。速く走るほど、この設計の意味がわかります。</p>
+      <svg class="wave" viewBox="0 0 640 120" role="img" aria-label="騒音波形の比較。一般的なセダンは大きく波打ち、颪はほぼ直線">
+        <path d="M0 60 Q20 18 40 60 T80 60 T120 60 T160 60 T200 60 T240 60 T280 60" fill="none" stroke="#5a7591" stroke-width="2"/>
+        <path d="M320 60 C400 58 480 61 640 60" fill="none" stroke="#9adcff" stroke-width="2.4"/>
+        <text x="0" y="104" fill="#8fa5ba" font-size="15" font-family="IBM Plex Mono, monospace">SEDAN 67dB</text>
+        <text x="320" y="104" fill="#bfe7ff" font-size="15" font-family="IBM Plex Mono, monospace">OROSHI 57dB</text>
+      </svg>
+    </div>
+    <ul class="silence-list">
+      <li data-reveal><strong>二重隔壁モーター</strong><span>駆動音は真空層で閉じ込める。聞こえるのはタイヤと、かすかな風だけ。</span></li>
+      <li data-reveal><strong>五層ラミネートガラス</strong><span>4.6mmのガラスの間に、音を熱に変える樹脂膜を二枚。</span></li>
+      <li data-reveal><strong>風切り音の主犯を排除</strong><span>ミラー・ハンドル・ワイパー。突起物ゼロの側面が、57dBの正体です。</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec sec-light" id="atelier">
+  <div class="wrap">
+    <p class="sec-no">05 — ATELIER</p>
+    <h2 class="sec-h">颪（おろし）は、<br class="br-sp">この土地の風の名前。</h2>
+    <div class="atelier-cols">
+      <p class="sec-lead">八ヶ岳から諏訪湖へ吹き下ろす冬の強風を、この土地では颪と呼びます。長野県茅野市、標高900mの工房。元レース空力エンジニア6名が2019年に始めた小さな会社は、いまも年間200台しか作りません。速い車ではなく、風に愛される車を作るためです。</p>
+      <ul class="atelier-nums">
+        <li><em><span data-count="200" data-count-dur="1400">0</span><i>台</i></em><span>年間生産台数（受注生産）</span></li>
+        <li><em><span data-count="28" data-count-dur="1200">0</span><i>人</i></em><span>茅野工房の職人</span></li>
+        <li><em><span data-count="714" data-count-dur="1600">0</span><i>時間</i></em><span>一台にかける組立時間</span></li>
+      </ul>
+    </div>
+    <blockquote class="atelier-quote" data-reveal>
+      <p>「急いで作った車は、音でわかる。<br>うちの納期が14ヶ月なのは、謝ることじゃない。」</p>
+      <cite>— 颪モータース 工房長</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="sec sec-dark" id="buy">
+  <div class="wrap">
+    <p class="sec-no">06 — ORDER</p>
+    <h2 class="sec-h">価格も、乱流なし。</h2>
+    <div class="price-card" data-reveal>
+      <p class="price-name">颪 type-01（全グレード共通・単一仕様）</p>
+      <p class="price-num"><i>¥</i>13,970,000<span class="price-tax">税込</span></p>
+      <ul class="price-notes">
+        <li>先行予約金 ¥300,000（納車前まで全額返金できます）</li>
+        <li>オプション商法はしません。装備は全車同一、選ぶのは外装8色と内装3色だけ。</li>
+        <li>CEV補助金の対象外です。颪は量産要件を満たしません——正直に書いておきます。</li>
+      </ul>
+    </div>
+    <ol class="order-steps">
+      <li data-reveal><span class="step-no">01</span><h3>先行予約を申し込む</h3><p>オンラインで5分。順番待ちの列に、静かに並びます。</p></li>
+      <li data-reveal><span class="step-no">02</span><h3>茅野工房で仕様を決める</h3><p>外装色と内装を、実車と風洞を見ながら。遠方の方はオンラインでも。</p></li>
+      <li data-reveal><span class="step-no">03</span><h3>14ヶ月後、鍵を渡します</h3><p>納車は工房で。あなたの一台が通った風洞を、最後に一緒に歩きます。</p></li>
+    </ol>
+    <div class="buy-cta"><a class="btn btn-solid" href="#drive">先行予約を申し込む</a></div>
+  </div>
+</section>
+
+<section class="sec sec-blueprint" id="drive">
+  <div class="wrap drive-wrap">
+    <p class="sec-no">07 — TEST DRIVE</p>
+    <h2 class="sec-h">カタログは、<br class="br-sp">風を語れないので。</h2>
+    <p class="sec-lead">試乗コースは霧ヶ峰、約40分のワインディングです。ビーナスラインの登りで、風と戦わない車がどれだけ静かか聞いてください。土日のみ、1日4組。急かしません。</p>
+    <dl class="drive-info">
+      <div><dt>集合</dt><dd>颪モータース 茅野工房（JR茅野駅から送迎10分）</dd></div>
+      <div><dt>コース</dt><dd>霧ヶ峰・ビーナスライン 約28km / 40分</dd></div>
+      <div><dt>枠</dt><dd>土日 10:00 / 11:30 / 14:00 / 15:30</dd></div>
+    </dl>
+    <form class="drive-form" aria-label="試乗予約">
+      <div class="form-row">
+        <label for="f-name">お名前</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" placeholder="諏訪 颯太" required>
+      </div>
+      <div class="form-row">
+        <label for="f-mail">メールアドレス</label>
+        <input id="f-mail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-row">
+        <label for="f-date">希望日（土日）</label>
+        <input id="f-date" name="date" type="date" required>
+      </div>
+      <button type="submit" class="btn btn-solid btn-wide">試乗を申し込む</button>
+      <p class="form-note">申込み後2営業日以内に、担当者から確認のご連絡をします。キャンセル料はかかりません。</p>
+    </form>
+  </div>
+</section>
+
+<section class="sec sec-dark sec-trust" id="trust">
+  <div class="wrap">
+    <p class="sec-no">08 — AFTER</p>
+    <h2 class="sec-h">買ったあとの話を、<br class="br-sp">先にします。</h2>
+    <dl class="trust-list">
+      <div data-reveal><dt>保証</dt><dd>車両5年/10万km。バッテリーは8年/16万kmで、健全度が70%を切れば無償交換します。</dd></div>
+      <div data-reveal><dt>充電</dt><dd>急速150kW（10→80%を28分）、自宅は6kWの普通充電。ケーブルは標準装備です。</dd></div>
+      <div data-reveal><dt>年次点検</dt><dd>年に一度、あなたの颪は風洞へ里帰りします。空力パーツの実測検査は、ずっと無償。</dd></div>
+      <div data-reveal><dt>販売</dt><dd>オンラインと茅野工房のみ。ディーラー網も、値引きの駆け引きもありません。</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-brand">颪 <em>OROSHI</em></p>
+      <p class="foot-copy">風と、和解する。</p>
+    </div>
+    <nav class="foot-nav" aria-label="フッター">
+      <a href="#tunnel">風洞</a>
+      <a href="#design">設計</a>
+      <a href="#performance">性能</a>
+      <a href="#atelier">工房</a>
+      <a href="#drive">試乗</a>
+    </nav>
+    <p class="foot-note">颪 OROSHI は架空のブランドです。本ページはデザインポートフォリオとして制作されたコンセプトワークであり、実在の企業・製品とは関係ありません。<br>Typefaces: Saira Condensed / IBM Plex Mono (SIL OFL)</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

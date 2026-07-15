@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YURAGI 揺 ｜ 蔵前・動く装身具のアトリエ</title>
+<meta name="description" content="蔵前の路地にある、ひとりのアトリエ。身につけた人の呼吸で揺れ、昼の光をすくうドロップピアスだけを、金と淡水パールで仕立てます。揺れの周期から設計する、動く装身具。">
+<meta name="theme-color" content="#f4efe6">
+<link rel="canonical" href="https://example.com/yuragi/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YURAGI 揺 ｜ 蔵前・動く装身具のアトリエ">
+<meta property="og:description" content="揺れて、はじめて光る。呼吸で動くドロップピアスを、金と淡水パールで仕立てる蔵前のアトリエ。">
+<meta property="og:image" content="ogp.png">
+<meta property="og:url" content="https://example.com/yuragi/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4v6' stroke='%23a9793a' stroke-width='1.4' fill='none'/%3E%3Cpath d='M16 11c4 0 7 3.4 7 8.5S19.6 28 16 28s-7-3.9-7-8.5S12 11 16 11z' fill='%23c99f57'/%3E%3Cpath d='M16 11c4 0 7 3.4 7 8.5 0 2-.6 3.7-1.6 5C19 24 16 21 16 11z' fill='%23a9793a'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/cormorant-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/spacemono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className='js';addEventListener('load',function(){setTimeout(function(){var n=document.querySelectorAll('.reveal:not(.in)');for(var i=0;i<n.length;i++)n[i].classList.add('in')},6000)})</script>
+</head>
+<body>
+<a class="skip" href="#collection">本文へスキップ</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0dcae"/><stop offset=".35" stop-color="#c99f57"/>
+      <stop offset=".7" stop-color="#a9793a"/><stop offset="1" stop-color="#7c561f"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7cd92"/><stop offset="1" stop-color="#b3853f"/>
+    </linearGradient>
+    <radialGradient id="pearl" cx=".38" cy=".34" r=".8">
+      <stop offset="0" stop-color="#fffef9"/><stop offset=".5" stop-color="#f4ead9"/>
+      <stop offset="1" stop-color="#d9c6ad"/>
+    </radialGradient>
+    <radialGradient id="stone" cx=".4" cy=".32" r=".9">
+      <stop offset="0" stop-color="#fef4d8"/><stop offset=".55" stop-color="#e6c477"/>
+      <stop offset="1" stop-color="#9c6f2c"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#8a6320" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+</svg>
+
+<header class="site-head" id="head">
+  <a class="brand" href="#top" aria-label="YURAGI ホーム">
+    <span class="mark">YURAGI</span><span class="kanji">揺</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav" id="nav" aria-label="サイト内ナビゲーション">
+    <a href="#statement">思想</a>
+    <a href="#collection">コレクション</a>
+    <a href="#mechanism">揺れの設計</a>
+    <a href="#maker">作り手</a>
+    <a href="#access">アクセス</a>
+    <a class="cta-mini" href="#final">来店を予約</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="ヒーロー">
+    <div class="hero-stage" id="heroStage">
+      <svg viewBox="0 0 300 640" role="img" aria-label="金と淡水パールのドロップピアスが吊られ、静かに揺れている">
+        <ellipse id="heroGlow" cx="150" cy="430" rx="118" ry="150" fill="#f6ecd2" opacity="0.55"/>
+        <!-- fixed post -->
+        <circle cx="150" cy="78" r="4.4" fill="url(#goldSoft)"/>
+        <path d="M150 82 C150 96 150 104 150 108" stroke="url(#goldSoft)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- swinging assembly rotates around pivot (150,90) -->
+        <g id="swing">
+          <!-- ear wire hook -->
+          <path d="M150 108 c0 -10 -18 -12 -18 2 c0 12 18 14 18 30" fill="none" stroke="url(#gold)" stroke-width="3.2" stroke-linecap="round"/>
+          <circle cx="150" cy="150" r="6.2" fill="none" stroke="url(#gold)" stroke-width="2.6"/>
+          <!-- thin drop bar -->
+          <path d="M150 156 L150 214" stroke="url(#goldSoft)" stroke-width="2.4"/>
+          <!-- pearl accent -->
+          <circle cx="150" cy="228" r="14" fill="url(#pearl)"/>
+          <circle cx="145" cy="223" r="4" fill="#fffef9" opacity=".85"/>
+          <path d="M150 242 L150 262" stroke="url(#goldSoft)" stroke-width="2.4"/>
+          <!-- faceted teardrop gem -->
+          <g filter="url(#soft)">
+            <path d="M150 264 C120 300 108 344 108 388 C108 448 150 486 150 486 C150 486 192 448 192 388 C192 344 180 300 150 264 Z" fill="url(#stone)"/>
+            <path d="M150 264 C120 300 108 344 108 388 C108 448 150 486 150 486 Z" fill="#8a5f22" opacity=".22"/>
+            <path d="M150 300 L128 372 L150 400 L172 372 Z" fill="#fff3d4" opacity=".55"/>
+            <path d="M150 400 L128 372 L134 430 Z" fill="#c69a52" opacity=".6"/>
+            <path d="M150 400 L172 372 L166 430 Z" fill="#a5772f" opacity=".55"/>
+            <path d="M150 400 L134 430 L150 456 L166 430 Z" fill="#7c5620" opacity=".5"/>
+            <path d="M150 264 C120 300 108 344 108 388 C108 448 150 486 150 486 C150 486 192 448 192 388 C192 344 180 300 150 264 Z" fill="none" stroke="url(#gold)" stroke-width="2.4"/>
+            <ellipse id="glint" class="glint" cx="138" cy="342" rx="9" ry="20" fill="#fffdf3" opacity=".8" transform="rotate(-18 138 342)"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow reveal">Kuramae Atelier — 動く装身具</p>
+      <h1 class="reveal d1"><span class="en">jewelry that lives when you move</span>揺れて、はじめて<br><em>光る。</em></h1>
+      <p class="lead reveal d2">蔵前の路地、ひとりのアトリエ。身につけた人の呼吸で揺れ、昼の光をすくうドロップピアスだけを、金と淡水パールで仕立てています。</p>
+      <div class="actions reveal d3">
+        <a class="btn btn-primary" href="#final">来店を予約する</a>
+        <a class="btn btn-ghost" href="#collection">コレクションを見る</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">SCROLL<span></span></div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="band panel statement" id="statement" aria-label="思想">
+    <div class="wrap">
+      <div class="rule-gold reveal" aria-hidden="true"></div>
+      <p class="big reveal d1">宝石は、<span class="q">静物</span>じゃない。</p>
+      <p class="sub reveal d2">ショーケースの中でいちばん美しい石が、あなたの耳もとで同じ顔をするとは限りません。歩く、振り向く、笑う——その0.5秒の揺れの中でしか現れない光がある。だから私たちは、飾りより先に「動き」を設計します。</p>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section class="band" aria-label="素材">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Materials — 素材</p>
+        <h2 class="sec-title reveal d1">軽く、<em>やわらかく</em>揺れる素材だけ。</h2>
+        <p class="lede reveal d2">重い石は、耳もとで止まってしまう。揺れの周期をつくるために、素材はここまで絞りました。</p>
+      </div>
+      <div class="mat-grid reveal d1">
+        <div class="mat"><span class="k">18</span><span class="n">K18 ゴールド</span><span class="d">主役の金。しなやかで、光をいちばん深く返す。留め具まで同素材で。</span><span class="spec">Au 75.0% / 税込</span></div>
+        <div class="mat"><span class="k">10</span><span class="n">K10 ゴールド</span><span class="d">日常づかいの強度。軽さと価格の折り合いがよく、初めての一点に。</span><span class="spec">Au 41.7% / daily</span></div>
+        <div class="mat"><span class="k">◍</span><span class="n">淡水パール</span><span class="d">粒ごとに歪みのある天然の形。揺れると表面のてりが移ろう。</span><span class="spec">5–8mm / natural</span></div>
+        <div class="mat"><span class="k">△</span><span class="n">天然石カット</span><span class="d">シトリン・ラブラドライト等。面取りは揺れで光が走る角度に。</span><span class="spec">brilliant / hand-set</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="band surface" id="collection" aria-label="コレクション">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Collection — 定番の四型</p>
+        <h2 class="sec-title reveal d1">耳もとで、<em>時間</em>が揺れる。</h2>
+        <p class="lede reveal d2">すべて受注仕立て。価格はすべて税込・送料無料。刻印とサイズはあつらえます。</p>
+      </div>
+      <div class="coll">
+        <article class="piece reveal d1">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 140 220" class="sway" data-amp="6">
+              <circle cx="70" cy="26" r="12" fill="none" stroke="url(#gold)" stroke-width="2.4"/>
+              <path d="M70 38 L70 74" stroke="url(#goldSoft)" stroke-width="2"/>
+              <path d="M70 78 C50 104 42 138 42 164 C42 196 70 214 70 214 C70 214 98 196 98 164 C98 138 90 104 70 78 Z" fill="url(#stone)" stroke="url(#gold)" stroke-width="2"/>
+              <ellipse cx="60" cy="128" rx="6" ry="14" fill="#fffdf3" opacity=".6" transform="rotate(-18 60 128)"/>
+            </svg>
+          </div>
+          <div class="row"><h3><span class="en">Shizuku</span>ドロップピアス「雫」</h3><span class="price">¥42,000</span></div>
+          <p class="meta">K18 / 淡水パール7mm / 全長38mm</p>
+          <p class="desc">歩幅にあわせてゆっくり戻る、いちばん静かな揺れ。最初の一点に選ばれます。</p>
+        </article>
+        <article class="piece reveal d2">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 140 220" class="sway" data-amp="9">
+              <path d="M70 30 a16 16 0 1 0 0.1 0" fill="none" stroke="url(#gold)" stroke-width="2.6"/>
+              <path d="M70 62 L70 96" stroke="url(#goldSoft)" stroke-width="2"/>
+              <circle cx="70" cy="120" r="20" fill="url(#pearl)"/>
+              <circle cx="63" cy="113" r="5" fill="#fffef9" opacity=".85"/>
+              <path d="M70 142 L70 172" stroke="url(#goldSoft)" stroke-width="2"/>
+              <path d="M58 172 L82 172 L70 200 Z" fill="url(#goldSoft)" stroke="url(#gold)" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <div class="row"><h3><span class="en">Furi</span>イヤリング「ふり」</h3><span class="price">¥28,000</span></div>
+          <p class="meta">K10 / 淡水パール10mm / ノンホール</p>
+          <p class="desc">穴を開けない留め具でも、揺れる。挟む位置で振れ幅が変わる設計です。</p>
+        </article>
+        <article class="piece reveal d1">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 140 220" class="sway" data-amp="5">
+              <path d="M20 40 C50 70 90 70 120 40" fill="none" stroke="url(#goldSoft)" stroke-width="1.6"/>
+              <path d="M70 55 L70 96" stroke="url(#goldSoft)" stroke-width="1.8"/>
+              <path d="M70 100 C54 122 48 150 48 170 C48 196 70 210 70 210 C70 210 92 196 92 170 C92 150 86 122 70 100 Z" fill="url(#stone)" stroke="url(#gold)" stroke-width="1.8"/>
+              <path d="M70 128 L58 158 L70 174 L82 158 Z" fill="#fff3d4" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="row"><h3><span class="en">Mio</span>一連ペンダント「澪」</h3><span class="price">¥58,000</span></div>
+          <p class="meta">K18 / チェーン40cm / 天然石8mm</p>
+          <p class="desc">鎖骨で息をするように、呼吸のたび石がわずかに上下する長さに調整。</p>
+        </article>
+        <article class="piece reveal d2">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 140 220" class="sway" data-amp="8">
+              <circle cx="70" cy="30" r="10" fill="none" stroke="url(#gold)" stroke-width="2.2"/>
+              <path d="M70 40 L70 70" stroke="url(#goldSoft)" stroke-width="2"/>
+              <circle cx="70" cy="140" r="52" fill="none" stroke="url(#gold)" stroke-width="6"/>
+              <circle cx="70" cy="140" r="52" fill="none" stroke="#fff3d4" stroke-width="1.4" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="row"><h3><span class="en">Wa</span>フープ「わ」</h3><span class="price">¥36,000</span></div>
+          <p class="meta">K18 / 直径26mm / 中空パイプ</p>
+          <p class="desc">中を空洞に挽いて軽くした金の輪。回りながら、面が光をひろう。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MECHANISM (signature doubled) -->
+  <section class="band" id="mechanism" aria-label="揺れの設計">
+    <div class="mech wrap">
+      <div class="mech-fig reveal" aria-hidden="true">
+        <svg viewBox="0 0 380 320">
+          <!-- ceiling / pivot -->
+          <line x1="60" y1="46" x2="320" y2="46" stroke="var(--line)" stroke-width="1.4" stroke-dasharray="2 5"/>
+          <circle cx="190" cy="46" r="5" fill="var(--gold-a)"/>
+          <text class="anno anno-v" x="200" y="40">PIVOT · 支点</text>
+          <!-- swing arc -->
+          <path d="M120 240 A120 120 0 0 1 260 240" fill="none" stroke="var(--gold-b)" stroke-width="1" stroke-dasharray="3 4" opacity=".7"/>
+          <!-- rod -->
+          <g id="mechSwing">
+            <line x1="190" y1="46" x2="190" y2="210" stroke="var(--gold-a)" stroke-width="2"/>
+            <circle cx="190" cy="228" r="20" fill="url(#goldSoft)" stroke="var(--gold-a)" stroke-width="1.5"/>
+            <circle cx="184" cy="222" r="5" fill="#fffdf3" opacity=".7"/>
+          </g>
+          <!-- COG marker -->
+          <line x1="190" y1="46" x2="150" y2="150" stroke="none"/>
+          <circle cx="250" cy="150" r="3" fill="var(--ink)"/>
+          <text class="anno" x="258" y="140">CENTRE OF</text>
+          <text class="anno" x="258" y="152">GRAVITY · 重心</text>
+          <path d="M250 150 L196 200" stroke="var(--line)" stroke-width="1" stroke-dasharray="2 3"/>
+          <!-- amplitude label -->
+          <text class="anno anno-v" x="120" y="286">← 振れ幅 T = 2π√(L/g) →</text>
+          <text class="anno" x="150" y="304">L = 支点から重心までの距離</text>
+        </svg>
+      </div>
+      <div>
+        <div class="sec-head">
+          <p class="eyebrow reveal">The Design of Sway — 揺れの設計</p>
+          <h2 class="sec-title reveal d1">1/100gで、<em>周期</em>を合わせる。</h2>
+          <p class="lede reveal d2">上のピアスは、あなたのスクロールや指の動きに、本物の振り子として反応しています。同じ物理を、耳もとの一点にも仕込みます。</p>
+        </div>
+        <ol class="mech-list reveal d2">
+          <li><span class="num">01</span><div><span class="t">支点をどこに置くか</span><p class="b">留め具の穴一つで、揺れの軸が変わる。まず軸を決めます。</p></div></li>
+          <li><span class="num">02</span><div><span class="t">重心までの距離 L</span><p class="b">石とチェーンの重さ配分で、揺れの速さ(周期)が決まる。</p></div></li>
+          <li><span class="num">03</span><div><span class="t">減衰のさじ加減</span><p class="b">速すぎれば落ち着かず、遅すぎれば鈍い。歩幅に合う戻りへ。</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAKER -->
+  <section class="band surface" id="maker" aria-label="作り手">
+    <div class="maker wrap">
+      <div class="maker-card reveal">
+        <svg class="glyph" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true">
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--gold-hair)" stroke-width="1"/>
+          <circle cx="80" cy="80" r="42" fill="none" stroke="var(--gold-hair)" stroke-width="1"/>
+          <line x1="80" y1="20" x2="80" y2="140" stroke="var(--gold-hair)" stroke-width="1"/>
+        </svg>
+        <p class="role">Maker · 金工作家</p>
+        <p class="name">東 望<span class="en">Nozomu Azuma</span></p>
+        <p class="sig">元・機械式時計 調整技師 / 蔵前 2019–</p>
+      </div>
+      <div class="reveal d2">
+        <blockquote><span class="lead-mark">“</span>テンプの往復を、十年ずっと見てきました。いちばん美しい揺れには、決まった周期があります。その周期を、耳もとに移しているだけなんです。</blockquote>
+        <p class="sig">— 東 望</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER FLOW -->
+  <section class="band" aria-label="あつらえの流れ">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">How we make yours — あつらえ</p>
+        <h2 class="sec-title reveal d1">四つの工程で、<em>あなたの周期</em>へ。</h2>
+      </div>
+      <div class="flow reveal d1">
+        <div class="step"><h3>相談</h3><p>髪の長さ、よく動く日か。暮らしを聞いてから素材を選びます。所要40分・無料。</p></div>
+        <div class="step"><h3>重心設計</h3><p>石とチェーンで揺れの周期を試算。1/100g単位で重りを足し引きします。</p></div>
+        <div class="step"><h3>試作の揺れ確認</h3><p>試作を実際に着けて、鏡の前で揺らす。納得いくまで支点を調整します。</p></div>
+        <div class="step"><h3>仕立て</h3><p>本番の金で仕上げ、刻印を入れてお渡し。目安は3〜4週間です。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICES -->
+  <section class="band panel" aria-label="お客様の声">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Voices — 着けた人の言葉</p>
+        <h2 class="sec-title reveal d1">「動くたび、<em>気づく</em>」</h2>
+      </div>
+      <div class="voices">
+        <figure class="voice reveal d1"><span class="star" aria-hidden="true">★★★★★</span><p>信号待ちでふと揺れて、自分の一日を思い出す。そういう装身具は初めてでした。</p><figcaption class="who">32歳 / 雫をあつらえ</figcaption></figure>
+        <figure class="voice reveal d2"><span class="star" aria-hidden="true">★★★★★</span><p>重心の話を一時間。ここまで理屈で作る店だとは思わず、通ってしまう。</p><figcaption class="who">45歳 / 澪をあつらえ</figcaption></figure>
+        <figure class="voice reveal d3"><span class="star" aria-hidden="true">★★★★★</span><p>母の指輪をほどいて、揺れるピアスに。金が生き返ったみたいで泣きました。</p><figcaption class="who">58歳 / リメイク</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONEST PRICING -->
+  <section class="band" aria-label="価格と保証">
+    <div class="wrap">
+      <div class="honest">
+        <div class="sec-head" style="margin:0">
+          <p class="eyebrow reveal">Honest — 誠実のはなし</p>
+          <h2 class="sec-title reveal d1">値段の内訳まで、<em>正直に</em>。</h2>
+          <p class="lede reveal d2">金は日々の相場で動きます。当日の地金価格を明細でお見せし、工賃と分けて記載します。</p>
+        </div>
+        <dl class="reveal d2">
+          <dt>表示価格</dt><dd>すべて税込・国内送料無料。ラッピング無料。</dd>
+          <dt>地金相場</dt><dd>K18は当日レートで再計算。差額は明細に明記します。</dd>
+          <dt>保証</dt><dd>留め具のゆるみは1年間無料調整。以降も実費のみ。</dd>
+          <dt>修理</dt><dd>他店品・他社品の揺れ調整も相談可(要見積り)。</dd>
+          <dt>リメイク</dt><dd>手持ちの金を溶かして仕立て直し。地金分を差し引きます。</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="band surface" aria-label="よくある質問">
+    <div class="wrap">
+      <div class="sec-head" style="text-align:center;align-items:center">
+        <p class="eyebrow reveal">FAQ</p>
+        <h2 class="sec-title reveal d1">よくある、<em>ご質問</em>。</h2>
+      </div>
+      <div class="faq reveal d1">
+        <details><summary>金属アレルギーが心配です。</summary><p class="a">主素材はK18・K10で、留め具まで同素材を基本にしています。ニッケルは使いません。心配な方には事前のパッチ確認用サンプルもお渡しできます。</p></details>
+        <details><summary>お手入れはどうすれば。</summary><p class="a">やわらかい布で拭くだけで十分です。淡水パールは汗に弱いため、外したら軽く拭ってから保管を。年1回の無料クリーニングも承ります。</p></details>
+        <details><summary>予約は必要ですか。</summary><p class="a">あつらえ相談は完全予約制です。既製の四型のご購入のみでしたら、営業時間内はご予約なしでご覧いただけます。</p></details>
+        <details><summary>納期の目安は。</summary><p class="a">あつらえは試作確認を含めて3〜4週間です。お急ぎの場合は在庫素材での短縮もご相談ください。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section class="band" id="access" aria-label="アクセス">
+    <div class="access wrap">
+      <div class="info">
+        <div class="sec-head">
+          <p class="eyebrow reveal">Access — 蔵前</p>
+          <h2 class="sec-title reveal d1">路地の、<em>奥の一軒</em>。</h2>
+        </div>
+        <dl class="reveal d2">
+          <dt>所在</dt><dd>東京都台東区蔵前(ご予約時に詳細をご案内)</dd>
+          <dt>最寄</dt><dd>都営浅草線・大江戸線「蔵前」徒歩4分</dd>
+          <dt>営業</dt><dd>12:00 – 19:00 / 木曜定休</dd>
+          <dt>予約</dt><dd>あつらえ相談は予約制 / 03-0000-0000</dd>
+        </dl>
+      </div>
+      <div class="map reveal d2" aria-hidden="true">
+        <svg viewBox="0 0 320 300">
+          <rect width="320" height="300" fill="#f6f1e8"/>
+          <path d="M0 90 H320 M0 190 H320 M90 0 V300 M210 0 V300" stroke="#e3d9c6" stroke-width="10"/>
+          <path d="M0 140 H320 M150 0 V300" stroke="#ece3d3" stroke-width="4"/>
+          <path d="M210 190 L250 150 L280 175" stroke="var(--gold-hair)" stroke-width="2" fill="none" stroke-dasharray="3 4"/>
+          <circle cx="250" cy="150" r="8" fill="var(--gold-a)"/>
+          <circle cx="250" cy="150" r="15" fill="none" stroke="var(--gold-a)" stroke-width="1.4" opacity=".5"/>
+          <text x="16" y="30" font-family="Space Mono, monospace" font-size="11" letter-spacing="2" fill="#9a8c78">KURAMAE</text>
+          <text x="196" y="230" font-family="Space Mono, monospace" font-size="9" letter-spacing="1" fill="#a9793a">YURAGI</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="band final" id="final" aria-label="来店予約">
+    <div class="wrap">
+      <div class="rule-gold reveal" aria-hidden="true"></div>
+      <h2 class="reveal d1">揺れを、<em>試しに</em>きてください。</h2>
+      <p class="sub reveal d2">鏡の前で、あなたの歩幅に合う周期を一緒にさがします。手ぶらでも、母の古い指輪を握りしめても。</p>
+      <div class="actions reveal d3">
+        <a class="btn btn-primary" href="mailto:atelier@example.com?subject=来店のご予約">来店を予約する</a>
+        <a class="btn btn-ghost" href="#collection">四型をもう一度見る</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-grid">
+    <div>
+      <span class="mark">YURAGI</span> <span class="kanji">揺</span>
+      <p>身につけた人の呼吸で揺れ、昼の光をすくうドロップピアスのアトリエ。蔵前の路地から。</p>
+    </div>
+    <div class="foot-col">
+      <h4>Explore</h4>
+      <a href="#statement">思想</a>
+      <a href="#collection">コレクション</a>
+      <a href="#mechanism">揺れの設計</a>
+      <a href="#maker">作り手</a>
+    </div>
+    <div class="foot-col">
+      <h4>Visit</h4>
+      <a href="#access">アクセス</a>
+      <a href="#final">来店を予約</a>
+      <a href="mailto:atelier@example.com">atelier@example.com</a>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© 2026 YURAGI Atelier, Kuramae</span>
+    <span>Handmade in Tokyo · 全て税込表記</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

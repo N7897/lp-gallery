@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0d1418"/>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="-6%" r="80%">
+      <stop offset="0%" stop-color="#14222b"/>
+      <stop offset="60%" stop-color="#0d1418"/>
+    </radialGradient>
+    <radialGradient id="pearl" cx="40%" cy="34%" r="72%">
+      <stop offset="0%" stop-color="#fdfbf6"/>
+      <stop offset="16%" stop-color="#f1ece2"/>
+      <stop offset="40%" stop-color="#ddd8cd"/>
+      <stop offset="64%" stop-color="#c2c6c4"/>
+      <stop offset="84%" stop-color="#9aa4a5"/>
+      <stop offset="100%" stop-color="#586669"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e6d3b3" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#a8c8bb" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0d1418" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="330" cy="315" r="260" fill="url(#glow)"/>
+  <circle cx="330" cy="315" r="185" fill="url(#pearl)"/>
+  <circle cx="278" cy="258" r="34" fill="#ffffff" opacity="0.65"/>
+  <text x="640" y="278" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="120" fill="#ece7de">tamayura</text>
+  <text x="646" y="360" font-family="'Yu Mincho', serif" font-size="46" letter-spacing="10" fill="#bcc3bf">玉響 ・ 選珠アトリエ</text>
+  <text x="646" y="432" font-family="'Yu Mincho', serif" font-size="34" letter-spacing="4" fill="#e6d3b3">あこや本真珠の誂え一連 ／ 神戸・北野</text>
+</svg>
