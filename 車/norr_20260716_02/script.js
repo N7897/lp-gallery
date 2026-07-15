@@ -6,29 +6,29 @@
 
   function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
 
-  /* ── 回転検分: スクロール位置を0..1に正規化し、車体のrotateY角度・章切替に写像
-     Polestarの実配置写真の代わりに、静止した1台のSVGを軽く傾けて「見て回る」感覚を作る ── */
+  /* ── 組立検分: スクロール位置0..1で散らばった部品写真が定位置へ収束し、
+     終盤で完成車の実写にクロスフェードする(位置合わせの粗をフェードで吸収する設計) ── */
   function initRotate() {
     var sec = document.getElementById("rotate");
-    var car = document.querySelector(".car-turn");
     var azEl = document.querySelector("[data-azimuth]");
     var notes = document.querySelectorAll(".rn");
-    if (!sec || !car) return;
-
-    var stops = [0, 0.5, 1];
-    var angles = [10, -6, 4];
-    var azimuths = [0, 48, 96];
+    var parts = document.querySelectorAll(".asm");
+    var finalImg = document.querySelector(".asm-final");
+    if (!sec || !parts.length) return;
 
     function apply(p) {
-      var seg = p < stops[1] ? 0 : 1;
-      var segP = seg === 0 ? p / stops[1] : (p - stops[1]) / (stops[2] - stops[1]);
-      segP = clamp(segP, 0, 1);
-      var angle = angles[seg] + (angles[seg + 1] - angles[seg]) * segP;
-      var az = azimuths[seg] + (azimuths[seg + 1] - azimuths[seg]) * segP;
+      var e = 1 - Math.pow(1 - clamp(p / 0.75, 0, 1), 3);
+      var fade = clamp((p - 0.7) / 0.18, 0, 1);
       if (!reduced) {
-        car.style.transform = "perspective(1400px) rotateY(" + angle.toFixed(2) + "deg)";
+        parts.forEach(function (el) {
+          var k = 1 - e;
+          el.style.transform = "translate(" + (el.dataset.dx * k).toFixed(1) + "px," +
+            (el.dataset.dy * k).toFixed(1) + "px) rotate(" + (el.dataset.rot * k).toFixed(2) + "deg)";
+          el.style.opacity = (1 - fade).toFixed(3);
+        });
+        if (finalImg) finalImg.style.opacity = fade.toFixed(3);
       }
-      if (azEl) azEl.textContent = Math.round(az);
+      if (azEl) azEl.textContent = Math.round(e * 100);
 
       var idx = p < 0.34 ? 0 : p < 0.67 ? 1 : 2;
       notes.forEach(function (n) {
@@ -36,7 +36,13 @@
       });
     }
 
-    if (reduced) { apply(0.5); return; }
+    if (reduced) {
+      parts.forEach(function (el) { el.style.opacity = "0"; });
+      if (finalImg) finalImg.style.opacity = "1";
+      if (azEl) azEl.textContent = "100";
+      apply(1);
+      return;
+    }
 
     var running = false, rafId = 0;
     function tick() {

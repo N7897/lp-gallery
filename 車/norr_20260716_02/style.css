@@ -215,7 +215,13 @@ h1, h2, h3, .sec-lead, .hero-lead {
   padding-bottom: 3vh;
 }
 .car-svg { display: block; width: 100%; height: auto; }
-.car-hero { filter: drop-shadow(0 18px 30px rgba(30, 30, 24, 0.14)); }
+.car-photo {
+  display: block;
+  width: min(880px, 86vw);
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 22px 34px rgba(30, 30, 24, 0.2));
+}
 
 .scroll-cue {
   position: absolute;
@@ -279,6 +285,27 @@ html.js .rotate-stage {
   transform: translateX(-50%);
 }
 .car-turn { display: block; width: 100%; height: auto; will-change: transform; }
+
+.assembly {
+  width: min(820px, 86vw);
+  aspect-ratio: 888 / 434;
+}
+.asm {
+  position: absolute;
+  height: auto;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 10px 18px rgba(30, 30, 24, 0.16));
+}
+.asm-final {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  filter: drop-shadow(0 22px 34px rgba(30, 30, 24, 0.2));
+}
+html:not(.js) .asm { display: none; }
+html:not(.js) .asm-final { opacity: 1; }
 
 .rotate-notes {
   position: absolute;

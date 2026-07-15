@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NORR One — 静寂は、設計できる。ニセコ発・単一素材のリフトバックEV</title>
 <meta name="description" content="北海道ニセコ発のEVメーカーNORR。単一車種「NORR One」は、音を消すのではなく雪のように吸う設計。WLTC 620km、単一素材の内装、¥8,900,000から。">
+<link rel="preload" href="img/car-side.webp" as="image" type="image/webp">
 <link rel="preload" href="fonts/Inter-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
@@ -80,92 +81,35 @@
     <a class="btn btn-solid" href="#rotate">モデルを見る<span class="arrow" aria-hidden="true">→</span></a>
   </div>
 
-  <figure class="hero-car" aria-hidden="true">
+  <figure class="hero-car" aria-hidden="false">
     <div class="car-stage">
-      <svg class="car-svg car-hero" viewBox="0 0 1200 460" role="img" aria-label="NORR One の側面像。石灰石グレーのリフトバックが雪原に静かに置かれている">
-        <defs>
-          <linearGradient id="paintA" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#f2f1ec"/>
-            <stop offset=".38" stop-color="#d7d6cd"/>
-            <stop offset=".7" stop-color="#b7b6ac"/>
-            <stop offset="1" stop-color="#8f8e85"/>
-          </linearGradient>
-          <linearGradient id="sheenA" x1="0" y1="0" x2="1" y2=".3">
-            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-            <stop offset=".45" stop-color="#fff" stop-opacity=".55"/>
-            <stop offset=".58" stop-color="#fff" stop-opacity="0"/>
-            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-          </linearGradient>
-          <linearGradient id="glassA" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#dfe9ea"/>
-            <stop offset=".5" stop-color="#aeb9bc"/>
-            <stop offset="1" stop-color="#7c8689"/>
-          </linearGradient>
-          <radialGradient id="shadowA" cx=".5" cy=".5" r=".5">
-            <stop offset="0" stop-color="#000" stop-opacity=".22"/>
-            <stop offset="1" stop-color="#000" stop-opacity="0"/>
-          </radialGradient>
-          <linearGradient id="rimTop" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
-            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-
-        <ellipse cx="600" cy="398" rx="470" ry="26" fill="url(#shadowA)"/>
-
-        <g class="car-body">
-          <path class="bodyshell" d="M90 330 C88 316 92 300 104 292 C118 280 138 266 168 258 C240 248 300 252 350 240 C400 214 440 176 500 156 C548 140 596 136 650 138 C740 142 820 172 900 202 C944 216 980 214 1004 222 C1024 230 1038 246 1040 268 C1042 288 1032 306 1014 316 L992 322 L990 336 A76 76 0 0 0 844 336 L420 336 A76 76 0 0 0 268 336 L178 336 C136 336 100 332 90 330 Z"
-            fill="url(#paintA)" stroke="#8a897f" stroke-width="1.6"/>
-          <path class="bodyshell" d="M90 330 C88 316 92 300 104 292 C118 280 138 266 168 258 C240 248 300 252 350 240 C400 214 440 176 500 156 C548 140 596 136 650 138 C740 142 820 172 900 202 C944 216 980 214 1004 222 C1024 230 1038 246 1040 268 C1042 288 1032 306 1014 316 L992 322 L990 336 A76 76 0 0 0 844 336 L420 336 A76 76 0 0 0 268 336 L178 336 C136 336 100 332 90 330 Z"
-            fill="url(#sheenA)"/>
-          <path d="M370 236 C420 212 460 176 512 158 C552 144 596 140 646 141 C728 144 802 172 876 200 C846 210 730 222 600 228 C500 232 420 234 370 236 Z" fill="url(#glassA)" stroke="#5f6a6d" stroke-width="1"/>
-          <path d="M600 228 L602 141" stroke="#7c8689" stroke-width="2"/>
-          <path d="M150 288 C300 274 480 278 660 292 C780 300 900 306 1000 306" fill="none" stroke="#9c9b90" stroke-width="1" opacity=".6"/>
-          <path d="M178 334 L990 334" stroke="#6c6b62" stroke-width="5" opacity=".5"/>
-          <rect x="330" y="252" width="30" height="7" rx="3" fill="#6c6b62"/>
-          <rect x="742" y="222" width="30" height="7" rx="3" fill="#6c6b62"/>
-          <path class="lightbar" d="M978 224 C994 232 1004 246 1006 264" fill="none" stroke="#c9483c" stroke-width="3.4" stroke-linecap="round"/>
-          <path d="M104 292 C120 300 148 306 170 308 L170 300 C148 298 122 294 104 292 Z" fill="#3a3a34"/>
-          <path d="M90 330 C110 334 140 336 168 336 L168 330 C138 330 108 328 90 330 Z" fill="#2c2c27"/>
-          <path d="M990 336 L992 322 L1014 316 C1000 326 992 332 990 336 Z" fill="#2c2c27"/>
-        </g>
-
-        <g class="wheel" transform="translate(328,306)">
-          <circle r="60" fill="#20201c" stroke="#3a3a33" stroke-width="3"/>
-          <circle r="40" fill="#c7c6bd" stroke="#8f8e85" stroke-width="1.6"/>
-          <g class="rim" fill="#4a4a42">
-            <path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z"/><path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z" transform="rotate(72)"/><path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z" transform="rotate(144)"/><path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z" transform="rotate(216)"/><path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z" transform="rotate(288)"/>
-            <circle r="8" fill="#c7c6bd" stroke="#4a4a42" stroke-width="1.4"/>
-          </g>
-        </g>
-        <g class="wheel" transform="translate(908,306)">
-          <circle r="60" fill="#20201c" stroke="#3a3a33" stroke-width="3"/>
-          <circle r="40" fill="#c7c6bd" stroke="#8f8e85" stroke-width="1.6"/>
-          <g class="rim" fill="#4a4a42">
-            <path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z"/><path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z" transform="rotate(72)"/><path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z" transform="rotate(144)"/><path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z" transform="rotate(216)"/><path d="M-3 -36 L3 -36 L4 -6 L-4 -6 Z" transform="rotate(288)"/>
-            <circle r="8" fill="#c7c6bd" stroke="#4a4a42" stroke-width="1.4"/>
-          </g>
-        </g>
-      </svg>
+      <img class="car-photo" src="img/car-side.webp" width="856" height="304" alt="NORR One の側面。雪白のリフトバックが淡い光の中に静かに置かれている" fetchpriority="high">
     </div>
   </figure>
 
   <p class="scroll-cue" aria-hidden="true"><span></span>SCROLL</p>
 </section>
 
-<section class="rotate-sec" id="rotate" aria-label="NORR One 360度検分">
+<section class="rotate-sec" id="rotate" aria-label="NORR One 組立 — スクロールで部品が一台になる">
   <div class="rotate-stage">
-    <h2 class="sr-only">NORR One — 360度検分</h2>
-    <p class="rotate-label"><span data-azimuth>0</span>°</p>
-    <div class="rotate-car">
-      <svg class="car-svg car-turn" viewBox="0 0 1200 460" role="img" aria-label="スクロールに応じて回転するNORR Oneの側面〜前方視点">
-        <use href="#carBodyDef"/>
-      </svg>
+    <h2 class="sr-only">NORR One — 部品からの組立</h2>
+    <p class="rotate-label">ASSEMBLY <span data-azimuth>0</span>%</p>
+    <div class="rotate-car assembly">
+      <img class="asm" src="img/part-shell.webp" alt="" loading="lazy" data-dx="0" data-dy="-60" data-rot="0" style="left:9%;top:2%;width:72%">
+      <img class="asm" src="img/part-roof.webp" alt="" loading="lazy" data-dx="40" data-dy="-250" data-rot="-7" style="left:16%;top:-6%;width:64%">
+      <img class="asm" src="img/part-hood.webp" alt="" loading="lazy" data-dx="-170" data-dy="-60" data-rot="-12" style="left:1%;top:26%;width:20%">
+      <img class="asm" src="img/part-door-l.webp" alt="" loading="lazy" data-dx="-210" data-dy="60" data-rot="10" style="left:13%;top:30%;width:22%">
+      <img class="asm" src="img/part-door-r.webp" alt="" loading="lazy" data-dx="210" data-dy="40" data-rot="-10" style="left:62%;top:28%;width:23%">
+      <img class="asm" src="img/part-front.webp" alt="" loading="lazy" data-dx="-160" data-dy="110" data-rot="7" style="left:24%;top:40%;width:44%">
+      <img class="asm" src="img/part-rocker.webp" alt="" loading="lazy" data-dx="-40" data-dy="250" data-rot="-5" style="left:26%;top:64%;width:42%">
+      <img class="asm" src="img/part-rear.webp" alt="" loading="lazy" data-dx="170" data-dy="170" data-rot="6" style="left:28%;top:58%;width:46%">
+      <img class="asm" src="img/part-wheel.webp" alt="" loading="lazy" data-dx="260" data-dy="120" data-rot="80" style="left:70%;top:52%;width:20%">
+      <img class="asm-final" src="img/car-assembled.webp" width="888" height="434" alt="組み上がった NORR One の後方3/4視点" loading="lazy">
     </div>
     <ol class="rotate-notes">
-      <li class="rn is-on" data-rn="0"><span class="rn-no">01</span><h3>ドアハンドルは、消える。</h3><p>フラッシュサーフェスのハンドルは走行中は面一に沈み、Cd値0.21に貢献します。触れると4mm浮き上がる。</p></li>
-      <li class="rn" data-rn="1"><span class="rn-no">02</span><h3>光は、一本の線で足りる。</h3><p>フルLEDの一本線シグネチャーは、まぶしさの原因になる余分な光源を削った結果です。視認性は自動制御で夜間+40%増光。</p></li>
-      <li class="rn" data-rn="2"><span class="rn-no">03</span><h3>屋根は、風のために低い。</h3><p>全高1,432mm。低いルーフラインは、デザインの好みである前に、空気抵抗係数0.21のための答えです。</p></li>
+      <li class="rn is-on" data-rn="0"><span class="rn-no">01</span><h3>部品は、41点しかない。</h3><p>外装パネルは41点。一般的なSUVの6割です。分割線が少ないほど、風切り音の入口も少ない。</p></li>
+      <li class="rn" data-rn="1"><span class="rn-no">02</span><h3>締結は、音のしない順に。</h3><p>パネルの合わせ目は0.8mm公差。組立の順序は、走行時のきしみ音が最小になる順に決めてあります。</p></li>
+      <li class="rn" data-rn="2"><span class="rn-no">03</span><h3>一台に、なる。</h3><p>ニセコ工場のラインは1日あたり26台まで。急がないことも、静けさの部品です。</p></li>
     </ol>
   </div>
 </section>
