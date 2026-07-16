@@ -423,10 +423,6 @@ html.js .rn.is-on { opacity: 1; transform: none; pointer-events: auto; }
   clip-path: inset(0 0 0 0);
   transition: clip-path 0.75s var(--ease);
 }
-.cfg-blue {
-  -webkit-mask-image: radial-gradient(ellipse 50% 58% at 50% 45%, #000 32%, transparent 78%);
-  mask-image: radial-gradient(ellipse 50% 58% at 50% 45%, #000 32%, transparent 78%);
-}
 html:not(.js) .cfg-img { clip-path: none; opacity: 0; }
 html:not(.js) .cfg-img.is-on { opacity: 1; }
 

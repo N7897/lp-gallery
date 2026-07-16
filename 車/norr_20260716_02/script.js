@@ -61,13 +61,24 @@
     io.observe(sec);
   }
 
-  /* ── カラー配色: ボタン選択でボディ塗装・ホイールを差し替え(<use>先のdefsグラデ終端色を書き換え) ── */
   /* ── 配色ハブ: 実写5枚をスタック配置し、選択で「ペイントが塗られる」ワイプで前面へ切替
-     (clip-path inset()を右→左に開くアニメ。塗装をひと吹きで替える感覚をそのまま演出に翻訳) ── */
+     (clip-path inset()を右→左に開くアニメ。塗装をひと吹きで替える感覚をそのまま演出に翻訳)
+     連続クリック対策: 進行中のワイプがあれば即座に確定(settle)してから次のワイプを始める。
+     pendingTimeoutは常に1つだけ保持し、新しいクリックで前のタイマーを必ずclearする
+     (放置すると古いタイマーが後から発火して新しい選択を上書きし、色が一瞬で戻るバグになる) ── */
   function initConfigure() {
     var swatches = document.querySelectorAll(".swatch");
     var imgs = document.querySelectorAll(".cfg-img");
     if (!swatches.length || !imgs.length) return;
+    var pendingTimeout = null;
+
+    function settle(finalImg) {
+      imgs.forEach(function (img) {
+        img.classList.remove("is-wiping");
+        img.style.clipPath = "";
+        img.classList.toggle("is-on", img === finalImg);
+      });
+    }
 
     swatches.forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -80,13 +91,13 @@
         btn.classList.add("is-on");
         btn.setAttribute("aria-pressed", "true");
 
-        if (reduced) {
-          imgs.forEach(function (img) { img.classList.remove("is-on", "is-wiping"); });
-          target.classList.add("is-on");
-          return;
-        }
+        if (pendingTimeout) { clearTimeout(pendingTimeout); pendingTimeout = null; }
 
-        var current = document.querySelector(".cfg-img.is-on");
+        if (reduced) { settle(target); return; }
+
+        var wiping = document.querySelector(".cfg-img.is-wiping");
+        if (wiping) settle(wiping);
+
         target.style.clipPath = "inset(0 100% 0 0)";
         target.classList.add("is-wiping");
         requestAnimationFrame(function () {
@@ -94,9 +105,9 @@
             target.style.clipPath = "inset(0 0 0 0)";
           });
         });
-        setTimeout(function () {
-          imgs.forEach(function (img) { img.classList.remove("is-on", "is-wiping"); img.style.clipPath = ""; });
-          target.classList.add("is-on");
+        pendingTimeout = setTimeout(function () {
+          pendingTimeout = null;
+          settle(target);
         }, 780);
       });
     });
