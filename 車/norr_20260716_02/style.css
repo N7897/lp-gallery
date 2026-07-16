@@ -36,13 +36,12 @@
 }
 
 :root {
-  --bg: #f6f5f2;
-  --bg-mute: #edece5;
+  --bg: #ffffff;
   --panel: #ffffff;
   --ink: #191a17;
   --ink-dim: #55564e;
   --ink-faint: #666760;
-  --line: #dedcd0;
+  --line: #e8e6e0;
   --accent: #7c8a74;
   --accent-deep: #566150;
   --disp: "Inter", "Hiragino Kaku Gothic ProN", sans-serif;
@@ -124,7 +123,7 @@ h1, h2, h3, .sec-lead, .hero-lead {
   gap: 40px;
   height: 68px;
   padding: 0 28px;
-  background: rgba(246, 245, 242, 0.82);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
@@ -346,7 +345,17 @@ html.js .rn.is-on { opacity: 1; transform: none; pointer-events: auto; }
 .rn p { font-size: 14px; color: var(--ink-dim); }
 
 .sec { padding: clamp(88px, 14vh, 160px) 0; position: relative; }
-.sec-mute { background: var(--bg-mute); }
+.sec-dark {
+  background: #121210;
+  color: var(--ink);
+  --bg: #121210;
+  --panel: #1c1b18;
+  --ink: #f2f1ec;
+  --ink-dim: #c7c6bd;
+  --ink-faint: #93938a;
+  --line: #322f2a;
+  --accent-deep: #a9c49b;
+}
 .sec-no {
   font-family: var(--mono);
   font-size: 12px;
@@ -563,7 +572,16 @@ html:not(.js) .cfg-img.is-on { opacity: 1; }
 .price-notes li::before { content: "—"; position: absolute; left: 0; color: var(--accent-deep); }
 .buy-cta { display: flex; flex-wrap: wrap; gap: 14px; }
 
-.site-foot { background: var(--panel); padding: 72px 0 56px; border-top: 1px solid var(--line); }
+.site-foot {
+  background: #121210;
+  color: #f2f1ec;
+  padding: 72px 0 56px;
+  border-top: 1px solid #322f2a;
+  --ink: #f2f1ec;
+  --ink-dim: #c7c6bd;
+  --ink-faint: #93938a;
+  --line: #322f2a;
+}
 .foot-grid { display: grid; grid-template-columns: 1fr auto; gap: 32px 64px; align-items: start; }
 .foot-brand { font-family: var(--disp); font-weight: 700; font-size: 20px; letter-spacing: 0.04em; }
 .foot-copy { font-size: 13px; color: var(--ink-faint); margin-top: 6px; }
